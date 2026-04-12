@@ -1,0 +1,1252 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pig industry data lab</title>
+    <style>
+      :root {
+        --bg: #f6f0e7;
+        --panel: rgba(255,255,255,0.82);
+        --ink: #19261f;
+        --muted: #5d675f;
+        --line: rgba(25,38,31,0.12);
+        --accent: #8c5129;
+        --accent-soft: rgba(140,81,41,0.12);
+        --good: #355f4a;
+        --warn: #8a4133;
+        --soft: #6e6457;
+        --font-ui: "PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif;
+        --font-display: "STSong","Songti SC","Noto Serif SC",serif;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: linear-gradient(180deg, #fbf6ef 0%, var(--bg) 100%); color: var(--ink); font-family: var(--font-ui); }
+      .page { max-width: 1440px; margin: 0 auto; padding: 28px 18px 56px; }
+      .hero, .panel, .mini-card, .indicator-card { border: 1px solid var(--line); background: var(--panel); box-shadow: 0 14px 36px rgba(39,30,21,0.06); }
+      .hero { padding: 28px; margin-bottom: 20px; background: linear-gradient(135deg, rgba(255,252,247,0.95), rgba(247,236,223,0.92)); }
+      h1, h2, h3 { font-family: var(--font-display); margin-top: 0; }
+      h1 { font-size: clamp(34px, 6vw, 62px); margin-bottom: 12px; }
+      h2 { font-size: 28px; margin-bottom: 10px; }
+      h3 { font-size: 20px; margin-bottom: 8px; }
+      p { line-height: 1.7; margin-top: 0; }
+      .eyebrow { color: var(--accent); text-transform: uppercase; letter-spacing: 0.16em; font-size: 12px; }
+      .subtle, .muted { color: var(--muted); }
+      .top-grid, .grid-3, .grid-4, .indicator-grid { display: grid; gap: 16px; }
+      .top-grid { grid-template-columns: 1.3fr 0.9fr; }
+      .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .indicator-grid { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+      .panel { padding: 20px 22px; margin-bottom: 18px; }
+      .mini-card, .indicator-card { padding: 16px 18px; }
+      .metric-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 16px; }
+      .metric-box { padding: 12px 14px; border: 1px solid var(--line); background: rgba(255,255,255,0.44); }
+      .metric-box strong { display: block; font-size: 28px; }
+      .status, .tag, .weight { display: inline-flex; align-items: center; padding: 4px 10px; border-radius: 999px; font-size: 12px; }
+      .status-good { background: rgba(53,95,74,0.12); color: var(--good); }
+      .status-warn { background: rgba(138,65,51,0.12); color: var(--warn); }
+      .status-soft { background: rgba(110,100,87,0.14); color: var(--soft); }
+      .weight-high { background: rgba(53,95,74,0.12); color: var(--good); }
+      .weight-medium { background: rgba(140,81,41,0.12); color: var(--accent); }
+      .weight-low { background: rgba(93,103,95,0.12); color: var(--muted); }
+      .tag { background: rgba(25,38,31,0.07); color: var(--ink); margin: 0 8px 8px 0; }
+      .tag-accent { background: var(--accent-soft); color: var(--accent); }
+      .chip-row { margin-top: 10px; }
+      .card-top { display: flex; justify-content: space-between; gap: 10px; align-items: center; flex-wrap: wrap; }
+      table { width: 100%; border-collapse: collapse; }
+      th, td { border-bottom: 1px solid var(--line); text-align: left; padding: 12px 10px; vertical-align: top; }
+      th { color: var(--accent); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
+      nav { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+      nav a { color: var(--accent); text-decoration: none; border: 1px solid var(--line); padding: 8px 12px; border-radius: 999px; background: rgba(255,255,255,0.55); }
+      .footnote { font-size: 13px; color: var(--muted); }
+      @media (max-width: 980px) {
+        .top-grid, .grid-3, .grid-4, .metric-row { grid-template-columns: 1fr; }
+        .page { padding: 18px 12px 40px; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <p class="eyebrow">pig industry research workbench</p>
+        <h1>Pig industry data lab</h1>
+        <p>Make indicator-to-hog-price, profitability, and equity mapping intuitive enough for phase learning and later tracking, without pretending the current thread already has complete primary-series binding.</p>
+        <div class="metric-row">
+          <div class="metric-box"><span class="muted">history window</span><strong>2016-01-01 to present</strong></div>
+          <div class="metric-box"><span class="muted">regimes</span><strong>4</strong></div>
+          <div class="metric-box"><span class="muted">indicators</span><strong>15</strong></div>
+          <div class="metric-box"><span class="muted">missing data packs</span><strong>4</strong></div>
+        </div>
+        <nav>
+          <a href="./current-state-dashboard.html">state room</a>
+          <a href="#regimes">regimes</a>
+          <a href="#official-refresh">official refresh</a>
+          <a href="#data-gaps">data gaps</a>
+          <a href="#company-tracker">company tracker</a>
+          <a href="#indicator-cards">indicator cards</a>
+          <a href="#outcome-board">outcome board</a>
+          <a href="#weight-board">weight board</a>
+          <a href="#signal-tests">signal tests</a>
+          <a href="#false-signals">false signals</a>
+        </nav>
+      </section>
+
+      <section class="panel top-grid">
+        <div>
+          <p class="eyebrow">research layers</p>
+          <h2>Three-layer mapping</h2>
+          <div class="chip-row"><span class="tag tag-accent">hog price layer</span><span class="tag tag-accent">equity basket layer</span><span class="tag tag-accent">single-name dispersion layer</span></div>
+          <p class="footnote">第一轮股价层固定为行业 basket 加三龙头，不把公司特例直接改写行业状态。</p>
+        </div>
+        <div>
+          <p class="eyebrow">equity scope</p>
+          <h2>Basket and single names</h2>
+          <div class="chip-row"><span class="tag">牧原股份</span><span class="tag">温氏股份</span><span class="tag">新希望</span><span class="tag">巨星农牧</span><span class="tag">神农集团</span><span class="tag">天康生物</span></div>
+          <div class="chip-row"><span class="tag tag-accent">single: 牧原股份</span><span class="tag tag-accent">single: 温氏股份</span><span class="tag tag-accent">single: 新希望</span></div>
+        </div>
+      </section>
+
+      <section class="panel" id="regimes">
+        <p class="eyebrow">phase map</p>
+        <h2>Regime segmentation</h2>
+        <div class="grid-4">
+            <article class="mini-card">
+              <p class="eyebrow">phase 1 baseline</p>
+              <h3>2016-07 to 2018-07</h3>
+              <p>normal pig-cycle grammar without ASF break</p>
+            </article>
+            
+            <article class="mini-card">
+              <p class="eyebrow">phase 2 ASF break</p>
+              <h3>2018-10 to 2020-04</h3>
+              <p>disease shock, transport disruption, and regime break</p>
+            </article>
+            
+            <article class="mini-card">
+              <p class="eyebrow">phase 3 post-ASF rebuild</p>
+              <h3>2021-10 to 2023-08</h3>
+              <p>scale-up, cost curves, and reconstruction after ASF</p>
+            </article>
+            
+            <article class="mini-card">
+              <p class="eyebrow">phase 4 current paradigm test</p>
+              <h3>2025-01 to 2026-04</h3>
+              <p>new-paradigm debate, tighter cycles, and modern tracking</p>
+            </article>
+            </div>
+      </section>
+
+      
+      <section class="panel" id="official-refresh">
+        <p class="eyebrow">official refresh</p>
+        <h2>Official backbone refresh</h2>
+        <div class="metric-row">
+          <div class="metric-box"><span class="muted">bundle status</span><strong><span class="status status-good">ready</span></strong></div>
+          <div class="metric-box"><span class="muted">weekly spot rows</span><strong>1983</strong></div>
+          <div class="metric-box"><span class="muted">monthly backbone</span><strong>2021-12-31 -> 2026-02-28</strong></div>
+          <div class="metric-box"><span class="muted">feed-cost bridge</span><strong>2025-04-30 -> 2026-03-31</strong></div>
+        </div>
+        <div class="grid-3">
+          <article class="mini-card">
+            <p class="eyebrow">official report derived</p>
+            <h3>Weekly and daily hog spot</h3>
+            <p><strong>weekly reports:</strong> 411</p>
+            <p><strong>daily rows:</strong> 1983</p>
+            <p><strong>weekly rows:</strong> 411</p>
+          </article>
+          <article class="mini-card">
+            <p class="eyebrow">official monthly backbone</p>
+            <h3>MOA pig product pages</h3>
+            <p><strong>page count:</strong> 51</p>
+            <p><strong>coverage:</strong> 2021-12-31 -> 2026-02-28</p>
+            <p><strong>wide outputs:</strong> production 51 | price 51 | trade 46 | profit 45</p>
+          </article>
+          <article class="mini-card">
+            <p class="eyebrow">official api bridge</p>
+            <h3>Feed cost and raw material</h3>
+            <p><strong>coverage:</strong> 2025-04-30 -> 2026-03-31</p>
+            <p><strong>rows:</strong> long 289 | wide 12</p>
+            <p><strong>note:</strong> Current structured API returns a rolling recent monthly window rather than full-history backfill.</p>
+          </article>
+        </div>
+        <p class="footnote">official refresh generated_at: 2026-04-10 16:10:33. `weekly spot` is official-report-derived; `monthly backbone` and `feed-cost bridge` are official extracted or official-api-extracted layers.</p>
+      </section>
+    
+
+      <section class="panel" id="data-gaps">
+        <p class="eyebrow">binding queue</p>
+        <h2>Data gaps before empirical upgrade</h2>
+        <div class="metric-row">
+          <div class="metric-box"><span class="muted">ready packs</span><strong>18</strong></div>
+          <div class="metric-box"><span class="muted">missing packs</span><strong>4</strong></div>
+          <div class="metric-box"><span class="muted">company tracker rows</span><strong>12</strong></div>
+          <div class="metric-box"><span class="muted">company exact complete</span><strong>9</strong></div>
+        </div>
+        <table>
+          <thead><tr><th>dataset</th><th>frequency</th><th>purpose</th><th>status</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>hog_spot_daily</td>
+              <td>daily</td>
+              <td>pig price target layer</td>
+              <td><span class="status status-good">ready</span></td>
+            </tr>
+            
+            <tr>
+              <td>hog_spot_weekly_region</td>
+              <td>weekly</td>
+              <td>weekly pressure and region spread checks</td>
+              <td><span class="status status-good">ready</span></td>
+            </tr>
+            
+            <tr>
+              <td>sow_inventory_monthly</td>
+              <td>monthly</td>
+              <td>slow supply anchor and slow-variable event tests</td>
+              <td><span class="status status-good">ready</span></td>
+            </tr>
+            
+            <tr>
+              <td>official_pig_product_monthly_long</td>
+              <td>monthly</td>
+              <td>official MOA monthly pig product long ledger across production, price, trade, and profit blocks</td>
+              <td><span class="status status-good">ready</span></td>
+            </tr>
+            
+            <tr>
+              <td>official_pig_production_monthly</td>
+              <td>monthly</td>
+              <td>official production and slaughter anchor from MOA monthly pig product pages</td>
+              <td><span class="status status-good">ready</span></td>
+            </tr>
+            
+            <tr>
+              <td>official_pig_price_monthly</td>
+              <td>monthly</td>
+              <td>official monthly price anchor for piglet, hog outfarm, and white pork wholesale pricing</td>
+              <td><span class="status status-good">ready</span></td>
+            </tr>
+            
+            <tr>
+              <td>official_pig_trade_monthly</td>
+              <td>monthly</td>
+              <td>official monthly pig-trade anchor from MOA pig product pages</td>
+              <td><span class="status status-good">ready</span></td>
+            </tr>
+            
+            <tr>
+              <td>official_pig_profit_monthly</td>
+              <td>monthly</td>
+              <td>official monthly pig profitability anchor from MOA pig product pages</td>
+              <td><span class="status status-good">ready</span></td>
+            </tr>
+            
+            <tr>
+              <td>official_feed_cost_monthly</td>
+              <td>monthly</td>
+              <td>official upstream feed-cost bridge from the MOA market data platform, combining corn, soymeal futures, and hog-feed product price anchors</td>
+              <td><span class="status status-good">ready</span></td>
+            </tr>
+            
+            <tr>
+              <td>corn_price_monthly</td>
+              <td>monthly</td>
+              <td>official monthly corn price bridge using MOA grain procurement and futures series</td>
+              <td><span class="status status-good">ready</span></td>
+            </tr>
+            
+            <tr>
+              <td>soymeal_price_monthly</td>
+              <td>monthly</td>
+              <td>official monthly soymeal price bridge using the MOA market data platform futures series</td>
+              <td><span class="status status-good">ready</span></td>
+            </tr>
+            
+            <tr>
+              <td>hog_feed_price_monthly</td>
+              <td>monthly</td>
+              <td>official monthly hog-feed product price bridge from the MOA market data platform</td>
+              <td><span class="status status-good">ready</span></td>
+            </tr>
+            
+            <tr>
+              <td>piglet_weekly</td>
+              <td>weekly</td>
+              <td>mid-cycle restocking signal validation</td>
+              <td><span class="status status-warn">missing-file</span></td>
+            </tr>
+            
+            <tr>
+              <td>short_cycle_weekly</td>
+              <td>weekly</td>
+              <td>short-cycle pressure and combo signals</td>
+              <td><span class="status status-warn">missing-file</span></td>
+            </tr>
+            
+            <tr>
+              <td>slaughter_inventory_weekly</td>
+              <td>weekly</td>
+              <td>downstream absorption board and confirmation layer</td>
+              <td><span class="status status-warn">missing-file</span></td>
+            </tr>
+            
+            <tr>
+              <td>cost_monthly</td>
+              <td>monthly</td>
+              <td>cash-flow stress board and threshold event tests</td>
+              <td><span class="status status-warn">missing-file</span></td>
+            </tr>
+            
+            <tr>
+              <td>company_monthly_shipments</td>
+              <td>monthly</td>
+              <td>concentration and company-dispersion checks</td>
+              <td><span class="status status-good">ready</span></td>
+            </tr>
+            
+            <tr>
+              <td>company_shipment_guidance_candidates</td>
+              <td>event-driven</td>
+              <td>official guidance candidate layer for shipment targets and capacity planning</td>
+              <td><span class="status status-good">ready</span></td>
+            </tr>
+            
+            <tr>
+              <td>company_shipment_tracker_summary</td>
+              <td>event-driven</td>
+              <td>bridge layer that combines latest official monthly shipment with current official guidance status</td>
+              <td><span class="status status-good">ready</span></td>
+            </tr>
+            
+            <tr>
+              <td>ifind_edb_catalog_pig</td>
+              <td>reference-refresh</td>
+              <td>local iFinD EDB pig-industry catalog surface that shows which database nodes exist before live access is confirmed</td>
+              <td><span class="status status-good">ready</span></td>
+            </tr>
+            
+            <tr>
+              <td>ifind_pig_edb_probe_status</td>
+              <td>event-driven</td>
+              <td>live iFinD EDB accessibility check for pig metrics; this file can exist even when the current account is still quota-blocked</td>
+              <td><span class="status status-good">ready</span></td>
+            </tr>
+            
+            <tr>
+              <td>equity_prices_daily</td>
+              <td>daily</td>
+              <td>basket and single-name mapping layer</td>
+              <td><span class="status status-good">ready</span></td>
+            </tr>
+            </tbody>
+        </table>
+      </section>
+
+      <section class="panel" id="company-tracker">
+        <p class="eyebrow">company bridge</p>
+        <h2>Shipment and guidance summary</h2>
+        <div class="metric-row">
+          <div class="metric-box"><span class="muted">exact complete</span><strong>9</strong></div>
+          <div class="metric-box"><span class="muted">summary only</span><strong>2</strong></div>
+          <div class="metric-box"><span class="muted">pending latest</span><strong>1</strong></div>
+          <div class="metric-box"><span class="muted">needs review</span><strong>0</strong></div>
+        </div>
+        <table>
+          <thead><tr><th>company</th><th>latest month</th><th>shipment mt</th><th>yoy %</th><th>latest source</th><th>coverage</th><th>mix</th><th>coverage note</th><th>guidance</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>牧原股份</td>
+              <td>2026-03-31</td>
+              <td>675.1</td>
+              <td>-2.6532</td>
+              <td>exact-title</td>
+              <td><span class="status status-soft">summary-only-explained</span></td>
+              <td>exact 13 / breakout 0</td>
+              <td>summary-only: 2025-01;2025-02</td>
+              <td>2026 / forward-guidance / 7500.0-8100.0</td>
+            </tr>
+            
+            <tr>
+              <td>温氏股份</td>
+              <td>2026-03-31</td>
+              <td>368.28</td>
+              <td>18.9727</td>
+              <td>exact-title</td>
+              <td><span class="status status-good">exact-complete</span></td>
+              <td>exact 15 / breakout 0</td>
+              <td>exact monthly coverage in current window</td>
+              <td>no-guidance-candidate;no-forward-guidance-candidate</td>
+            </tr>
+            
+            <tr>
+              <td>新希望</td>
+              <td>2026-03-31</td>
+              <td>130.47</td>
+              <td>-15.8638</td>
+              <td>exact-title</td>
+              <td><span class="status status-good">exact-complete</span></td>
+              <td>exact 15 / breakout 0</td>
+              <td>exact monthly coverage in current window</td>
+              <td>no-guidance-candidate;no-forward-guidance-candidate</td>
+            </tr>
+            
+            <tr>
+              <td>巨星农牧</td>
+              <td>2026-03-31</td>
+              <td>45.68</td>
+              <td>34.7493</td>
+              <td>exact-title</td>
+              <td><span class="status status-good">exact-complete</span></td>
+              <td>exact 15 / breakout 0</td>
+              <td>exact monthly coverage in current window</td>
+              <td>2025 / forward-guidance / 400.0</td>
+            </tr>
+            
+            <tr>
+              <td>神农集团</td>
+              <td>2026-03-31</td>
+              <td>31.66</td>
+              <td>-9.9032</td>
+              <td>exact-title</td>
+              <td><span class="status status-good">exact-complete</span></td>
+              <td>exact 15 / breakout 0</td>
+              <td>exact monthly coverage in current window</td>
+              <td>2027 / long-term-target / 500.0</td>
+            </tr>
+            
+            <tr>
+              <td>天康生物</td>
+              <td>2026-02-28</td>
+              <td>27.34</td>
+              <td>6.0101</td>
+              <td>exact-title</td>
+              <td><span class="status status-warn">pending-latest-month</span></td>
+              <td>exact 14 / breakout 0</td>
+              <td>pending: 2026-03</td>
+              <td>2025 / forward-guidance / 350.0-400.0</td>
+            </tr>
+            
+            <tr>
+              <td>天邦食品</td>
+              <td>2026-03-31</td>
+              <td>64.47</td>
+              <td>20.4596</td>
+              <td>exact-title</td>
+              <td><span class="status status-good">exact-complete</span></td>
+              <td>exact 15 / breakout 0</td>
+              <td>exact monthly coverage in current window</td>
+              <td>2025 / forward-guidance / 650.0-710.0</td>
+            </tr>
+            
+            <tr>
+              <td>正邦科技</td>
+              <td>2026-03-31</td>
+              <td>93.64</td>
+              <td>49.6803</td>
+              <td>exact-title</td>
+              <td><span class="status status-good">exact-complete</span></td>
+              <td>exact 15 / breakout 0</td>
+              <td>exact monthly coverage in current window</td>
+              <td>no-guidance-candidate;no-forward-guidance-candidate</td>
+            </tr>
+            
+            <tr>
+              <td>傲农生物</td>
+              <td>2026-03-31</td>
+              <td>18.58</td>
+              <td>41.2928</td>
+              <td>exact-title</td>
+              <td><span class="status status-good">exact-complete</span></td>
+              <td>exact 15 / breakout 0</td>
+              <td>exact monthly coverage in current window</td>
+              <td>2025 / forward-guidance / 250.0</td>
+            </tr>
+            
+            <tr>
+              <td>唐人神</td>
+              <td>2026-03-31</td>
+              <td>54.16</td>
+              <td>33.7614</td>
+              <td>exact-title</td>
+              <td><span class="status status-good">exact-complete</span></td>
+              <td>exact 15 / breakout 0</td>
+              <td>exact monthly coverage in current window</td>
+              <td>2025 / forward-guidance / 500.0-550.0</td>
+            </tr>
+            
+            <tr>
+              <td>东瑞股份</td>
+              <td>2026-03-31</td>
+              <td>17.47</td>
+              <td>45.8264</td>
+              <td>exact-title</td>
+              <td><span class="status status-good">exact-complete</span></td>
+              <td>exact 15 / breakout 0</td>
+              <td>exact monthly coverage in current window</td>
+              <td>no-guidance-candidate;no-forward-guidance-candidate</td>
+            </tr>
+            
+            <tr>
+              <td>新五丰</td>
+              <td>2026-02-28</td>
+              <td>22.83</td>
+              <td></td>
+              <td>exact-title</td>
+              <td><span class="status status-soft">summary-only-explained</span></td>
+              <td>exact 8 / breakout 3</td>
+              <td>summary-only: 2025-01;2025-02;2025-03 | pending: 2026-03</td>
+              <td>no-guidance-candidate;no-forward-guidance-candidate</td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="footnote">`exact-complete` means the current window has monthly rows throughout. `summary-only-explained` means some months are only covered by range summaries and were not force-split. `pending-latest-month` usually means the most recent month is still waiting for company disclosure. Guidance remains a candidate layer until human review confirms it is a shipment target rather than capacity or bridge language.</p>
+      </section>
+
+      <section class="panel" id="indicator-cards">
+        <p class="eyebrow">indicator cards</p>
+        <h2>Indicator impact cards</h2>
+        <div class="indicator-grid">
+            <article class="indicator-card">
+              <div class="card-top">
+                <h3>能繁母猪存栏</h3>
+                <span class="status status-good">high</span>
+              </div>
+              <p class="subtle"><strong>proxy_for:</strong> future commercial hog supply after breeding lag</p>
+              <p><strong>regime_validity:</strong> baseline strongest; phase 2 noisy; phase 3-4 still core but must pair with efficiency</p>
+              <p><strong>lead_lag_window:</strong> hog price 6-12m; equity basket 3-9m via expected cycle turn</p>
+              <p><strong>hog path:</strong> down is structurally bullish after lag if efficiency, disease, and policy distortions do not offset</p>
+              <p><strong>equity path:</strong> usually bullish before spot when the market believes de-capacity is real</p>
+              <p><strong>false signal risk:</strong> headcount down but productivity up; official sample drift</p>
+              <div class="chip-row"><span class="tag">failure: MSY or PSY improves enough to offset lower sow headcount</span><span class="tag">failure: official sample under-represents structural shifts</span><span class="tag">failure: disease or policy shock rewrites the normal lag</span></div>
+              <div class="chip-row"><span class="tag tag-accent">chart: 同比与未来 6/9/12 个月猪价路径叠图</span><span class="tag tag-accent">chart: 分 regime 滞后散点图</span><span class="tag tag-accent">chart: 与母猪料销量交叉验证图</span></div>
+            </article>
+            
+            <article class="indicator-card">
+              <div class="card-top">
+                <h3>母猪淘汰量 / 淘汰折价</h3>
+                <span class="status status-good">medium-high</span>
+              </div>
+              <p class="subtle"><strong>proxy_for:</strong> de-capacity confirmation and breeder stress</p>
+              <p><strong>regime_validity:</strong> phase 2-4 strongest; phase 1 auxiliary</p>
+              <p><strong>lead_lag_window:</strong> hog price 4-9m; equity basket 2-6m if liquidation is persistent</p>
+              <p><strong>hog path:</strong> higher culling and deeper discount are bullish after lag if they reflect real exit</p>
+              <p><strong>equity path:</strong> positive for leaders if liquidation is persistent and financing stress is real</p>
+              <p><strong>false signal risk:</strong> temporary panic sales that do not become structural capacity exit</p>
+              <div class="chip-row"><span class="tag">failure: panic culling reverses quickly after a short price bounce</span><span class="tag">failure: better financing keeps capacity alive despite weak prices</span><span class="tag">failure: regional culling data do not scale to the full industry</span></div>
+              <div class="chip-row"><span class="tag tag-accent">chart: 淘汰折价与未来 6 个月猪价散点图</span><span class="tag tag-accent">chart: 淘汰量阈值事件窗口图</span><span class="tag tag-accent">chart: 淘汰量与能繁趋势并列图</span></div>
+            </article>
+            
+            <article class="indicator-card">
+              <div class="card-top">
+                <h3>仔猪价格与补栏意愿</h3>
+                <span class="status status-good">medium-high</span>
+              </div>
+              <p class="subtle"><strong>proxy_for:</strong> mid-cycle restocking behavior and far-end supply intent</p>
+              <p><strong>regime_validity:</strong> baseline and phase 4 strongest; phase 2 distortions are common</p>
+              <p><strong>lead_lag_window:</strong> hog price 3-6m; equity basket 1-4m when restocking shifts expectations</p>
+              <p><strong>hog path:</strong> weak piglet price is bullish after lag because it signals lower future restocking</p>
+              <p><strong>equity path:</strong> weak piglet price can turn positive for equities if it confirms future tightening, not current demand collapse</p>
+              <p><strong>false signal risk:</strong> policy or epidemic disruption changes piglet circulation without changing long-term supply</p>
+              <div class="chip-row"><span class="tag">failure: piglet price drops because transport is blocked, not because restocking weakens</span><span class="tag">failure: self-breeding ratio rises and weakens third-party piglet price relevance</span><span class="tag">failure: seasonal behavior dominates for a few weeks</span></div>
+              <div class="chip-row"><span class="tag tag-accent">chart: 仔猪价格与未来 3/6 个月猪价路径图</span><span class="tag tag-accent">chart: 补栏意愿代理与远期现货关系图</span><span class="tag tag-accent">chart: piglet price phase heatmap</span></div>
+            </article>
+            
+            <article class="indicator-card">
+              <div class="card-top">
+                <h3>出栏量</h3>
+                <span class="status status-good">medium</span>
+              </div>
+              <p class="subtle"><strong>proxy_for:</strong> current physical supply release</p>
+              <p><strong>regime_validity:</strong> all phases, but interpretation shifts with downstream absorption</p>
+              <p><strong>lead_lag_window:</strong> hog price 0-2m; equity basket 0-3m through near-end pressure</p>
+              <p><strong>hog path:</strong> higher releases are bearish if absorption does not improve</p>
+              <p><strong>equity path:</strong> usually negative for basket unless the market focuses on share gains or scale advantage</p>
+              <p><strong>false signal risk:</strong> high volume can reflect planned efficiency rather than distress</p>
+              <div class="chip-row"><span class="tag">failure: larger shipments are absorbed by stronger slaughter or frozen inventory demand</span><span class="tag">failure: company share gain masks industry-wide tightening</span><span class="tag">failure: monthly data miss hidden inventory in weight</span></div>
+              <div class="chip-row"><span class="tag tag-accent">chart: 月度出栏量与现货猪价叠图</span><span class="tag tag-accent">chart: 分 regime 同步散点图</span><span class="tag tag-accent">chart: 出栏量与屠宰吸收并列图</span></div>
+            </article>
+            
+            <article class="indicator-card">
+              <div class="card-top">
+                <h3>出栏均重</h3>
+                <span class="status status-good">high</span>
+              </div>
+              <p class="subtle"><strong>proxy_for:</strong> hidden inventory and short-cycle release pressure</p>
+              <p><strong>regime_validity:</strong> all phases, especially phase 3-4 near bottoms</p>
+              <p><strong>lead_lag_window:</strong> hog price 1-8w; equity basket 1-6w when the market trades short-term repair</p>
+              <p><strong>hog path:</strong> higher weight is bearish until it rolls over and release pressure fades</p>
+              <p><strong>equity path:</strong> weight rollover is often positive for basket because it hints that hidden inventory is being cleared</p>
+              <p><strong>false signal risk:</strong> temporary weather, holidays, or transport problems delay shipments without true inventory repair</p>
+              <div class="chip-row"><span class="tag">failure: weights fall because of forced sales rather than genuine tightening</span><span class="tag">failure: regional samples miss national pressure</span><span class="tag">failure: other short-cycle variables still point to unresolved pressure</span></div>
+              <div class="chip-row"><span class="tag tag-accent">chart: 均重与未来 1/2/4/8 周猪价路径图</span><span class="tag tag-accent">chart: 均重高位回落事件窗口图</span><span class="tag tag-accent">chart: 均重与标肥价差联动图</span></div>
+            </article>
+            
+            <article class="indicator-card">
+              <div class="card-top">
+                <h3>标肥价差</h3>
+                <span class="status status-good">medium</span>
+              </div>
+              <p class="subtle"><strong>proxy_for:</strong> body-weight structure and large-hog pressure</p>
+              <p><strong>regime_validity:</strong> phase 3-4 strongest; phase 1 supportive</p>
+              <p><strong>lead_lag_window:</strong> hog price 1-6w; equity basket 1-4w</p>
+              <p><strong>hog path:</strong> wide spread can signal body-structure imbalance and short-term spot pressure</p>
+              <p><strong>equity path:</strong> spread convergence can help basket repair if weight and secondary fattening also calm down</p>
+              <p><strong>false signal risk:</strong> holiday demand or local structure can temporarily widen or narrow the spread</p>
+              <div class="chip-row"><span class="tag">failure: spread moves because of local consumption mix, not national supply pressure</span><span class="tag">failure: weight and inventory data do not confirm</span><span class="tag">failure: secondary fattening re-accelerates and reopens pressure</span></div>
+              <div class="chip-row"><span class="tag tag-accent">chart: 标肥价差与未来 2/4 周猪价散点图</span><span class="tag tag-accent">chart: 价差收敛事件窗口图</span><span class="tag tag-accent">chart: 与均重、二育组合热力图</span></div>
+            </article>
+            
+            <article class="indicator-card">
+              <div class="card-top">
+                <h3>二育活跃度</h3>
+                <span class="status status-good">medium</span>
+              </div>
+              <p class="subtle"><strong>proxy_for:</strong> bottom support and speculative buffer in the spot chain</p>
+              <p><strong>regime_validity:</strong> phase 3-4 strongest; phase 1 weaker</p>
+              <p><strong>lead_lag_window:</strong> hog price 1-4w; equity basket 1-4w mainly as a trading amplifier</p>
+              <p><strong>hog path:</strong> higher activity can cushion downside short term but may postpone later pressure</p>
+              <p><strong>equity path:</strong> positive for basket only if it aligns with tightening, not if it simply delays supply</p>
+              <p><strong>false signal risk:</strong> bottom trading enthusiasm can mimic real tightening</p>
+              <div class="chip-row"><span class="tag">failure: 二育 turns into delayed release rather than true absorption</span><span class="tag">failure: cash economics deteriorate too quickly to sustain demand</span><span class="tag">failure: weight and slaughter data do not validate support</span></div>
+              <div class="chip-row"><span class="tag tag-accent">chart: 二育活跃度与未来 1/2/4 周猪价图</span><span class="tag tag-accent">chart: 二育代理与标肥价差并列图</span><span class="tag tag-accent">chart: 短周期组合信号热力图</span></div>
+            </article>
+            
+            <article class="indicator-card">
+              <div class="card-top">
+                <h3>屠宰量 / 开工率</h3>
+                <span class="status status-good">medium</span>
+              </div>
+              <p class="subtle"><strong>proxy_for:</strong> downstream absorption strength</p>
+              <p><strong>regime_validity:</strong> all phases, but only decisive when paired with weight and inventory</p>
+              <p><strong>lead_lag_window:</strong> hog price 0-4w; equity basket 0-4w</p>
+              <p><strong>hog path:</strong> higher slaughter and utilization are supportive if they absorb supply and weights fall</p>
+              <p><strong>equity path:</strong> supportive for basket when it confirms that spot weakness is being digested</p>
+              <p><strong>false signal risk:</strong> slaughter can rise because cheap supply is overwhelming the system, not because demand improved</p>
+              <div class="chip-row"><span class="tag">failure: high slaughter coincides with higher weights and higher frozen inventory</span><span class="tag">failure: utilization rises briefly around holidays and then fades</span><span class="tag">failure: regional slaughter does not generalize</span></div>
+              <div class="chip-row"><span class="tag tag-accent">chart: 屠宰量与现货猪价同步图</span><span class="tag tag-accent">chart: 开工率与均重交叉图</span><span class="tag tag-accent">chart: 吸收确认四象限图</span></div>
+            </article>
+            
+            <article class="indicator-card">
+              <div class="card-top">
+                <h3>冻品库存 / 库容率</h3>
+                <span class="status status-good">medium</span>
+              </div>
+              <p class="subtle"><strong>proxy_for:</strong> cold-storage buffer and delayed supply absorption</p>
+              <p><strong>regime_validity:</strong> phase 2-4 strongest; phase 1 supportive</p>
+              <p><strong>lead_lag_window:</strong> hog price 0-6w; equity basket 1-6w</p>
+              <p><strong>hog path:</strong> lower inventory or improving active absorption is supportive for spot</p>
+              <p><strong>equity path:</strong> positive when inventory clears alongside weight easing; negative when inventory swells despite lower spot</p>
+              <p><strong>false signal risk:</strong> inventory can improve because slaughter slows, not because real demand improved</p>
+              <div class="chip-row"><span class="tag">failure: 库存下降 only because input flow collapses</span><span class="tag">failure: 库存高位维持 but market still trades a short squeeze</span><span class="tag">failure: data coverage is sample-based and patchy</span></div>
+              <div class="chip-row"><span class="tag tag-accent">chart: 冻品库存与未来 2/4/8 周猪价图</span><span class="tag tag-accent">chart: 库存与屠宰吸收并列图</span><span class="tag tag-accent">chart: 库存状态 event window</span></div>
+            </article>
+            
+            <article class="indicator-card">
+              <div class="card-top">
+                <h3>全国猪价与区域价差</h3>
+                <span class="status status-good">high</span>
+              </div>
+              <p class="subtle"><strong>proxy_for:</strong> current cash-flow state and regional imbalance</p>
+              <p><strong>regime_validity:</strong> all phases</p>
+              <p><strong>lead_lag_window:</strong> hog price is the target layer; equity basket 0-8w via expectation reset</p>
+              <p><strong>hog path:</strong> spot direction is the result variable and must be decomposed by supply, cost, and flow</p>
+              <p><strong>equity path:</strong> basket often leads spot turns, but spot stabilization still anchors confirmation</p>
+              <p><strong>false signal risk:</strong> headline spot bounces can be trading mirrors without chain confirmation</p>
+              <div class="chip-row"><span class="tag">failure: regional spread reflects transport friction, not national tightening</span><span class="tag">failure: spot rebounds but weight and inventory remain unresolved</span><span class="tag">failure: equity rallies on far-month expectations while spot stays weak</span></div>
+              <div class="chip-row"><span class="tag tag-accent">chart: 现货猪价与 basket 对照图</span><span class="tag tag-accent">chart: 区域价差状态板</span><span class="tag tag-accent">chart: spot versus equity event panel</span></div>
+            </article>
+            
+            <article class="indicator-card">
+              <div class="card-top">
+                <h3>猪价 - 完全成本缺口</h3>
+                <span class="status status-good">high</span>
+              </div>
+              <p class="subtle"><strong>proxy_for:</strong> industry cash-flow stress and de-capacity pressure</p>
+              <p><strong>regime_validity:</strong> phase 3-4 strongest; phase 1 auxiliary</p>
+              <p><strong>lead_lag_window:</strong> hog price 0-3m via de-capacity response; equity basket 1-6m via bottom hunting</p>
+              <p><strong>hog path:</strong> deeper negative spread becomes bullish after lag if losses are persistent enough to force exit</p>
+              <p><strong>equity path:</strong> leaders can rally during deep losses if the market believes forced exit is underway</p>
+              <p><strong>false signal risk:</strong> short-lived losses do not force real exit; cost assumptions drift</p>
+              <div class="chip-row"><span class="tag">failure: losses use mixed cost definitions</span><span class="tag">failure: deep losses persist but capacity does not exit because financing is still available</span><span class="tag">failure: price rebounds without clearing hidden inventory</span></div>
+              <div class="chip-row"><span class="tag tag-accent">chart: 成本缺口与未来 1/3/6 个月 basket 表现图</span><span class="tag tag-accent">chart: 深亏损阈值事件窗口图</span><span class="tag tag-accent">chart: 缺口与能繁趋势对照图</span></div>
+            </article>
+            
+            <article class="indicator-card">
+              <div class="card-top">
+                <h3>猪粮比</h3>
+                <span class="status status-good">medium</span>
+              </div>
+              <p class="subtle"><strong>proxy_for:</strong> policy warning line and broad profitability stress</p>
+              <p><strong>regime_validity:</strong> all phases, but best as a validation metric</p>
+              <p><strong>lead_lag_window:</strong> hog price 0-2m; equity basket 0-3m through policy and stress framing</p>
+              <p><strong>hog path:</strong> very low ratio can support later tightening, but by itself it is not enough</p>
+              <p><strong>equity path:</strong> helpful when the market expects policy response or real de-capacity, weak when used alone</p>
+              <p><strong>false signal risk:</strong> policy framing can change the ratio without changing physical supply</p>
+              <div class="chip-row"><span class="tag">failure: ratio improves because grain falls, not because hog economics truly healed</span><span class="tag">failure: policy attention rises but no physical chain variable improves</span><span class="tag">failure: ratio is read as a trigger instead of a context metric</span></div>
+              <div class="chip-row"><span class="tag tag-accent">chart: 猪粮比与行业亏损状态图</span><span class="tag tag-accent">chart: 政策事件窗口图</span><span class="tag tag-accent">chart: ratio versus basket context panel</span></div>
+            </article>
+            
+            <article class="indicator-card">
+              <div class="card-top">
+                <h3>玉米价格</h3>
+                <span class="status status-good">medium</span>
+              </div>
+              <p class="subtle"><strong>proxy_for:</strong> slow feed-cost input</p>
+              <p><strong>regime_validity:</strong> all phases</p>
+              <p><strong>lead_lag_window:</strong> profitability 0-2m; equity basket 1-3m when cost is the main marginal story</p>
+              <p><strong>hog path:</strong> higher corn price is bearish for margins but only indirectly shapes future hog price through exit pressure</p>
+              <p><strong>equity path:</strong> negative for high-cost names; can become positive for low-cost leaders if it accelerates exit</p>
+              <p><strong>false signal risk:</strong> feed cost changes the depth of losses without changing the direction of spot supply</p>
+              <div class="chip-row"><span class="tag">failure: hog price dominates the narrative and feed only changes spread depth</span><span class="tag">failure: hedging or formula changes weaken sensitivity</span><span class="tag">failure: company-specific feed mix differs from industry assumptions</span></div>
+              <div class="chip-row"><span class="tag tag-accent">chart: 玉米与完全成本叠图</span><span class="tag tag-accent">chart: 成本冲击到 basket 的事件窗口图</span><span class="tag tag-accent">chart: corn regime heatmap</span></div>
+            </article>
+            
+            <article class="indicator-card">
+              <div class="card-top">
+                <h3>豆粕价格</h3>
+                <span class="status status-good">medium</span>
+              </div>
+              <p class="subtle"><strong>proxy_for:</strong> fast feed-cost input</p>
+              <p><strong>regime_validity:</strong> all phases</p>
+              <p><strong>lead_lag_window:</strong> profitability 0-2m; equity basket 1-3m mainly through spread pressure</p>
+              <p><strong>hog path:</strong> higher soymeal price hurts margins first and only later affects hog price if stress becomes persistent</p>
+              <p><strong>equity path:</strong> negative for basket in the short term; mixed later if it speeds up de-capacity</p>
+              <p><strong>false signal risk:</strong> short sharp soymeal moves can reverse before they matter for real capacity decisions</p>
+              <div class="chip-row"><span class="tag">failure: temporary soybean shock reverses quickly</span><span class="tag">failure: formula substitution weakens cost pass-through</span><span class="tag">failure: spot hog recovery offsets feed inflation</span></div>
+              <div class="chip-row"><span class="tag tag-accent">chart: 豆粕与完全成本叠图</span><span class="tag tag-accent">chart: soymeal shock event window</span><span class="tag tag-accent">chart: beans versus hog spread panel</span></div>
+            </article>
+            
+            <article class="indicator-card">
+              <div class="card-top">
+                <h3>龙头月度出栏增速</h3>
+                <span class="status status-good">medium-high</span>
+              </div>
+              <p class="subtle"><strong>proxy_for:</strong> concentration, scale discipline, and company-level divergence</p>
+              <p><strong>regime_validity:</strong> phase 3-4 strongest</p>
+              <p><strong>lead_lag_window:</strong> hog price 0-3m via supply pressure; equity basket 0-2m; single names 0-1m</p>
+              <p><strong>hog path:</strong> faster leader growth is bearish for spot if it adds supply faster than the tail exits</p>
+              <p><strong>equity path:</strong> can be neutral to positive for the basket if leaders take share efficiently, but it drives dispersion within single names</p>
+              <p><strong>false signal risk:</strong> company growth can improve market share while industry supply is still tightening</p>
+              <div class="chip-row"><span class="tag">failure: monthly shipment timing distorts growth</span><span class="tag">failure: volume growth hides poor margins or weak cash flow</span><span class="tag">failure: market rewards efficiency instead of penalizing supply</span></div>
+              <div class="chip-row"><span class="tag tag-accent">chart: 龙头出栏增速与 basket 对照图</span><span class="tag tag-accent">chart: 单名股分化 event panel</span><span class="tag tag-accent">chart: 集中度 versus spot panel</span></div>
+            </article>
+            </div>
+      </section>
+
+      <section class="panel" id="outcome-board">
+        <p class="eyebrow">indicator -> outcome</p>
+        <h2>Outcome board</h2>
+        <table>
+          <thead><tr><th>metric</th><th>target</th><th>horizon</th><th>sign</th><th>regime weight</th><th>visual</th><th>binding</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>能繁母猪存栏</td>
+              <td>hog price</td>
+              <td>6-12m</td>
+              <td>down -&gt; later bullish</td>
+              <td>baseline high / asf break medium / rebuild high / current high</td>
+              <td>lead-lag path chart</td>
+              <td><span class="status status-warn">needs-primary-binding</span></td>
+            </tr>
+            
+            <tr>
+              <td>母猪淘汰量 / 淘汰折价</td>
+              <td>hog price</td>
+              <td>4-9m</td>
+              <td>up -&gt; later bullish</td>
+              <td>baseline medium / asf break high / rebuild high / current high</td>
+              <td>threshold event chart</td>
+              <td><span class="status status-warn">needs-primary-binding</span></td>
+            </tr>
+            
+            <tr>
+              <td>仔猪价格与补栏意愿</td>
+              <td>hog price</td>
+              <td>3-6m</td>
+              <td>down -&gt; later bullish</td>
+              <td>baseline high / asf break medium / rebuild medium / current high</td>
+              <td>lead-lag path chart</td>
+              <td><span class="status status-soft">support-only</span></td>
+            </tr>
+            
+            <tr>
+              <td>出栏量</td>
+              <td>hog price</td>
+              <td>0-2m</td>
+              <td>up -&gt; bearish</td>
+              <td>baseline medium / asf break medium / rebuild medium / current medium</td>
+              <td>standardized time-series overlay</td>
+              <td><span class="status status-soft">support-only</span></td>
+            </tr>
+            
+            <tr>
+              <td>出栏均重</td>
+              <td>hog price</td>
+              <td>1-8w</td>
+              <td>up -&gt; bearish until rollover</td>
+              <td>baseline medium / asf break medium / rebuild high / current high</td>
+              <td>short-cycle pressure chart</td>
+              <td><span class="status status-soft">support-only</span></td>
+            </tr>
+            
+            <tr>
+              <td>标肥价差</td>
+              <td>hog price</td>
+              <td>1-6w</td>
+              <td>wider -&gt; bearish</td>
+              <td>baseline low / asf break medium / rebuild high / current high</td>
+              <td>short-cycle pressure chart</td>
+              <td><span class="status status-soft">support-only</span></td>
+            </tr>
+            
+            <tr>
+              <td>二育活跃度</td>
+              <td>hog price</td>
+              <td>1-4w</td>
+              <td>up -&gt; short-term supportive</td>
+              <td>baseline low / asf break medium / rebuild high / current high</td>
+              <td>short-cycle pressure chart</td>
+              <td><span class="status status-warn">needs-primary-binding</span></td>
+            </tr>
+            
+            <tr>
+              <td>屠宰量 / 开工率</td>
+              <td>hog price</td>
+              <td>0-4w</td>
+              <td>up -&gt; supportive if paired with easing pressure</td>
+              <td>baseline medium / asf break medium / rebuild high / current high</td>
+              <td>absorption confirmation chart</td>
+              <td><span class="status status-warn">needs-primary-binding</span></td>
+            </tr>
+            
+            <tr>
+              <td>冻品库存 / 库容率</td>
+              <td>hog price</td>
+              <td>2-8w</td>
+              <td>inventory down -&gt; supportive</td>
+              <td>baseline low / asf break high / rebuild high / current medium</td>
+              <td>inventory stress chart</td>
+              <td><span class="status status-soft">support-only</span></td>
+            </tr>
+            
+            <tr>
+              <td>全国猪价与区域价差</td>
+              <td>equity basket</td>
+              <td>0-8w</td>
+              <td>spot stabilization -&gt; supportive</td>
+              <td>baseline high / asf break high / rebuild high / current high</td>
+              <td>equity mapping chart</td>
+              <td><span class="status status-soft">support-only</span></td>
+            </tr>
+            
+            <tr>
+              <td>猪价 - 完全成本缺口</td>
+              <td>equity basket</td>
+              <td>1-6m</td>
+              <td>more negative -&gt; later supportive if persistent</td>
+              <td>baseline low / asf break medium / rebuild high / current high</td>
+              <td>cash-flow stress chart</td>
+              <td><span class="status status-soft">support-only</span></td>
+            </tr>
+            
+            <tr>
+              <td>猪粮比</td>
+              <td>equity basket</td>
+              <td>0-3m</td>
+              <td>very low -&gt; later supportive with confirmation</td>
+              <td>baseline medium / asf break medium / rebuild high / current medium</td>
+              <td>validation panel</td>
+              <td><span class="status status-warn">needs-primary-binding</span></td>
+            </tr>
+            
+            <tr>
+              <td>玉米价格</td>
+              <td>profitability</td>
+              <td>0-2m</td>
+              <td>up -&gt; margin negative</td>
+              <td>baseline medium / asf break low / rebuild medium / current medium</td>
+              <td>feed-cost impact chart</td>
+              <td><span class="status status-soft">support-only</span></td>
+            </tr>
+            
+            <tr>
+              <td>豆粕价格</td>
+              <td>profitability</td>
+              <td>0-2m</td>
+              <td>up -&gt; margin negative</td>
+              <td>baseline medium / asf break low / rebuild medium / current medium</td>
+              <td>feed-cost impact chart</td>
+              <td><span class="status status-soft">support-only</span></td>
+            </tr>
+            
+            <tr>
+              <td>龙头月度出栏增速</td>
+              <td>single-name dispersion</td>
+              <td>0-2m</td>
+              <td>higher -&gt; mixed, usually more dispersion</td>
+              <td>baseline low / asf break medium / rebuild high / current high</td>
+              <td>equity dispersion chart</td>
+              <td><span class="status status-soft">support-only</span></td>
+            </tr>
+            </tbody>
+        </table>
+      </section>
+
+      <section class="panel" id="weight-board">
+        <p class="eyebrow">regime priority</p>
+        <h2>Regime weight board</h2>
+        <table>
+          <thead><tr><th>metric</th><th>phase 1</th><th>phase 2</th><th>phase 3</th><th>phase 4</th><th>primary target</th><th>notes</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>能繁母猪存栏</td>
+              <td><span class="weight weight-high">high</span></td>
+              <td><span class="weight weight-medium">medium</span></td>
+              <td><span class="weight weight-high">high</span></td>
+              <td><span class="weight weight-high">high</span></td>
+              <td>hog price</td>
+              <td>slow anchor; pair with efficiency after ASF</td>
+            </tr>
+            
+            <tr>
+              <td>母猪淘汰量 / 淘汰折价</td>
+              <td><span class="weight weight-medium">medium</span></td>
+              <td><span class="weight weight-high">high</span></td>
+              <td><span class="weight weight-high">high</span></td>
+              <td><span class="weight weight-high">high</span></td>
+              <td>hog price</td>
+              <td>best real-exit confirmation in stress phases</td>
+            </tr>
+            
+            <tr>
+              <td>仔猪价格与补栏意愿</td>
+              <td><span class="weight weight-high">high</span></td>
+              <td><span class="weight weight-medium">medium</span></td>
+              <td><span class="weight weight-medium">medium</span></td>
+              <td><span class="weight weight-high">high</span></td>
+              <td>hog price</td>
+              <td>behavior layer; check circulation distortions</td>
+            </tr>
+            
+            <tr>
+              <td>出栏量</td>
+              <td><span class="weight weight-medium">medium</span></td>
+              <td><span class="weight weight-medium">medium</span></td>
+              <td><span class="weight weight-medium">medium</span></td>
+              <td><span class="weight weight-medium">medium</span></td>
+              <td>hog price</td>
+              <td>must be paired with absorption and weight</td>
+            </tr>
+            
+            <tr>
+              <td>出栏均重</td>
+              <td><span class="weight weight-medium">medium</span></td>
+              <td><span class="weight weight-medium">medium</span></td>
+              <td><span class="weight weight-high">high</span></td>
+              <td><span class="weight weight-high">high</span></td>
+              <td>hog price</td>
+              <td>best hidden-inventory proxy near bottoms</td>
+            </tr>
+            
+            <tr>
+              <td>标肥价差</td>
+              <td><span class="weight weight-low">low</span></td>
+              <td><span class="weight weight-medium">medium</span></td>
+              <td><span class="weight weight-high">high</span></td>
+              <td><span class="weight weight-high">high</span></td>
+              <td>hog price</td>
+              <td>short-cycle structure indicator</td>
+            </tr>
+            
+            <tr>
+              <td>二育活跃度</td>
+              <td><span class="weight weight-low">low</span></td>
+              <td><span class="weight weight-medium">medium</span></td>
+              <td><span class="weight weight-high">high</span></td>
+              <td><span class="weight weight-high">high</span></td>
+              <td>hog price</td>
+              <td>buffer or delay variable, not a full-cycle anchor</td>
+            </tr>
+            
+            <tr>
+              <td>屠宰量 / 开工率</td>
+              <td><span class="weight weight-medium">medium</span></td>
+              <td><span class="weight weight-medium">medium</span></td>
+              <td><span class="weight weight-high">high</span></td>
+              <td><span class="weight weight-high">high</span></td>
+              <td>hog price</td>
+              <td>downstream absorption check</td>
+            </tr>
+            
+            <tr>
+              <td>冻品库存 / 库容率</td>
+              <td><span class="weight weight-low">low</span></td>
+              <td><span class="weight weight-high">high</span></td>
+              <td><span class="weight weight-high">high</span></td>
+              <td><span class="weight weight-medium">medium</span></td>
+              <td>hog price</td>
+              <td>important when stock buffer matters</td>
+            </tr>
+            
+            <tr>
+              <td>全国猪价与区域价差</td>
+              <td><span class="weight weight-high">high</span></td>
+              <td><span class="weight weight-high">high</span></td>
+              <td><span class="weight weight-high">high</span></td>
+              <td><span class="weight weight-high">high</span></td>
+              <td>hog price</td>
+              <td>result variable, not enough on its own</td>
+            </tr>
+            
+            <tr>
+              <td>猪价 - 完全成本缺口</td>
+              <td><span class="weight weight-low">low</span></td>
+              <td><span class="weight weight-medium">medium</span></td>
+              <td><span class="weight weight-high">high</span></td>
+              <td><span class="weight weight-high">high</span></td>
+              <td>equity basket</td>
+              <td>best bottom-search validation in rebuild phases</td>
+            </tr>
+            
+            <tr>
+              <td>猪粮比</td>
+              <td><span class="weight weight-medium">medium</span></td>
+              <td><span class="weight weight-medium">medium</span></td>
+              <td><span class="weight weight-high">high</span></td>
+              <td><span class="weight weight-medium">medium</span></td>
+              <td>equity basket</td>
+              <td>policy and profitability context, not enough alone</td>
+            </tr>
+            
+            <tr>
+              <td>玉米价格</td>
+              <td><span class="weight weight-medium">medium</span></td>
+              <td><span class="weight weight-low">low</span></td>
+              <td><span class="weight weight-medium">medium</span></td>
+              <td><span class="weight weight-medium">medium</span></td>
+              <td>profitability</td>
+              <td>slow cost variable</td>
+            </tr>
+            
+            <tr>
+              <td>豆粕价格</td>
+              <td><span class="weight weight-medium">medium</span></td>
+              <td><span class="weight weight-low">low</span></td>
+              <td><span class="weight weight-medium">medium</span></td>
+              <td><span class="weight weight-medium">medium</span></td>
+              <td>profitability</td>
+              <td>fast cost variable</td>
+            </tr>
+            
+            <tr>
+              <td>龙头月度出栏增速</td>
+              <td><span class="weight weight-low">low</span></td>
+              <td><span class="weight weight-medium">medium</span></td>
+              <td><span class="weight weight-high">high</span></td>
+              <td><span class="weight weight-high">high</span></td>
+              <td>single-name dispersion</td>
+              <td>concentration plus balance-sheet filter</td>
+            </tr>
+            </tbody>
+        </table>
+      </section>
+
+      <section class="panel" id="signal-tests">
+        <p class="eyebrow">light validation</p>
+        <h2>Signal tests</h2>
+        <div class="grid-3">
+            <article class="mini-card">
+              <div class="card-top">
+                <h3>sow_inventory_decline_persistence</h3>
+                <span class="status status-good">computed</span>
+              </div>
+              <p class="subtle"><strong>signal_type:</strong> threshold</p>
+              <p><strong>spec:</strong> 能繁母猪同比低于阈值且 3 个月趋势继续向下</p>
+              <p><strong>target:</strong> hog_price | <strong>window:</strong> 6m / 9m / 12m</p>
+              <p><strong>sample_regimes:</strong> baseline, post_asf_rebuild, current_paradigm_test</p>
+              <p><strong>hit_rate:</strong> 41.67%</p>
+              <p><strong>median_outcome:</strong> -4.01%</p>
+              <p><strong>falsifier:</strong> 效率提升或政策冲击抵消供给收缩</p>
+            </article>
+            
+            <article class="mini-card">
+              <div class="card-top">
+                <h3>piglet_price_weakness_forward_repair</h3>
+                <span class="status status-warn">blocked-missing-data</span>
+              </div>
+              <p class="subtle"><strong>signal_type:</strong> threshold</p>
+              <p><strong>spec:</strong> 仔猪价格跌入弱区间并持续</p>
+              <p><strong>target:</strong> hog_price | <strong>window:</strong> 3m / 6m</p>
+              <p><strong>sample_regimes:</strong> baseline, current_paradigm_test</p>
+              <p><strong>hit_rate:</strong> pending-data</p>
+              <p><strong>median_outcome:</strong> pending-data</p>
+              <p><strong>falsifier:</strong> 流通受阻导致仔猪报价失真</p>
+            </article>
+            
+            <article class="mini-card">
+              <div class="card-top">
+                <h3>body_weight_rollover_short_cycle_repair</h3>
+                <span class="status status-warn">blocked-missing-data</span>
+              </div>
+              <p class="subtle"><strong>signal_type:</strong> threshold</p>
+              <p><strong>spec:</strong> 出栏均重从高位回落</p>
+              <p><strong>target:</strong> hog_price | <strong>window:</strong> 2w / 4w / 8w</p>
+              <p><strong>sample_regimes:</strong> post_asf_rebuild, current_paradigm_test</p>
+              <p><strong>hit_rate:</strong> pending-data</p>
+              <p><strong>median_outcome:</strong> pending-data</p>
+              <p><strong>falsifier:</strong> 均重下降来自被迫抛售而非库存改善</p>
+            </article>
+            
+            <article class="mini-card">
+              <div class="card-top">
+                <h3>deep_loss_bottom_hunting</h3>
+                <span class="status status-warn">blocked-missing-data</span>
+              </div>
+              <p class="subtle"><strong>signal_type:</strong> threshold</p>
+              <p><strong>spec:</strong> 猪价低于完全成本并持续若干期</p>
+              <p><strong>target:</strong> equity_basket | <strong>window:</strong> 1m / 3m / 6m</p>
+              <p><strong>sample_regimes:</strong> post_asf_rebuild, current_paradigm_test</p>
+              <p><strong>hit_rate:</strong> pending-data</p>
+              <p><strong>median_outcome:</strong> pending-data</p>
+              <p><strong>falsifier:</strong> 亏损不够久，或者融资支持导致出清没有发生</p>
+            </article>
+            
+            <article class="mini-card">
+              <div class="card-top">
+                <h3>short_cycle_combo_relief</h3>
+                <span class="status status-warn">blocked-missing-data</span>
+              </div>
+              <p class="subtle"><strong>signal_type:</strong> combo</p>
+              <p><strong>spec:</strong> 均重回落 + 标肥价差收敛 + 二育缓和</p>
+              <p><strong>target:</strong> hog_price | <strong>window:</strong> 2w / 4w / 8w</p>
+              <p><strong>sample_regimes:</strong> post_asf_rebuild, current_paradigm_test</p>
+              <p><strong>hit_rate:</strong> pending-data</p>
+              <p><strong>median_outcome:</strong> pending-data</p>
+              <p><strong>falsifier:</strong> 屠宰和库存没有同步改善，说明只是短暂交易修复</p>
+            </article>
+            
+            <article class="mini-card">
+              <div class="card-top">
+                <h3>deep_loss_plus_decapacity_combo</h3>
+                <span class="status status-warn">blocked-missing-data</span>
+              </div>
+              <p class="subtle"><strong>signal_type:</strong> combo</p>
+              <p><strong>spec:</strong> 深亏损 + 能繁下行 + 龙头出栏转弱</p>
+              <p><strong>target:</strong> equity_basket | <strong>window:</strong> 3m / 6m</p>
+              <p><strong>sample_regimes:</strong> post_asf_rebuild, current_paradigm_test</p>
+              <p><strong>hit_rate:</strong> pending-data</p>
+              <p><strong>median_outcome:</strong> pending-data</p>
+              <p><strong>falsifier:</strong> 效率提升或政策干预让深亏损没有转化为真实出清</p>
+            </article>
+            </div>
+      </section>
+
+      <section class="panel" id="false-signals">
+        <p class="eyebrow">guardrails</p>
+        <h2>False signal library</h2>
+        <div class="grid-3">
+            <article class="mini-card">
+              <p class="eyebrow">能繁母猪存栏 | post_asf_rebuild</p>
+              <h3>能繁下降</h3>
+              <p><strong>expected:</strong> 未来供给会明显收缩，猪价中期偏多</p>
+              <p><strong>actual:</strong> 效率提升和规模化复制抵消了部分头数下降的影响</p>
+              <p><strong>why failed:</strong> 只看头数，没有同时看生产效率和疾病恢复后的产能质量</p>
+              <p><strong>guardrail:</strong> 默认与母猪料销量、MSY/PSY 或公司生产效率一起看</p>
+            </article>
+            
+            <article class="mini-card">
+              <p class="eyebrow">仔猪价格与补栏意愿 | asf_break</p>
+              <h3>仔猪价格快速回落</h3>
+              <p><strong>expected:</strong> 补栏意愿走弱，未来供给会收缩</p>
+              <p><strong>actual:</strong> 部分价格失真来自流通受阻和区域疫情，不等于真实长期补栏意愿</p>
+              <p><strong>why failed:</strong> 把流通冲击当成供需本身变化</p>
+              <p><strong>guardrail:</strong> 疫情或运输冲击阶段先验证流通条件，再解读 piglet 信号</p>
+            </article>
+            
+            <article class="mini-card">
+              <p class="eyebrow">出栏均重 | current_paradigm_test</p>
+              <h3>均重回落</h3>
+              <p><strong>expected:</strong> 隐藏库存下降，短期价格有望修复</p>
+              <p><strong>actual:</strong> 回落来自被动抛售，后续现货并未走强</p>
+              <p><strong>why failed:</strong> 没有同步看屠宰、库存和标肥价差</p>
+              <p><strong>guardrail:</strong> 均重回落必须和吸收改善一起确认</p>
+            </article>
+            
+            <article class="mini-card">
+              <p class="eyebrow">二育活跃度 | post_asf_rebuild</p>
+              <h3>二育明显活跃</h3>
+              <p><strong>expected:</strong> 价格底部有承接，行业开始转强</p>
+              <p><strong>actual:</strong> 短期托底后供给后移，随后形成二次压力</p>
+              <p><strong>why failed:</strong> 把缓冲器错当成趋势拐点</p>
+              <p><strong>guardrail:</strong> 区分 short-covering support 与 structural tightening</p>
+            </article>
+            
+            <article class="mini-card">
+              <p class="eyebrow">猪价 - 完全成本缺口 | post_asf_rebuild</p>
+              <h3>行业深亏损</h3>
+              <p><strong>expected:</strong> 很快进入去化和股价底部</p>
+              <p><strong>actual:</strong> 现金流承受能力和融资支持延长了去化时长</p>
+              <p><strong>why failed:</strong> 只看亏损深度，没有看持续时间和资金链</p>
+              <p><strong>guardrail:</strong> 深亏损至少同时看 duration、债务、资本开支与母猪去化</p>
+            </article>
+            
+            <article class="mini-card">
+              <p class="eyebrow">屠宰量 / 开工率 | baseline</p>
+              <h3>屠宰量上升</h3>
+              <p><strong>expected:</strong> 下游需求改善，价格压力缓解</p>
+              <p><strong>actual:</strong> 屠宰量上升只是因为低价供给大量涌入</p>
+              <p><strong>why failed:</strong> 忽略了库存端和体重端是否同步改善</p>
+              <p><strong>guardrail:</strong> 屠宰量只能和库存、均重一起解释</p>
+            </article>
+            
+            <article class="mini-card">
+              <p class="eyebrow">股价 basket | current_paradigm_test</p>
+              <h3>股价先行反弹</h3>
+              <p><strong>expected:</strong> 基本面拐点已被确认</p>
+              <p><strong>actual:</strong> 后续现货、均重和库存没有验证，只是交易层镜像</p>
+              <p><strong>why failed:</strong> 把预期交易误判成基本面兑现</p>
+              <p><strong>guardrail:</strong> 股价先动必须显式标记 inferred，并要求链上变量补确认</p>
+            </article>
+            
+            <article class="mini-card">
+              <p class="eyebrow">政策扰动 | current_paradigm_test</p>
+              <h3>政策预警或收储消息强化</h3>
+              <p><strong>expected:</strong> 长期趋势已被扭转</p>
+              <p><strong>actual:</strong> 价格波动被改变，但长期供需方向未被逆转</p>
+              <p><strong>why failed:</strong> 把振幅管理当成供需拐点</p>
+              <p><strong>guardrail:</strong> 政策只改节奏时，不得上升为长期供需结论</p>
+            </article>
+            </div>
+      </section>
+
+      <section class="panel">
+        <p class="eyebrow">upstream and downstream</p>
+        <h2>Service boards for the main chain</h2>
+        <div class="grid-3">
+          <article class="mini-card">
+            <h3>Feed-cost impact board</h3>
+            <table>
+              <thead><tr><th>metric</th><th>target</th><th>path</th><th>buffer</th><th>accelerator</th></tr></thead>
+              <tbody><tr><td>玉米价格</td><td>full cost</td><td>玉米上行 -&gt; 完全成本抬升 -&gt; 亏损深度加深</td><td>猪价主导时，玉米只改变亏损深度</td><td>深亏损期与融资受限期，玉米可加速出清</td></tr><tr><td>豆粕价格</td><td>full cost</td><td>豆粕上行 -&gt; 饲料配方成本上行 -&gt; 短期利润更脆弱</td><td>短期冲高回落时，更像噪音</td><td>持续数月上行且猪价弱时，更可能加速退出</td></tr><tr><td>猪价 - 完全成本缺口</td><td>cash-flow stress</td><td>成本端与现货共同决定亏损深度</td><td>猪价快速修复时，成本只影响弹性大小</td><td>深亏损持久化时，缺口是最直接的出清压力板</td></tr></tbody>
+            </table>
+          </article>
+          <article class="mini-card">
+            <h3>Processing-demand impact board</h3>
+            <table>
+              <thead><tr><th>metric</th><th>target</th><th>path</th><th>supportive</th><th>non-supportive</th></tr></thead>
+              <tbody><tr><td>屠宰量 / 开工率</td><td>spot absorption</td><td>屠宰改善 -&gt; 供给被吸收 -&gt; 现货压力缓解</td><td>均重回落、库存不升、现货止跌</td><td>屠宰高但库存和体重继续恶化</td></tr><tr><td>冻品库存 / 库容率</td><td>stock buffer</td><td>库存去化 -&gt; 托底现货；库存累积 -&gt; 拖累后续现货</td><td>库存回落且价格不再破位</td><td>库存下降只是因为低价抛售减少</td></tr><tr><td>进口猪肉 / 冻品到港</td><td>marginal supply</td><td>进口增加 -&gt; 边际供给加压 -&gt; 去化放缓</td><td>进口下降与国内去化同向</td><td>进口变化小，但市场错误放大其影响</td></tr></tbody>
+            </table>
+          </article>
+          <article class="mini-card">
+            <h3>Equity mapping contract</h3>
+            <p><strong>basket_target:</strong> 等权 pig breeding equity basket</p>
+            <div class="chip-row"><span class="tag">牧原股份</span><span class="tag">温氏股份</span><span class="tag">新希望</span><span class="tag">巨星农牧</span><span class="tag">神农集团</span><span class="tag">天康生物</span></div>
+            <div class="chip-row"><span class="tag tag-accent">single: 牧原股份</span><span class="tag tag-accent">single: 温氏股份</span><span class="tag tag-accent">single: 新希望</span></div>
+            <div class="chip-row"><span class="tag">先分清楚变量主要映射到 hog price、profitability 还是 equity expectations。</span><span class="tag">先解释 basket，再解释单名股分化，避免把公司特例误写成行业规律。</span><span class="tag">股价先于现货时一律标记 inferred，直到主链变量补充确认。</span></div>
+          </article>
+        </div>
+      </section>
+
+      <p class="footnote">as_of: 2026-04-10 | validation_mode: light-regime-segmented | source: F:\Codex\projects\research-report\config\pig-industry-data-lab-config.json</p>
+    </main>
+  </body>
+</html>

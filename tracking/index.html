@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>跟踪系统 | 中国生猪周期研究</title>
+    <meta
+      name="description"
+      content="中国生猪行业 tracking 页面：daily、weekly、monthly、事件驱动的跟踪框架与公开样例。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/site.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark">Public research layer</span>
+          <span class="brand-title">中国生猪周期研究</span>
+        </div>
+        <nav class="nav-links" aria-label="站点导航">
+          <a href="../index.html">首页</a>
+          <a href="../framework/index.html">框架</a>
+          <a href="../regime/index.html">阶段</a>
+          <a class="active" href="./index.html">跟踪</a>
+          <a href="../companies/index.html">公司映射</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div>
+            <span class="eyebrow">Tracking system</span>
+            <h1>不是每天都在找新观点，而是在持续验证旧判断。</h1>
+            <p class="lead">
+              跟踪系统的目标不是制造噪音，而是把变量变化直接映射到判断层级：这组变化是在
+              强化底板、修正条件结论，还是只给某个待验证命题加分减分。
+            </p>
+          </div>
+          <aside class="hero-side">
+            <div class="callout">
+              <span class="status-pill status-conditional">Current state</span>
+              <strong>去化必要性增强，但去化现实性仍待确认。</strong>
+              <p>
+                当前行业仍应按“弱现实 + 远期修复预期并存”的框架处理。想把判断升级到拐点确认，
+                必须看到慢变量、现实供给和短周期行为一起改善。
+              </p>
+            </div>
+          </aside>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <div>
+              <span class="eyebrow">Cadence</span>
+              <h2>四种跟踪节奏</h2>
+            </div>
+            <p>
+              日更看结果变量和交易镜像，周更看行为变量，月更看慢变量与层级变化，事件驱动则负责
+              把冲击映射到主链路径与 falsifier。
+            </p>
+          </div>
+          <div class="cadence-grid">
+            <article class="cadence-card">
+              <span class="card-label">Daily</span>
+              <h3>结果变量与盘面</h3>
+              <p>
+                猪价、区域价差、<code>LH</code>、核心猪股相对强弱。重点是识别市场是否在提前交易修复，
+                但不把盘面误写成确认层。
+              </p>
+            </article>
+            <article class="cadence-card">
+              <span class="card-label">Weekly</span>
+              <h3>短周期行为变量</h3>
+              <p>
+                均重、标肥价差、二育、屠宰开工、冻品库存。这些变量最能解释“为什么现在还是不涨”
+                或“为什么短期跌不动了”。
+              </p>
+            </article>
+            <article class="cadence-card">
+              <span class="card-label">Monthly</span>
+              <h3>慢变量与层级变化</h3>
+              <p>
+                能繁母猪、仔猪、龙头月报、猪价-成本缺口和政策数据。真正会改写行业层级的变量，
+                通常集中在这一层。
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <div>
+              <span class="eyebrow">Watchboard</span>
+              <h2>当前 watchboard</h2>
+            </div>
+            <p>
+              公开版把当前最重要的变量分成三组：月度优先、周度优先和交易镜像。它们共同服务于同一个
+              问题：行业到底是在深亏损中磨底，还是已经进入确认过的现实去化。
+            </p>
+          </div>
+          <div class="three-up">
+            <article class="watch-card">
+              <h3>Monthly priority</h3>
+              <ul class="list-clean">
+                <li>能繁母猪存栏</li>
+                <li>母猪淘汰量 / 淘汰折价</li>
+                <li>出栏量</li>
+                <li>龙头月度出栏增速</li>
+                <li>猪价 - 完全成本缺口</li>
+                <li>猪粮比</li>
+              </ul>
+            </article>
+            <article class="watch-card">
+              <h3>Weekly priority</h3>
+              <ul class="list-clean">
+                <li>出栏均重</li>
+                <li>标肥价差</li>
+                <li>二育活跃度</li>
+                <li>屠宰量 / 开工率</li>
+                <li>冻品库存 / 库容率</li>
+              </ul>
+            </article>
+            <article class="watch-card">
+              <h3>Market mirror</h3>
+              <ul class="list-clean">
+                <li><code>LH</code> 基差 / 期限结构</li>
+                <li>优质猪股与高风险猪股的相对强弱</li>
+                <li>盘面抢跑是否被后续供给变量验证</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <div>
+              <span class="eyebrow">Checklists</span>
+              <h2>确认项与反证项</h2>
+            </div>
+            <p>
+              研究不是累积更多“理由”，而是不断更新哪些东西足以升级判断，哪些事实一旦出现就要主动
+              把判断降级。
+            </p>
+          </div>
+          <div class="two-up">
+            <article class="panel">
+              <h3>Confirmation checklist</h3>
+              <ul class="list-clean">
+                <li>官方能繁母猪数据连续、有效下降</li>
+                <li>龙头月报显示出栏增速回落或兑现质量变化</li>
+                <li>出栏均重与二育活跃度同步缓和</li>
+                <li>冻品与屠宰吸收改善，不再只是被动承接</li>
+                <li>远月 <code>LH</code> 的偏强能被后续供给变量确认</li>
+              </ul>
+            </article>
+            <article class="panel">
+              <h3>Falsifiers</h3>
+              <ul class="list-clean">
+                <li>母猪和出栏没有继续走弱，只是现货技术性反弹</li>
+                <li>均重持续高位、二育扰动没有缓和</li>
+                <li>龙头月报维持高供给 plateau</li>
+                <li>远月和股票先走强，但官数与月报不配合</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="daily-sample">
+          <div class="section-header">
+            <div>
+              <span class="eyebrow">Public samples</span>
+              <h2>Daily sample</h2>
+            </div>
+            <p>
+              Daily 只回答一个问题：市场今天在交易什么，它与行业现实之间有没有出现新的张力。
+            </p>
+          </div>
+          <article class="note-card">
+            <div class="note-summary">
+              <div class="note-meta">
+                <span class="chip">2026-04-10</span>
+                <span class="chip">Evidence: extracted + inferred</span>
+                <span class="chip">Cadence: daily</span>
+              </div>
+              <p>
+                <strong>Core judgment:</strong>
+                日内更像“盘面在交易修复概率，而现实层仍未确认”。现货仍弱，区域价差并没有给出强修复
+                信号，远月 <code>LH</code> 和优质猪股如果偏强，只能暂时理解成预期交易。
+              </p>
+              <ul class="list-clean">
+                <li>现货偏弱说明现实供给压力仍在，至少尚不足以支持“已经见底”的强说法。</li>
+                <li>远月 <code>LH</code> 若强于现货，当前仍应归入交易镜像，而非现实确认。</li>
+                <li>主链龙头相对高风险猪股更稳，说明市场更在意质量与穿越能力。</li>
+                <li>下一步仍需回到月报、能繁与均重，验证盘面是否只是抢跑。</li>
+              </ul>
+            </div>
+          </article>
+        </section>
+
+        <section class="section" id="weekly-sample">
+          <div class="section-header">
+            <div>
+              <span class="eyebrow">Public samples</span>
+              <h2>Weekly sample</h2>
+            </div>
+            <p>
+              周度层的意义在于解释短周期行为变量。很多现货弱势并不是方向错了，而是均重、二育和库存
+              张力还没有真正释放完。
+            </p>
+          </div>
+          <article class="note-card">
+            <div class="note-summary">
+              <div class="note-meta">
+                <span class="chip">2026-04-09</span>
+                <span class="chip">Cadence: weekly</span>
+                <span class="chip">核心变量：均重、二育、豆粕、LH</span>
+              </div>
+              <p>
+                <strong>Core judgment:</strong>
+                价格仍弱、均重和二育承接仍是主要压力源，成本端暂未足以单独扭转主链判断，当前更接近
+                弱势磨底，而非已确认反转。
+              </p>
+              <ul class="list-clean">
+                <li>出栏均重仍高，说明隐藏库存压力没有真正释放完。</li>
+                <li>二育承接偏弱，使得底部缓冲仍然不足。</li>
+                <li>豆粕偏强会加深亏损，但不足以独立决定价格方向。</li>
+                <li><code>LH</code> 仍只能当作 watch mirror，不能直接升格为确认层。</li>
+              </ul>
+            </div>
+          </article>
+        </section>
+
+        <section class="section" id="monthly-sample">
+          <div class="section-header">
+            <div>
+              <span class="eyebrow">Public samples</span>
+              <h2>Monthly sample</h2>
+            </div>
+            <p>
+              月度层最接近行业判断本身，核心不是“价格会不会反弹”，而是“深亏损能否传导成真实供给收缩”。
+            </p>
+          </div>
+          <article class="note-card">
+            <div class="note-summary">
+              <div class="note-meta">
+                <span class="chip">2026-04-10</span>
+                <span class="chip">Cadence: monthly</span>
+                <span class="chip">Conclusion tier: Tier B / Tier C</span>
+              </div>
+              <p>
+                <strong>Core judgment:</strong>
+                行业已经确认回到深亏损区，去化必要性被明显强化；但慢变量和现实供给尚未形成足够强的
+                同步转弱，因此“当前已确认进入加速去化阶段”仍不能升级。
+              </p>
+              <ul class="list-clean">
+                <li>深亏损强化了去化必要性，这是当前最强的中层判断。</li>
+                <li>高位母猪、效率提升、高均重与龙头出栏兑现共同构成现实压力。</li>
+                <li>若后续母猪、出栏、均重、仔猪和龙头月报继续共振转弱，才有资格讨论升级。</li>
+                <li>在此之前，优质猪股和远月 <code>LH</code> 更适合被理解为修复概率的交易镜像。</li>
+              </ul>
+            </div>
+          </article>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <div>
+              <span class="eyebrow">Trading mirror</span>
+              <h2>现货、股票与 LH 各自告诉我们什么</h2>
+            </div>
+            <p>
+              交易层必须早纳入，但不能反客为主。公开版默认把三者拆开看：现货给现实，股票给前瞻，
+              <code>LH</code> 给远期预期结构。
+            </p>
+          </div>
+          <div class="three-up">
+            <article class="metric-card">
+              <h3>Spot</h3>
+              <p>
+                现货是行业现实层的直接结果变量。它告诉我们现在赚不赚钱，但它本身不一定能解释未来是否
+                会去化、会不会修复。
+              </p>
+            </article>
+            <article class="metric-card">
+              <h3>Equities</h3>
+              <p>
+                股票更早交易未来利润率、质量分层和修复概率。它的领先很重要，但领先不等于必然正确。
+              </p>
+            </article>
+            <article class="metric-card">
+              <h3><code>LH</code></h3>
+              <p>
+                <code>LH</code> 提供了远月预期镜像，有助于观察近月弱现实与远月修复预期之间的张力。
+                但它不能单独定义行业状态。
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <div>
+              <span class="eyebrow">Open gaps</span>
+              <h2>当前仍未补齐的缺口</h2>
+            </div>
+            <p>
+              公开版不伪装成“已经全部验证完毕”。这几项缺口会直接影响我们是否能把条件性判断升级成
+              更强的行业结论。
+            </p>
+          </div>
+          <div class="two-up">
+            <article class="panel">
+              <h3>数据层缺口</h3>
+              <ul class="list-clean">
+                <li>慢变量仍缺统一的 primary-series binding</li>
+                <li>二育活跃度缺更稳定的高频口径</li>
+                <li><code>LH</code> 基差与期限结构尚未拉成独立验证时间线</li>
+              </ul>
+            </article>
+            <article class="panel">
+              <h3>判断层缺口</h3>
+              <ul class="list-clean">
+                <li>新范式三条命题仍缺更长序列独立验证</li>
+                <li>龙头月报与行业 ledger 还没有完全统一压入同一张表</li>
+                <li>当前近现实结论仍以 sellside-first 框架为主</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>
+          跟踪页强调的是判断契约，而不是数据堆砌。后续新增更新也应继续遵守同一顺序：
+          <code>what changed -> why it matters -> confirmation -> falsifier</code>。
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
