@@ -1,0 +1,60 @@
+{
+  "as_of_date": "2026-04-03",
+  "current_phase": "底部磨底 / 去化验证段",
+  "headline_judgment": "行业仍在底部磨底到去化验证段，远端母猪收缩是支撑，但近端效率提升与出栏释放仍压着现货。",
+  "judgment_summary": {
+    "current_state": "猪价处在低位，去化逻辑成立但还没完全走到现货拐点确认。",
+    "why_not_more_bullish": "均重仍高、区域价差仍宽、龙头月报没有同步熄火，说明短期供给不紧。",
+    "why_not_more_bearish": "母猪同比仍下行，现金流压力仍在，若去化继续，远月供给会继续收缩。",
+    "what_changes_judgment": "看均重、猪价-成本、母猪、龙头出栏增速四组变量是否同向确认。"
+  },
+  "confidence_level": "medium",
+  "evidence_mix": {
+    "official": 6,
+    "candidate_mirror": 2,
+    "company_disclosure": 2,
+    "support_candidate": 1
+  },
+  "bullish_factors": [
+    "能繁母猪同比仍为负，远端供给收缩方向没有被推翻",
+    "规模场利润历史上仍处低位区间，去化压力仍在",
+    "成本端没有重新显著上冲，行业未被成本反杀"
+  ],
+  "bearish_factors": [
+    "宰后均重仍偏高，说明近端供给释放尚未真正收紧",
+    "区域价差仍大，现货不是全国性紧平衡状态",
+    "仔猪价格和高频镜像还没给出强补栏修复信号"
+  ],
+  "confirmation_needed": [
+    "宰后均重是否连续回落并回到 87 公斤下方",
+    "全国猪价能否站稳 13 元/公斤上方",
+    "龙头月报出栏同比是否继续放缓",
+    "能繁母猪月度是否继续环比下行"
+  ],
+  "downgrade_triggers": [
+    "均重重新抬升并维持高位",
+    "母猪止跌回升但猪价仍无修复",
+    "股价先强而现货与月报未验证"
+  ],
+  "upgrade_triggers": [
+    "均重下行 + 区域价差收敛 + 猪价站稳 13.5 元/公斤",
+    "母猪继续下行且龙头月报增速同步放缓"
+  ],
+  "staleness_warnings": [
+    "能繁母猪 数据存在滞后: 滞后 102 天",
+    "规模场利润 数据存在滞后: 滞后 224 天"
+  ],
+  "why_not_more_bullish": "均重仍高、区域价差仍宽、龙头月报没有同步熄火，说明短期供给不紧。",
+  "why_not_more_bearish": "母猪同比仍下行，现金流压力仍在，若去化继续，远月供给会继续收缩。",
+  "current_supporting_data": {
+    "spot_price": 12.5369,
+    "carcass_weight": 88.99,
+    "regional_spread": 3.378,
+    "sow_yoy": -2.9,
+    "sow_mom": -1.8,
+    "piglet_price": 27.57,
+    "scale_profit_per_head": -57.0
+  },
+  "indicator_count": 8,
+  "company_count": 13
+}
