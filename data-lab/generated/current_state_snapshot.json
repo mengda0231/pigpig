@@ -55,6 +55,80 @@
     "piglet_price": 27.57,
     "scale_profit_per_head": -57.0
   },
+  "high_frequency_directionals": [
+    {
+      "metric": "全国生猪均价",
+      "latest_state": "12.54 元/公斤；近 5 日 -0.29 元/公斤",
+      "direction_to_industry": "近端偏空",
+      "first_order_path": "现货低位 -> 盈利仍弱 -> 板块修复仍要等供给验证跟上。",
+      "what_it_supports": "支持行业仍在底部磨底，而不是已经完成现货反转。",
+      "what_it_does_not_confirm": "不单独确认远端母猪收缩是否会顺利传导到未来猪价。",
+      "evidence_mode": "extracted",
+      "evidence_tier": "official-derived",
+      "date": "2026-04-03"
+    },
+    {
+      "metric": "宰后均重",
+      "latest_state": "88.99 kg；近 4 周 +0.35 kg",
+      "direction_to_industry": "近端偏空",
+      "first_order_path": "均重偏高 -> 可售体重供给更足 -> 近端猪价修复被压住。",
+      "what_it_supports": "支持短期供给没有真正收紧，现货修复还不够扎实。",
+      "what_it_does_not_confirm": "不单独否定中期去化方向，因为它更多反映近端节奏。",
+      "evidence_mode": "extracted",
+      "evidence_tier": "official-derived",
+      "date": "2026-04-03"
+    },
+    {
+      "metric": "区域价差",
+      "latest_state": "3.38 元/公斤；近 4 周 -1.27 元/公斤",
+      "direction_to_industry": "现货分化偏空",
+      "first_order_path": "区域价差偏宽 -> 全国不是一致性紧平衡 -> 板块很难靠单一区域涨价就确认反转。",
+      "what_it_supports": "支持当前更像局部波动而不是全国性现货共振修复。",
+      "what_it_does_not_confirm": "不确认远月供给趋势，也不能替代龙头月报和母猪口径。",
+      "evidence_mode": "extracted",
+      "evidence_tier": "official-derived",
+      "date": "2026-04-03"
+    },
+    {
+      "metric": "仔猪价格周度镜像",
+      "latest_state": "27.67 元/公斤；近 4 周 +0.8 元/公斤；滞后 45 天",
+      "direction_to_industry": "中期偏多",
+      "first_order_path": "仔猪不热 -> 补栏意愿一般 -> 新一轮供给扩张冲动不足。",
+      "what_it_supports": "支持当前没有看到强补栏带来的未来供给再扩张信号。",
+      "what_it_does_not_confirm": "不能替代官方月度仔猪价和母猪序列，只能做高频补窗。",
+      "evidence_mode": "guarded-extracted",
+      "evidence_tier": "candidate-mirror",
+      "date": "2026-02-26"
+    },
+    {
+      "metric": "猪粮比周度镜像",
+      "latest_state": "5.5；近 4 周 -0.13；滞后 60 天",
+      "direction_to_industry": "中期偏多",
+      "first_order_path": "猪粮比偏低 -> 现金流承压 -> 去化更容易继续，而不是马上扩产。",
+      "what_it_supports": "支持中期出清压力仍在，远端供给收缩逻辑没有被推翻。",
+      "what_it_does_not_confirm": "不确认当天猪价会不会立刻反弹，也不替代官方利润序列。",
+      "evidence_mode": "guarded-extracted",
+      "evidence_tier": "candidate-mirror",
+      "date": "2026-02-11"
+    },
+    {
+      "metric": "白条价周度代理",
+      "latest_state": "17.86 元/公斤；周环比 -0.9%；滞后 56 天",
+      "direction_to_industry": "需求承接偏弱",
+      "first_order_path": "白条价不强 -> 下游吸收一般 -> 现货修复弹性有限。",
+      "what_it_supports": "支持下游需求并没有给出足够强的托底信号。",
+      "what_it_does_not_confirm": "不能单独说明供给是否已经去化完成，它更像下游承接代理。",
+      "evidence_mode": "guarded-extracted",
+      "evidence_tier": "candidate-mirror",
+      "date": "2026-02-15"
+    }
+  ],
+  "official_status_notes": [
+    "官方月度产品页中的价格/产量口径当前最新到 2026-02-28，能繁当前最新到 2025-12-31。",
+    "官方成本端结构化市场口径当前最新到 2026-03-31。",
+    "官方规模场利润/猪粮比序列目前只更新到 2025-08-31；在后续已抓取月度产品页中暂未继续看到该指标。",
+    "高频候选镜像当前最新到 2026-02-11，仅用于补高频空窗。"
+  ],
   "indicator_count": 8,
   "company_count": 13
 }

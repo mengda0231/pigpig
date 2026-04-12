@@ -20,12 +20,14 @@
       "shipment_2023": "pending",
       "shipment_2024": "derived-from-reporting-mix",
       "shipment_2025": "derived-from-reporting-mix",
+      "guidance_2026": "candidate-forward",
+      "guidance_2027": "pending",
       "sow_inventory_latest": "support-candidate",
       "psy_latest": "support-candidate",
       "avg_cost_latest": "support-candidate"
     },
-    "notes": "已覆盖 5/12；精确月份 10/12 + 区间汇总补齐；精确月份 10/12 + 区间汇总补齐；zsxq_file_study | 2025-10...；zsxq_file_study | 2026-01...；基于 file-study 正文正则提取，需官方披...",
-    "evidence_badge": "出栏:derived-from-reporting-mix | 母猪:support-candidate | PSY:support-candidate | 成本:support-candidate"
+    "notes": "已覆盖 5/12；精确月份 10/12 + 区间汇总补齐；精确月份 10/12 + 区间汇总补齐；年报候选 | 2026-03-28 | 2025年年度报告；知识星球摘录 | 2025-10-31 | medium；知识星球摘录 | 2026-01-09 | medium；基于 file-study 正文正则提取，需官方披...",
+    "evidence_badge": "出栏:reporting-mix | 指引26:年报候选 | 指引27:待补 | 母猪:support 候选 | PSY:support 候选 | 成本:support 候选"
   },
   {
     "company_name": "温氏股份",
@@ -36,7 +38,7 @@
     "shipment_latest_ytd": "934.3",
     "shipment_latest_month": "2026-03",
     "shipment_latest_yoy": "19.0%",
-    "guidance_2026": "",
+    "guidance_2026": "3800 - 3900 万头",
     "guidance_2027": "",
     "sow_inventory_latest": "",
     "psy_latest": "PSY 达到 23.7",
@@ -48,12 +50,14 @@
       "shipment_2023": "pending",
       "shipment_2024": "verified",
       "shipment_2025": "verified",
+      "guidance_2026": "support-candidate",
+      "guidance_2027": "pending",
       "sow_inventory_latest": "pending-company-capture",
       "psy_latest": "company-disclosure-extracted",
       "avg_cost_latest": "待补"
     },
-    "notes": "已覆盖 3/12；12/12 月报或拆分已覆盖；12/12 月报或拆分已覆盖；company_disclosure_pdf | ...；尚无结构化成本字段",
-    "evidence_badge": "出栏:verified | 母猪:pending-company-capture | PSY:company-disclosure-extracted | 成本:待补"
+    "notes": "已覆盖 3/12；12/12 月报或拆分已覆盖；12/12 月报或拆分已覆盖；support 候选 | 2025-09-04 | ind...；公司披露摘录 | 2025-04-24 | high；尚无结构化成本字段",
+    "evidence_badge": "出栏:已验证 | 指引26:support 候选 | 指引27:待补 | 母猪:待补 | PSY:披露摘录 | 成本:待补"
   },
   {
     "company_name": "新希望",
@@ -76,12 +80,14 @@
       "shipment_2023": "pending",
       "shipment_2024": "verified",
       "shipment_2025": "pending",
+      "guidance_2026": "pending",
+      "guidance_2027": "pending",
       "sow_inventory_latest": "pending-company-capture",
       "psy_latest": "company-disclosure-extracted",
       "avg_cost_latest": "待补"
     },
-    "notes": "已覆盖 3/12；12/12 月报或拆分已覆盖；已覆盖 11/12；company_disclosure_pdf | ...；尚无结构化成本字段",
-    "evidence_badge": "出栏:pending | 母猪:pending-company-capture | PSY:company-disclosure-extracted | 成本:待补"
+    "notes": "已覆盖 3/12；12/12 月报或拆分已覆盖；已覆盖 11/12；公司披露摘录 | 2025-08-30 | high；尚无结构化成本字段",
+    "evidence_badge": "出栏:待补 | 指引26:待补 | 指引27:待补 | 母猪:待补 | PSY:披露摘录 | 成本:待补"
   },
   {
     "company_name": "巨星农牧",
@@ -104,12 +110,14 @@
       "shipment_2023": "pending",
       "shipment_2024": "pending",
       "shipment_2025": "verified",
+      "guidance_2026": "pending",
+      "guidance_2027": "pending",
       "sow_inventory_latest": "pending-company-capture",
       "psy_latest": "pending-company-capture",
       "avg_cost_latest": "待补"
     },
     "notes": "已覆盖 0/12；已覆盖 0/12；12/12 月报或拆分已覆盖；尚无结构化成本字段",
-    "evidence_badge": "出栏:verified | 母猪:pending-company-capture | PSY:pending-company-capture | 成本:待补"
+    "evidence_badge": "出栏:已验证 | 指引26:待补 | 指引27:待补 | 母猪:待补 | PSY:待补 | 成本:待补"
   },
   {
     "company_name": "神农集团",
@@ -120,7 +128,7 @@
     "shipment_latest_ytd": "81.7",
     "shipment_latest_month": "2026-03",
     "shipment_latest_yoy": "-9.9%",
-    "guidance_2026": "",
+    "guidance_2026": "350 万头",
     "guidance_2027": "500 万头",
     "sow_inventory_latest": "能繁母猪约13-14万头",
     "psy_latest": "PSY年平均29.5",
@@ -132,12 +140,14 @@
       "shipment_2023": "pending",
       "shipment_2024": "verified",
       "shipment_2025": "verified",
+      "guidance_2026": "support-candidate",
+      "guidance_2027": "candidate-long-term",
       "sow_inventory_latest": "support-candidate",
       "psy_latest": "support-candidate",
       "avg_cost_latest": "support-candidate"
     },
-    "notes": "已覆盖 3/12；12/12 月报或拆分已覆盖；12/12 月报或拆分已覆盖；zsxq_file_study | 2026-01...；zsxq_file_study | 2026-01...；基于 file-study 正文正则提取，需官方披...",
-    "evidence_badge": "出栏:verified | 母猪:support-candidate | PSY:support-candidate | 成本:support-candidate"
+    "notes": "已覆盖 3/12；12/12 月报或拆分已覆盖；12/12 月报或拆分已覆盖；support 候选 | 2026-02-27 | ind...；年报候选 | 2025-04-29 | 云南神农农业产业集...；知识星球摘录 | 2026-01-14 | medium；知识星球摘录 | 2026-01-14 | medium；基于 file-study 正文正则提取，需官方披...",
+    "evidence_badge": "出栏:已验证 | 指引26:support 候选 | 指引27:长期目标候选 | 母猪:support 候选 | PSY:support 候选 | 成本:support 候选"
   },
   {
     "company_name": "天康生物",
@@ -148,7 +158,7 @@
     "shipment_latest_ytd": "89.9",
     "shipment_latest_month": "2026-03",
     "shipment_latest_yoy": "27.7%",
-    "guidance_2026": "",
+    "guidance_2026": "500 万头",
     "guidance_2027": "",
     "sow_inventory_latest": "",
     "psy_latest": "",
@@ -160,12 +170,14 @@
       "shipment_2023": "pending",
       "shipment_2024": "verified",
       "shipment_2025": "verified",
+      "guidance_2026": "support-candidate",
+      "guidance_2027": "pending",
       "sow_inventory_latest": "pending-company-capture",
       "psy_latest": "pending-company-capture",
       "avg_cost_latest": "support-candidate"
     },
-    "notes": "已覆盖 3/12；12/12 月报或拆分已覆盖；12/12 月报或拆分已覆盖；基于 file-study 正文正则提取，需官方披...",
-    "evidence_badge": "出栏:verified | 母猪:pending-company-capture | PSY:pending-company-capture | 成本:support-candidate"
+    "notes": "已覆盖 3/12；12/12 月报或拆分已覆盖；12/12 月报或拆分已覆盖；support 候选 | 2025-09-04 | ind...；基于 file-study 正文正则提取，需官方披...",
+    "evidence_badge": "出栏:已验证 | 指引26:support 候选 | 指引27:待补 | 母猪:待补 | PSY:待补 | 成本:support 候选"
   },
   {
     "company_name": "德康农牧",
@@ -176,7 +188,7 @@
     "shipment_latest_ytd": "",
     "shipment_latest_month": "",
     "shipment_latest_yoy": "",
-    "guidance_2026": "",
+    "guidance_2026": "1500 万头",
     "guidance_2027": "",
     "sow_inventory_latest": "",
     "psy_latest": "PSY 提升至 27",
@@ -188,12 +200,14 @@
       "shipment_2023": "pending",
       "shipment_2024": "pending",
       "shipment_2025": "pending",
+      "guidance_2026": "support-candidate",
+      "guidance_2027": "pending",
       "sow_inventory_latest": "pending-company-capture",
       "psy_latest": "support-candidate",
       "avg_cost_latest": "待补"
     },
-    "notes": "已覆盖 0/12；已覆盖 0/12；已覆盖 0/12；zsxq_file_study | 2025-08...；尚无结构化成本字段",
-    "evidence_badge": "出栏:pending | 母猪:pending-company-capture | PSY:support-candidate | 成本:待补"
+    "notes": "已覆盖 0/12；已覆盖 0/12；已覆盖 0/12；support 候选 | 2025-06-04 | ind...；知识星球摘录 | 2025-08-18 | medium；尚无结构化成本字段",
+    "evidence_badge": "出栏:待补 | 指引26:support 候选 | 指引27:待补 | 母猪:待补 | PSY:support 候选 | 成本:待补"
   },
   {
     "company_name": "正邦科技",
@@ -216,12 +230,14 @@
       "shipment_2023": "pending",
       "shipment_2024": "verified",
       "shipment_2025": "verified",
+      "guidance_2026": "pending",
+      "guidance_2027": "pending",
       "sow_inventory_latest": "待补",
       "psy_latest": "待补",
       "avg_cost_latest": "待补"
     },
     "notes": "已覆盖 3/12；12/12 月报或拆分已覆盖；12/12 月报或拆分已覆盖；尚无结构化成本字段",
-    "evidence_badge": "出栏:verified | 母猪:待补 | PSY:待补 | 成本:待补"
+    "evidence_badge": "出栏:已验证 | 指引26:待补 | 指引27:待补 | 母猪:待补 | PSY:待补 | 成本:待补"
   },
   {
     "company_name": "天邦食品",
@@ -244,12 +260,14 @@
       "shipment_2023": "pending",
       "shipment_2024": "verified",
       "shipment_2025": "verified",
+      "guidance_2026": "pending",
+      "guidance_2027": "pending",
       "sow_inventory_latest": "待补",
       "psy_latest": "待补",
       "avg_cost_latest": "待补"
     },
     "notes": "已覆盖 3/12；12/12 月报或拆分已覆盖；12/12 月报或拆分已覆盖；尚无结构化成本字段",
-    "evidence_badge": "出栏:verified | 母猪:待补 | PSY:待补 | 成本:待补"
+    "evidence_badge": "出栏:已验证 | 指引26:待补 | 指引27:待补 | 母猪:待补 | PSY:待补 | 成本:待补"
   },
   {
     "company_name": "傲农生物",
@@ -260,7 +278,7 @@
     "shipment_latest_ytd": "50",
     "shipment_latest_month": "2026-03",
     "shipment_latest_yoy": "41.3%",
-    "guidance_2026": "",
+    "guidance_2026": "250 万头",
     "guidance_2027": "",
     "sow_inventory_latest": "",
     "psy_latest": "",
@@ -272,12 +290,14 @@
       "shipment_2023": "pending",
       "shipment_2024": "derived-from-reporting-mix",
       "shipment_2025": "verified",
+      "guidance_2026": "support-candidate",
+      "guidance_2027": "pending",
       "sow_inventory_latest": "待补",
       "psy_latest": "待补",
       "avg_cost_latest": "待补"
     },
-    "notes": "已覆盖 4/12；精确月份 10/12 + 区间汇总补齐；12/12 月报或拆分已覆盖；尚无结构化成本字段",
-    "evidence_badge": "出栏:verified | 母猪:待补 | PSY:待补 | 成本:待补"
+    "notes": "已覆盖 4/12；精确月份 10/12 + 区间汇总补齐；12/12 月报或拆分已覆盖；support 候选 | 2026-03-29 | ind...；尚无结构化成本字段",
+    "evidence_badge": "出栏:已验证 | 指引26:support 候选 | 指引27:待补 | 母猪:待补 | PSY:待补 | 成本:待补"
   },
   {
     "company_name": "唐人神",
@@ -300,12 +320,14 @@
       "shipment_2023": "pending",
       "shipment_2024": "verified",
       "shipment_2025": "verified",
+      "guidance_2026": "pending",
+      "guidance_2027": "pending",
       "sow_inventory_latest": "待补",
       "psy_latest": "待补",
       "avg_cost_latest": "待补"
     },
     "notes": "已覆盖 3/12；12/12 月报或拆分已覆盖；12/12 月报或拆分已覆盖；尚无结构化成本字段",
-    "evidence_badge": "出栏:verified | 母猪:待补 | PSY:待补 | 成本:待补"
+    "evidence_badge": "出栏:已验证 | 指引26:待补 | 指引27:待补 | 母猪:待补 | PSY:待补 | 成本:待补"
   },
   {
     "company_name": "东瑞股份",
@@ -316,7 +338,7 @@
     "shipment_latest_ytd": "47.9",
     "shipment_latest_month": "2026-03",
     "shipment_latest_yoy": "45.8%",
-    "guidance_2026": "",
+    "guidance_2026": "35 万头",
     "guidance_2027": "",
     "sow_inventory_latest": "",
     "psy_latest": "",
@@ -328,12 +350,14 @@
       "shipment_2023": "pending",
       "shipment_2024": "verified",
       "shipment_2025": "verified",
+      "guidance_2026": "support-candidate",
+      "guidance_2027": "pending",
       "sow_inventory_latest": "待补",
       "psy_latest": "待补",
       "avg_cost_latest": "待补"
     },
-    "notes": "已覆盖 3/12；12/12 月报或拆分已覆盖；12/12 月报或拆分已覆盖；尚无结构化成本字段",
-    "evidence_badge": "出栏:verified | 母猪:待补 | PSY:待补 | 成本:待补"
+    "notes": "已覆盖 3/12；12/12 月报或拆分已覆盖；12/12 月报或拆分已覆盖；support 候选 | 2025-08-31 | ind...；尚无结构化成本字段",
+    "evidence_badge": "出栏:已验证 | 指引26:support 候选 | 指引27:待补 | 母猪:待补 | PSY:待补 | 成本:待补"
   },
   {
     "company_name": "新五丰",
@@ -356,11 +380,13 @@
       "shipment_2023": "derived-from-reporting-mix",
       "shipment_2024": "derived-from-reporting-mix",
       "shipment_2025": "derived-from-reporting-mix",
+      "guidance_2026": "pending",
+      "guidance_2027": "pending",
       "sow_inventory_latest": "待补",
       "psy_latest": "待补",
       "avg_cost_latest": "待补"
     },
     "notes": "精确月份 0/12 + 区间汇总补齐；精确月份 0/12 + 区间汇总补齐；精确月份 9/12 + 区间汇总补齐；尚无结构化成本字段",
-    "evidence_badge": "出栏:derived-from-reporting-mix | 母猪:待补 | PSY:待补 | 成本:待补"
+    "evidence_badge": "出栏:reporting-mix | 指引26:待补 | 指引27:待补 | 母猪:待补 | PSY:待补 | 成本:待补"
   }
 ]
