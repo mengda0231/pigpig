@@ -1,0 +1,35 @@
+[
+  {
+    "company_name": "傲农生物",
+    "event_date": "2026-03-29",
+    "event_type": "capex",
+    "event_title": "资本开支",
+    "event_summary": "业务布局全面聚焦闽赣区域，剥离了北方、西北低效老旧产能，未来2-3年无需大规模资本开支。",
+    "potential_readthrough": "资本开支变化会改变现金流和扩张节奏，但必须回到经营兑现验证。",
+    "evidence_mode": "support-candidate",
+    "source_type": "company_file_study",
+    "source_ref": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\company\\industry-pig-zsxq-2026-03-29-傲农生物-20260327-f32706bf\\cursor-pdf-file-study.md"
+  },
+  {
+    "company_name": "傲农生物",
+    "event_date": "2026-02-27",
+    "event_type": "debt",
+    "event_title": "债务与降杠杆",
+    "event_summary": "：独重整后公司财务状况持续优化家的2025年二季度资产负债率已降至 60% 以下，年末进一步下降，债务结构得到改善，尤其是通过剥离低效资产和债务重组，减轻了财务负担。",
+    "potential_readthrough": "更偏负债表约束改善，影响权益弹性与风险溢价。",
+    "evidence_mode": "support-candidate",
+    "source_type": "company_file_study",
+    "source_ref": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\company\\industry-pig-zsxq-2026-02-27-傲农生物-20260226-ee7378fc\\cursor-pdf-file-study.md"
+  },
+  {
+    "company_name": "傲农生物",
+    "event_date": "2026-03-29",
+    "event_type": "mna",
+    "event_title": "并购与资产整合",
+    "event_summary": "A：公司食品板块目前以轻资产自建、租赁运营为主要扩张方式，同时也在密切关注行业内合适的并购标的若遇到契合公司业务布局性价比 高的屠宰或深加工项目，会适时通过并购方式扩大业务规模，快速提升区域市场占有率。",
+    "potential_readthrough": "并购与整合会改变资产结构，兑现仍要看经营与现金流。",
+    "evidence_mode": "support-candidate",
+    "source_type": "company_file_study",
+    "source_ref": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\company\\industry-pig-zsxq-2026-03-29-傲农生物-20260327-f32706bf\\cursor-pdf-file-study.md"
+  }
+]

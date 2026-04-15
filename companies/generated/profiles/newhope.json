@@ -1,0 +1,26 @@
+{
+  "company_name": "新希望",
+  "as_of_date": "2026-04-14",
+  "cycle_position": "底部磨底段里的成本与负债表接口样本",
+  "headline_judgment": "新希望 当前更像 养殖与饲料双接口，主看 中 price beta 与 中高 cost beta 的兑现，但证据强度仍受字段完整度限制。",
+  "price_beta": "中",
+  "cost_beta": "中高",
+  "volume_beta": "中",
+  "balance_sheet_constraint": "高",
+  "latest_operating_take": "成本锚 完全成本 12.2元/公斤（公司披露摘录 / 2026-01-31）；效率锚 PSY 25.4（公司披露摘录 / 2025-09-02）；母猪锚 能繁母猪 76 万头（公司披露摘录 / 2025-09-02）；月报 2026-03 / 同比 -15.9%",
+  "latest_market_take": "1m 相对 basket +3.7%；3m 相对 basket -3.1%；6m 相对 basket -0.4%",
+  "latest_evidence_mix": {
+    "company-disclosure-extracted": 3,
+    "historical-candidate": 1,
+    "pending": 2,
+    "verified": 2
+  },
+  "next_confirmations": [
+    "2026 指引",
+    "2027 目标"
+  ],
+  "open_gaps": [
+    "2026 指引",
+    "2027 目标"
+  ]
+}

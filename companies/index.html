@@ -3,264 +3,501 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>公司映射 | 中国生猪周期研究</title>
-    <meta
-      name="description"
-      content="中国生猪行业到公司层的映射页面：price beta、cost beta、volume beta 与负债表约束。"
-    />
+    <title>中国生猪公司导航与快筛</title>
+    <meta name="description" content="13 家养猪公司详情导航页，先做横向快筛，再跳到公司级经营、股价、财务和证据边界页面。" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23f5e7d5'/%3E%3Cpath d='M17 35c0-9 8-15 18-15 7 0 12 2 15 6l4-1 3 3-1 4c1 2 1 4 1 6 0 9-8 15-18 15H27l-6 4-1-6c-2-2-3-5-3-8z' fill='%23825a36'/%3E%3Ccircle cx='45' cy='32' r='2.5' fill='%23f5e7d5'/%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../assets/site.css" />
+    <style>
+      .hub-hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(300px,0.85fr);gap:1rem;}
+      .filter-row,.hub-meta{display:flex;flex-wrap:wrap;gap:0.65rem;}
+      .hub-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;}
+      .company-hub-card{padding:20px;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper);box-shadow:var(--shadow);}
+      .hub-card-top{display:flex;justify-content:space-between;gap:0.8rem;align-items:flex-start;}
+      .hub-judgment{margin:0.55rem 0 0.85rem;line-height:1.55;color:var(--ink);}
+      .hub-kpi-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0.7rem;margin-bottom:0.85rem;}
+      .hub-kpi{padding:0.78rem 0.82rem;border-radius:16px;border:1px solid var(--line);background:rgba(255,251,244,0.72);display:grid;gap:0.18rem;}
+      .hub-kpi strong{font-size:0.76rem;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;}
+      @media (max-width:1100px){.hub-hero,.hub-grid{grid-template-columns:1fr;}}
+    </style>
   </head>
   <body>
     <div class="site-shell">
-      <header class="topbar">
-        <div class="brand">
-          <span class="brand-mark">Public research layer</span>
-          <span class="brand-title">中国生猪周期研究</span>
-        </div>
-        <nav class="nav-links" aria-label="站点导航">
-          <a href="../index.html">首页</a>
-          <a href="../framework/index.html">框架</a>
-          <a href="../regime/index.html">阶段</a>
-          <a href="../tracking/index.html">跟踪</a>
-          <a class="active" href="./index.html">公司映射</a>
-        </nav>
-      </header>
-
-      <main>
-        <section class="hero">
-          <div>
-            <span class="eyebrow">Company bridge</span>
-            <h1>公司不是行业，但公司会放大行业。</h1>
-            <p class="lead">
-              公司层最重要的工作，不是抢着下结论，而是把行业 motherboard 映射成经营弹性。
-              谁更吃猪价、谁更吃成本改善、谁更受负债和现金流约束，往往决定了周期底部的股价分化。
-            </p>
-          </div>
-          <aside class="hero-side">
-            <div class="callout">
-              <span class="status-pill status-established">Research boundary</span>
-              <strong>公司信息不能单独改写行业状态。</strong>
-              <p>
-                公开版默认把公司材料放在 bridge lane。它们可以帮助解释行业变量对经营与估值的影响，
-                但不能单独定义行业正在发生什么。
-              </p>
-            </div>
-          </aside>
-        </section>
-
-        <section class="section">
-          <div class="section-header">
-            <div>
-              <span class="eyebrow">Core pool</span>
-              <h2>第一层主链样本</h2>
-            </div>
-            <p>
-              第一版公开站只做 bridge-card 级别的主链映射，不展开成完整公司深度覆盖。目的不是偷懒，
-              而是保证公司层始终从属于行业层。
-            </p>
-          </div>
-          <div class="card-grid">
-            <article class="company-card">
-              <h3>牧原股份</h3>
-              <p>
-                主链核心映射对象，兼具高 <code>price beta</code> 与重要的成本曲线观察意义。月度出栏与
-                完全成本既是公司变量，也是行业供给预期的镜像变量。
-              </p>
+      <header class="topbar"><div class="brand"><span class="brand-mark">Pig Research Room</span><strong class="brand-title">养猪公司导航与快筛</strong></div><nav class="nav-links"><a href="../data-lab/current-state-dashboard.html">行业首页</a><a class="active" href="./index.html">公司 Hub</a><a href="../index.html">公开首页</a></nav></header>
+      <section class="hero hub-hero"><div><span class="eyebrow">Company Navigator</span><h1>这个页面只做两件事：横向快筛，再跳到详情页。</h1><p class="lead">如果你想先判断哪家公司值得深看，就先用这页比较最新月报、成本、母猪、PSY、2026 指引和字段完整度；真正的经营、股价、财务和证据边界阅读都放在各自详情页里。</p><div class="filter-row" style="margin-top:1rem;"><button class="chip hub-filter" data-filter="all">全部</button><button class="chip hub-filter" data-filter="核心">核心</button><button class="chip hub-filter" data-filter="扩展">扩展</button><button class="chip hub-filter" data-band="较完整">较完整</button><button class="chip hub-filter" data-band="缺口较多">缺口较多</button></div></div><aside class="panel"><h3>怎么用</h3><ul><li>第一步：看快筛表，决定先点开哪几家。</li><li>第二步：看下方导航卡，快速进入详情页。</li><li>第三步：公司页只做桥接，不越权改写行业状态。</li></ul></aside></section>
+      <section class="section"><div class="section-header"><div><h2>Quick Compare</h2><p>表格放在前面，是因为这个页面的核心价值就是横向比较，而不是重复堆一遍长篇公司摘要。</p></div></div><div class="table-shell"><table class="compact-table"><thead><tr><th>公司</th><th>周期位置</th><th>最新月报</th><th>月报同比</th><th>成本</th><th>母猪</th><th>PSY</th><th>2026 指引</th><th>完整度</th><th>证据状态</th><th>补充线索</th></tr></thead><tbody id="hub-table-body">
+            <tr data-tier="核心" data-band="较完整">
+              <td><a href="./muyuan.html">牧原股份</a></td>
+              <td>底部磨底段里的低成本龙头锚</td>
+              <td>2026-03</td>
+              <td>-2.7%</td>
+              <td>完全成本 12元/公斤</td>
+              <td>能繁母猪存栏为 330.5 万头</td>
+              <td>PSY 在 28</td>
+              <td>7500 - 8100 万头</td>
+              <td>7/8</td>
+              <td>公司披露摘录×3 / reporting-mix派生×2 / 历史口径候选...</td>
+              <td>1 条补充线索</td>
+            </tr>
+            
+            <tr data-tier="核心" data-band="较完整">
+              <td><a href="./wens.html">温氏股份</a></td>
+              <td>底部磨底段里的经营韧性对照组</td>
+              <td>2026-03</td>
+              <td>19.0%</td>
+              <td>完全成本 11.4元/公斤</td>
+              <td>能繁母猪为178 万头</td>
+              <td>PSY 为 27</td>
+              <td>3800 - 3900 万头</td>
+              <td>7/8</td>
+              <td>公司披露摘录×3 / 已验证×2 / support候选×1 / 历史口径...</td>
+              <td>暂无最新补充线索</td>
+            </tr>
+            
+            <tr data-tier="核心" data-band="较完整">
+              <td><a href="./newhope.html">新希望</a></td>
+              <td>底部磨底段里的成本与负债表接口样本</td>
+              <td>2026-03</td>
+              <td>-15.9%</td>
+              <td>完全成本 12.2元/公斤</td>
+              <td>能繁母猪存栏 76 万头</td>
+              <td>PSY 为 25.4</td>
+              <td>待补</td>
+              <td>6/8</td>
+              <td>公司披露摘录×3 / 已验证×2 / 历史口径候选×1 / 待补×2</td>
+              <td>暂无最新补充线索</td>
+            </tr>
+            
+            <tr data-tier="核心" data-band="较完整">
+              <td><a href="./juxing.html">巨星农牧</a></td>
+              <td>底部磨底段里的高弹性成长样本</td>
+              <td>2026-03</td>
+              <td>34.7%</td>
+              <td>完全成本 13元/公斤</td>
+              <td>目前能繁母猪存量规模控制在 18 万头左右</td>
+              <td>PSY（每头母猪每年提供断奶仔猪头数）超30</td>
+              <td>待补</td>
+              <td>6/8</td>
+              <td>公司披露摘录×1 / 已验证×1 / support候选×2 / 历史口径...</td>
+              <td>1 条补充线索</td>
+            </tr>
+            
+            <tr data-tier="核心" data-band="较完整">
+              <td><a href="./shennong.html">神农集团</a></td>
+              <td>底部磨底段里的低成本效率样本</td>
+              <td>2026-03</td>
+              <td>-9.9%</td>
+              <td>完全成本 12.4元/公斤</td>
+              <td>能繁 母猪为 13.6万头</td>
+              <td>PSY提升1.5个点至29.5</td>
+              <td>350 万头</td>
+              <td>8/8</td>
+              <td>公司披露摘录×2 / 已验证×2 / support候选×2 / 历史口径...</td>
+              <td>暂无最新补充线索</td>
+            </tr>
+            
+            <tr data-tier="核心" data-band="中等">
+              <td><a href="./tiankang.html">天康生物</a></td>
+              <td>底部磨底段里的主链与动保接口样本</td>
+              <td>2026-03</td>
+              <td>27.7%</td>
+              <td>完全成本 13.12元/公斤</td>
+              <td>待补</td>
+              <td>PSY 已达 27</td>
+              <td>待补</td>
+              <td>5/8</td>
+              <td>公司披露摘录×2 / 已验证×2 / 历史口径候选×1 / 待补×3</td>
+              <td>暂无最新补充线索</td>
+            </tr>
+            
+            <tr data-tier="核心" data-band="较完整">
+              <td><a href="./dekon.html">德康农牧</a></td>
+              <td>底部磨底段里的高增速港股样本</td>
+              <td>待补</td>
+              <td>待补</td>
+              <td>全成本控制在 12.3元/公斤</td>
+              <td>待补</td>
+              <td>PSY（母 豬年產斷奶仔豬數）提升至27</td>
+              <td>1500 万头</td>
+              <td>6/8</td>
+              <td>公司披露摘录×2 / support候选×2 / 历史口径候选×2 / 待补×2</td>
+              <td>暂无最新补充线索</td>
+            </tr>
+            
+            <tr data-tier="扩展" data-band="较完整">
+              <td><a href="./zhengbang.html">正邦科技</a></td>
+              <td>底部磨底段里的高压力修复样本</td>
+              <td>2026-03</td>
+              <td>49.7%</td>
+              <td>完全成本为13.8 元/公斤</td>
+              <td>能繁 母猪存栏约 27.5 万头</td>
+              <td>PSY(单头母 猪年产猪苗数量)达到 26</td>
+              <td>待补</td>
+              <td>6/8</td>
+              <td>公司披露摘录×2 / 已验证×2 / support候选×1 / 历史口径...</td>
+              <td>暂无最新补充线索</td>
+            </tr>
+            
+            <tr data-tier="扩展" data-band="中等">
+              <td><a href="./tianbang.html">天邦食品</a></td>
+              <td>底部磨底段里的产能利用率修复样本</td>
+              <td>2026-03</td>
+              <td>20.5%</td>
+              <td>完全成本 13.31元/公斤</td>
+              <td>能繁母猪存栏 26.2 万头</td>
+              <td>待补</td>
+              <td>待补</td>
+              <td>5/8</td>
+              <td>公司披露摘录×2 / 已验证×2 / 历史口径候选×1 / 待补×3</td>
+              <td>1 条补充线索</td>
+            </tr>
+            
+            <tr data-tier="扩展" data-band="较完整">
+              <td><a href="./aonong.html">傲农生物</a></td>
+              <td>底部磨底段里的重整后高波动样本</td>
+              <td>2026-03</td>
+              <td>41.3%</td>
+              <td>育肥完全成本6.3-6.4元/斤</td>
+              <td>母猪存栏达 11.5 万头</td>
+              <td>PSY 提升至 28.1</td>
+              <td>250 万头</td>
+              <td>6/8</td>
+              <td>公司披露摘录×2 / reporting-mix派生×1 / suppor...</td>
+              <td>1 条补充线索</td>
+            </tr>
+            
+            <tr data-tier="扩展" data-band="中等">
+              <td><a href="./tangrenshen.html">唐人神</a></td>
+              <td>底部磨底段里的经营优化样本</td>
+              <td>2026-03</td>
+              <td>33.8%</td>
+              <td>运营成本 12.71元/公斤</td>
+              <td>待补</td>
+              <td>待补</td>
+              <td>待补</td>
+              <td>4/8</td>
+              <td>公司披露摘录×1 / 已验证×2 / 历史口径候选×1 / 待补×4</td>
+              <td>暂无最新补充线索</td>
+            </tr>
+            
+            <tr data-tier="扩展" data-band="较完整">
+              <td><a href="./dongrui.html">东瑞股份</a></td>
+              <td>底部磨底段里的小体量高弹性样本</td>
+              <td>2026-03</td>
+              <td>45.8%</td>
+              <td>完全成本 13.5元/公斤</td>
+              <td>截至12月末的能繁母猪存栏数量为7.6万头</td>
+              <td>PSY从22</td>
+              <td>35 万头</td>
+              <td>7/8</td>
+              <td>公司披露摘录×3 / 已验证×2 / support候选×1 / 历史口径...</td>
+              <td>1 条补充线索</td>
+            </tr>
+            
+            <tr data-tier="扩展" data-band="中等">
+              <td><a href="./xinwufeng.html">新五丰</a></td>
+              <td>底部磨底段里的国企修复样本</td>
+              <td>2026-03</td>
+              <td>待补</td>
+              <td>完全成本或已降至 17.7 元/千克</td>
+              <td>能繁母猪存栏 25.77 万头</td>
+              <td>待补</td>
+              <td>待补</td>
+              <td>5/8</td>
+              <td>公司披露摘录×1 / reporting-mix派生×3 / suppor...</td>
+              <td>暂无最新补充线索</td>
+            </tr>
+            </tbody></table></div></section>
+      <section class="section"><div class="section-header"><div><h2>Detail Entry Cards</h2><p>卡片只保留一句判断和四个最相关的经营锚，不再把低相关背景信息塞进首页。</p></div></div><div id="hub-grid" class="hub-grid">
+            <article class="company-hub-card" data-tier="核心" data-band="较完整">
+              <div class="hub-card-top">
+                <div>
+                  <span class="eyebrow">核心</span>
+                  <h3><a href="./muyuan.html">牧原股份</a></h3>
+                </div>
+                <span class="chip">较完整</span>
+              </div>
+              <p class="hub-judgment">牧原股份 当前更像 主链龙头与成本曲线锚点，主看 高 price beta 与 高 cost beta 的兑现，但证据强度仍受字段完整度限制。</p>
+              <div class="hub-kpi-grid">
+                <div class="hub-kpi"><strong>最新月报</strong><span>2026-03</span></div>
+                <div class="hub-kpi"><strong>成本</strong><span>完全成本 12元/公斤</span></div>
+                <div class="hub-kpi"><strong>母猪</strong><span>能繁母猪存栏为 330.5 万头</span></div>
+                <div class="hub-kpi"><strong>PSY</strong><span>PSY 在 28</span></div>
+              </div>
+              <div class="hub-meta">
+                <span class="chip">7/8 字段</span>
+                <span class="chip">002714.SZ</span>
+                <span class="chip">1 条补充线索</span>
+              </div>
             </article>
-            <article class="company-card">
-              <h3>温氏股份</h3>
-              <p>
-                主链核心对照组，但必须拆开看猪与禽。它更适合帮助研究者理解“同样是龙头，不同业务结构
-                会如何改变行业映射”。
-              </p>
+            
+            <article class="company-hub-card" data-tier="核心" data-band="较完整">
+              <div class="hub-card-top">
+                <div>
+                  <span class="eyebrow">核心</span>
+                  <h3><a href="./wens.html">温氏股份</a></h3>
+                </div>
+                <span class="chip">较完整</span>
+              </div>
+              <p class="hub-judgment">温氏股份 当前更像 猪禽混合经营的龙头对照，主看 中高 price beta 与 中 cost beta 的兑现，但证据强度仍受字段完整度限制。</p>
+              <div class="hub-kpi-grid">
+                <div class="hub-kpi"><strong>最新月报</strong><span>2026-03</span></div>
+                <div class="hub-kpi"><strong>成本</strong><span>完全成本 11.4元/公斤</span></div>
+                <div class="hub-kpi"><strong>母猪</strong><span>能繁母猪为178 万头</span></div>
+                <div class="hub-kpi"><strong>PSY</strong><span>PSY 为 27</span></div>
+              </div>
+              <div class="hub-meta">
+                <span class="chip">7/8 字段</span>
+                <span class="chip">300498.SZ</span>
+                <span class="chip">暂无最新补充线索</span>
+              </div>
             </article>
-            <article class="company-card">
-              <h3>新希望</h3>
-              <p>
-                同时具备主链与饲料接口，更能体现成本端、负债表和业务结构如何改变行业变量的公司层弹性。
-              </p>
+            
+            <article class="company-hub-card" data-tier="核心" data-band="较完整">
+              <div class="hub-card-top">
+                <div>
+                  <span class="eyebrow">核心</span>
+                  <h3><a href="./newhope.html">新希望</a></h3>
+                </div>
+                <span class="chip">较完整</span>
+              </div>
+              <p class="hub-judgment">新希望 当前更像 养殖与饲料双接口，主看 中 price beta 与 中高 cost beta 的兑现，但证据强度仍受字段完整度限制。</p>
+              <div class="hub-kpi-grid">
+                <div class="hub-kpi"><strong>最新月报</strong><span>2026-03</span></div>
+                <div class="hub-kpi"><strong>成本</strong><span>完全成本 12.2元/公斤</span></div>
+                <div class="hub-kpi"><strong>母猪</strong><span>能繁母猪存栏 76 万头</span></div>
+                <div class="hub-kpi"><strong>PSY</strong><span>PSY 为 25.4</span></div>
+              </div>
+              <div class="hub-meta">
+                <span class="chip">6/8 字段</span>
+                <span class="chip">000876.SZ</span>
+                <span class="chip">暂无最新补充线索</span>
+              </div>
             </article>
-            <article class="company-card">
-              <h3>巨星农牧</h3>
-              <p>更偏高弹性样本，适合观察价格弹性、扩张兑现和市场预期放大效应。</p>
+            
+            <article class="company-hub-card" data-tier="核心" data-band="较完整">
+              <div class="hub-card-top">
+                <div>
+                  <span class="eyebrow">核心</span>
+                  <h3><a href="./juxing.html">巨星农牧</a></h3>
+                </div>
+                <span class="chip">较完整</span>
+              </div>
+              <p class="hub-judgment">巨星农牧 当前更像 高弹性成长龙头，主看 高 price beta 与 中高 cost beta 的兑现，但证据强度仍受字段完整度限制。</p>
+              <div class="hub-kpi-grid">
+                <div class="hub-kpi"><strong>最新月报</strong><span>2026-03</span></div>
+                <div class="hub-kpi"><strong>成本</strong><span>完全成本 13元/公斤</span></div>
+                <div class="hub-kpi"><strong>母猪</strong><span>目前能繁母猪存量规模控制在 18 万头左右</span></div>
+                <div class="hub-kpi"><strong>PSY</strong><span>PSY（每头母猪每年提供断奶仔猪头数）超30</span></div>
+              </div>
+              <div class="hub-meta">
+                <span class="chip">6/8 字段</span>
+                <span class="chip">603477.SH</span>
+                <span class="chip">1 条补充线索</span>
+              </div>
             </article>
-            <article class="company-card">
-              <h3>神农集团</h3>
-              <p>更偏成本曲线与成长弹性的观察位，适合研究“低成本 + 成长兑现”如何被市场定价。</p>
+            
+            <article class="company-hub-card" data-tier="核心" data-band="较完整">
+              <div class="hub-card-top">
+                <div>
+                  <span class="eyebrow">核心</span>
+                  <h3><a href="./shennong.html">神农集团</a></h3>
+                </div>
+                <span class="chip">较完整</span>
+              </div>
+              <p class="hub-judgment">神农集团 当前更像 低成本效率与区域经营样本，主看 中高 price beta 与 高 cost beta 的兑现，但证据强度仍受字段完整度限制。</p>
+              <div class="hub-kpi-grid">
+                <div class="hub-kpi"><strong>最新月报</strong><span>2026-03</span></div>
+                <div class="hub-kpi"><strong>成本</strong><span>完全成本 12.4元/公斤</span></div>
+                <div class="hub-kpi"><strong>母猪</strong><span>能繁 母猪为 13.6万头</span></div>
+                <div class="hub-kpi"><strong>PSY</strong><span>PSY提升1.5个点至29.5</span></div>
+              </div>
+              <div class="hub-meta">
+                <span class="chip">8/8 字段</span>
+                <span class="chip">605296.SH</span>
+                <span class="chip">暂无最新补充线索</span>
+              </div>
             </article>
-            <article class="company-card">
-              <h3>天康生物</h3>
-              <p>主链与动保接口并存，是观察主链与相邻链如何交叉影响经营表现的典型样本。</p>
+            
+            <article class="company-hub-card" data-tier="核心" data-band="中等">
+              <div class="hub-card-top">
+                <div>
+                  <span class="eyebrow">核心</span>
+                  <h3><a href="./tiankang.html">天康生物</a></h3>
+                </div>
+                <span class="chip">中等</span>
+              </div>
+              <p class="hub-judgment">天康生物 当前更像 主链经营与相邻链接口，主看 中 price beta 与 中 cost beta 的兑现，但证据强度仍受字段完整度限制。</p>
+              <div class="hub-kpi-grid">
+                <div class="hub-kpi"><strong>最新月报</strong><span>2026-03</span></div>
+                <div class="hub-kpi"><strong>成本</strong><span>完全成本 13.12元/公斤</span></div>
+                <div class="hub-kpi"><strong>母猪</strong><span>待补</span></div>
+                <div class="hub-kpi"><strong>PSY</strong><span>PSY 已达 27</span></div>
+              </div>
+              <div class="hub-meta">
+                <span class="chip">5/8 字段</span>
+                <span class="chip">002100.SZ</span>
+                <span class="chip">暂无最新补充线索</span>
+              </div>
             </article>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="section-header">
-            <div>
-              <span class="eyebrow">Sensitivity matrix</span>
-              <h2>弹性矩阵</h2>
-            </div>
-            <p>
-              公开版不追求把所有公司讲完，而是先把最核心的四类弹性看清：价格、成本、出栏兑现和
-              负债表约束。
-            </p>
-          </div>
-          <table class="matrix">
-            <thead>
-              <tr>
-                <th>公司</th>
-                <th>更强映射</th>
-                <th>核心看点</th>
-                <th>主要风险</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>牧原股份</td>
-                <td>Price beta + cost beta</td>
-                <td>出栏节奏、完全成本、现金流与资本开支</td>
-                <td>扩产节奏与现金流匹配</td>
-              </tr>
-              <tr>
-                <td>温氏股份</td>
-                <td>Price beta + 经营韧性</td>
-                <td>猪与禽的拆分理解、利润率与现金流质量</td>
-                <td>跨品类叙事串味</td>
-              </tr>
-              <tr>
-                <td>新希望</td>
-                <td>Cost interface + balance sheet</td>
-                <td>养殖与饲料接口、业务拆分、负债与现金流</td>
-                <td>单一猪价叙事不够解释</td>
-              </tr>
-              <tr>
-                <td>巨星农牧</td>
-                <td>High beta</td>
-                <td>价格弹性、扩张兑现、阶段性预期差</td>
-                <td>高弹性也意味着预期容易放大</td>
-              </tr>
-              <tr>
-                <td>神农集团</td>
-                <td>Cost curve + growth</td>
-                <td>低成本、成长兑现、区域暴露</td>
-                <td>扩张速度与资金匹配</td>
-              </tr>
-              <tr>
-                <td>天康生物</td>
-                <td>Main chain + adjacent interface</td>
-                <td>养殖与动保接口、业务拆分、主链映射</td>
-                <td>相邻链影响盖过主链解释</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-
-        <section class="section">
-          <div class="section-header">
-            <div>
-              <span class="eyebrow">Risk split</span>
-              <h2>三类公司视角</h2>
-            </div>
-            <p>
-              周期底部最重要的不是“谁更便宜”，而是“谁的经营质量、成本和负债表能把行业变化转成
-              更真实的权益弹性”。
-            </p>
-          </div>
-          <div class="risk-grid">
-            <article class="metric-card">
-              <h3>低成本主链龙头</h3>
-              <p>
-                更容易先被市场当成未来修复的承接对象。它们不一定马上兑现利润，但通常更能在底部
-                阶段守住经营质量和估值韧性。
-              </p>
+            
+            <article class="company-hub-card" data-tier="核心" data-band="较完整">
+              <div class="hub-card-top">
+                <div>
+                  <span class="eyebrow">核心</span>
+                  <h3><a href="./dekon.html">德康农牧</a></h3>
+                </div>
+                <span class="chip">较完整</span>
+              </div>
+              <p class="hub-judgment">德康农牧 当前更像 高增长低成本样本，主看 高 price beta 与 高 cost beta 的兑现，但证据强度仍受字段完整度限制。</p>
+              <div class="hub-kpi-grid">
+                <div class="hub-kpi"><strong>最新月报</strong><span>待补</span></div>
+                <div class="hub-kpi"><strong>成本</strong><span>全成本控制在 12.3元/公斤</span></div>
+                <div class="hub-kpi"><strong>母猪</strong><span>待补</span></div>
+                <div class="hub-kpi"><strong>PSY</strong><span>PSY（母 豬年產斷奶仔豬數）提升至27</span></div>
+              </div>
+              <div class="hub-meta">
+                <span class="chip">6/8 字段</span>
+                <span class="chip">2419.HK</span>
+                <span class="chip">暂无最新补充线索</span>
+              </div>
             </article>
-            <article class="metric-card">
-              <h3>高弹性 / 高压力主体</h3>
-              <p>
-                猪价一旦修复，弹性可能更大；但在深亏损阶段，也更容易先在市场预期上失真，尤其当
-                负债和现金流约束更强时。
-              </p>
+            
+            <article class="company-hub-card" data-tier="扩展" data-band="较完整">
+              <div class="hub-card-top">
+                <div>
+                  <span class="eyebrow">扩展</span>
+                  <h3><a href="./zhengbang.html">正邦科技</a></h3>
+                </div>
+                <span class="chip">较完整</span>
+              </div>
+              <p class="hub-judgment">正邦科技 当前更像 重组与修复观察位，主看 高 price beta 与 中 cost beta 的兑现，但证据强度仍受字段完整度限制。</p>
+              <div class="hub-kpi-grid">
+                <div class="hub-kpi"><strong>最新月报</strong><span>2026-03</span></div>
+                <div class="hub-kpi"><strong>成本</strong><span>完全成本为13.8 元/公斤</span></div>
+                <div class="hub-kpi"><strong>母猪</strong><span>能繁 母猪存栏约 27.5 万头</span></div>
+                <div class="hub-kpi"><strong>PSY</strong><span>PSY(单头母 猪年产猪苗数量)达到 26</span></div>
+              </div>
+              <div class="hub-meta">
+                <span class="chip">6/8 字段</span>
+                <span class="chip">002157.SZ</span>
+                <span class="chip">暂无最新补充线索</span>
+              </div>
             </article>
-            <article class="metric-card">
-              <h3>接口型公司</h3>
-              <p>
-                饲料、动保或多业务公司可以帮助我们补充证据链，但不能把接口业务的情绪直接等同于
-                主链反转。
-              </p>
+            
+            <article class="company-hub-card" data-tier="扩展" data-band="中等">
+              <div class="hub-card-top">
+                <div>
+                  <span class="eyebrow">扩展</span>
+                  <h3><a href="./tianbang.html">天邦食品</a></h3>
+                </div>
+                <span class="chip">中等</span>
+              </div>
+              <p class="hub-judgment">天邦食品 当前更像 产能利用率与成本修复样本，主看 中高 price beta 与 中高 cost beta 的兑现，但证据强度仍受字段完整度限制。</p>
+              <div class="hub-kpi-grid">
+                <div class="hub-kpi"><strong>最新月报</strong><span>2026-03</span></div>
+                <div class="hub-kpi"><strong>成本</strong><span>完全成本 13.31元/公斤</span></div>
+                <div class="hub-kpi"><strong>母猪</strong><span>能繁母猪存栏 26.2 万头</span></div>
+                <div class="hub-kpi"><strong>PSY</strong><span>待补</span></div>
+              </div>
+              <div class="hub-meta">
+                <span class="chip">5/8 字段</span>
+                <span class="chip">002124.SZ</span>
+                <span class="chip">1 条补充线索</span>
+              </div>
             </article>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="section-header">
-            <div>
-              <span class="eyebrow">New bridge special</span>
-              <h2>最新桥接专题</h2>
-            </div>
-            <p>
-              新增的公司桥接专题单独落在公司映射层，不改根首页，也不越权改写行业主链判断。
-            </p>
-          </div>
-          <div class="card-grid">
-            <article class="company-card">
-              <h3><a href="./haida-group/index.html">海大集团：饲料业务与猪周期桥接专题</a></h3>
-              <p>
-                这是一份单独的 bridge special。重点回答海大经营层和股价层对猪周期到底是强映射、
-                弱映射还是阶段性映射，以及为什么它更像 pig interface，而不是纯猪价 beta。
-              </p>
-              <p><a href="./haida-group/index.html">进入专题页</a></p>
+            
+            <article class="company-hub-card" data-tier="扩展" data-band="较完整">
+              <div class="hub-card-top">
+                <div>
+                  <span class="eyebrow">扩展</span>
+                  <h3><a href="./aonong.html">傲农生物</a></h3>
+                </div>
+                <span class="chip">较完整</span>
+              </div>
+              <p class="hub-judgment">傲农生物 当前更像 重整与恢复样本，主看 高 price beta 与 中 cost beta 的兑现，但证据强度仍受字段完整度限制。</p>
+              <div class="hub-kpi-grid">
+                <div class="hub-kpi"><strong>最新月报</strong><span>2026-03</span></div>
+                <div class="hub-kpi"><strong>成本</strong><span>育肥完全成本6.3-6.4元/斤</span></div>
+                <div class="hub-kpi"><strong>母猪</strong><span>母猪存栏达 11.5 万头</span></div>
+                <div class="hub-kpi"><strong>PSY</strong><span>PSY 提升至 28.1</span></div>
+              </div>
+              <div class="hub-meta">
+                <span class="chip">6/8 字段</span>
+                <span class="chip">603363.SH</span>
+                <span class="chip">1 条补充线索</span>
+              </div>
             </article>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="section-header">
-            <div>
-              <span class="eyebrow">Extended pool</span>
-              <h2>主链扩展池与上游补充链</h2>
-            </div>
-            <p>
-              公开版第一轮不对扩展池做深度卡片，但会保留接口名单，方便后续从行业层继续往公司层推进。
-            </p>
-          </div>
-          <div class="two-up">
-            <article class="panel">
-              <h3>主链扩展池</h3>
-              <ul class="list-clean">
-                <li>正邦科技</li>
-                <li>天邦食品</li>
-                <li>德康农牧</li>
-                <li>傲农生物</li>
-                <li>唐人神</li>
-                <li>东瑞股份</li>
-                <li>新五丰</li>
-              </ul>
+            
+            <article class="company-hub-card" data-tier="扩展" data-band="中等">
+              <div class="hub-card-top">
+                <div>
+                  <span class="eyebrow">扩展</span>
+                  <h3><a href="./tangrenshen.html">唐人神</a></h3>
+                </div>
+                <span class="chip">中等</span>
+              </div>
+              <p class="hub-judgment">唐人神 当前更像 成本优化与产能利用率样本，主看 中高 price beta 与 中 cost beta 的兑现，但证据强度仍受字段完整度限制。</p>
+              <div class="hub-kpi-grid">
+                <div class="hub-kpi"><strong>最新月报</strong><span>2026-03</span></div>
+                <div class="hub-kpi"><strong>成本</strong><span>运营成本 12.71元/公斤</span></div>
+                <div class="hub-kpi"><strong>母猪</strong><span>待补</span></div>
+                <div class="hub-kpi"><strong>PSY</strong><span>待补</span></div>
+              </div>
+              <div class="hub-meta">
+                <span class="chip">4/8 字段</span>
+                <span class="chip">002567.SZ</span>
+                <span class="chip">暂无最新补充线索</span>
+              </div>
             </article>
-            <article class="panel">
-              <h3>上游补充链</h3>
-              <ul class="list-clean">
-                <li>海大集团</li>
-                <li>大北农</li>
-                <li>新希望饲料业务</li>
-              </ul>
+            
+            <article class="company-hub-card" data-tier="扩展" data-band="较完整">
+              <div class="hub-card-top">
+                <div>
+                  <span class="eyebrow">扩展</span>
+                  <h3><a href="./dongrui.html">东瑞股份</a></h3>
+                </div>
+                <span class="chip">较完整</span>
+              </div>
+              <p class="hub-judgment">东瑞股份 当前更像 区域性高弹性样本，主看 中高 price beta 与 中高 cost beta 的兑现，但证据强度仍受字段完整度限制。</p>
+              <div class="hub-kpi-grid">
+                <div class="hub-kpi"><strong>最新月报</strong><span>2026-03</span></div>
+                <div class="hub-kpi"><strong>成本</strong><span>完全成本 13.5元/公斤</span></div>
+                <div class="hub-kpi"><strong>母猪</strong><span>截至12月末的能繁母猪存栏数量为7.6万头</span></div>
+                <div class="hub-kpi"><strong>PSY</strong><span>PSY从22</span></div>
+              </div>
+              <div class="hub-meta">
+                <span class="chip">7/8 字段</span>
+                <span class="chip">001201.SZ</span>
+                <span class="chip">1 条补充线索</span>
+              </div>
             </article>
-          </div>
-        </section>
-      </main>
-
-      <footer class="footer">
-        <p>
-          公司页的目标是桥接，不是越权。只有当公司层现象被更广样本与主链变量验证时，相关结论才有资格
-          提升到行业层。
-        </p>
-      </footer>
+            
+            <article class="company-hub-card" data-tier="扩展" data-band="中等">
+              <div class="hub-card-top">
+                <div>
+                  <span class="eyebrow">扩展</span>
+                  <h3><a href="./xinwufeng.html">新五丰</a></h3>
+                </div>
+                <span class="chip">中等</span>
+              </div>
+              <p class="hub-judgment">新五丰 当前更像 经营修复与 reporting-mix 样本，主看 中 price beta 与 中 cost beta 的兑现，但证据强度仍受字段完整度限制。</p>
+              <div class="hub-kpi-grid">
+                <div class="hub-kpi"><strong>最新月报</strong><span>2026-03</span></div>
+                <div class="hub-kpi"><strong>成本</strong><span>完全成本或已降至 17.7 元/千克</span></div>
+                <div class="hub-kpi"><strong>母猪</strong><span>能繁母猪存栏 25.77 万头</span></div>
+                <div class="hub-kpi"><strong>PSY</strong><span>待补</span></div>
+              </div>
+              <div class="hub-meta">
+                <span class="chip">5/8 字段</span>
+                <span class="chip">600975.SH</span>
+                <span class="chip">暂无最新补充线索</span>
+              </div>
+            </article>
+            </div></section>
     </div>
+    <script>const filters=document.querySelectorAll('.hub-filter');function applyFilter(filter,band){document.querySelectorAll('#hub-grid .company-hub-card').forEach((card)=>{const tier=card.dataset.tier;const cardBand=card.dataset.band;const show=(filter==='all'||tier===filter)&&(!band||band===cardBand);card.style.display=show?'':'none';});document.querySelectorAll('#hub-table-body tr').forEach((row)=>{const tier=row.dataset.tier;const rowBand=row.dataset.band;const show=(filter==='all'||tier===filter)&&(!band||band===rowBand);row.style.display=show?'':'none';});}filters.forEach((button)=>button.addEventListener('click',()=>applyFilter(button.dataset.filter||'all',button.dataset.band||'')));applyFilter('all','');</script>
   </body>
 </html>

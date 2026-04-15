@@ -1,0 +1,132 @@
+[
+  {
+    "company_name": "牧原股份",
+    "slug": "muyuan",
+    "tier": "核心",
+    "ticker": "002714.SZ",
+    "exchange": "SZ",
+    "display_order": 1,
+    "is_core": true,
+    "detail_page_path": "./muyuan.html"
+  },
+  {
+    "company_name": "温氏股份",
+    "slug": "wens",
+    "tier": "核心",
+    "ticker": "300498.SZ",
+    "exchange": "SZ",
+    "display_order": 2,
+    "is_core": true,
+    "detail_page_path": "./wens.html"
+  },
+  {
+    "company_name": "新希望",
+    "slug": "newhope",
+    "tier": "核心",
+    "ticker": "000876.SZ",
+    "exchange": "SZ",
+    "display_order": 3,
+    "is_core": true,
+    "detail_page_path": "./newhope.html"
+  },
+  {
+    "company_name": "巨星农牧",
+    "slug": "juxing",
+    "tier": "核心",
+    "ticker": "603477.SH",
+    "exchange": "SH",
+    "display_order": 4,
+    "is_core": true,
+    "detail_page_path": "./juxing.html"
+  },
+  {
+    "company_name": "神农集团",
+    "slug": "shennong",
+    "tier": "核心",
+    "ticker": "605296.SH",
+    "exchange": "SH",
+    "display_order": 5,
+    "is_core": true,
+    "detail_page_path": "./shennong.html"
+  },
+  {
+    "company_name": "天康生物",
+    "slug": "tiankang",
+    "tier": "核心",
+    "ticker": "002100.SZ",
+    "exchange": "SZ",
+    "display_order": 6,
+    "is_core": true,
+    "detail_page_path": "./tiankang.html"
+  },
+  {
+    "company_name": "德康农牧",
+    "slug": "dekon",
+    "tier": "核心",
+    "ticker": "2419.HK",
+    "exchange": "HK",
+    "display_order": 7,
+    "is_core": true,
+    "detail_page_path": "./dekon.html"
+  },
+  {
+    "company_name": "正邦科技",
+    "slug": "zhengbang",
+    "tier": "扩展",
+    "ticker": "002157.SZ",
+    "exchange": "SZ",
+    "display_order": 8,
+    "is_core": false,
+    "detail_page_path": "./zhengbang.html"
+  },
+  {
+    "company_name": "天邦食品",
+    "slug": "tianbang",
+    "tier": "扩展",
+    "ticker": "002124.SZ",
+    "exchange": "SZ",
+    "display_order": 9,
+    "is_core": false,
+    "detail_page_path": "./tianbang.html"
+  },
+  {
+    "company_name": "傲农生物",
+    "slug": "aonong",
+    "tier": "扩展",
+    "ticker": "603363.SH",
+    "exchange": "SH",
+    "display_order": 10,
+    "is_core": false,
+    "detail_page_path": "./aonong.html"
+  },
+  {
+    "company_name": "唐人神",
+    "slug": "tangrenshen",
+    "tier": "扩展",
+    "ticker": "002567.SZ",
+    "exchange": "SZ",
+    "display_order": 11,
+    "is_core": false,
+    "detail_page_path": "./tangrenshen.html"
+  },
+  {
+    "company_name": "东瑞股份",
+    "slug": "dongrui",
+    "tier": "扩展",
+    "ticker": "001201.SZ",
+    "exchange": "SZ",
+    "display_order": 12,
+    "is_core": false,
+    "detail_page_path": "./dongrui.html"
+  },
+  {
+    "company_name": "新五丰",
+    "slug": "xinwufeng",
+    "tier": "扩展",
+    "ticker": "600975.SH",
+    "exchange": "SH",
+    "display_order": 13,
+    "is_core": false,
+    "detail_page_path": "./xinwufeng.html"
+  }
+]

@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>德康农牧 | 中国生猪公司详情</title>
+    <meta name="description" content="德康农牧 的经营、股价、财务、资本事件与证据边界页面。" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23f5e7d5'/%3E%3Cpath d='M17 35c0-9 8-15 18-15 7 0 12 2 15 6l4-1 3 3-1 4c1 2 1 4 1 6 0 9-8 15-18 15H27l-6 4-1-6c-2-2-3-5-3-8z' fill='%23825a36'/%3E%3Ccircle cx='45' cy='32' r='2.5' fill='%23f5e7d5'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/site.css" />
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+    <style>
+      .company-hero {
+        position:relative;
+        overflow:hidden;
+      }
+      .company-hero::before {
+        position:absolute;
+        inset:-18% auto auto -10%;
+        width:360px;
+        height:360px;
+        border-radius:50%;
+        background:radial-gradient(circle, rgba(184,104,62,0.22), transparent 70%);
+        content:"";
+        pointer-events:none;
+      }
+      .company-hero::after {
+        position:absolute;
+        inset:auto -12% -20% auto;
+        width:380px;
+        height:380px;
+        border-radius:50%;
+        background:radial-gradient(circle, rgba(83,96,65,0.16), transparent 72%);
+        content:"";
+        pointer-events:none;
+      }
+      .hero-shell {
+        position:relative;
+        z-index:1;
+        display:grid;
+        grid-template-columns:1fr;
+        gap:1.1rem;
+        align-items:start;
+      }
+      .hero-copy, .hero-side { position:relative; z-index:1; }
+      .hero-copy h1 { max-width:9ch; }
+      .hero-lead { max-width:60ch; font-size:1.08rem; color:var(--ink); }
+      .hero-pill-row, .hero-actions, .meta-strip, .chart-meta, .chart-boxes, .section-anchor-nav {
+        display:flex;
+        flex-wrap:wrap;
+        gap:0.7rem;
+      }
+      .hero-pill, .anchor-link {
+        display:inline-flex;
+        align-items:center;
+        padding:0.44rem 0.78rem;
+        border-radius:999px;
+        border:1px solid rgba(64,54,40,0.12);
+        background:rgba(255,251,244,0.8);
+        font-size:0.84rem;
+      }
+      .hero-actions { margin-top:1rem; }
+      .hero-actions a {
+        padding:0.62rem 0.98rem;
+        border-radius:999px;
+        border:1px solid var(--line);
+        background:rgba(255,251,244,0.82);
+        font-weight:700;
+      }
+      .hero-actions a:last-child {
+        background:linear-gradient(135deg, rgba(123,63,33,0.96), rgba(184,104,62,0.9));
+        color:#fffaf2;
+        border-color:rgba(123,63,33,0.38);
+      }
+      .hero-insight-grid, .summary-grid, .detail-grid, .metrics-grid, .event-grid, .overview-grid, .priority-grid, .hero-quick-grid {
+        display:grid;
+        gap:1rem;
+      }
+      .chart-stack {
+        display:grid;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:1rem;
+      }
+      .priority-grid {
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        margin-top:1.1rem;
+      }
+      .priority-card {
+        padding:16px 18px;
+        border-radius:18px;
+        border:1px solid rgba(64,54,40,0.12);
+        background:rgba(255,251,244,0.72);
+      }
+      .priority-card strong {
+        display:block;
+        margin-bottom:0.35rem;
+        font-size:0.78rem;
+        color:var(--muted);
+        letter-spacing:0.1em;
+        text-transform:uppercase;
+      }
+      .priority-card ul {
+        margin:0;
+        padding-left:1rem;
+      }
+      .hero-side {
+        display:grid;
+        grid-template-columns:repeat(2,minmax(280px,1fr));
+        gap:1rem;
+        align-items:start;
+      }
+      .hero-side .panel {
+        background:linear-gradient(180deg, rgba(255,251,244,0.94), rgba(255,248,238,0.86));
+      }
+      .hero-side .panel h3 {
+        margin-top:0;
+      }
+      .hero-side .metric-strip-grid {
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+      .hero-quick-grid {
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+      .summary-grid {
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+      .summary-card {
+        padding:18px;
+        border-radius:18px;
+        border:1px solid var(--line);
+        background:rgba(255,251,244,0.78);
+      }
+      .summary-card span {
+        display:block;
+        color:var(--muted);
+        font-size:0.76rem;
+        letter-spacing:0.12em;
+        text-transform:uppercase;
+        margin-bottom:0.38rem;
+      }
+      .summary-value {
+        font-weight:700;
+        color:var(--ink);
+        line-height:1.45;
+      }
+      .summary-detail {
+        margin-top:0.55rem;
+        color:var(--muted);
+        font-size:0.82rem;
+      }
+      .section-anchor-nav {
+        position:sticky;
+        top:16px;
+        z-index:4;
+        margin-top:18px;
+        padding:14px 16px;
+        border:1px solid var(--line);
+        border-radius:999px;
+        background:rgba(255,251,244,0.84);
+        backdrop-filter:blur(16px);
+        box-shadow:var(--shadow);
+      }
+      .anchor-link {
+        color:var(--muted);
+        transition:180ms ease;
+      }
+      .anchor-link:hover {
+        color:var(--ink);
+        border-color:rgba(123,63,33,0.18);
+      }
+      .overview-grid {
+        grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      }
+      .metric-strip-grid {
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+        gap:1rem;
+      }
+      .metric-strip-card {
+        padding:16px 18px;
+        border-radius:18px;
+        border:1px solid var(--line);
+        background:rgba(255,251,244,0.82);
+        box-shadow:var(--shadow);
+      }
+      .metric-strip-card strong {
+        display:block;
+        margin-bottom:0.35rem;
+        font-size:0.76rem;
+        color:var(--muted);
+        letter-spacing:0.12em;
+        text-transform:uppercase;
+      }
+      .metric-strip-foot {
+        display:flex;
+        flex-wrap:wrap;
+        gap:0.4rem;
+        margin-top:0.78rem;
+      }
+      .overview-card {
+        padding:18px 20px;
+        border-radius:20px;
+        border:1px solid var(--line);
+        background:linear-gradient(180deg, rgba(255,251,244,0.94), rgba(255,255,255,0.8));
+        box-shadow:var(--shadow);
+      }
+      .overview-card strong {
+        display:block;
+        margin-bottom:0.35rem;
+        font-size:0.78rem;
+        color:var(--muted);
+        letter-spacing:0.1em;
+        text-transform:uppercase;
+      }
+      .detail-grid {
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        align-items:start;
+      }
+      .metrics-grid {
+        grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+      }
+      .metric-status {
+        display:grid;
+        gap:0.18rem;
+        padding:0.9rem 1rem;
+        border:1px solid var(--line);
+        border-radius:16px;
+        background:rgba(255,251,244,0.72);
+      }
+      .metric-status strong {
+        font-size:0.78rem;
+        color:var(--muted);
+        text-transform:uppercase;
+        letter-spacing:0.08em;
+      }
+      .data-badge {
+        display:inline-flex;
+        align-items:center;
+        padding:0.34rem 0.66rem;
+        border-radius:999px;
+        font-size:0.8rem;
+        font-weight:700;
+        line-height:1.1;
+        border:1px solid rgba(64,54,40,0.12);
+        background:rgba(255,255,255,0.76);
+      }
+      .data-badge-compact {
+        padding:0.28rem 0.58rem;
+        font-size:0.76rem;
+      }
+      .badge-official, .inline-official {
+        border-color:rgba(123,63,33,0.2);
+        background:rgba(249,238,232,0.95);
+        color:#8b3f1f;
+      }
+      .badge-support, .inline-support {
+        border-color:rgba(47,143,123,0.22);
+        background:rgba(232,247,243,0.95);
+        color:#1f7662;
+      }
+      .badge-pending, .inline-pending {
+        border-color:rgba(96,83,65,0.14);
+        background:rgba(243,240,235,0.95);
+        color:#7b6f62;
+      }
+      .badge-target, .inline-target {
+        border-color:rgba(158,123,47,0.24);
+        background:rgba(251,245,224,0.95);
+        color:#9a6f12;
+      }
+      .badge-inferred, .inline-inferred {
+        border-color:rgba(122,42,38,0.18);
+        background:rgba(249,233,232,0.95);
+        color:#7a2a26;
+      }
+      .badge-derived, .inline-derived {
+        border-color:rgba(57,84,118,0.2);
+        background:rgba(233,240,248,0.95);
+        color:#31567a;
+      }
+      .badge-review, .inline-review {
+        border-color:rgba(150,95,37,0.22);
+        background:rgba(252,241,228,0.96);
+        color:#8e5c21;
+      }
+      .badge-actual, .inline-actual {
+        border-color:rgba(83,96,65,0.2);
+        background:rgba(237,244,233,0.95);
+        color:#445335;
+      }
+      .badge-neutral, .inline-neutral {
+        border-color:rgba(64,54,40,0.12);
+        background:rgba(255,255,255,0.78);
+        color:var(--ink);
+      }
+      .inline-value {
+        display:inline-flex;
+        align-items:center;
+        padding:0.38rem 0.66rem;
+        border-radius:12px;
+        border:1px solid rgba(64,54,40,0.12);
+        background:rgba(255,255,255,0.78);
+      }
+      .evidence-mix-row {
+        display:flex;
+        flex-wrap:wrap;
+        gap:0.42rem;
+      }
+      .chart-card {
+        padding:22px;
+        border:1px solid var(--line);
+        border-radius:var(--radius);
+        background:linear-gradient(180deg, rgba(255,251,244,0.94), rgba(255,255,255,0.82));
+        box-shadow:var(--shadow);
+      }
+      .chart-card-span-2 {
+        grid-column:span 2;
+      }
+      .chart-head {
+        display:flex;
+        justify-content:space-between;
+        align-items:flex-start;
+        gap:1rem;
+        margin-bottom:0.85rem;
+      }
+      .chart-title-stack h3 {
+        margin:0;
+        font-size:1.06rem;
+        line-height:1.25;
+      }
+      .chart-title-stack p {
+        margin:0.34rem 0 0;
+        color:var(--muted);
+        font-size:0.88rem;
+      }
+      .chart-canvas { width:100%; height:360px; }
+      .chart-meta { margin-bottom:0.75rem; }
+      .chart-box {
+        padding:0.8rem 0.95rem;
+        border-radius:14px;
+        border:1px solid var(--line);
+        background:rgba(255,251,244,0.84);
+        min-width:120px;
+      }
+      .chart-box strong {
+        display:block;
+        margin-top:0.18rem;
+      }
+      .legend-row {
+        display:flex;
+        flex-wrap:wrap;
+        gap:0.48rem;
+        margin-bottom:0.8rem;
+      }
+      @media (max-width:1280px) {
+        .hero-side {
+          grid-template-columns:1fr;
+        }
+        .hero-side .metric-strip-grid {
+          grid-template-columns:repeat(2,minmax(0,1fr));
+        }
+      }
+      @media (max-width:1100px) {
+        .hero-shell, .detail-grid, .summary-grid, .priority-grid, .hero-quick-grid, .chart-stack, .hero-side {
+          grid-template-columns:1fr;
+        }
+        .chart-card-span-2 {
+          grid-column:auto;
+        }
+        .section-anchor-nav {
+          position:static;
+          border-radius:24px;
+        }
+      }
+      .legend-chip {
+        display:inline-flex;
+        align-items:center;
+        gap:0.45rem;
+        padding:0.34rem 0.64rem;
+        border-radius:999px;
+        border:1px solid rgba(64,54,40,0.12);
+        background:rgba(255,255,255,0.76);
+        font-size:0.82rem;
+      }
+      .legend-swatch {
+        width:10px;
+        height:10px;
+        border-radius:50%;
+        flex:0 0 10px;
+      }
+      .event-grid {
+        grid-template-columns:1fr;
+      }
+      .event-card {
+        display:grid;
+        grid-template-columns:minmax(220px,0.72fr) minmax(0,1.28fr);
+        gap:0.9rem;
+        align-items:start;
+        padding:18px;
+        border:1px solid var(--line);
+        border-radius:18px;
+        background:rgba(255,251,244,0.74);
+      }
+      .event-rail {
+        display:grid;
+        gap:0.55rem;
+        align-content:start;
+        padding-right:0.9rem;
+        border-right:1px dashed rgba(64,54,40,0.14);
+      }
+      .event-body {
+        display:grid;
+        gap:0.55rem;
+        min-width:0;
+      }
+      .event-top {
+        display:flex;
+        justify-content:space-between;
+        gap:0.75rem;
+        align-items:flex-start;
+      }
+      .notes-board {
+        display:grid;
+        grid-template-columns:1fr;
+        gap:1rem;
+      }
+      .note-group {
+        padding:16px 18px;
+        border:1px solid var(--line);
+        border-radius:20px;
+        background:rgba(255,251,244,0.72);
+      }
+      .note-group-head {
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        gap:0.8rem;
+        margin-bottom:0.85rem;
+      }
+      .note-group-head h4 {
+        margin:0;
+      }
+      .panel-subsection { margin-top:1rem; }
+      .compact-table { min-width:860px; }
+      .source-list li + li { margin-top:0.8rem; }
+      .note-card {
+        display:grid;
+        grid-template-columns:minmax(230px,0.76fr) minmax(0,1.24fr);
+        gap:0.9rem;
+        align-items:start;
+        padding:14px 16px;
+        border:1px solid var(--line);
+        border-radius:16px;
+        background:rgba(255,255,255,0.76);
+      }
+      .note-card.official-note {
+        border-color:rgba(123,63,33,0.18);
+        background:rgba(250,242,236,0.92);
+      }
+      .note-card.study-note {
+        border-color:rgba(57,84,118,0.14);
+        background:rgba(241,245,250,0.92);
+      }
+      .note-card.external-clue {
+        border-color:rgba(47,143,123,0.18);
+        background:rgba(236,247,244,0.92);
+      }
+      .note-card-rail {
+        display:grid;
+        gap:0.55rem;
+        align-content:start;
+        padding-right:0.85rem;
+        border-right:1px dashed rgba(64,54,40,0.14);
+      }
+      .note-card-head {
+        display:flex;
+        flex-direction:column;
+        gap:0.55rem;
+        align-items:flex-start;
+      }
+      .note-badges {
+        display:flex;
+        flex-wrap:wrap;
+        gap:0.4rem;
+      }
+      .note-card-body {
+        margin-top:0;
+        color:var(--ink);
+        line-height:1.7;
+      }
+      .note-link {
+        margin-top:0.62rem;
+      }
+      .signal-card {
+        padding:16px 18px;
+        border-radius:18px;
+        border:1px solid rgba(64,54,40,0.12);
+        background:rgba(255,255,255,0.7);
+      }
+      .signal-card strong {
+        display:block;
+        margin-bottom:0.35rem;
+        font-size:0.78rem;
+        color:var(--muted);
+        letter-spacing:0.1em;
+        text-transform:uppercase;
+      }
+      .compact-stack {
+        display:grid;
+        gap:0.9rem;
+      }
+      @media (max-width: 1180px) {
+        .hero-shell, .detail-grid, .metrics-grid, .event-grid, .overview-grid, .priority-grid, .metric-strip-grid, .hero-quick-grid {
+          grid-template-columns:1fr;
+        }
+        .event-card, .note-card {
+          grid-template-columns:1fr;
+        }
+        .event-rail, .note-card-rail {
+          padding-right:0;
+          padding-bottom:0.65rem;
+          border-right:none;
+          border-bottom:1px dashed rgba(64,54,40,0.14);
+        }
+        .section-anchor-nav {
+          border-radius:24px;
+        }
+      }
+      @media (max-width: 760px) {
+        .chart-head {
+          flex-direction:column;
+        }
+        .chart-canvas {
+          height:320px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark">Pig Research Room</span>
+          <strong class="brand-title">德康农牧 公司详情</strong>
+        </div>
+        <nav class="nav-links">
+          <a href="../data-lab/current-state-dashboard.html">行业首页</a>
+          <a class="active" href="./index.html">公司 Hub</a>
+          <a href="../index.html">公开首页</a>
+        </nav>
+      </header>
+      <section class="hero company-hero">
+        <div class="hero-shell">
+          <div class="hero-copy">
+            <span class="eyebrow">核心 Company</span>
+            <h1>德康农牧</h1>
+            <p class="lead hero-lead">德康农牧 当前更像 高增长低成本样本，主看 高 price beta 与 高 cost beta 的兑现，但证据强度仍受字段完整度限制。</p>
+            <div class="hero-pill-row">
+              <span class="hero-pill">底部磨底段里的高增速港股样本</span>
+              <span class="hero-pill">2419.HK</span>
+              <span class="hero-pill">6/8 字段已绑定</span>
+              <span class="hero-pill">暂无最新补充线索</span>
+            </div>
+            <div class="priority-grid">
+              <article class="priority-card">
+                <strong>经营判断</strong>
+                <span>成本锚 成本 12.3元/公斤（知识星球多源印证（2篇） / 2026-04-02）；效率锚 PSY 27（公司披露摘录 / 2025-08-15）；经营细项 仔猪售价 475.5元/头</span>
+              </article>
+              <article class="priority-card">
+                <strong>市场正在交易什么</strong>
+                <span>德康农牧 的市场层优先看相对行业 basket 的强弱，而不是只看绝对涨跌。</span>
+              </article>
+              <article class="priority-card">
+                <strong>下一步确认项</strong>
+                <ul><li>2027 目标</li><li>最新能繁母猪</li></ul>
+              </article>
+              <article class="priority-card">
+                <strong>证据边界</strong>
+                <div class="evidence-mix-row"><span class="data-badge badge-official data-badge-compact">公司披露摘录 2</span><span class="data-badge badge-support data-badge-compact">support候选 2</span><span class="data-badge badge-support data-badge-compact">历史口径候选 2</span><span class="data-badge badge-pending data-badge-compact">待补 2</span></div>
+                <div class="summary-detail">公司披露摘录×2 / support候选×2 / 历史口径候选×2 / 待补×2</div>
+              </article>
+            </div>
+            <div class="hero-actions">
+              <a href="../data-lab/current-state-dashboard.html">返回行业状态页</a>
+              <a href="./index.html">返回公司 Hub</a>
+              <a href="./tiankang.html">上一家公司: 天康生物</a>
+              <a href="./zhengbang.html">下一家公司: 正邦科技</a>
+            </div>
+          </div>
+          <aside class="hero-side">
+            <div class="panel">
+              <h3>关键锚点先看</h3>
+              <div class="metric-strip-grid">
+                
+            <article class="metric-strip-card">
+              <strong>2025 出栏</strong>
+              <div><span class="inline-value inline-official">1082.8 万头</span></div>
+              <div class="metric-strip-foot"><span class="data-badge badge-official data-badge-compact">公司披露摘录</span></div>
+            </article>
+            
+            <article class="metric-strip-card">
+              <strong>最新月报同比</strong>
+              <div><span class="inline-value inline-pending">待补</span></div>
+              <div class="metric-strip-foot"><span class="data-badge badge-pending data-badge-compact">待补</span></div>
+            </article>
+            
+            <article class="metric-strip-card">
+              <strong>能繁母猪</strong>
+              <div><span class="inline-value inline-pending">待补</span></div>
+              <div class="metric-strip-foot"><span class="data-badge badge-pending data-badge-compact">待补</span></div>
+            </article>
+            
+            <article class="metric-strip-card">
+              <strong>PSY</strong>
+              <div><span class="inline-value inline-official">PSY（母 豬年產斷奶仔豬數）提升至27</span></div>
+              <div class="metric-strip-foot"><span class="data-badge badge-official data-badge-compact">公司披露摘录</span><span class="data-badge badge-neutral data-badge-compact">2025-08-15</span></div>
+            </article>
+            
+            <article class="metric-strip-card">
+              <strong>平均成本</strong>
+              <div><span class="inline-value inline-support">全成本控制在 12.3元/公斤</span></div>
+              <div class="metric-strip-foot"><span class="data-badge badge-support data-badge-compact">support候选</span><span class="data-badge badge-neutral data-badge-compact">2026-04-02</span></div>
+            </article>
+            
+              </div>
+            </div>
+            <div class="panel compact-stack">
+              <div class="hero-quick-grid">
+                <div class="summary-card"><span>周期位置</span><div class="summary-value">底部磨底段里的高增速港股样本</div></div>
+                <div class="summary-card"><span>弹性结构</span><div class="summary-value">高 / 高 / 高</div></div>
+                <div class="summary-card"><span>资产负债表约束</span><div class="summary-value">中高</div></div>
+                <div class="summary-card"><span>更新时点</span><div class="summary-value">2026-04-14</div></div>
+              </div>
+              <div class="signal-card">
+                <strong>待补缺口</strong>
+                <ul><li>2027 目标</li><li>最新能繁母猪</li><li>avg_cost_latest: keep-support-candidate | 可以确认低成本区间大致成立，但“12.3 元/公斤”这一精确最新点位仍未由官方原文直接锁定。</li></ul>
+              </div>
+              <div class="signal-card">
+                <strong>当前研究定位</strong>
+                <div>高增长低成本样本；港股个案不能替代 A 股主链信号。</div>
+              </div>
+              <div class="signal-card">
+                <strong>最新补充线索</strong>
+                <div>暂无最新外部线索，当前仍以官方字段和本地学习层为主。</div>
+                <div class="metric-strip-foot"><span class="data-badge badge-support data-badge-compact">暂无最新补充线索</span></div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+      <div class="section-anchor-nav">
+        <a class="anchor-link" href="#overview">总览</a>
+        <a class="anchor-link" href="#operating">经营</a>
+        <a class="anchor-link" href="#market">市场</a>
+        <a class="anchor-link" href="#financial">财务</a>
+        <a class="anchor-link" href="#evidence">证据</a>
+        <a class="anchor-link" href="#guardrails">边界</a>
+      </div>
+      <section id="overview" class="section">
+        <div class="section-header">
+          <div>
+            <h2>判断与边界</h2>
+            <p>这里不再重复堆很多长卡片，只保留最影响阅读顺序的几条：怎么看它、不能怎么过度解读、当前最容易错在哪里。</p>
+          </div>
+        </div>
+        <div class="overview-grid">
+          <article class="overview-card">
+            <strong>对行业判断有什么帮助</strong>
+            <span>适合观察高增速、低成本、港股定价三者如何叠加形成弹性和分歧。</span>
+          </article>
+          <article class="overview-card">
+            <strong>不能改写行业判断的边界</strong>
+            <span>港股个案不能替代 A 股主链信号。</span>
+          </article>
+          <article class="overview-card">
+            <strong>最容易误判的点</strong>
+            <span>把 support 级成本与出栏计划误看成已验证年内兑现。</span>
+          </article>
+          <article class="overview-card">
+            <strong>如果口径失真看什么反证</strong>
+            <span>若 2025 实际出栏和母猪绝对值仍缺官方硬绑定，市场预期就不能当成现实。</span>
+          </article>
+        </div>
+      </section>
+      <section id="operating" class="section">
+        <div class="section-header">
+          <div>
+            <h2>Operating Layer</h2>
+            <p>出栏是最硬主序列，母猪、PSY、成本和经营细项按“离散点优先”的方式展示，不伪装成连续月度。</p>
+          </div>
+        </div>
+        <div id="operating-chart-grid" class="chart-stack"></div>
+        <article class="panel" style="margin-top:1rem;">
+          <h3>Operating Hard Table</h3>
+          <p class="small-note">把出栏、指引、母猪、PSY、成本与仔猪经营细项放进一张硬表里。没有绑定就显式显示待补，不拿交流口径硬凑连续值。</p>
+          
+      <div class="table-shell">
+        <table class="compact-table">
+          <thead>
+            <tr>
+              <th>字段</th>
+              <th>当前页面采用值</th>
+              <th>日期</th>
+              <th>证据状态</th>
+              <th>来源层</th>
+              <th>备注</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2023 出栏</td>
+              <td>708.4 万头</td>
+              <td>2023年</td>
+              <td><span class="data-badge badge-support data-badge-compact">历史口径候选</span></td>
+              <td><span class="data-badge badge-neutral data-badge-compact">矩阵层汇总</span></td>
+              <td>—</td>
+            </tr>
+            
+            <tr>
+              <td>2024 出栏</td>
+              <td>877.9 万头</td>
+              <td>2024年</td>
+              <td><span class="data-badge badge-support data-badge-compact">历史口径候选</span></td>
+              <td><span class="data-badge badge-neutral data-badge-compact">矩阵层汇总</span></td>
+              <td>—</td>
+            </tr>
+            
+            <tr>
+              <td>2025 出栏</td>
+              <td>1082.8 万头</td>
+              <td>2025年</td>
+              <td><span class="data-badge badge-official data-badge-compact">公司披露摘录</span></td>
+              <td><span class="data-badge badge-neutral data-badge-compact">港交所2025年报</span></td>
+              <td>港交所 2025 年报 Financial Highlights 明确披露 2025 年生猪总销量 10,827,982 头，即 1082.7982 万头；该值可直接作为 202...</td>
+            </tr>
+            
+            <tr>
+              <td>最新月报</td>
+              <td>待补</td>
+              <td>待补</td>
+              <td><span class="data-badge badge-pending data-badge-compact">待补</span></td>
+              <td><span class="data-badge badge-neutral data-badge-compact">矩阵层汇总</span></td>
+              <td>—</td>
+            </tr>
+            
+            <tr>
+              <td>2026 指引</td>
+              <td>1500 万头</td>
+              <td>2026</td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+              <td><span class="data-badge badge-neutral data-badge-compact">矩阵层汇总</span></td>
+              <td>—</td>
+            </tr>
+            
+            <tr>
+              <td>2027 目标</td>
+              <td>待补</td>
+              <td>2027</td>
+              <td><span class="data-badge badge-pending data-badge-compact">待补</span></td>
+              <td><span class="data-badge badge-neutral data-badge-compact">矩阵层汇总</span></td>
+              <td>—</td>
+            </tr>
+            
+            <tr>
+              <td>能繁母猪</td>
+              <td>待补</td>
+              <td>待补</td>
+              <td><span class="data-badge badge-pending data-badge-compact">待补</span></td>
+              <td><span class="data-badge badge-neutral data-badge-compact">矩阵层汇总</span></td>
+              <td>—</td>
+            </tr>
+            
+            <tr>
+              <td>PSY</td>
+              <td>PSY（母 豬年產斷奶仔豬數）提升至27</td>
+              <td>2025-08-15</td>
+              <td><span class="data-badge badge-official data-badge-compact">公司披露摘录</span></td>
+              <td><span class="data-badge badge-official data-badge-compact">公司披露摘录</span></td>
+              <td>—</td>
+            </tr>
+            
+            <tr>
+              <td>平均成本</td>
+              <td>全成本控制在 12.3元/公斤</td>
+              <td>2026-04-02</td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">知识星球多源印证（2篇）</span></td>
+              <td>知识星球两份独立材料共同指向全成本约 12.0-12.3 元/公斤，取最新 12.3 元/公斤；仅用于补弱字段，不覆盖官方披露。来源：2025-08-18 德康农牧、2026-0...</td>
+            </tr>
+            
+            <tr>
+              <td>仔猪成本</td>
+              <td>待补</td>
+              <td>待补</td>
+              <td><span class="data-badge badge-pending data-badge-compact">待补</span></td>
+              <td><span class="data-badge badge-pending data-badge-compact">待补</span></td>
+              <td>—</td>
+            </tr>
+            
+            <tr>
+              <td>断奶成本</td>
+              <td>断奶成本控制在 260-270 元／头</td>
+              <td>2026-04-02</td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">知识星球学习摘录</span></td>
+              <td>业高质量发展与产业融合的典型模式，经过前期实践已取得显著效果，得到地方政府与农户广泛认可。未来三年公司将根据不同区域资源禀赋、养殖基础与政策环境，逐步将该成熟模式向更多地区复制推...</td>
+            </tr>
+            
+            <tr>
+              <td>仔猪售价</td>
+              <td>平均售價 (2) （頭） （人民幣元） 銷量 平均售價 (2) （頭） （人民幣元） 4,843,040 (1) 6,944 267,382 2,032.7 4,530.0 475.5 3,925,495 10,917 89,725 （隻或枚） 42,703,302 57,422,159 （隻或枚） 39,839,536 51,619,494 30.5 0.6 1,964.1 2,362.3 426.8 37.7 0.8 主要經營數據 生豬銷售 商品肉豬 種豬 商品仔豬 家禽銷售 黃羽肉雞 雞苗及蛋 附註</td>
+              <td>2025-08-15</td>
+              <td><span class="data-badge badge-official data-badge-compact">公司披露摘录</span></td>
+              <td><span class="data-badge badge-official data-badge-compact">公司披露PDF</span></td>
+              <td>港聯合交易所有限公司對本公告的內容概不負責，對其 準確性或完整性亦不發表任何聲明，並明確表示概不就因本公告全部或任何部分內容而 產生或因倚賴該等內容而引致的任何損失承擔任何責任。...</td>
+            </tr>
+            
+            <tr>
+              <td>料肉比</td>
+              <td>料肉比 1.92</td>
+              <td>2026-04-02</td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">知识星球学习摘录</span></td>
+              <td>殖效率指标处于什么水平？ A：截至2026年3月，公司生猪全程成活率超 过88%，120公斤标准料肉比约2.45产断奶成... | 8 | 页 8 | risk-warning ...</td>
+            </tr>
+            
+            <tr>
+              <td>饲料成本</td>
+              <td>饲料成本下降约-0.9-1.0元，财务费用与管理费用合计下降约0.3元</td>
+              <td>2025-08-18</td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">知识星球学习摘录</span></td>
+              <td>Iviacro Guru 从 奥A姆刷 微信：vacro_GuA：独国际会计准则与中国会计准则在公允价值变动损益上存在差异。今年上半年公允价值变动为8,700 万元，而同期为十几...</td>
+            </tr>
+            
+            <tr>
+              <td>销售成本</td>
+              <td>待补</td>
+              <td>待补</td>
+              <td><span class="data-badge badge-pending data-badge-compact">待补</span></td>
+              <td><span class="data-badge badge-pending data-badge-compact">待补</span></td>
+              <td>—</td>
+            </tr>
+            
+            <tr>
+              <td>期间费用/公斤</td>
+              <td>待补</td>
+              <td>待补</td>
+              <td><span class="data-badge badge-pending data-badge-compact">待补</span></td>
+              <td><span class="data-badge badge-pending data-badge-compact">待补</span></td>
+              <td>—</td>
+            </tr>
+            
+            <tr>
+              <td>成活率/上市率</td>
+              <td>成活率超 过88%</td>
+              <td>2026-04-02</td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">知识星球学习摘录</span></td>
+              <td>未来三年的落地推广规划如 A：独百村百为亚程是生猪产业高质量发展与产业融合的典型模式，经过前期实践已取得显著效果，得到地方政府与农户广泛认可。未来三年公司将根据不同区域资源禀赋、...</td>
+            </tr>
+            
+            <tr>
+              <td>日增重</td>
+              <td>日增重超 1200 克</td>
+              <td>2026-04-02</td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">知识星球学习摘录</span></td>
+              <td>水平？ A：截至2026年3月，公司生猪全程成活率超 过88%，120公斤标准料肉比约2.45产断奶成... | 8 | 页 8 | risk-warning | low - 材...</td>
+            </tr>
+            </tbody>
+        </table>
+      </div>
+    
+        </article>
+        <article class="panel" style="margin-top:1rem;">
+          <h3>Support Notes &amp; External Clues</h3>
+          <p class="small-note">低相关、但值得留痕的交流纪要、知识星球和雪球线索都后置到这里。它们保留来源、日期、动作建议与待验证状态，只作 support 层参考，不直接改写硬字段。</p>
+          <div class="notes-board">
+            <section class="note-group note-group-official-note">
+              <div class="note-group-head">
+                <h4>官方摘录</h4>
+                <span class="data-badge badge-neutral data-badge-compact">2 条</span>
+              </div>
+              <ul class="list-clean source-list">
+            <li class="note-card official-note">
+              <div class="note-card-rail">
+                <div class="note-card-head">
+                  <strong>官方字段说明</strong>
+                  <div class="note-badges"><span class="data-badge badge-official data-badge-compact">官方摘录</span><span class="data-badge badge-neutral data-badge-compact">2026-03-24</span><span class="data-badge badge-official data-badge-compact">公司披露摘录</span></div>
+                </div>
+                
+              </div>
+              <div class="note-card-body">
+                港交所 2025 年报 Financial Highlights 明确披露 In 2025, we sold 10,827,982 heads of pigs in total，可直接折算为 1082.8 万头 2025 实际出栏。
+              </div>
+            </li>
+        
+            <li class="note-card official-note">
+              <div class="note-card-rail">
+                <div class="note-card-head">
+                  <strong>官方成本说明</strong>
+                  <div class="note-badges"><span class="data-badge badge-official data-badge-compact">官方摘录</span><span class="data-badge badge-neutral data-badge-compact">2025-08-22</span><span class="data-badge badge-official data-badge-compact">公司披露摘录</span></div>
+                </div>
+                
+              </div>
+              <div class="note-card-body">
+                官方港交所 2025 中报确认完全成本、单头利润持续领先，但当前线程未在官方页内直接锁定 2025 全年 12.3 元/公斤这一精确点位。
+              </div>
+            </li>
+        </ul>
+            </section>
+            
+            <section class="note-group note-group-study-note">
+              <div class="note-group-head">
+                <h4>学习摘录</h4>
+                <span class="data-badge badge-neutral data-badge-compact">6 条</span>
+              </div>
+              <ul class="list-clean source-list">
+            <li class="note-card study-note">
+              <div class="note-card-rail">
+                <div class="note-card-head">
+                  <strong>产能/扩张规划</strong>
+                  <div class="note-badges"><span class="data-badge badge-neutral data-badge-compact">学习摘录</span><span class="data-badge badge-neutral data-badge-compact">待补日期</span><span class="data-badge badge-neutral data-badge-compact">手动投喂卖方</span></div>
+                </div>
+                
+              </div>
+              <div class="note-card-body">
+                1、行业：猪产能去化与鸡价格拐点共振，养殖周期双击行情启动 生猪板块新周期逻辑持续强化。
+              </div>
+            </li>
+        
+            <li class="note-card study-note">
+              <div class="note-card-rail">
+                <div class="note-card-head">
+                  <strong>经营拆分线索</strong>
+                  <div class="note-badges"><span class="data-badge badge-neutral data-badge-compact">学习摘录</span><span class="data-badge badge-neutral data-badge-compact">待补日期</span><span class="data-badge badge-neutral data-badge-compact">手动投喂卖方</span></div>
+                </div>
+                
+              </div>
+              <div class="note-card-body">
+                技术上，在公司前瞻性布局和持续深耕下，公司培育出具有强大竞争力的品种体系，通过德康Ε系和母猪生产的配套系商品肉猪饲养天龄减少12 天，料肉比降低 0.1，可带来每头生猪出栏成本可降低约 0.7-0.8元/kg，形成显著的育种优势转换为最终的成本竞争力。
+              </div>
+            </li>
+        
+            <li class="note-card study-note">
+              <div class="note-card-rail">
+                <div class="note-card-head">
+                  <strong>产能/扩张规划</strong>
+                  <div class="note-badges"><span class="data-badge badge-neutral data-badge-compact">学习摘录</span><span class="data-badge badge-neutral data-badge-compact">待补日期</span><span class="data-badge badge-neutral data-badge-compact">手动投喂卖方</span></div>
+                </div>
+                
+              </div>
+              <div class="note-card-body">
+                以西南地区为例，除去头部集团场和尾部散户后的总产能约 6000 万头（约占全国出栏量的 40%）的生猪养殖农户适合公司“二号农场”模式，公司未来与适度规模农场合作空间较大。
+              </div>
+            </li>
+        
+            <li class="note-card study-note">
+              <div class="note-card-rail">
+                <div class="note-card-head">
+                  <strong>经营拆分线索</strong>
+                  <div class="note-badges"><span class="data-badge badge-neutral data-badge-compact">学习摘录</span><span class="data-badge badge-neutral data-badge-compact">待补日期</span><span class="data-badge badge-neutral data-badge-compact">手动投喂卖方</span></div>
+                </div>
+                
+              </div>
+              <div class="note-card-body">
+                公司ELY 商品猪相对于市场主流的 DLY 商品猪提前12.16 天出栏，料肉比降低0.1以上，效益增长约100元/头，可使代养农户单头母猪年增效2300元。
+              </div>
+            </li>
+        
+            <li class="note-card study-note">
+              <div class="note-card-rail">
+                <div class="note-card-head">
+                  <strong>经营拆分线索</strong>
+                  <div class="note-badges"><span class="data-badge badge-neutral data-badge-compact">学习摘录</span><span class="data-badge badge-neutral data-badge-compact">2026-04-02</span><span class="data-badge badge-neutral data-badge-compact">行业学习摘录</span></div>
+                </div>
+                
+              </div>
+              <div class="note-card-body">
+                A：截至2026年3月，公司生猪全程成活率超 过88%，120公斤标准料肉比约2.45产断奶成... | 8 | 页 8 | risk-warning | low
+              </div>
+            </li>
+        
+            <li class="note-card study-note">
+              <div class="note-card-rail">
+                <div class="note-card-head">
+                  <strong>产能/扩张规划</strong>
+                  <div class="note-badges"><span class="data-badge badge-neutral data-badge-compact">学习摘录</span><span class="data-badge badge-neutral data-badge-compact">2025-09-05</span><span class="data-badge badge-neutral data-badge-compact">公司学习摘录</span></div>
+                </div>
+                
+              </div>
+              <div class="note-card-body">
+                发展历程：公司历经四阶段发展，从1994-2010年饲料业务奠基，到2011- 2015年种猪育种破局、模式创新萌芽，2016－2020年技术迭代赋能、产能快速释放，2021年至今盈利与规模双突破，跻身行业头部。
+              </div>
+            </li>
+        </ul>
+            </section>
+            </div>
+        </article>
+      </section>
+      <section id="market" class="section">
+        <div class="section-header">
+          <div>
+            <h2>Stock &amp; Market Layer</h2>
+            <p>把股价放回行业 basket 和猪价镜像里看，判断它是在交易现实、预期，还是只是风格与风险偏好。</p>
+          </div>
+        </div>
+        <div id="market-chart-grid" class="chart-stack"></div>
+      </section>
+      <section id="financial" class="section">
+        <div class="section-header">
+          <div>
+            <h2>Financial &amp; Capital Layer</h2>
+            <p>先看结构化财务序列，再看最新硬表和资本事件。没有稳定字段就显式留空，不拿推测值凑完整度。</p>
+          </div>
+        </div>
+        <div id="financial-chart-grid" class="chart-stack"></div>
+        <div class="detail-grid" style="margin-top:1rem;">
+          <article class="panel">
+            <h3>Financial Matrix</h3>
+            
+      <div class="table-shell">
+        <table class="compact-table">
+          <thead>
+            <tr>
+              <th>字段</th>
+              <th>2026年</th>
+              <th>证据状态</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>营业收入</td>
+              <td>224.6亿元</td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+            </tr>
+            
+            <tr>
+              <td>毛利率</td>
+              <td>待补</td>
+              <td><span class="data-badge badge-pending data-badge-compact">待补</span></td>
+            </tr>
+            
+            <tr>
+              <td>归母净利润</td>
+              <td>14.2亿元</td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+            </tr>
+            
+            <tr>
+              <td>经营现金流净额</td>
+              <td>待补</td>
+              <td><span class="data-badge badge-pending data-badge-compact">待补</span></td>
+            </tr>
+            
+            <tr>
+              <td>资本开支</td>
+              <td>待补</td>
+              <td><span class="data-badge badge-pending data-badge-compact">待补</span></td>
+            </tr>
+            
+            <tr>
+              <td>有息负债</td>
+              <td>待补</td>
+              <td><span class="data-badge badge-pending data-badge-compact">待补</span></td>
+            </tr>
+            
+            <tr>
+              <td>现金及现金等价物</td>
+              <td>100亿元</td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+            </tr>
+            
+            <tr>
+              <td>资产负债率</td>
+              <td>待补</td>
+              <td><span class="data-badge badge-pending data-badge-compact">待补</span></td>
+            </tr>
+            
+            <tr>
+              <td>财务费用</td>
+              <td>待补</td>
+              <td><span class="data-badge badge-pending data-badge-compact">待补</span></td>
+            </tr>
+            </tbody>
+        </table>
+      </div>
+      <div class="panel-subsection">
+        <h4>来源摘录</h4>
+        <ul class="list-clean source-list">
+            <li>
+              <strong>revenue</strong>
+              <span>待补日期 / 手动投喂卖方</span>
+              <div class="small-note">营收方面，2024 年公司实现营业收入 224.6 亿元，2018 至2024 年复合增长率达38%。</div>
+            </li>
+            
+            <li>
+              <strong>net_profit</strong>
+              <span>2026-04-02 / 行业学习摘录</span>
+              <div class="small-note">会议要点 2025 年德康农牧经营业绩稳健，生猪业务为核心支柱，全年实现销售收入231亿元，同比增长3.1%归母净利润14.2亿元，经营活动现金净 流量25亿元业货币资金及银行授信近100亿元，财务费用同比下降 45%。</div>
+            </li>
+            
+            <li>
+              <strong>cash</strong>
+              <span>2026-04-02 / 行业学习摘录</span>
+              <div class="small-note">货币资金及银行适用额度接近100 亿元，财务费用同比减少 45%，资本性开支8-9 亿元，资金储备充足、财务结构稳健，盈利水平在行业内处于领先地位。</div>
+            </li>
+            </ul>
+      </div>
+    
+            <p class="small-note">当前还没有稳定可复用的财务历史序列，先保留最新口径和来源层。</p>
+          </article>
+          <article class="panel">
+            <h3>Capital Events</h3>
+            <div class="event-grid">
+            <article class="event-card">
+              <div class="event-rail">
+                <div class="event-top">
+                  <h4>分红</h4>
+                  <span class="data-badge badge-neutral data-badge-compact">2026-04-02</span>
+                </div>
+                <p class="small-note"><strong>证据：</strong><span class="data-badge badge-support data-badge-compact">support-candidate</span> <span class="data-badge badge-neutral data-badge-compact">行业学习摘录</span></p>
+              </div>
+              <div class="event-body">
+                <p>A：公司高度重视股东回报，2024 年上市后首个完整年度即实施超 3 亿元现金分红。</p>
+                <p class="small-note"><strong>如何解读：</strong>更多反映现金创造能力与股东回报，不直接证明行业拐点。</p>
+              </div>
+            </article>
+            
+            <article class="event-card">
+              <div class="event-rail">
+                <div class="event-top">
+                  <h4>并购与资产整合</h4>
+                  <span class="data-badge badge-neutral data-badge-compact">2025-09-05</span>
+                </div>
+                <p class="small-note"><strong>证据：</strong><span class="data-badge badge-support data-badge-compact">support-candidate</span> <span class="data-badge badge-neutral data-badge-compact">公司学习摘录</span></p>
+              </div>
+              <div class="event-body">
+                <p>布局阶段（2011-2015年）：2011年收购重庆特驱42%股权整合资源，2013年从加拿大引进优质种猪构建核心种群，2015年提出“号家2020年引|进图佩克种猪实现基因组选育突破，同年生猪出栏量达137万头。</p>
+                <p class="small-note"><strong>如何解读：</strong>并购与整合会改变资产结构，兑现仍要看经营与现金流。</p>
+              </div>
+            </article>
+            
+            <article class="event-card">
+              <div class="event-rail">
+                <div class="event-top">
+                  <h4>资本开支</h4>
+                  <span class="data-badge badge-neutral data-badge-compact">2026-04-02</span>
+                </div>
+                <p class="small-note"><strong>证据：</strong><span class="data-badge badge-support data-badge-compact">support-candidate</span> <span class="data-badge badge-neutral data-badge-compact">行业学习摘录</span></p>
+              </div>
+              <div class="event-body">
+                <p>2026 年公司以降本增效、轻资产扩张、资金安全为核心，生猪全成本设定基础目标 11.6 元／公斤、挑战目标 11.3 元／公斤，3 月成本已降至11.9 元／公斤，资本开支预算 8 亿元，以二号农场与百村百万工程为主要扩张模式，坚持联农带农，持续优化PSY、料肉比等核心生产指标对 标国际先进养殖水平。</p>
+                <p class="small-note"><strong>如何解读：</strong>资本开支变化会改变现金流和扩张节奏，但必须回到经营兑现验证。</p>
+              </div>
+            </article>
+            
+            <article class="event-card">
+              <div class="event-rail">
+                <div class="event-top">
+                  <h4>资本开支</h4>
+                  <span class="data-badge badge-neutral data-badge-compact">2025-06-16</span>
+                </div>
+                <p class="small-note"><strong>证据：</strong><span class="data-badge badge-support data-badge-compact">support-candidate</span> <span class="data-badge badge-neutral data-badge-compact">行业学习摘录</span></p>
+              </div>
+              <div class="event-body">
+                <p>这种模式优势明显，公司无需在种猪场建设上投入大量资本开支，在相同资金投入的情况下，能够撬动更大的经营杠杆，从而实现更多产能的饲养。</p>
+                <p class="small-note"><strong>如何解读：</strong>资本开支变化会改变现金流和扩张节奏，但必须回到经营兑现验证。</p>
+              </div>
+            </article>
+            
+            <article class="event-card">
+              <div class="event-rail">
+                <div class="event-top">
+                  <h4>再融资</h4>
+                  <span class="data-badge badge-neutral data-badge-compact">2025-06-04</span>
+                </div>
+                <p class="small-note"><strong>证据：</strong><span class="data-badge badge-support data-badge-compact">support-candidate</span> <span class="data-badge badge-neutral data-badge-compact">公司学习摘录</span></p>
+              </div>
+              <div class="event-body">
+                <p>这些措施使得公司在非洲豬瘟的影响下，依然保持稳定增长态势，从而实现了较高的利润回报。</p>
+                <p class="small-note"><strong>如何解读：</strong>再融资改善流动性，但不能把融资动作直接等于经营修复。</p>
+              </div>
+            </article>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="evidence" class="section">
+        <div class="section-header">
+          <div>
+            <h2>Evidence Matrix</h2>
+            <p>这里统一显示 actual / target、evidence mode 和 binding 状态，避免把 support 或 inferred 伪装成硬事实。</p>
+          </div>
+        </div>
+        <div class="metrics-grid"><span class="metric-status"><strong>shipment_2023</strong><span>历史口径候选</span></span><span class="metric-status"><strong>shipment_2024</strong><span>历史口径候选</span></span><span class="metric-status"><strong>shipment_2025</strong><span>公司披露摘录</span></span><span class="metric-status"><strong>guidance_2026</strong><span>support候选</span></span><span class="metric-status"><strong>guidance_2027</strong><span>待补</span></span><span class="metric-status"><strong>sow_inventory_latest</strong><span>待补</span></span><span class="metric-status"><strong>psy_latest</strong><span>公司披露摘录</span></span><span class="metric-status"><strong>avg_cost_latest</strong><span>support候选</span></span></div>
+        <div style="margin-top:1rem;">
+      <div class="table-shell">
+        <table class="compact-table">
+          <thead>
+            <tr>
+              <th>字段</th>
+              <th>数值/口径</th>
+              <th>日期</th>
+              <th>实际/目标</th>
+              <th>证据模式</th>
+              <th>绑定状态</th>
+              <th>来源层</th>
+              <th>备注</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>断奶成本</td>
+              <td>断奶成本控制在 260-270 元／头</td>
+              <td>2026-04-02</td>
+              <td><span class="data-badge badge-actual data-badge-compact">actual</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support-candidate</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">知识星球学习摘录</span></td>
+              <td>业高质量发展与产业融合的典型模式，经过前期实践已取得显著效果，得到地方政府与农户广泛认可。未来三年公司将根据不同区域资源禀赋、养殖基础与政策环境，逐步将该成熟模式向更多地区复制推广。持续...</td>
+            </tr>
+            
+            <tr>
+              <td>断奶成本</td>
+              <td>断奶成本降至230 元／头</td>
+              <td>2026-04-02</td>
+              <td><span class="data-badge badge-actual data-badge-compact">actual</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support-candidate</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">知识星球学习摘录</span></td>
+              <td>种养结合、助力乡村振兴的定位，通过标准化培训、体系化赋能、长期化合作，把更多中小农户培养为会技术、会管理、会经营的养殖主体，稳步扩大模式覆盖范围。 Q：公司当前核心养殖效率指标处于什么水...</td>
+            </tr>
+            
+            <tr>
+              <td>成活率/上市率</td>
+              <td>成活率超 过88%</td>
+              <td>2026-04-02</td>
+              <td><span class="data-badge badge-actual data-badge-compact">actual</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support-candidate</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">知识星球学习摘录</span></td>
+              <td>未来三年的落地推广规划如 A：独百村百为亚程是生猪产业高质量发展与产业融合的典型模式，经过前期实践已取得显著效果，得到地方政府与农户广泛认可。未来三年公司将根据不同区域资源禀赋、养殖基础...</td>
+            </tr>
+            
+            <tr>
+              <td>完全成本</td>
+              <td>全成本设定基础目标 11.6 元／公斤、挑战目标 11.3 元／公斤，3 月成本已降至11.9 元／公斤</td>
+              <td>2026-04-02</td>
+              <td><span class="data-badge badge-target data-badge-compact">target</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support-candidate</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">知识星球学习摘录</span></td>
+              <td>page summary - summary: ## 会议要点 2025 年德康农牧经营业绩稳健，生猪业务为核心支柱，全年实现销售收入231亿元，同比增长3.1%归母净利润14.2亿元，...</td>
+            </tr>
+            
+            <tr>
+              <td>完全成本</td>
+              <td>全成本12.3 元／公斤</td>
+              <td>2026-04-02</td>
+              <td><span class="data-badge badge-actual data-badge-compact">actual</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support-candidate</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">知识星球学习摘录</span></td>
+              <td>dustry-pig-zsxq-2026-04-02-德康农牧-20260401-331b4ac0\cursor-pdf-file-study.md ## One-page summar...</td>
+            </tr>
+            
+            <tr>
+              <td>完全成本</td>
+              <td>全成本控制在 12.3元／公斤</td>
+              <td>2026-04-02</td>
+              <td><span class="data-badge badge-actual data-badge-compact">actual</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support-candidate</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">知识星球学习摘录</span></td>
+              <td>亿元，资金储备充足、财务结构稳健，盈利水平在行业内处于领先地位。公司生猪业务收入占比超80%为业绩核心，黄羽鸡与屠宰板块同 公众号：奥KA姆剃力 步运营整体堂现出收入稳定、现金流健康成本...</td>
+            </tr>
+            
+            <tr>
+              <td>料肉比</td>
+              <td>料肉比 1.92</td>
+              <td>2026-04-02</td>
+              <td><span class="data-badge badge-actual data-badge-compact">actual</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support-candidate</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">知识星球学习摘录</span></td>
+              <td>殖效率指标处于什么水平？ A：截至2026年3月，公司生猪全程成活率超 过88%，120公斤标准料肉比约2.45产断奶成... | 8 | 页 8 | risk-warning | lo...</td>
+            </tr>
+            
+            <tr>
+              <td>料肉比</td>
+              <td>料肉比约2.45</td>
+              <td>2026-04-02</td>
+              <td><span class="data-badge badge-actual data-badge-compact">actual</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support-candidate</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">知识星球学习摘录</span></td>
+              <td>村百为亚程是生猪产业高质量发展与产业融合的典型模式，经过前期实践已取得显著效果，得到地方政府与农户广泛认可。未来三年公司将根据不同区域资源禀赋、养殖基础与政策环境，逐步将该成熟模式向更多...</td>
+            </tr>
+            
+            <tr>
+              <td>日增重</td>
+              <td>日增重超 1200 克</td>
+              <td>2026-04-02</td>
+              <td><span class="data-badge badge-actual data-badge-compact">actual</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support-candidate</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">知识星球学习摘录</span></td>
+              <td>水平？ A：截至2026年3月，公司生猪全程成活率超 过88%，120公斤标准料肉比约2.45产断奶成... | 8 | 页 8 | risk-warning | low - 材料摘录（...</td>
+            </tr>
+            
+            <tr>
+              <td>完全成本</td>
+              <td>完全成本3.6元/公斤</td>
+              <td>2025-09-05</td>
+              <td><span class="data-badge badge-actual data-badge-compact">actual</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support-candidate</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">知识星球学习摘录</span></td>
+              <td>，从1994-2010年饲料业务奠基，到2011- 2015年种猪育种破局、模式创新萌芽，2016－2020年技术迭代赋能、产能快速释放，2021年至今盈利与规模双突破，跻身行业头部。 ...</td>
+            </tr>
+            
+            <tr>
+              <td>成活率/上市率</td>
+              <td>上市率平均约 96%</td>
+              <td>2025-08-18</td>
+              <td><span class="data-badge badge-actual data-badge-compact">actual</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support-candidate</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">知识星球学习摘录</span></td>
+              <td>本低于 12 元／公斤，优秀区域低于11.5 元／公斤，实现多赢。 公从写：奧NA妈利力 微同：vacro Guru 公从亏：奧NA妈別刀 微信：vacro_uuru成本控制与效率提升：...</td>
+            </tr>
+            
+            <tr>
+              <td>完全成本</td>
+              <td>全成本低于 12 元／公斤，优秀区域低于11.5 元／公斤</td>
+              <td>2025-08-18</td>
+              <td><span class="data-badge badge-actual data-badge-compact">actual</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support-candidate</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">知识星球学习摘录</span></td>
+              <td>年公司在荣誉与资质方面取得多项进展。 生猪业务增长因素：育种技术成果转化使公司位居国内育种第一梯队，自主研发的二系配套系效益显著；精准营养与饲料技术通过动态数据库和不同阶段配方，有效控制...</td>
+            </tr>
+            
+            <tr>
+              <td>饲料成本</td>
+              <td>饲料成本下降约-0.9-1.0元，财务费用与管理费用合计下降约0.3元</td>
+              <td>2025-08-18</td>
+              <td><span class="data-badge badge-actual data-badge-compact">actual</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support-candidate</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">知识星球学习摘录</span></td>
+              <td>Iviacro Guru 从 奥A姆刷 微信：vacro_GuA：独国际会计准则与中国会计准则在公允价值变动损益上存在差异。今年上半年公允价值变动为8,700 万元，而同期为十几亿元，差...</td>
+            </tr>
+            
+            <tr>
+              <td>料肉比</td>
+              <td>料肉比约 2.6</td>
+              <td>2025-08-18</td>
+              <td><span class="data-badge badge-actual data-badge-compact">actual</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support-candidate</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">知识星球学习摘录</span></td>
+              <td>势显著，上半年全成本低于 12 元／公斤，优秀区域低于11.5 元／公斤，实现多赢。 公从写：奧NA妈利力 微同：vacro Guru 公从亏：奧NA妈別刀 微信：vacro_uuru成...</td>
+            </tr>
+            
+            <tr>
+              <td>日增重</td>
+              <td>日增重约800 克</td>
+              <td>2025-08-18</td>
+              <td><span class="data-badge badge-actual data-badge-compact">actual</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support-candidate</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">知识星球学习摘录</span></td>
+              <td>工程，二号农场成本优势显著，上半年全成本低于 12 元／公斤，优秀区域低于11.5 元／公斤，实现多赢。 公从写：奧NA妈利力 微同：vacro Guru 公从亏：奧NA妈別刀 微信：v...</td>
+            </tr>
+            
+            <tr>
+              <td>仔猪售价</td>
+              <td>平均售價 (2) （頭） （人民幣元） 銷量 平均售價 (2) （頭） （人民幣元） 4,843,040 (1) 6,944 267,382 2,032.7 4,530.0 475.5 3,925,495 10,917 89,725 （隻或枚） 42,703,302 57,422,159 （隻或枚） 39,839,536 51,619,494 30.5 0.6 1,964.1 2,362.3 426.8 37.7 0.8 主要經營數據 生豬銷售 商品肉豬 種豬 商品仔豬 家禽銷售 黃羽肉雞 雞苗及蛋 附註</td>
+              <td>2025-08-15</td>
+              <td><span class="data-badge badge-actual data-badge-compact">actual</span></td>
+              <td><span class="data-badge badge-official data-badge-compact">company-disclosure-extracted</span></td>
+              <td><span class="data-badge badge-official data-badge-compact">公司披露摘录</span></td>
+              <td><span class="data-badge badge-official data-badge-compact">公司披露PDF</span></td>
+              <td>港聯合交易所有限公司對本公告的內容概不負責，對其 準確性或完整性亦不發表任何聲明，並明確表示概不就因本公告全部或任何部分內容而 產生或因倚賴該等內容而引致的任何損失承擔任何責任。 DEK...</td>
+            </tr>
+            
+            <tr>
+              <td>完全成本</td>
+              <td>完全成本约为每公斤12.4元</td>
+              <td>2025-07-04</td>
+              <td><span class="data-badge badge-actual data-badge-compact">actual</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support-candidate</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">知识星球学习摘录</span></td>
+              <td>f-file-study.md ## One-page summary - summary: ## 会议要点 生豬出栏量目标：2025年德康生猪出栏量目标为1100万头，该目标基于已形成...</td>
+            </tr>
+            
+            <tr>
+              <td>料肉比</td>
+              <td>料比为1.84</td>
+              <td>2025-07-04</td>
+              <td><span class="data-badge badge-actual data-badge-compact">actual</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support-candidate</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">知识星球学习摘录</span></td>
+              <td>为34。全群日增重约780克，一系日增重约800克，高于行业平均720-... - 页 6-10（文本摘录） | 6-10 | Q：公司当前成本构成情况如何？ A：公司当前成本构成与以前...</td>
+            </tr>
+            
+            <tr>
+              <td>日增重</td>
+              <td>日增重约780克</td>
+              <td>2025-07-04</td>
+              <td><span class="data-badge badge-actual data-badge-compact">actual</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support-candidate</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">知识星球学习摘录</span></td>
+              <td>合理规划，并创新养殖模式，如赋能模式和资源整合模式，以适应未来发展，但目前能繁母豬具体数量未披露。 成本情况：2025年上半年完全成本约为每公斤12.4元，后续通过团队学习欧洲农场管理新...</td>
+            </tr>
+            
+            <tr>
+              <td>日增重</td>
+              <td>日增重约800克</td>
+              <td>2025-07-04</td>
+              <td><span class="data-badge badge-actual data-badge-compact">actual</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support-candidate</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">知识星球学习摘录</span></td>
+              <td>式，如赋能模式和资源整合模式，以适应未来发展，但目前能繁母豬具体数量未披露。 成本情况：2025年上半年完全成本约为每公斤12.4元，后续通过团队学习欧洲农场管理新模式、精准营养和技术储...</td>
+            </tr>
+            
+            <tr>
+              <td>完全成本</td>
+              <td>完全成本低于14 元／公斤，而最新月度数据更是低于12.5 元／公斤，这一成本水平显著低于行业中枢，每公斤比行业均值低1 元</td>
+              <td>2025-06-04</td>
+              <td><span class="data-badge badge-actual data-badge-compact">actual</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support-candidate</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">知识星球学习摘录</span></td>
+              <td>种公猪及饲料营养技术、 公众号：奧KA 姆剃刀 健康管... - 页 6-10（文本摘录） | 6-10 | 益。以2024 準鹅信与将塑龙头企业相比，德康的总资产金额分别处于 1,50...</td>
+            </tr>
+            
+            <tr>
+              <td>完全成本</td>
+              <td>完全成本低于14元／公斤，最新月度数据低于12.5 元／公斤</td>
+              <td>2025-06-04</td>
+              <td><span class="data-badge badge-actual data-badge-compact">actual</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support-candidate</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">知识星球学习摘录</span></td>
+              <td>达 1,100 万头，有望成为 2022-2025 年间唯一突破干万头的上市猪企，显示出强劲增长势头，未来能繁母猪数量预计将支持产能扩展至 3,000 万头。 创新养殖模式：采用“公司+...</td>
+            </tr>
+            
+            <tr>
+              <td>2026 指引</td>
+              <td>1500 万头</td>
+              <td>2025-06-04</td>
+              <td><span class="data-badge badge-target data-badge-compact">target</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support-candidate</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+              <td>5 万头核心种群及 14.8 万头纯种群为基础，可提供远期 3,000 万头仔猪的生产能力。中期规划方面，2025 年计划出栏1,100万头，同比增长 25%；2026 年计划出栏1,5...</td>
+            </tr>
+            
+            <tr>
+              <td>料肉比</td>
+              <td>料肉比为1.92</td>
+              <td>2025-06-04</td>
+              <td><span class="data-badge badge-actual data-badge-compact">actual</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support-candidate</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">知识星球学习摘录</span></td>
+              <td>伸至母猪，由农户负责母猪育肥舍建设。自繁自养、一号农场（仔猪代养）和二号农场（母猪代养）的出栏量占比分别为 20%、60%和 20%，实现轻资产快速扩张，提高农户收益，农户投入回报率达 ...</td>
+            </tr>
+            
+            <tr>
+              <td>能繁母猪</td>
+              <td>待补</td>
+              <td>待补</td>
+              <td><span class="data-badge badge-actual data-badge-compact">actual</span></td>
+              <td><span class="data-badge badge-pending data-badge-compact">待补</span></td>
+              <td><span class="data-badge badge-pending data-badge-compact">待补</span></td>
+              <td><span class="data-badge badge-pending data-badge-compact">待补</span></td>
+              <td>—</td>
+            </tr>
+            
+            <tr>
+              <td>完全成本</td>
+              <td>完全成本 12.5 元/kg</td>
+              <td>待补</td>
+              <td><span class="data-badge badge-actual data-badge-compact">actual</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support-candidate</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">知识星球学习摘录</span></td>
+              <td>同生理阶段的生猪采取不同的营养策略，通过精准营养需求、精准原料、精准配方、精准价格和精准饲喂五个环节实现降本增效，实现最佳的饲喂和生产效率。公司通过精准饲喂，每头母猪年饲料消耗量降低 4...</td>
+            </tr>
+            </tbody>
+        </table>
+      </div>
+    </div>
+      </section>
+      <section id="guardrails" class="section">
+        <div class="section-header">
+          <div>
+            <h2>Readthrough &amp; Guardrails</h2>
+            <p>公司页的价值是桥接行业 motherboard，不是越权改写行业状态。</p>
+          </div>
+        </div>
+        <div class="detail-grid">
+          <article class="panel">
+            <h3>下一步确认项</h3>
+            <ul><li>2027 目标</li><li>最新能繁母猪</li></ul>
+          </article>
+          <article class="panel">
+            <h3>待补缺口</h3>
+            <ul><li>2027 目标</li><li>最新能繁母猪</li><li>avg_cost_latest: keep-support-candidate | 可以确认低成本区间大致成立，但“12.3 元/公斤”这一精确最新点位仍未由官方原文直接锁定。</li></ul>
+          </article>
+        </div>
+      </section>
+    </div>
+    <script id="chart-data" type="application/json">{"company_name": "德康农牧", "operating_panels": [{"panel_id": "dekon-hog_full_cost", "title": "完全成本离散轨迹", "coverage_start": "2025-06-04", "coverage_end": "2026-04-02", "series": [{"name": "完全成本离散轨迹", "type": "line", "showSymbol": true, "smooth": false, "data": [["2025-06-04", 14.0], ["2025-06-04", 14.0], ["2025-07-04", 12.4], ["2025-08-18", 12.0], ["2025-09-05", 3.6], ["2026-04-02", 11.6], ["2026-04-02", 12.3], ["2026-04-02", 12.3]]}], "latest_boxes": [{"label": "最新值", "value": "全成本控制在 12.3元／公斤", "tone": "neutral", "source_tier": "", "source_label": "", "trend_key": "", "trend_icon": "", "trend_label": ""}, {"label": "证据", "value": "support候选", "tone": "neutral", "source_tier": "", "source_label": "", "trend_key": "", "trend_icon": "", "trend_label": ""}], "current_read": "成本线决定亏损深度和估值韧性，是公司层的重要经营锚。", "evidence_tier": "知识星球摘录", "data_mode": "support-candidate", "failure_mode": "这是稀疏披露点，不代表连续月度主序列；若公司只给目标值，需要回到 actual/target 标签重读。"}, {"panel_id": "dekon-ops-events", "title": "经营细项时间轴", "coverage_start": "2025-06-04", "coverage_end": "2026-04-02", "series": [{"name": "断奶成本", "type": "scatter", "symbolSize": 12, "data": [["2026-04-02", 0, "断奶成本控制在 260-270 元／头"], ["2026-04-02", 0, "断奶成本降至230 元／头"]]}, {"name": "成活率/上市率", "type": "scatter", "symbolSize": 12, "data": [["2026-04-02", 1, "成活率超 过88%"], ["2025-08-18", 1, "上市率平均约 96%"]]}, {"name": "料肉比", "type": "scatter", "symbolSize": 12, "data": [["2026-04-02", 2, "料肉比 1.92"], ["2026-04-02", 2, "料肉比约2.45"], ["2025-08-18", 2, "料肉比约 2.6"], ["2025-07-04", 2, "料比为1.84"], ["2025-06-04", 2, "料肉比为1.92"]]}, {"name": "日增重", "type": "scatter", "symbolSize": 12, "data": [["2026-04-02", 3, "日增重超 1200 克"], ["2025-08-18", 3, "日增重约800 克"], ["2025-07-04", 3, "日增重约780克"], ["2025-07-04", 3, "日增重约800克"]]}, {"name": "饲料成本", "type": "scatter", "symbolSize": 12, "data": [["2025-08-18", 4, "饲料成本下降约-0.9-1.0元，财务费用与管理费用合计下降约0.3元"]]}, {"name": "仔猪售价", "type": "scatter", "symbolSize": 12, "data": [["2025-08-15", 5, "平均售價 (2) （頭） （人民幣元） 銷量 平均售價 (2) （頭） （人民幣元） 4,843,040 (1) 6,944 267,382 2,032.7 4,530.0 475.5 3,925,495 10,917 89,725 （隻或枚） 42,703,302 57,422,159 （隻或枚） 39,839,536 51,619,494 30.5 0.6 1,964.1 2,362.3 426.8 37.7 0.8 主要經營數據 生豬銷售 商品肉豬 種豬 商品仔豬 家禽銷售 黃羽肉雞 雞苗及蛋 附註"]]}], "y_axis_type": "category", "y_axis_data": ["断奶成本", "成活率/上市率", "料肉比", "日增重", "饲料成本", "仔猪售价"], "latest_boxes": [{"label": "指标数", "value": "15", "tone": "neutral", "source_tier": "", "source_label": "", "trend_key": "", "trend_icon": "", "trend_label": ""}, {"label": "类别数", "value": "6", "tone": "neutral", "source_tier": "", "source_label": "", "trend_key": "", "trend_icon": "", "trend_label": ""}], "current_read": "当公司只披露离散经营细项时，用时间轴先看这些变量何时出现、何时改善，而不是假装有连续线。", "evidence_tier": "离散披露点", "data_mode": "mixed", "failure_mode": "事件时间轴只表达出现顺序，不表达完整频率和持续性。"}], "market_panels": [], "financial_panels": []}</script>
+    <script>
+      const chartBundle = JSON.parse(document.getElementById("chart-data").textContent);
+      const palette = ["#7b3f21", "#b8683e", "#536041", "#9e7b2f", "#2f8f7b", "#7a2a26"];
+      function buildChart(panel, targetId) {
+        const target = document.getElementById(targetId);
+        const card = document.createElement("article");
+        card.className = "chart-card";
+        const wideSuffixes = ["shipment-history", "equity-price", "relative", "financial-income", "financial-balance-sheet", "ops-events"];
+        if (wideSuffixes.some((suffix) => (panel.panel_id || "").endsWith(suffix))) {
+          card.classList.add("chart-card-span-2");
+        }
+        const series = panel.series || [];
+        const boxes = (panel.latest_boxes || []).map((item) => `<div class="chart-box"><small>${item.label}</small><strong>${item.value}</strong></div>`).join("");
+        const legend = series.map((item, index) => `<span class="legend-chip"><span class="legend-swatch" style="background:${item.color || palette[index % palette.length]}"></span>${item.name}</span>`).join("");
+        card.innerHTML = `<div class="chart-head"><div class="chart-title-stack"><h3>${panel.title}</h3><p>${panel.coverage_start} ~ ${panel.coverage_end}</p></div><div class="chart-meta"><span class="chip">${panel.evidence_tier}</span><span class="chip">${panel.data_mode}</span></div></div><div class="legend-row">${legend}</div><div class="chart-boxes">${boxes}</div><div class="chart-canvas" id="chart-${panel.panel_id}"></div><p><strong>当前读法：</strong>${panel.current_read}</p><p class="small-note"><strong>失效方式：</strong>${panel.failure_mode}</p>`;
+        target.appendChild(card);
+        const chart = echarts.init(card.querySelector(".chart-canvas"));
+        const yAxes = panel.y_axis_type === "category" ? [{ type: "category", data: panel.y_axis_data || [], axisLabel: { color: "#675e53" } }] : [{ type: "value", scale: true, axisLabel: { color: "#675e53" } }];
+        chart.setOption({
+          animation: false,
+          grid: { left: 58, right: 28, top: 24, bottom: 64 },
+          tooltip: { trigger: "axis", formatter: function(params) { if (!Array.isArray(params)) return ''; return params.map((item) => { const value = item.data && item.data.length > 2 ? item.data[2] : (Array.isArray(item.data) ? item.data[1] : item.data); return `${item.seriesName}: ${value}`; }).join('<br>'); } },
+          legend: { top: 0 },
+          dataZoom: panel.x_axis_type === "category" ? [] : [{ type: "inside", xAxisIndex: 0 }, { type: "slider", xAxisIndex: 0, bottom: 12, height: 22 }],
+          xAxis: { type: panel.x_axis_type === "category" ? "category" : "time", data: panel.x_axis_type === "category" ? (panel.x_axis_data || []) : undefined, axisLabel: { color: "#675e53" } },
+          yAxis: yAxes,
+          series: series.map((series, index) => ({ name: series.name, type: series.type || "line", smooth: !!series.smooth, showSymbol: series.showSymbol !== false, symbolSize: series.symbolSize || 8, emphasis: { focus: "series" }, lineStyle: { width: series.lineWidth || 2.4, color: series.color || palette[index % palette.length] }, itemStyle: { color: series.color || palette[index % palette.length] }, areaStyle: series.areaStyle || undefined, barMaxWidth: series.barMaxWidth || 26, data: series.data }))
+        });
+        window.addEventListener("resize", () => chart.resize());
+      }
+      (chartBundle.operating_panels || []).forEach((panel) => buildChart(panel, "operating-chart-grid"));
+      (chartBundle.market_panels || []).forEach((panel) => buildChart(panel, "market-chart-grid"));
+      (chartBundle.financial_panels || []).forEach((panel) => buildChart(panel, "financial-chart-grid"));
+    </script>
+  </body>
+</html>

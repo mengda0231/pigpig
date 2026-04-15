@@ -1,0 +1,33 @@
+{
+  "company_name": "唐人神",
+  "as_of_date": "2026-04-14",
+  "cycle_position": "底部磨底段里的经营优化样本",
+  "headline_judgment": "唐人神 当前更像 成本优化与产能利用率样本，主看 中高 price beta 与 中 cost beta 的兑现，但证据强度仍受字段完整度限制。",
+  "price_beta": "中高",
+  "cost_beta": "中",
+  "volume_beta": "中",
+  "balance_sheet_constraint": "中高",
+  "latest_operating_take": "成本锚 运营成本 12.71元/公斤（公司披露摘录 / 2025-08-30）；月报 2026-03 / 同比 33.8%；经营细项 断奶成本变化 较上年下降46.34元/头",
+  "latest_market_take": "1m 相对 basket -0.2%；3m 相对 basket -2.1%；6m 相对 basket -1.3%",
+  "latest_evidence_mix": {
+    "company-disclosure-extracted": 1,
+    "historical-candidate": 1,
+    "pending": 2,
+    "pending-company-capture": 2,
+    "verified": 2
+  },
+  "next_confirmations": [
+    "2026 指引",
+    "2027 目标",
+    "最新能繁母猪",
+    "最新 PSY"
+  ],
+  "open_gaps": [
+    "2026 指引",
+    "2027 目标",
+    "最新能繁母猪",
+    "最新 PSY",
+    "sow_inventory_latest: keep-blank | 官方 2025 披露仍未给最新母猪绝对值；公网仅有规模线索，时间锚不清，因此继续留空。",
+    "psy_latest: keep-blank | 官方材料只有目标值，公网层虽出现 28.06 的实际口径，但目前仍是单一实际来源，不能直接回填 psy_latest。"
+  ]
+}

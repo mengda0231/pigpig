@@ -1,0 +1,29 @@
+{
+  "company_name": "巨星农牧",
+  "as_of_date": "2026-04-14",
+  "cycle_position": "底部磨底段里的高弹性成长样本",
+  "headline_judgment": "巨星农牧 当前更像 高弹性成长龙头，主看 高 price beta 与 中高 cost beta 的兑现，但证据强度仍受字段完整度限制。",
+  "price_beta": "高",
+  "cost_beta": "中高",
+  "volume_beta": "高",
+  "balance_sheet_constraint": "中高",
+  "latest_operating_take": "成本锚 完全成本 13元/公斤（公司披露摘录 / 2025-03-22）；效率锚 PSY 30（最新交流纪要 / 2026-01-17）；母猪锚 能繁母猪 18 万头（知识星球纪要补录 / 2026-01-17）；月报 2026-03 / 同比 34.7%",
+  "latest_market_take": "1m 相对 basket -1.8%；3m 相对 basket +4.2%；6m 相对 basket -0.5%",
+  "latest_evidence_mix": {
+    "company-disclosure-extracted": 1,
+    "historical-candidate": 2,
+    "pending": 2,
+    "support-candidate": 2,
+    "verified": 1
+  },
+  "next_confirmations": [
+    "2026 指引",
+    "2027 目标"
+  ],
+  "open_gaps": [
+    "2026 指引",
+    "2027 目标",
+    "sow_inventory_latest: keep-support-candidate | 知识星球有 18 万头线索，但官方 2025 披露未给绝对值；公开网更多是产能或种猪口径，不能直接改写为最新能繁母猪存栏。",
+    "psy_latest: keep-support-candidate | 按“最新值优先但显式标注来源”的新规则，页面可采用 2026-01-17 交流中的“PSY 超30”作为最新 support 展示值，并明确来源与级别；2025-05 正..."
+  ]
+}

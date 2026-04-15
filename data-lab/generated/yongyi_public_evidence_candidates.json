@@ -1,0 +1,172 @@
+{
+  "as_of": "2026-04-16",
+  "vendor": "yongyi",
+  "payload": {
+    "public_series_count": 5,
+    "public_link_count": 18,
+    "login_gated_count": 18,
+    "public_group_counts": {
+      "首页最新": 6,
+      "月度报告": 6,
+      "调研相关": 6
+    },
+    "public_access_counts": {
+      "title-open-body-gated": 18
+    },
+    "history_row_count": 1518,
+    "history_group_counts": {
+      "日评": 1085,
+      "周报": 201,
+      "月报": 64,
+      "调研": 119,
+      "会议回放": 49
+    },
+    "history_access_counts": {
+      "title-open-body-gated": 401,
+      "listing-open-unprobed": 1117
+    },
+    "history_probe_scope_counts": {
+      "recent-probed": 401,
+      "historical-unprobed": 1117
+    },
+    "recent_probe_floor": "2025-01-01",
+    "recent_probe_count": 401,
+    "recent_body_gated_count": 401,
+    "latest_series_dates": [
+      "2026-04-14",
+      "2026-04-13",
+      "2026-04-12"
+    ],
+    "series_summary": [
+      "yongyi_daily_meat_price",
+      "yongyi_monthly_sow_inventory",
+      "yongyi_monthly_sow_inventory_mom",
+      "yongyi_weekly_hog_price",
+      "yongyi_weekly_shipment_weight"
+    ],
+    "integrated_series_titles": [
+      "出栏体重图",
+      "商品猪出栏均价",
+      "日度肉价",
+      "月度能繁母猪存栏量走势图"
+    ],
+    "gated_titles": [
+      "2026年4月14日 午间行情播报（预期今晚与明日）",
+      "2026年4月13日 午间行情播报（预期今晚与明日）",
+      "2026年4月10日 午间行情播报（预期今晚与明日）",
+      "2026年3月26日 涌益咨询 生猪市场周报",
+      "涌益咨询生猪市场月报 2026年3月生猪市场解读",
+      "2026年4月9日 午间行情播报（预期今晚与明日）",
+      "2026年4月8日 涌益咨询电话会PPT分享",
+      "2026年4月8日 午间行情播报（预期今晚与明日）"
+    ],
+    "latest_recent_titles": [
+      "2026年4月14日 午间行情播报（预期今晚与明日）",
+      "2026年4月13日 午间行情播报（预期今晚与明日）",
+      "2026年4月10日 午间行情播报（预期今晚与明日）",
+      "2026年3月26日 涌益咨询 生猪市场周报",
+      "涌益咨询生猪市场月报 2026年3月生猪市场解读",
+      "2026年4月9日 午间行情播报（预期今晚与明日）",
+      "2026年4月8日 涌益咨询电话会PPT分享",
+      "2026年4月8日 午间行情播报（预期今晚与明日）",
+      "2026年4月7日 午间行情播报（预期今晚与明日）",
+      "2026年4月3日 午间行情播报（预期今晚与明日）"
+    ],
+    "keyword_focus": [
+      {
+        "keyword": "仔猪",
+        "terms": [
+          "仔猪",
+          "新生仔猪"
+        ],
+        "hit_count": 2,
+        "latest_rows": [
+          {
+            "publish_date": "2026-04-01",
+            "group": "调研",
+            "title": "2026年3月31日 涌益各地区仔猪育肥户当下市场调研汇总",
+            "access_mode": "title-open-body-gated"
+          },
+          {
+            "publish_date": "2026-01-07",
+            "group": "日评",
+            "title": "涌益咨询12月能繁及新生仔猪数据",
+            "access_mode": "title-open-body-gated"
+          }
+        ]
+      },
+      {
+        "keyword": "母猪",
+        "terms": [
+          "母猪",
+          "能繁"
+        ],
+        "hit_count": 2,
+        "latest_rows": [
+          {
+            "publish_date": "2026-03-31",
+            "group": "调研",
+            "title": "涌益咨询2026.3.31各规模母猪群体当下现状调研",
+            "access_mode": "title-open-body-gated"
+          },
+          {
+            "publish_date": "2026-01-07",
+            "group": "日评",
+            "title": "涌益咨询12月能繁及新生仔猪数据",
+            "access_mode": "title-open-body-gated"
+          }
+        ]
+      },
+      {
+        "keyword": "二育",
+        "terms": [
+          "二育"
+        ],
+        "hit_count": 1,
+        "latest_rows": [
+          {
+            "publish_date": "2025-08-14",
+            "group": "调研",
+            "title": "山东二育调研情况汇总0812-0813",
+            "access_mode": "title-open-body-gated"
+          }
+        ]
+      },
+      {
+        "keyword": "供应",
+        "terms": [
+          "供应",
+          "出栏完成度",
+          "出栏"
+        ],
+        "hit_count": 1,
+        "latest_rows": [
+          {
+            "publish_date": "2025-12-22",
+            "group": "日评",
+            "title": "涌益咨询 出栏完成度(截至2025年12月20日)",
+            "access_mode": "title-open-body-gated"
+          }
+        ]
+      },
+      {
+        "keyword": "冻品",
+        "terms": [
+          "冻品",
+          "库容"
+        ],
+        "hit_count": 0,
+        "latest_rows": []
+      },
+      {
+        "keyword": "屠宰",
+        "terms": [
+          "屠宰",
+          "开工率"
+        ],
+        "hit_count": 0,
+        "latest_rows": []
+      }
+    ]
+  }
+}

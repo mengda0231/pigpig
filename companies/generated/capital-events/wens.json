@@ -1,0 +1,13 @@
+[
+  {
+    "company_name": "温氏股份",
+    "event_date": "2025-09-04",
+    "event_type": "capex",
+    "event_title": "资本开支",
+    "event_summary": "期间资本开支增加，但负债率维持在行业较低水平。",
+    "potential_readthrough": "资本开支变化会改变现金流和扩张节奏，但必须回到经营兑现验证。",
+    "evidence_mode": "support-candidate",
+    "source_type": "company_file_study",
+    "source_ref": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\company\\industry-pig-zsxq-2025-09-04-温氏股份-20250903-e161d3f3\\cursor-pdf-file-study.md"
+  }
+]

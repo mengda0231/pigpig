@@ -1,0 +1,28 @@
+{
+  "company_name": "德康农牧",
+  "as_of_date": "2026-04-14",
+  "cycle_position": "底部磨底段里的高增速港股样本",
+  "headline_judgment": "德康农牧 当前更像 高增长低成本样本，主看 高 price beta 与 高 cost beta 的兑现，但证据强度仍受字段完整度限制。",
+  "price_beta": "高",
+  "cost_beta": "高",
+  "volume_beta": "高",
+  "balance_sheet_constraint": "中高",
+  "latest_operating_take": "成本锚 成本 12.3元/公斤（知识星球多源印证（2篇） / 2026-04-02）；效率锚 PSY 27（公司披露摘录 / 2025-08-15）；经营细项 仔猪售价 475.5元/头",
+  "latest_market_take": "德康农牧 的市场层优先看相对行业 basket 的强弱，而不是只看绝对涨跌。",
+  "latest_evidence_mix": {
+    "company-disclosure-extracted": 2,
+    "historical-candidate": 2,
+    "pending": 1,
+    "pending-company-capture": 1,
+    "support-candidate": 2
+  },
+  "next_confirmations": [
+    "2027 目标",
+    "最新能繁母猪"
+  ],
+  "open_gaps": [
+    "2027 目标",
+    "最新能繁母猪",
+    "avg_cost_latest: keep-support-candidate | 可以确认低成本区间大致成立，但“12.3 元/公斤”这一精确最新点位仍未由官方原文直接锁定。"
+  ]
+}

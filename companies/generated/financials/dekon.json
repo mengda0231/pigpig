@@ -1,0 +1,49 @@
+{
+  "company_name": "德康农牧",
+  "reporting_period": "2026年",
+  "revenue": "224.6亿元",
+  "gross_margin": "",
+  "net_profit": "14.2亿元",
+  "operating_cash_flow": "",
+  "capex": "",
+  "debt": "",
+  "cash": "100亿元",
+  "asset_liability_ratio": "",
+  "finance_cost": "",
+  "history_rows": [],
+  "history_source": "",
+  "evidence_status_by_field": {
+    "revenue": "support-candidate",
+    "gross_margin": "pending",
+    "net_profit": "support-candidate",
+    "operating_cash_flow": "pending",
+    "capex": "pending",
+    "debt": "pending",
+    "cash": "support-candidate",
+    "asset_liability_ratio": "pending",
+    "finance_cost": "pending"
+  },
+  "source_refs": [
+    {
+      "field_name": "revenue",
+      "source_date": "",
+      "source_type": "manual_sellside_report",
+      "source_path": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\mixed\\industry-pig-manual-20260319-开源证券-德康农牧-2419-HK-模式与育种共筑壁垒-出栏放量成本下降路径清晰-cd34e7c7\\cursor-pdf-file-study.md",
+      "snippet": "营收方面，2024 年公司实现营业收入 224.6 亿元，2018 至2024 年复合增长率达38%。"
+    },
+    {
+      "field_name": "net_profit",
+      "source_date": "2026-04-02",
+      "source_type": "industry_file_study",
+      "source_path": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\macro\\industry-pig-zsxq-2026-04-02-德康农牧-20260401-331b4ac0\\cursor-pdf-file-study.md",
+      "snippet": "会议要点 2025 年德康农牧经营业绩稳健，生猪业务为核心支柱，全年实现销售收入231亿元，同比增长3.1%归母净利润14.2亿元，经营活动现金净 流量25亿元业货币资金及银行授信近100亿元，财务费用同比下降 45%。"
+    },
+    {
+      "field_name": "cash",
+      "source_date": "2026-04-02",
+      "source_type": "industry_file_study",
+      "source_path": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\macro\\industry-pig-zsxq-2026-04-02-德康农牧-20260401-331b4ac0\\cursor-pdf-file-study.md",
+      "snippet": "货币资金及银行适用额度接近100 亿元，财务费用同比减少 45%，资本性开支8-9 亿元，资金储备充足、财务结构稳健，盈利水平在行业内处于领先地位。"
+    }
+  ]
+}

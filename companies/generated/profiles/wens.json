@@ -1,0 +1,25 @@
+{
+  "company_name": "温氏股份",
+  "as_of_date": "2026-04-14",
+  "cycle_position": "底部磨底段里的经营韧性对照组",
+  "headline_judgment": "温氏股份 当前更像 猪禽混合经营的龙头对照，主看 中高 price beta 与 中 cost beta 的兑现，但证据强度仍受字段完整度限制。",
+  "price_beta": "中高",
+  "cost_beta": "中",
+  "volume_beta": "中",
+  "balance_sheet_constraint": "低",
+  "latest_operating_take": "成本锚 完全成本 11.4元/公斤（公司披露摘录 / 2025-12-18）；效率锚 PSY 27（公司披露摘录 / 2025-12-18）；母猪锚 能繁母猪 178 万头（公司披露摘录 / 2025-02-14）；月报 2026-03 / 同比 19.0%",
+  "latest_market_take": "1m 相对 basket +4.0%；3m 相对 basket +3.6%；6m 相对 basket +2.0%",
+  "latest_evidence_mix": {
+    "company-disclosure-extracted": 3,
+    "historical-candidate": 1,
+    "pending": 1,
+    "support-candidate": 1,
+    "verified": 2
+  },
+  "next_confirmations": [
+    "2027 目标"
+  ],
+  "open_gaps": [
+    "2027 目标"
+  ]
+}

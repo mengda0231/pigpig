@@ -1,0 +1,25 @@
+{
+  "company_name": "东瑞股份",
+  "as_of_date": "2026-04-14",
+  "cycle_position": "底部磨底段里的小体量高弹性样本",
+  "headline_judgment": "东瑞股份 当前更像 区域性高弹性样本，主看 中高 price beta 与 中高 cost beta 的兑现，但证据强度仍受字段完整度限制。",
+  "price_beta": "中高",
+  "cost_beta": "中高",
+  "volume_beta": "中",
+  "balance_sheet_constraint": "中",
+  "latest_operating_take": "成本锚 完全成本 13.5元/公斤（公司披露摘录 / 2025-07-14）；效率锚 PSY 22（公司披露摘录 / 2025-01-20）；母猪锚 能繁母猪 7.6 万头（公司披露摘录 / 2025-01-20）；月报 2026-03 / 同比 45.8%",
+  "latest_market_take": "1m 相对 basket -6.1%；3m 相对 basket -7.4%；6m 相对 basket -4.8%",
+  "latest_evidence_mix": {
+    "company-disclosure-extracted": 3,
+    "historical-candidate": 1,
+    "pending": 1,
+    "support-candidate": 1,
+    "verified": 2
+  },
+  "next_confirmations": [
+    "2027 目标"
+  ],
+  "open_gaps": [
+    "2027 目标"
+  ]
+}

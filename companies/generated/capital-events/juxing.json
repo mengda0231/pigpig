@@ -1,0 +1,24 @@
+[
+  {
+    "company_name": "巨星农牧",
+    "event_date": "2026-01-17",
+    "event_type": "capex",
+    "event_title": "资本开支",
+    "event_summary": "资本开支规划2-3亿元，投向猪场升级与饲料厂技术迭代，以轻资产整合为主。",
+    "potential_readthrough": "资本开支变化会改变现金流和扩张节奏，但必须回到经营兑现验证。",
+    "evidence_mode": "support-candidate",
+    "source_type": "industry_file_study",
+    "source_ref": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\macro\\industry-pig-zsxq-2026-01-17-巨星农牧-20260116-792499a1\\cursor-pdf-file-study.md"
+  },
+  {
+    "company_name": "巨星农牧",
+    "event_date": "2026-01-17",
+    "event_type": "refinancing",
+    "event_title": "再融资",
+    "event_summary": "定增项目近期更新披露公 告，核心调整投向，而非金额，旨在响应高质量发展政策，让募投项目为高质量发展树立标杆，契合行业政策主导的发展趋势。",
+    "potential_readthrough": "再融资改善流动性，但不能把融资动作直接等于经营修复。",
+    "evidence_mode": "support-candidate",
+    "source_type": "industry_file_study",
+    "source_ref": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\macro\\industry-pig-zsxq-2026-01-17-巨星农牧-20260116-792499a1\\cursor-pdf-file-study.md"
+  }
+]

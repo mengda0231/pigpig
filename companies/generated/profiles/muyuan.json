@@ -1,0 +1,25 @@
+{
+  "company_name": "牧原股份",
+  "as_of_date": "2026-04-14",
+  "cycle_position": "底部磨底段里的低成本龙头锚",
+  "headline_judgment": "牧原股份 当前更像 主链龙头与成本曲线锚点，主看 高 price beta 与 高 cost beta 的兑现，但证据强度仍受字段完整度限制。",
+  "price_beta": "高",
+  "cost_beta": "高",
+  "volume_beta": "高",
+  "balance_sheet_constraint": "中",
+  "latest_operating_take": "成本锚 完全成本 12元/公斤（公司披露摘录 / 2026-03-28）；效率锚 PSY 28（公司披露摘录 / 2025-04-09）；母猪锚 能繁母猪 330.5 万头（公司披露摘录 / 2025-10-10）；月报 2026-03 / 同比 -2.7%",
+  "latest_market_take": "1m 相对 basket -5.0%；3m 相对 basket -9.3%；6m 相对 basket -4.5%",
+  "latest_evidence_mix": {
+    "candidate-forward": 1,
+    "company-disclosure-extracted": 3,
+    "derived-from-reporting-mix": 2,
+    "historical-candidate": 1,
+    "pending": 1
+  },
+  "next_confirmations": [
+    "2027 目标"
+  ],
+  "open_gaps": [
+    "2027 目标"
+  ]
+}

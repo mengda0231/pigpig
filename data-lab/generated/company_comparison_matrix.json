@@ -2,7 +2,7 @@
   {
     "company_name": "牧原股份",
     "tier": "核心",
-    "shipment_2023": "",
+    "shipment_2023": "6381.6",
     "shipment_2024": "7160.5",
     "shipment_2025": "7798.1",
     "shipment_latest_ytd": "1836.3",
@@ -10,29 +10,59 @@
     "shipment_latest_yoy": "-2.7%",
     "guidance_2026": "7500 - 8100 万头",
     "guidance_2027": "",
-    "sow_inventory_latest": "",
-    "psy_latest": "",
-    "avg_cost_latest": "全成本约 12元／公斤",
+    "sow_inventory_latest": "能繁母猪存栏为 330.5 万头",
+    "sow_inventory_as_of": "2025-10-10",
+    "sow_inventory_freshness": "旧口径",
+    "psy_latest": "PSY 在 28",
+    "psy_as_of": "2025-04-09",
+    "psy_freshness": "旧口径",
+    "avg_cost_latest": "完全成本 12元/公斤",
+    "avg_cost_as_of": "2026-03-28",
+    "avg_cost_freshness": "较新口径",
     "shipment_share_vs_industry": "",
-    "shipment_share_vs_tracked_pool": "44.6%",
-    "sow_share_vs_bound_pool": "",
+    "shipment_share_vs_tracked_pool": "42.4%",
+    "sow_share_vs_bound_pool": "46.2%",
+    "operating_highlights": "成活率/上市率 95%",
     "evidence_status_by_field": {
-      "shipment_2023": "pending",
+      "shipment_2023": "historical-candidate",
       "shipment_2024": "derived-from-reporting-mix",
       "shipment_2025": "derived-from-reporting-mix",
       "guidance_2026": "candidate-forward",
       "guidance_2027": "pending",
-      "sow_inventory_latest": "pending-company-capture",
-      "psy_latest": "pending-company-capture",
-      "avg_cost_latest": "support-candidate"
+      "sow_inventory_latest": "company-disclosure-extracted",
+      "psy_latest": "company-disclosure-extracted",
+      "avg_cost_latest": "company-disclosure-extracted"
     },
-    "notes": "已覆盖 5/12；精确月份 10/12 + 区间汇总补齐；精确月份 10/12 + 区间汇总补齐；年报候选 | 2026-03-28 | 2025年年度报告；基于 file-study 正文正则提取，需官方披...",
-    "evidence_badge": "出栏:reporting-mix | 指引26:年报候选 | 指引27:待补 | 母猪:待补 | PSY:待补 | 成本:support 候选"
+    "source_meta_by_field": {
+      "sow_inventory_latest": {
+        "source_label": "公司披露摘录",
+        "source_date": "2025-10-10",
+        "source_type": "company_disclosure_pdf",
+        "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\raw\\company-guidance\\pdfs\\牧原股份\\2025-10-10-cninfo-sales-brief.pdf",
+        "notes": ""
+      },
+      "psy_latest": {
+        "source_label": "公司披露摘录",
+        "source_date": "2025-04-09",
+        "source_type": "company_disclosure_pdf",
+        "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\raw\\company-guidance\\pdfs\\牧原股份\\2025-04-09-cninfo-ir-record.pdf",
+        "notes": ""
+      },
+      "avg_cost_latest": {
+        "source_label": "公司披露摘录",
+        "source_date": "2026-03-28",
+        "source_type": "company_disclosure_pdf",
+        "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\raw\\company-guidance\\pdfs\\牧原股份\\2026-03-28-1225042506.pdf",
+        "notes": "由经营指标官方摘录回填成本字段：生猪养殖完全成本约 12 元/kg，较上年同期降低约 2 元/kg"
+      }
+    },
+    "notes": "2023年年度报告摘要；精确月份 10/12 + 区间汇总补齐；精确月份 10/12 + 区间汇总补齐；年报候选 | 2026-03-28 | 2025年年度报告；公司披露摘录 | 2025-10-10 | high；公司披露摘录 | 2025-04-09 | high；成本口径日 | 2026-03-28；由经营指标官方摘录回填成本字段：生猪养殖完全成本约...；经营细项: 成活率/上市率 95%",
+    "evidence_badge": "出栏23:历史口径候选 | 出栏24:reporting-mix派生 | 出栏25:reporting-mix派生 | 指引26:年报/指引候选 | 指引27:待补 | 母猪:公司披露摘录 | PSY:公司披露摘录 | 成本:公司披露摘录"
   },
   {
     "company_name": "温氏股份",
     "tier": "核心",
-    "shipment_2023": "",
+    "shipment_2023": "2626.2",
     "shipment_2024": "3018.3",
     "shipment_2025": "4047.7",
     "shipment_latest_ytd": "934.3",
@@ -40,29 +70,59 @@
     "shipment_latest_yoy": "19.0%",
     "guidance_2026": "3800 - 3900 万头",
     "guidance_2027": "",
-    "sow_inventory_latest": "2025年7月末能繁母猪约 185 万头",
-    "psy_latest": "PSY 达到 23.7",
-    "avg_cost_latest": "1H2025 肉猪养殖综合成本约 12.4 元／公斤（约 6.2 元／斤）",
+    "sow_inventory_latest": "能繁母猪为178 万头",
+    "sow_inventory_as_of": "2025-02-14",
+    "sow_inventory_freshness": "旧口径",
+    "psy_latest": "PSY 为 27",
+    "psy_as_of": "2025-12-18",
+    "psy_freshness": "历史口径",
+    "avg_cost_latest": "完全成本 11.4元/公斤",
+    "avg_cost_as_of": "2025-12-18",
+    "avg_cost_freshness": "历史口径",
     "shipment_share_vs_industry": "",
-    "shipment_share_vs_tracked_pool": "23.2%",
-    "sow_share_vs_bound_pool": "61.0%",
+    "shipment_share_vs_tracked_pool": "22.0%",
+    "sow_share_vs_bound_pool": "24.9%",
+    "operating_highlights": "饲料成本 12.2元/公斤 / 料肉比 2.55 / 成活率/上市率 93.3%",
     "evidence_status_by_field": {
-      "shipment_2023": "pending",
+      "shipment_2023": "historical-candidate",
       "shipment_2024": "verified",
       "shipment_2025": "verified",
       "guidance_2026": "support-candidate",
       "guidance_2027": "pending",
-      "sow_inventory_latest": "support-candidate",
+      "sow_inventory_latest": "company-disclosure-extracted",
       "psy_latest": "company-disclosure-extracted",
-      "avg_cost_latest": "support-candidate"
+      "avg_cost_latest": "company-disclosure-extracted"
     },
-    "notes": "已覆盖 3/12；12/12 月报或拆分已覆盖；12/12 月报或拆分已覆盖；support 候选 | 2025-09-04 | ind...；公司披露摘录 | 2025-04-24 | high；尚无结构化成本字段；外部交叉验证（东方财富转发） | 2025-09-05 | 卖方跟踪引用，...；外部交叉验证（东方财富转发） | 2025-08-29 | 原文为 6.2...",
-    "evidence_badge": "出栏:已验证 | 指引26:support 候选 | 指引27:待补 | 母猪:support 候选 | PSY:披露摘录 | 成本:support 候选"
+    "source_meta_by_field": {
+      "sow_inventory_latest": {
+        "source_label": "公司披露摘录",
+        "source_date": "2025-02-14",
+        "source_type": "company_disclosure_pdf",
+        "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\raw\\company-guidance\\pdfs\\温氏股份\\2025-02-14-wens-ir.pdf",
+        "notes": ""
+      },
+      "psy_latest": {
+        "source_label": "公司披露摘录",
+        "source_date": "2025-12-18",
+        "source_type": "company_disclosure_pdf",
+        "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\raw\\company-guidance\\pdfs\\温氏股份\\2025-12-18-19-wens-ir.pdf",
+        "notes": ""
+      },
+      "avg_cost_latest": {
+        "source_label": "公司披露摘录",
+        "source_date": "2025-12-18",
+        "source_type": "company_disclosure_pdf",
+        "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\raw\\company-guidance\\pdfs\\温氏股份\\2025-12-18-19-wens-ir.pdf",
+        "notes": "由经营指标官方摘录回填成本字段：完全成本 为 5.7 元/斤"
+      }
+    },
+    "notes": "2023年年度报告；12/12 月报或拆分已覆盖；12/12 月报或拆分已覆盖；support 候选 | 2025-09-04 | ind...；公司披露摘录 | 2025-02-14 | high；公司披露摘录 | 2025-12-18 | high；成本口径日 | 2025-12-18；由经营指标官方摘录回填成本字段：完全成本 为 5....；经营细项: 饲料成本 12.2元/公斤 / 料肉比 2.55 / 成活率/上市率 93.3%",
+    "evidence_badge": "出栏23:历史口径候选 | 出栏24:已验证 | 出栏25:已验证 | 指引26:support候选 | 指引27:待补 | 母猪:公司披露摘录 | PSY:公司披露摘录 | 成本:公司披露摘录"
   },
   {
     "company_name": "新希望",
     "tier": "核心",
-    "shipment_2023": "",
+    "shipment_2023": "1768",
     "shipment_2024": "1652.5",
     "shipment_2025": "1754.5",
     "shipment_latest_ytd": "340.9",
@@ -70,30 +130,60 @@
     "shipment_latest_yoy": "-15.9%",
     "guidance_2026": "",
     "guidance_2027": "",
-    "sow_inventory_latest": "",
-    "psy_latest": "PSY 达到 25.4",
-    "avg_cost_latest": "生猪养殖运营成本降至 12.2 元／公斤",
+    "sow_inventory_latest": "能繁母猪存栏 76 万头",
+    "sow_inventory_as_of": "2025-09-02",
+    "sow_inventory_freshness": "旧口径",
+    "psy_latest": "PSY 为 25.4",
+    "psy_as_of": "2025-09-02",
+    "psy_freshness": "旧口径",
+    "avg_cost_latest": "完全成本 12.2元/公斤",
+    "avg_cost_as_of": "2026-01-31",
+    "avg_cost_freshness": "历史口径",
     "shipment_share_vs_industry": "",
-    "shipment_share_vs_tracked_pool": "10.0%",
-    "sow_share_vs_bound_pool": "",
+    "shipment_share_vs_tracked_pool": "9.5%",
+    "sow_share_vs_bound_pool": "10.6%",
+    "operating_highlights": "断奶成本 260元/头 / 断奶成本变化 较上年下降250元/头 / 料肉比 2.6",
     "evidence_status_by_field": {
-      "shipment_2023": "pending",
+      "shipment_2023": "historical-candidate",
       "shipment_2024": "verified",
       "shipment_2025": "verified",
       "guidance_2026": "pending",
       "guidance_2027": "pending",
-      "sow_inventory_latest": "pending-company-capture",
+      "sow_inventory_latest": "company-disclosure-extracted",
       "psy_latest": "company-disclosure-extracted",
-      "avg_cost_latest": "support-candidate"
+      "avg_cost_latest": "company-disclosure-extracted"
     },
-    "notes": "已覆盖 2/12；12/12 月报或拆分已覆盖；12/12 月报或拆分已覆盖；公司披露摘录 | 2025-08-30 | high；基于 file-study 正文正则提取，需官方披...",
-    "evidence_badge": "出栏:已验证 | 指引26:待补 | 指引27:待补 | 母猪:待补 | PSY:披露摘录 | 成本:support 候选"
+    "source_meta_by_field": {
+      "sow_inventory_latest": {
+        "source_label": "公司披露摘录",
+        "source_date": "2025-09-02",
+        "source_type": "company_disclosure_pdf",
+        "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\raw\\company-guidance\\pdfs\\新希望\\2025-09-02-1224633890.pdf",
+        "notes": ""
+      },
+      "psy_latest": {
+        "source_label": "公司披露摘录",
+        "source_date": "2025-09-02",
+        "source_type": "company_disclosure_pdf",
+        "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\raw\\company-guidance\\pdfs\\新希望\\2025-09-02-1224633890.pdf",
+        "notes": ""
+      },
+      "avg_cost_latest": {
+        "source_label": "公司披露摘录",
+        "source_date": "2026-01-31",
+        "source_type": "company_disclosure_pdf",
+        "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\raw\\company-guidance\\pdfs\\新希望\\2026-01-31-1224960916.pdf",
+        "notes": "由经营指标官方摘录回填成本字段：完全成本全年平均下来，每个月可以降低 0.1~0.15 元/公斤，12 月份已经降至 12..."
+      }
+    },
+    "notes": "2023年年度报告；12/12 月报或拆分已覆盖；12/12 月报或拆分已覆盖；公司披露摘录 | 2025-09-02 | high；公司披露摘录 | 2025-09-02 | high；成本口径日 | 2026-01-31；由经营指标官方摘录回填成本字段：完全成本全年平均下...；经营细项: 断奶成本 260元/头 / 断奶成本变化 较上年下降250元/头 / 料肉比 2.6",
+    "evidence_badge": "出栏23:历史口径候选 | 出栏24:已验证 | 出栏25:已验证 | 指引26:待补 | 指引27:待补 | 母猪:公司披露摘录 | PSY:公司披露摘录 | 成本:公司披露摘录"
   },
   {
     "company_name": "巨星农牧",
     "tier": "核心",
-    "shipment_2023": "",
-    "shipment_2024": "",
+    "shipment_2023": "267.4",
+    "shipment_2024": "275.5",
     "shipment_2025": "457.8",
     "shipment_latest_ytd": "115.9",
     "shipment_latest_month": "2026-03",
@@ -101,28 +191,58 @@
     "guidance_2026": "",
     "guidance_2027": "",
     "sow_inventory_latest": "目前能繁母猪存量规模控制在 18 万头左右",
+    "sow_inventory_as_of": "2026-01-17",
+    "sow_inventory_freshness": "历史口径",
     "psy_latest": "PSY（每头母猪每年提供断奶仔猪头数）超30",
-    "avg_cost_latest": "完全成本跌破6元/斤",
+    "psy_as_of": "2026-01-17",
+    "psy_freshness": "历史口径",
+    "avg_cost_latest": "完全成本 13元/公斤",
+    "avg_cost_as_of": "2025-03-22",
+    "avg_cost_freshness": "旧口径",
     "shipment_share_vs_industry": "",
-    "shipment_share_vs_tracked_pool": "2.6%",
-    "sow_share_vs_bound_pool": "5.9%",
+    "shipment_share_vs_tracked_pool": "2.5%",
+    "sow_share_vs_bound_pool": "2.5%",
+    "operating_highlights": "",
     "evidence_status_by_field": {
-      "shipment_2023": "pending",
-      "shipment_2024": "pending",
+      "shipment_2023": "historical-candidate",
+      "shipment_2024": "historical-candidate",
       "shipment_2025": "verified",
       "guidance_2026": "pending",
       "guidance_2027": "pending",
       "sow_inventory_latest": "support-candidate",
       "psy_latest": "support-candidate",
-      "avg_cost_latest": "support-candidate"
+      "avg_cost_latest": "company-disclosure-extracted"
     },
-    "notes": "已覆盖 0/12；已覆盖 0/12；12/12 月报或拆分已覆盖；知识星球摘录 | 2026-01-17 | medium；基于 file-study 正文正则提取，需官方披...；知识星球纪要补录 | 2026-01-17 | 纪要称 18 万头对应约 ...",
-    "evidence_badge": "出栏:已验证 | 指引26:待补 | 指引27:待补 | 母猪:support 候选 | PSY:support 候选 | 成本:support 候选"
+    "source_meta_by_field": {
+      "sow_inventory_latest": {
+        "source_label": "知识星球纪要补录",
+        "source_date": "2026-01-17",
+        "source_type": "support-candidate",
+        "source_path": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\macro\\industry-pig-zsxq-2026-01-17-巨星农牧-20260116-792499a1\\cursor-pdf-file-study.md",
+        "notes": "纪要称 18 万头对应约 500 万头投苗量；公司未给出 2026 年量化出栏目标"
+      },
+      "psy_latest": {
+        "source_label": "最新交流纪要",
+        "source_date": "2026-01-17",
+        "source_type": "support-candidate",
+        "source_path": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\macro\\industry-pig-zsxq-2026-01-17-巨星农牧-20260116-792499a1\\cursor-pdf-file-study.md",
+        "notes": "按“最新值优先但显式标注来源”采用 2026-01-17 交流纪要中的 PSY 超30；同时已有 2025-05-22 正式材料披露 2024 年 PSY 28.56 头，可作为方向交叉验证，但不覆盖更新交流口径。"
+      },
+      "avg_cost_latest": {
+        "source_label": "公司披露摘录",
+        "source_date": "2025-03-22",
+        "source_type": "company_disclosure_pdf",
+        "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\raw\\company-guidance\\pdfs\\巨星农牧\\2025-03-22-1222867672.pdf",
+        "notes": "由经营指标官方摘录回填成本字段：完全成本目标为6.5 元/斤"
+      }
+    },
+    "notes": "乐山巨星农牧股份有限公司2023年年度报告；巨星农牧2024年年度报告；12/12 月报或拆分已覆盖；知识星球摘录 | 2026-01-17 | medium；成本口径日 | 2025-03-22；由经营指标官方摘录回填成本字段：完全成本目标为6....；最新交流纪要 | 2026-01-17 | 按“最新值优先但显式标注来源”...；知识星球纪要补录 | 2026-01-17 | 纪要称 18 万头对应约 ...",
+    "evidence_badge": "出栏23:历史口径候选 | 出栏24:历史口径候选 | 出栏25:已验证 | 指引26:待补 | 指引27:待补 | 母猪:support候选 | PSY:support候选 | 成本:公司披露摘录"
   },
   {
     "company_name": "神农集团",
     "tier": "核心",
-    "shipment_2023": "",
+    "shipment_2023": "152",
     "shipment_2024": "227.1",
     "shipment_2025": "307.4",
     "shipment_latest_ytd": "81.7",
@@ -130,29 +250,59 @@
     "shipment_latest_yoy": "-9.9%",
     "guidance_2026": "350 万头",
     "guidance_2027": "500 万头",
-    "sow_inventory_latest": "",
-    "psy_latest": "PSY力争达31",
-    "avg_cost_latest": "完全成本降至11.5 元／公斤",
+    "sow_inventory_latest": "能繁 母猪为 13.6万头",
+    "sow_inventory_as_of": "2025-09-05",
+    "sow_inventory_freshness": "旧口径",
+    "psy_latest": "PSY提升1.5个点至29.5",
+    "psy_as_of": "2026-01-30",
+    "psy_freshness": "历史口径",
+    "avg_cost_latest": "完全成本 12.4元/公斤",
+    "avg_cost_as_of": "2025-09-05",
+    "avg_cost_freshness": "旧口径",
     "shipment_share_vs_industry": "",
-    "shipment_share_vs_tracked_pool": "1.8%",
-    "sow_share_vs_bound_pool": "",
+    "shipment_share_vs_tracked_pool": "1.7%",
+    "sow_share_vs_bound_pool": "1.9%",
+    "operating_highlights": "仔猪成本 2.9元/公斤 / 饲料成本 6.7元/公斤",
     "evidence_status_by_field": {
-      "shipment_2023": "pending",
+      "shipment_2023": "historical-candidate",
       "shipment_2024": "verified",
       "shipment_2025": "verified",
       "guidance_2026": "support-candidate",
       "guidance_2027": "candidate-long-term",
-      "sow_inventory_latest": "pending-company-capture",
+      "sow_inventory_latest": "company-disclosure-extracted",
       "psy_latest": "support-candidate",
-      "avg_cost_latest": "support-candidate"
+      "avg_cost_latest": "company-disclosure-extracted"
     },
-    "notes": "已覆盖 3/12；12/12 月报或拆分已覆盖；12/12 月报或拆分已覆盖；support 候选 | 2026-02-27 | ind...；年报候选 | 2025-04-29 | 云南神农农业产业集...；知识星球摘录 | 2026-01-30 | medium；基于 file-study 正文正则提取，需官方披...",
-    "evidence_badge": "出栏:已验证 | 指引26:support 候选 | 指引27:长期目标候选 | 母猪:待补 | PSY:support 候选 | 成本:support 候选"
+    "source_meta_by_field": {
+      "sow_inventory_latest": {
+        "source_label": "公司披露摘录",
+        "source_date": "2025-09-05",
+        "source_type": "company_disclosure_pdf",
+        "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\raw\\company-guidance\\pdfs\\神农集团\\2025-09-05-cninfo-ir-record.pdf",
+        "notes": ""
+      },
+      "psy_latest": {
+        "source_label": "知识星球多源印证（2篇）",
+        "source_date": "2026-01-30",
+        "source_type": "support-candidate",
+        "source_path": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\company\\industry-pig-zsxq-2026-01-14-神农集团-20260113-d94beff1\\cursor-pdf-file-study.md",
+        "notes": "知识星球两份独立材料一致指向 PSY 约 29.5；仅用于补弱字段，不覆盖官方披露。来源：2026-01-14 神农集团、2026-01-30 神农集团。"
+      },
+      "avg_cost_latest": {
+        "source_label": "公司披露摘录",
+        "source_date": "2025-09-05",
+        "source_type": "company_disclosure_pdf",
+        "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\raw\\company-guidance\\pdfs\\神农集团\\2025-09-05-cninfo-ir-record.pdf",
+        "notes": "由经营指标官方摘录回填成本字段：完全 成本为 12.4 元/公斤，上半年公司完全成本中仔猪成本2.9元/公斤， 饲料 成本..."
+      }
+    },
+    "notes": "云南神农农业产业集团股份有限公司2024年...；12/12 月报或拆分已覆盖；12/12 月报或拆分已覆盖；support 候选 | 2026-02-27 | ind...；年报候选 | 2025-04-29 | 云南神农农业产业集...；公司披露摘录 | 2025-09-05 | high；知识星球摘录 | 2026-01-14 | medium；成本口径日 | 2025-09-05；由经营指标官方摘录回填成本字段：完全 成本为 12...；经营细项: 仔猪成本 2.9元/公斤 / 饲料成本 6.7元/公斤；知识星球多源印证（2篇） | 2026-01-30 | 当前字段状态=su...；知识星球多源印证（2篇） | 2026-01-30 | 知识星球两份独立材...",
+    "evidence_badge": "出栏23:历史口径候选 | 出栏24:已验证 | 出栏25:已验证 | 指引26:support候选 | 指引27:长期目标候选 | 母猪:公司披露摘录 | PSY:support候选 | 成本:公司披露摘录"
   },
   {
     "company_name": "天康生物",
     "tier": "核心",
-    "shipment_2023": "",
+    "shipment_2023": "281.6",
     "shipment_2024": "302.9",
     "shipment_2025": "319",
     "shipment_latest_ytd": "89.9",
@@ -161,58 +311,125 @@
     "guidance_2026": "",
     "guidance_2027": "",
     "sow_inventory_latest": "",
-    "psy_latest": "",
-    "avg_cost_latest": "生猪养殖完全成本为12.76元/公斤",
+    "sow_inventory_as_of": "",
+    "sow_inventory_freshness": "",
+    "psy_latest": "PSY 已达 27",
+    "psy_as_of": "2025-03-21",
+    "psy_freshness": "旧口径",
+    "avg_cost_latest": "完全成本 13.12元/公斤",
+    "avg_cost_as_of": "2025-03-21",
+    "avg_cost_freshness": "旧口径",
     "shipment_share_vs_industry": "",
-    "shipment_share_vs_tracked_pool": "1.8%",
+    "shipment_share_vs_tracked_pool": "1.7%",
     "sow_share_vs_bound_pool": "",
+    "operating_highlights": "",
     "evidence_status_by_field": {
-      "shipment_2023": "pending",
+      "shipment_2023": "historical-candidate",
       "shipment_2024": "verified",
       "shipment_2025": "verified",
       "guidance_2026": "pending",
       "guidance_2027": "pending",
       "sow_inventory_latest": "pending-company-capture",
-      "psy_latest": "pending-company-capture",
-      "avg_cost_latest": "support-candidate"
+      "psy_latest": "company-disclosure-extracted",
+      "avg_cost_latest": "company-disclosure-extracted"
     },
-    "notes": "已覆盖 3/12；12/12 月报或拆分已覆盖；12/12 月报或拆分已覆盖；基于 file-study 正文正则提取，需官方披...",
-    "evidence_badge": "出栏:已验证 | 指引26:待补 | 指引27:待补 | 母猪:待补 | PSY:待补 | 成本:support 候选"
+    "source_meta_by_field": {
+      "sow_inventory_latest": {
+        "source_label": "",
+        "source_date": "",
+        "source_type": "",
+        "source_path": "",
+        "notes": ""
+      },
+      "psy_latest": {
+        "source_label": "公司披露摘录",
+        "source_date": "2025-03-21",
+        "source_type": "company_disclosure_pdf",
+        "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\raw\\company-guidance\\pdfs\\天康生物\\2025-03-21-1222865604.pdf",
+        "notes": ""
+      },
+      "avg_cost_latest": {
+        "source_label": "公司披露摘录",
+        "source_date": "2025-03-21",
+        "source_type": "company_disclosure_pdf",
+        "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\raw\\company-guidance\\pdfs\\天康生物\\2025-03-21-1222865604.pdf",
+        "notes": "由经营指标官方摘录回填成本字段：完全成本是多少， 今年的成本目标是 降到多少？ 答：2 月份的生猪完全成本是 13.12 ..."
+      }
+    },
+    "notes": "2023年年度报告；12/12 月报或拆分已覆盖；12/12 月报或拆分已覆盖；公司披露摘录 | 2025-03-21 | high；成本口径日 | 2025-03-21；由经营指标官方摘录回填成本字段：完全成本是多少， ...",
+    "evidence_badge": "出栏23:历史口径候选 | 出栏24:已验证 | 出栏25:已验证 | 指引26:待补 | 指引27:待补 | 母猪:待补 | PSY:公司披露摘录 | 成本:公司披露摘录"
   },
   {
     "company_name": "德康农牧",
     "tier": "核心",
-    "shipment_2023": "",
-    "shipment_2024": "",
-    "shipment_2025": "",
+    "shipment_2023": "708.4",
+    "shipment_2024": "877.9",
+    "shipment_2025": "1082.8",
     "shipment_latest_ytd": "",
     "shipment_latest_month": "",
     "shipment_latest_yoy": "",
     "guidance_2026": "1500 万头",
     "guidance_2027": "",
     "sow_inventory_latest": "",
-    "psy_latest": "PSY 內部目标提升至 33",
-    "avg_cost_latest": "全成本设定基础目标 11.6 元／公斤、挑战目标 11.3 元...",
+    "sow_inventory_as_of": "",
+    "sow_inventory_freshness": "",
+    "psy_latest": "PSY（母 豬年產斷奶仔豬數）提升至27",
+    "psy_as_of": "2025-08-15",
+    "psy_freshness": "旧口径",
+    "avg_cost_latest": "全成本控制在 12.3元/公斤",
+    "avg_cost_as_of": "2026-04-02",
+    "avg_cost_freshness": "较新口径",
     "shipment_share_vs_industry": "",
-    "shipment_share_vs_tracked_pool": "",
+    "shipment_share_vs_tracked_pool": "5.9%",
     "sow_share_vs_bound_pool": "",
+    "operating_highlights": "仔猪售价 475.5元/头",
     "evidence_status_by_field": {
-      "shipment_2023": "pending",
-      "shipment_2024": "pending",
-      "shipment_2025": "pending",
+      "shipment_2023": "historical-candidate",
+      "shipment_2024": "historical-candidate",
+      "shipment_2025": "company-disclosure-extracted",
       "guidance_2026": "support-candidate",
       "guidance_2027": "pending",
       "sow_inventory_latest": "pending-company-capture",
-      "psy_latest": "support-candidate",
+      "psy_latest": "company-disclosure-extracted",
       "avg_cost_latest": "support-candidate"
     },
-    "notes": "已覆盖 0/12；已覆盖 0/12；已覆盖 0/12；support 候选 | 2025-06-04 | ind...；知识星球摘录 | 2026-04-02 | medium；基于 file-study 正文正则提取，需官方披...",
-    "evidence_badge": "出栏:待补 | 指引26:support 候选 | 指引27:待补 | 母猪:待补 | PSY:support 候选 | 成本:support 候选"
+    "source_meta_by_field": {
+      "sow_inventory_latest": {
+        "source_label": "",
+        "source_date": "",
+        "source_type": "",
+        "source_path": "",
+        "notes": ""
+      },
+      "psy_latest": {
+        "source_label": "公司披露摘录",
+        "source_date": "2025-08-15",
+        "source_type": "company_disclosure_pdf",
+        "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\raw\\company-guidance\\pdfs\\德康农牧\\2025-08-15-hkex-interim-results-announcement.pdf",
+        "notes": ""
+      },
+      "avg_cost_latest": {
+        "source_label": "知识星球多源印证（2篇）",
+        "source_date": "2026-04-02",
+        "source_type": "support-candidate",
+        "source_path": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\company\\industry-pig-zsxq-2025-08-18-德康农牧-20250817-ed442e33\\cursor-pdf-file-study.md",
+        "notes": "知识星球两份独立材料共同指向全成本约 12.0-12.3 元/公斤，取最新 12.3 元/公斤；仅用于补弱字段，不覆盖官方披露。来源：2025-08-18 德康农牧、2026-04-02 德康农牧。"
+      },
+      "shipment_2025": {
+        "source_label": "港交所2025年报",
+        "source_date": "2026-03-24",
+        "source_type": "company-disclosure-extracted",
+        "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\raw\\company-guidance\\pdfs\\德康农牧\\2026-03-24-hkex-2025-annual-report.pdf",
+        "notes": "港交所 2025 年报 Financial Highlights 明确披露 2025 年生猪总销量 10,827,982 头，即 1082.7982 万头；该值可直接作为 2025 实际出栏官方字段。"
+      }
+    },
+    "notes": "2023年年度报告；2024年年度报告；已覆盖 0/12；support 候选 | 2025-06-04 | ind...；公司披露摘录 | 2025-08-15 | high；成本口径日 | 2026-04-02；基于 file-study 正文正则提取，需官方披...；经营细项: 仔猪售价 475.5元/头；知识星球多源印证（2篇） | 2026-04-02 | 当前字段状态=su...；港交所2025年报 | 2026-03-24 | 港交所 2025 年报 ...；知识星球多源印证（2篇） | 2026-04-02 | 知识星球两份独立材...",
+    "evidence_badge": "出栏23:历史口径候选 | 出栏24:历史口径候选 | 出栏25:公司披露摘录 | 指引26:support候选 | 指引27:待补 | 母猪:待补 | PSY:公司披露摘录 | 成本:support候选"
   },
   {
     "company_name": "正邦科技",
     "tier": "扩展",
-    "shipment_2023": "",
+    "shipment_2023": "547.9",
     "shipment_2024": "414.7",
     "shipment_2025": "853.7",
     "shipment_latest_ytd": "262.1",
@@ -220,14 +437,21 @@
     "shipment_latest_yoy": "49.7%",
     "guidance_2026": "",
     "guidance_2027": "",
-    "sow_inventory_latest": "母猪存栏约 27.5 万头",
-    "psy_latest": "PSY(单头母猪年产猪苗数量)达到 25",
+    "sow_inventory_latest": "能繁 母猪存栏约 27.5 万头",
+    "sow_inventory_as_of": "2025-04-25",
+    "sow_inventory_freshness": "旧口径",
+    "psy_latest": "PSY(单头母 猪年产猪苗数量)达到 26",
+    "psy_as_of": "2025-04-25",
+    "psy_freshness": "旧口径",
     "avg_cost_latest": "完全成本为13.8 元/公斤",
+    "avg_cost_as_of": "",
+    "avg_cost_freshness": "",
     "shipment_share_vs_industry": "",
-    "shipment_share_vs_tracked_pool": "4.9%",
-    "sow_share_vs_bound_pool": "9.1%",
+    "shipment_share_vs_tracked_pool": "4.6%",
+    "sow_share_vs_bound_pool": "3.8%",
+    "operating_highlights": "料肉比 2.6 / 成活率/上市率 94%",
     "evidence_status_by_field": {
-      "shipment_2023": "pending",
+      "shipment_2023": "historical-candidate",
       "shipment_2024": "verified",
       "shipment_2025": "verified",
       "guidance_2026": "pending",
@@ -236,13 +460,36 @@
       "psy_latest": "company-disclosure-extracted",
       "avg_cost_latest": "support-candidate"
     },
-    "notes": "已覆盖 3/12；12/12 月报或拆分已覆盖；12/12 月报或拆分已覆盖；公司披露摘录 | 2025-04-25 | high；公司披露摘录 | 2025-04-25 | high；基于 file-study 正文正则提取，需官方披...",
-    "evidence_badge": "出栏:已验证 | 指引26:待补 | 指引27:待补 | 母猪:披露摘录 | PSY:披露摘录 | 成本:support 候选"
+    "source_meta_by_field": {
+      "sow_inventory_latest": {
+        "source_label": "公司披露摘录",
+        "source_date": "2025-04-25",
+        "source_type": "company_disclosure_pdf",
+        "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\raw\\company-guidance\\pdfs\\正邦科技\\2025-04-25-1223269515.pdf",
+        "notes": ""
+      },
+      "psy_latest": {
+        "source_label": "公司披露摘录",
+        "source_date": "2025-04-25",
+        "source_type": "company_disclosure_pdf",
+        "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\raw\\company-guidance\\pdfs\\正邦科技\\2025-04-25-1223269564.pdf",
+        "notes": ""
+      },
+      "avg_cost_latest": {
+        "source_label": "知识星球摘录",
+        "source_date": "",
+        "source_type": "zsxq_file_study",
+        "source_path": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\mixed\\industry-pig-manual-20241126-华鑫证券-正邦科技-002157-SZ-重整归来内化双胞胎体系-合并可期迈向行业第一梯队-c98580b7\\cursor-pdf-file-study.md",
+        "notes": "基于 file-study 正文正则提取，需官方披露再绑定"
+      }
+    },
+    "notes": "2023年年度报告；12/12 月报或拆分已覆盖；12/12 月报或拆分已覆盖；公司披露摘录 | 2025-04-25 | high；公司披露摘录 | 2025-04-25 | high；基于 file-study 正文正则提取，需官方披...；经营细项: 料肉比 2.6 / 成活率/上市率 94%",
+    "evidence_badge": "出栏23:历史口径候选 | 出栏24:已验证 | 出栏25:已验证 | 指引26:待补 | 指引27:待补 | 母猪:公司披露摘录 | PSY:公司披露摘录 | 成本:support候选"
   },
   {
     "company_name": "天邦食品",
     "tier": "扩展",
-    "shipment_2023": "",
+    "shipment_2023": "712",
     "shipment_2024": "599.1",
     "shipment_2025": "666.3",
     "shipment_latest_ytd": "180.8",
@@ -250,14 +497,21 @@
     "shipment_latest_yoy": "20.5%",
     "guidance_2026": "",
     "guidance_2027": "",
-    "sow_inventory_latest": "2024年末能繁母猪存栏规模 26.2 万头",
+    "sow_inventory_latest": "能繁母猪存栏 26.2 万头",
+    "sow_inventory_as_of": "2025-03-31",
+    "sow_inventory_freshness": "旧口径",
     "psy_latest": "",
-    "avg_cost_latest": "2025年1月公司剔除空栏后的育肥完全成本约 12.92 元／公斤",
+    "psy_as_of": "",
+    "psy_freshness": "",
+    "avg_cost_latest": "完全成本 13.31元/公斤",
+    "avg_cost_as_of": "2026-02-03",
+    "avg_cost_freshness": "历史口径",
     "shipment_share_vs_industry": "",
-    "shipment_share_vs_tracked_pool": "3.8%",
-    "sow_share_vs_bound_pool": "8.6%",
+    "shipment_share_vs_tracked_pool": "3.6%",
+    "sow_share_vs_bound_pool": "3.7%",
+    "operating_highlights": "",
     "evidence_status_by_field": {
-      "shipment_2023": "pending",
+      "shipment_2023": "historical-candidate",
       "shipment_2024": "verified",
       "shipment_2025": "verified",
       "guidance_2026": "pending",
@@ -266,43 +520,96 @@
       "psy_latest": "pending-company-capture",
       "avg_cost_latest": "company-disclosure-extracted"
     },
-    "notes": "已覆盖 3/12；12/12 月报或拆分已覆盖；12/12 月报或拆分已覆盖；尚无结构化成本字段；公司年报补录 | 2025-03-31 | 来自 2024 年年报全文：能...；公司 IR 补录 | 2025-01-16 | 官方 IR 记录；同时提到...",
-    "evidence_badge": "出栏:已验证 | 指引26:待补 | 指引27:待补 | 母猪:披露摘录 | PSY:待补 | 成本:披露摘录"
+    "source_meta_by_field": {
+      "sow_inventory_latest": {
+        "source_label": "2024年年报经营披露",
+        "source_date": "2025-03-31",
+        "source_type": "company-disclosure-extracted",
+        "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\raw\\company-guidance\\pdfs\\天邦食品\\2025-03-31-1222947625.pdf",
+        "notes": "2024 年公司通过淘汰低产能母猪、优化猪群健康等举措，能繁母猪存栏规模从年初 26 万增加到 26.2 万；该值晚于 2024H1 的 24.48 万头，应作为当前最新官方绑定值。"
+      },
+      "psy_latest": {
+        "source_label": "",
+        "source_date": "",
+        "source_type": "",
+        "source_path": "",
+        "notes": ""
+      },
+      "avg_cost_latest": {
+        "source_label": "公司披露摘录",
+        "source_date": "2026-02-03",
+        "source_type": "company_disclosure_pdf",
+        "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\raw\\company-guidance\\pdfs\\天邦食品\\2026-02-03-cninfo-ir-record.pdf",
+        "notes": "由经营指标官方摘录回填成本字段：育肥完全成本降至 13.31 元/公斤，同 比下降 1.89 元/公斤"
+      }
+    },
+    "notes": "2023年年度报告；12/12 月报或拆分已覆盖；12/12 月报或拆分已覆盖；公司披露摘录 | 2024-08-30 | high；成本口径日 | 2026-02-03；由经营指标官方摘录回填成本字段：育肥完全成本降至 ...；2024年年报经营披露 | 2025-03-31 | 2024 年公司通过...",
+    "evidence_badge": "出栏23:历史口径候选 | 出栏24:已验证 | 出栏25:已验证 | 指引26:待补 | 指引27:待补 | 母猪:公司披露摘录 | PSY:待补 | 成本:公司披露摘录"
   },
   {
     "company_name": "傲农生物",
     "tier": "扩展",
-    "shipment_2023": "",
+    "shipment_2023": "585.9",
     "shipment_2024": "1223.2",
-    "shipment_2025": "175.1",
+    "shipment_2025": "",
     "shipment_latest_ytd": "50",
     "shipment_latest_month": "2026-03",
     "shipment_latest_yoy": "41.3%",
     "guidance_2026": "250 万头",
     "guidance_2027": "",
     "sow_inventory_latest": "母猪存栏达 11.5 万头",
+    "sow_inventory_as_of": "2025-08-26",
+    "sow_inventory_freshness": "旧口径",
     "psy_latest": "PSY 提升至 28.1",
+    "psy_as_of": "2025-08-26",
+    "psy_freshness": "旧口径",
     "avg_cost_latest": "育肥完全成本6.3-6.4元/斤",
+    "avg_cost_as_of": "2026-03-29",
+    "avg_cost_freshness": "较新口径",
     "shipment_share_vs_industry": "",
-    "shipment_share_vs_tracked_pool": "1.0%",
-    "sow_share_vs_bound_pool": "3.8%",
+    "shipment_share_vs_tracked_pool": "",
+    "sow_share_vs_bound_pool": "1.6%",
+    "operating_highlights": "断奶成本变化 较上年下降286.4元/头",
     "evidence_status_by_field": {
-      "shipment_2023": "pending",
+      "shipment_2023": "historical-candidate",
       "shipment_2024": "derived-from-reporting-mix",
-      "shipment_2025": "verified",
+      "shipment_2025": "pending",
       "guidance_2026": "support-candidate",
       "guidance_2027": "pending",
       "sow_inventory_latest": "company-disclosure-extracted",
       "psy_latest": "company-disclosure-extracted",
       "avg_cost_latest": "support-candidate"
     },
-    "notes": "已覆盖 4/12；精确月份 10/12 + 区间汇总补齐；12/12 月报或拆分已覆盖；support 候选 | 2026-03-29 | ind...；公司披露摘录 | 2025-08-26 | high；公司披露摘录 | 2025-08-26 | high；基于 file-study 正文正则提取，需官方披...",
-    "evidence_badge": "出栏:已验证 | 指引26:support 候选 | 指引27:待补 | 母猪:披露摘录 | PSY:披露摘录 | 成本:support 候选"
+    "source_meta_by_field": {
+      "sow_inventory_latest": {
+        "source_label": "公司披露摘录",
+        "source_date": "2025-08-26",
+        "source_type": "company_disclosure_pdf",
+        "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\raw\\company-guidance\\pdfs\\傲农生物\\2025-08-26-1224563374.pdf",
+        "notes": ""
+      },
+      "psy_latest": {
+        "source_label": "公司披露摘录",
+        "source_date": "2025-08-26",
+        "source_type": "company_disclosure_pdf",
+        "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\raw\\company-guidance\\pdfs\\傲农生物\\2025-08-26-1224563374.pdf",
+        "notes": ""
+      },
+      "avg_cost_latest": {
+        "source_label": "知识星球摘录",
+        "source_date": "2026-03-29",
+        "source_type": "zsxq_file_study",
+        "source_path": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\company\\industry-pig-zsxq-2026-03-29-傲农生物-20260327-f32706bf\\cursor-pdf-file-study.md",
+        "notes": "基于 file-study 正文正则提取，需官方披露再绑定；原文为元/斤，已按 2 倍换算为元/公斤"
+      }
+    },
+    "notes": "福建傲农生物科技集团股份有限公司2023年...；精确月份 10/12 + 区间汇总补齐；已覆盖 11/12；support 候选 | 2026-03-29 | ind...；公司披露摘录 | 2025-08-26 | high；公司披露摘录 | 2025-08-26 | high；成本口径日 | 2026-03-29；基于 file-study 正文正则提取，需官方披...；经营细项: 断奶成本变化 较上年下降286.4元/头",
+    "evidence_badge": "出栏23:历史口径候选 | 出栏24:reporting-mix派生 | 出栏25:待补 | 指引26:support候选 | 指引27:待补 | 母猪:公司披露摘录 | PSY:公司披露摘录 | 成本:support候选"
   },
   {
     "company_name": "唐人神",
     "tier": "扩展",
-    "shipment_2023": "",
+    "shipment_2023": "371.3",
     "shipment_2024": "433.6",
     "shipment_2025": "533.2",
     "shipment_latest_ytd": "141.6",
@@ -311,28 +618,58 @@
     "guidance_2026": "",
     "guidance_2027": "",
     "sow_inventory_latest": "",
-    "psy_latest": "PSY达 28",
-    "avg_cost_latest": "2025年6月自有仔猪育肥成本约 12.71 元／公斤",
+    "sow_inventory_as_of": "",
+    "sow_inventory_freshness": "",
+    "psy_latest": "",
+    "psy_as_of": "",
+    "psy_freshness": "",
+    "avg_cost_latest": "运营成本 12.71元/公斤",
+    "avg_cost_as_of": "2025-08-30",
+    "avg_cost_freshness": "旧口径",
     "shipment_share_vs_industry": "",
-    "shipment_share_vs_tracked_pool": "3.0%",
+    "shipment_share_vs_tracked_pool": "2.9%",
     "sow_share_vs_bound_pool": "",
+    "operating_highlights": "断奶成本变化 较上年下降46.34元/头",
     "evidence_status_by_field": {
-      "shipment_2023": "pending",
+      "shipment_2023": "historical-candidate",
       "shipment_2024": "verified",
       "shipment_2025": "verified",
       "guidance_2026": "pending",
       "guidance_2027": "pending",
       "sow_inventory_latest": "pending-company-capture",
-      "psy_latest": "company-disclosure-extracted",
+      "psy_latest": "pending-company-capture",
       "avg_cost_latest": "company-disclosure-extracted"
     },
-    "notes": "已覆盖 3/12；12/12 月报或拆分已覆盖；12/12 月报或拆分已覆盖；公司披露摘录 | 2025-04-29 | high；尚无结构化成本字段；公司 IR 补录 | 2025-09-02 | 官方 IR 记录；同时提到...",
-    "evidence_badge": "出栏:已验证 | 指引26:待补 | 指引27:待补 | 母猪:待补 | PSY:披露摘录 | 成本:披露摘录"
+    "source_meta_by_field": {
+      "sow_inventory_latest": {
+        "source_label": "",
+        "source_date": "",
+        "source_type": "",
+        "source_path": "",
+        "notes": ""
+      },
+      "psy_latest": {
+        "source_label": "字段校正",
+        "source_date": "",
+        "source_type": "pending-company-capture",
+        "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\derived\\current-state\\company-gap-cross-validation-review-20260413.json",
+        "notes": "现有 2024 年官方材料仅能支持旧时点或能力表述，尚不足以代表最新实际公司级 PSY；按 gap review 保持留空，等待更新的官方实际值。"
+      },
+      "avg_cost_latest": {
+        "source_label": "公司披露摘录",
+        "source_date": "2025-08-30",
+        "source_type": "company_disclosure_pdf",
+        "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\raw\\company-guidance\\pdfs\\唐人神\\2025-08-30-1224623670.pdf",
+        "notes": "由经营指标官方摘录回填成本字段：育肥生产成本为 12.71 元/公斤，较年初下降 0.74 元/公斤"
+      }
+    },
+    "notes": "2023年年度报告；12/12 月报或拆分已覆盖；12/12 月报或拆分已覆盖；公司披露摘录 | 2024-08-31 | medium；成本口径日 | 2025-08-30；由经营指标官方摘录回填成本字段：育肥生产成本为 1...；经营细项: 断奶成本变化 较上年下降46.34元/头；字段校正 | 现有 2024 年官方材料仅能支持旧时点或能力表述，尚不足以...",
+    "evidence_badge": "出栏23:历史口径候选 | 出栏24:已验证 | 出栏25:已验证 | 指引26:待补 | 指引27:待补 | 母猪:待补 | PSY:待补 | 成本:公司披露摘录"
   },
   {
     "company_name": "东瑞股份",
     "tier": "扩展",
-    "shipment_2023": "",
+    "shipment_2023": "62.5",
     "shipment_2024": "87.4",
     "shipment_2025": "147.7",
     "shipment_latest_ytd": "47.9",
@@ -340,24 +677,54 @@
     "shipment_latest_yoy": "45.8%",
     "guidance_2026": "35 万头",
     "guidance_2027": "",
-    "sow_inventory_latest": "维持 10 万头母猪规模",
-    "psy_latest": "",
-    "avg_cost_latest": "完全成本降至 14元／公斤",
+    "sow_inventory_latest": "截至12月末的能繁母猪存栏数量为7.6万头",
+    "sow_inventory_as_of": "2025-01-20",
+    "sow_inventory_freshness": "旧口径",
+    "psy_latest": "PSY从22",
+    "psy_as_of": "2025-01-20",
+    "psy_freshness": "旧口径",
+    "avg_cost_latest": "完全成本 13.5元/公斤",
+    "avg_cost_as_of": "2025-07-14",
+    "avg_cost_freshness": "旧口径",
     "shipment_share_vs_industry": "",
     "shipment_share_vs_tracked_pool": "0.8%",
-    "sow_share_vs_bound_pool": "3.3%",
+    "sow_share_vs_bound_pool": "1.1%",
+    "operating_highlights": "断奶成本 310元/头 / 断奶成本变化 较上年下降0.5元/公斤 / 仔猪成本 310元/头",
     "evidence_status_by_field": {
-      "shipment_2023": "pending",
+      "shipment_2023": "historical-candidate",
       "shipment_2024": "verified",
       "shipment_2025": "verified",
       "guidance_2026": "support-candidate",
       "guidance_2027": "pending",
-      "sow_inventory_latest": "support-candidate",
-      "psy_latest": "pending-company-capture",
-      "avg_cost_latest": "support-candidate"
+      "sow_inventory_latest": "company-disclosure-extracted",
+      "psy_latest": "company-disclosure-extracted",
+      "avg_cost_latest": "company-disclosure-extracted"
     },
-    "notes": "已覆盖 3/12；12/12 月报或拆分已覆盖；12/12 月报或拆分已覆盖；support 候选 | 2025-08-31 | ind...；基于 file-study 正文正则提取，需官方披...；知识星球纪要补录 | 2025-08-31 | 纪要称维持 10 万头母猪...",
-    "evidence_badge": "出栏:已验证 | 指引26:support 候选 | 指引27:待补 | 母猪:support 候选 | PSY:待补 | 成本:support 候选"
+    "source_meta_by_field": {
+      "sow_inventory_latest": {
+        "source_label": "公司披露摘录",
+        "source_date": "2025-01-20",
+        "source_type": "company_disclosure_pdf",
+        "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\raw\\company-guidance\\pdfs\\东瑞股份\\2025-01-20-1222381311.pdf",
+        "notes": ""
+      },
+      "psy_latest": {
+        "source_label": "公司披露摘录",
+        "source_date": "2025-01-20",
+        "source_type": "company_disclosure_pdf",
+        "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\raw\\company-guidance\\pdfs\\东瑞股份\\2025-01-20-1222381311.pdf",
+        "notes": ""
+      },
+      "avg_cost_latest": {
+        "source_label": "公司披露摘录",
+        "source_date": "2025-07-14",
+        "source_type": "company_disclosure_pdf",
+        "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\raw\\company-guidance\\pdfs\\东瑞股份\\2025-07-14-1224165167.pdf",
+        "notes": "由经营指标官方摘录回填成本字段：完全成本和自繁自养商品猪完全成本分别是多少？ 答：公司近期销售结算的代养商品猪完全成本约为..."
+      }
+    },
+    "notes": "2023年年度报告；12/12 月报或拆分已覆盖；12/12 月报或拆分已覆盖；support 候选 | 2025-08-31 | ind...；公司披露摘录 | 2025-01-20 | high；公司披露摘录 | 2025-01-20 | high；成本口径日 | 2025-07-14；由经营指标官方摘录回填成本字段：完全成本和自繁自养...；经营细项: 断奶成本 310元/头 / 断奶成本变化 较上年下降0.5元/公斤 / 仔猪成...",
+    "evidence_badge": "出栏23:历史口径候选 | 出栏24:已验证 | 出栏25:已验证 | 指引26:support候选 | 指引27:待补 | 母猪:公司披露摘录 | PSY:公司披露摘录 | 成本:公司披露摘录"
   },
   {
     "company_name": "新五丰",
@@ -370,12 +737,19 @@
     "shipment_latest_yoy": "",
     "guidance_2026": "",
     "guidance_2027": "",
-    "sow_inventory_latest": "能繁母猪存栏 25.32 万头",
+    "sow_inventory_latest": "能繁母猪存栏 25.77 万头",
+    "sow_inventory_as_of": "2025-08-23",
+    "sow_inventory_freshness": "旧口径",
     "psy_latest": "",
+    "psy_as_of": "",
+    "psy_freshness": "",
     "avg_cost_latest": "完全成本或已降至 17.7 元/千克",
+    "avg_cost_as_of": "",
+    "avg_cost_freshness": "",
     "shipment_share_vs_industry": "",
-    "shipment_share_vs_tracked_pool": "2.4%",
-    "sow_share_vs_bound_pool": "8.3%",
+    "shipment_share_vs_tracked_pool": "2.3%",
+    "sow_share_vs_bound_pool": "3.6%",
+    "operating_highlights": "成活率/上市率 90%",
     "evidence_status_by_field": {
       "shipment_2023": "derived-from-reporting-mix",
       "shipment_2024": "derived-from-reporting-mix",
@@ -386,7 +760,30 @@
       "psy_latest": "pending-company-capture",
       "avg_cost_latest": "support-candidate"
     },
-    "notes": "精确月份 0/12 + 区间汇总补齐；精确月份 0/12 + 区间汇总补齐；精确月份 9/12 + 区间汇总补齐；公司披露摘录 | 2025-08-23 | high；基于 file-study 正文正则提取，需官方披...",
-    "evidence_badge": "出栏:reporting-mix | 指引26:待补 | 指引27:待补 | 母猪:披露摘录 | PSY:待补 | 成本:support 候选"
+    "source_meta_by_field": {
+      "sow_inventory_latest": {
+        "source_label": "公司披露摘录",
+        "source_date": "2025-08-23",
+        "source_type": "company_disclosure_pdf",
+        "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\raw\\company-guidance\\pdfs\\新五丰\\2025-08-23-1224560034.pdf",
+        "notes": ""
+      },
+      "psy_latest": {
+        "source_label": "",
+        "source_date": "",
+        "source_type": "",
+        "source_path": "",
+        "notes": ""
+      },
+      "avg_cost_latest": {
+        "source_label": "知识星球摘录",
+        "source_date": "",
+        "source_type": "zsxq_file_study",
+        "source_path": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\mixed\\industry-pig-manual-20240111-中金公司-新五丰-600975-SH-产能足-资产轻-湖南养殖龙头厚积薄发-c84bf0f8\\cursor-pdf-file-study.md",
+        "notes": "基于 file-study 正文正则提取，需官方披露再绑定"
+      }
+    },
+    "notes": "精确月份 0/12 + 区间汇总补齐；精确月份 0/12 + 区间汇总补齐；精确月份 9/12 + 区间汇总补齐；公司披露摘录 | 2025-08-23 | high；基于 file-study 正文正则提取，需官方披...；经营细项: 成活率/上市率 90%",
+    "evidence_badge": "出栏23:reporting-mix派生 | 出栏24:reporting-mix派生 | 出栏25:reporting-mix派生 | 指引26:待补 | 指引27:待补 | 母猪:公司披露摘录 | PSY:待补 | 成本:support候选"
   }
 ]

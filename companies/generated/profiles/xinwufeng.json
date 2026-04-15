@@ -1,0 +1,31 @@
+{
+  "company_name": "新五丰",
+  "as_of_date": "2026-04-14",
+  "cycle_position": "底部磨底段里的国企修复样本",
+  "headline_judgment": "新五丰 当前更像 经营修复与 reporting-mix 样本，主看 中 price beta 与 中 cost beta 的兑现，但证据强度仍受字段完整度限制。",
+  "price_beta": "中",
+  "cost_beta": "中",
+  "volume_beta": "中",
+  "balance_sheet_constraint": "中高",
+  "latest_operating_take": "成本锚 完全成本 17.7元/千克（知识星球摘录）；母猪锚 能繁母猪 25.77 万头（公司披露摘录 / 2025-08-23）；月报 2026-03；经营细项 成活率/上市率 90%",
+  "latest_market_take": "1m 相对 basket +2.6%；3m 相对 basket -2.4%；6m 相对 basket -0.8%",
+  "latest_evidence_mix": {
+    "company-disclosure-extracted": 1,
+    "derived-from-reporting-mix": 3,
+    "pending": 2,
+    "pending-company-capture": 1,
+    "support-candidate": 1
+  },
+  "next_confirmations": [
+    "2026 指引",
+    "2027 目标",
+    "最新 PSY"
+  ],
+  "open_gaps": [
+    "2026 指引",
+    "2027 目标",
+    "最新 PSY",
+    "psy_latest: keep-blank | 官方 2025 披露面只确认“PSY 有效提升”，公网层则分散在 25 / 26.5 / 优秀水平 / 预计突破 30 等多档，无法锁定统一 latest。",
+    "avg_cost_latest: keep-support-candidate | 公开网未找到足够强的新一轮交叉验证，维持 support 标签，不升级。"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "company_name": "天邦食品",
+  "as_of_date": "2026-04-14",
+  "cycle_position": "底部磨底段里的产能利用率修复样本",
+  "headline_judgment": "天邦食品 当前更像 产能利用率与成本修复样本，主看 中高 price beta 与 中高 cost beta 的兑现，但证据强度仍受字段完整度限制。",
+  "price_beta": "中高",
+  "cost_beta": "中高",
+  "volume_beta": "中",
+  "balance_sheet_constraint": "高",
+  "latest_operating_take": "成本锚 完全成本 13.31元/公斤（公司披露摘录 / 2026-02-03）；母猪锚 能繁母猪 26.2 万头（2024年年报经营披露 / 2025-03-31）；月报 2026-03 / 同比 20.5%",
+  "latest_market_take": "1m 相对 basket -0.7%；3m 相对 basket -8.8%；6m 相对 basket -3.6%",
+  "latest_evidence_mix": {
+    "company-disclosure-extracted": 2,
+    "historical-candidate": 1,
+    "pending": 2,
+    "pending-company-capture": 1,
+    "verified": 2
+  },
+  "next_confirmations": [
+    "2026 指引",
+    "2027 目标",
+    "最新 PSY"
+  ],
+  "open_gaps": [
+    "2026 指引",
+    "2027 目标",
+    "最新 PSY",
+    "psy_latest: keep-blank | 官方材料没有给最新实际 PSY；公网层只有单一雪球实际值和 NBD 目标值，仍不能作为正式 latest 字段。"
+  ]
+}

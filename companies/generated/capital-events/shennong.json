@@ -1,0 +1,46 @@
+[
+  {
+    "company_name": "神农集团",
+    "event_date": "",
+    "event_type": "refinancing",
+    "event_title": "再融资",
+    "event_summary": "公司持续稳步推进生猪业务，2015 年至今资产负债率维持40%以内，随着IPO、定增、自筹项目规划的逐步落地，云南、广西、广东生猪产能将分别新增约 250万头、150 万头和50 万头。",
+    "potential_readthrough": "再融资改善流动性，但不能把融资动作直接等于经营修复。",
+    "evidence_mode": "support-candidate",
+    "source_type": "manual_sellside_report",
+    "source_ref": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\mixed\\industry-pig-manual-20240807-华安证券-神农集团-605296-SH-生猪养殖业务稳步增长-健康理念打造成本优势-8e3de7cf\\cursor-pdf-file-study.md"
+  },
+  {
+    "company_name": "神农集团",
+    "event_date": "2026-02-27",
+    "event_type": "capex",
+    "event_title": "资本开支",
+    "event_summary": "资本开支均衡，银行贷款 6 亿元，授信充足，现金储备接近 10 亿元，抗风险能力较强。",
+    "potential_readthrough": "资本开支变化会改变现金流和扩张节奏，但必须回到经营兑现验证。",
+    "evidence_mode": "support-candidate",
+    "source_type": "company_file_study",
+    "source_ref": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\company\\industry-pig-zsxq-2026-02-27-神农集团-20260225-6fbf3270\\cursor-pdf-file-study.md"
+  },
+  {
+    "company_name": "神农集团",
+    "event_date": "2026-01-30",
+    "event_type": "dividend",
+    "event_title": "分红",
+    "event_summary": "A：独家公司2026年分红计划目前尚未确定独立因业思考2025年年报未发布，2025年分红将于2026年9-10月实施。",
+    "potential_readthrough": "更多反映现金创造能力与股东回报，不直接证明行业拐点。",
+    "evidence_mode": "support-candidate",
+    "source_type": "industry_file_study",
+    "source_ref": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\macro\\industry-pig-zsxq-2026-01-30-神农集团-20260129-969cdb3c\\cursor-pdf-file-study.md"
+  },
+  {
+    "company_name": "神农集团",
+    "event_date": "2026-01-14",
+    "event_type": "capex",
+    "event_title": "资本开支",
+    "event_summary": "成本、屠宰、资本开支等：2026年原料成本预计与2025年持平，目标将成本降至11.5元。",
+    "potential_readthrough": "资本开支变化会改变现金流和扩张节奏，但必须回到经营兑现验证。",
+    "evidence_mode": "support-candidate",
+    "source_type": "company_file_study",
+    "source_ref": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\company\\industry-pig-zsxq-2026-01-14-神农集团-20260113-d94beff1\\cursor-pdf-file-study.md"
+  }
+]

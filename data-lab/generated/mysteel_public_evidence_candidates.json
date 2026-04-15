@@ -1,0 +1,79 @@
+{
+  "as_of": "2026-04-16",
+  "vendor": "mysteel",
+  "payload": {
+    "route_indexed_articles": 571,
+    "home_snapshot_metrics": [
+      "仔猪价格",
+      "出栏均重",
+      "外购利润",
+      "自养利润",
+      "屠宰开工率",
+      "冻品库容率",
+      "宰后体重",
+      "屠宰利润",
+      "能繁母猪存栏量",
+      "商品猪存栏量",
+      "商品猪出栏量",
+      "新生仔猪数量",
+      "仔猪销量",
+      "产房存活率"
+    ],
+    "public_chart_api_series": [
+      "生猪出栏价",
+      "生猪现货价格",
+      "前三级瘦肉型白条价格",
+      "猪肉价格",
+      "区域基差"
+    ],
+    "title_layer_visible": [
+      "标肥价差",
+      "毛白价差",
+      "二次育肥成本",
+      "养殖利润",
+      "期现价差",
+      "屠宰量",
+      "批发市场到货量",
+      "仔猪及二元母猪价格"
+    ],
+    "likely_hidden_in_body": [
+      "冻品库容率",
+      "屠宰开工率",
+      "鲜销率",
+      "月报里的样本明细字段"
+    ],
+    "second_wave_family_boundary": [
+      {
+        "family": "批发市场到货量",
+        "desktop": "partial-leak-with-header",
+        "mobile": "meta-only",
+        "current_use": "可保留为结构线索与统计日线索，不可形成数值主序列"
+      },
+      {
+        "family": "样本屠宰量",
+        "desktop": "login-placeholder-only",
+        "mobile": "meta-note-only",
+        "current_use": "只能确认统计口径说明，不能抓到正文数值"
+      },
+      {
+        "family": "仔猪及二元母猪价格",
+        "desktop": "login-placeholder-only",
+        "mobile": "empty-shell",
+        "current_use": "当前未登录状态下不可绑定为可用序列"
+      }
+    ],
+    "working_verdict": "Mysteel has materially larger unauthenticated public capture surface than Yongyi and should be the first priority for incremental public-data expansion, but正文深层表格目前被账号 entitlement gate 阻断",
+    "auth_boundary_status": "manual-login-confirmed-but-no-entitlement",
+    "auth_boundary_detail": "2026-04-14 已在专用 Chrome profile 中手动登录 Mysteel，但目标正文页仍显示无权限；当前 blocker 属于账号授权边界，不是浏览器或抓取技术故障。",
+    "auth_evidence_summary": [
+      "用户已在专用 Chrome profile 中手动完成 Mysteel 登录。",
+      "登录后目标页面仍显示无权限，说明问题不是浏览器可达性，也不是会话未建立，而是当前账号不具备这些正文数据的阅读权限。",
+      "在无 entitlement 的前提下，CDP / cookie / requests 都无法把正文权限绕开；后续应将 Mysteel 路线降格为公开层扩展，不再把正文抓取视为技术待修复项。"
+    ],
+    "auth_recommended_route": [
+      "继续扩展 Mysteel 首页公开样本与公共图表层",
+      "保留标肥价差、毛白价差、养殖利润、二次育肥成本为候选镜像",
+      "把正文权限受限字段转去官方链、涌益、杨猪网及其他可交叉验证源补足"
+    ]
+  }
+}

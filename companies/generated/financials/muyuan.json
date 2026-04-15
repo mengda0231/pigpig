@@ -1,0 +1,200 @@
+{
+  "company_name": "牧原股份",
+  "reporting_period": "2025年报",
+  "revenue": "1441.45亿元",
+  "gross_margin": "17.8%",
+  "net_profit": "154.87亿元",
+  "operating_cash_flow": "300.56亿元",
+  "capex": "95.29亿元",
+  "debt": "709.27亿元",
+  "cash": "138.62亿元",
+  "asset_liability_ratio": "54.2%",
+  "finance_cost": "24.58亿元",
+  "history_rows": [
+    {
+      "statement_date": "2023-12-31",
+      "query_period": "2023年报",
+      "revenue": "1108.61亿元",
+      "gross_margin": "3.1%",
+      "net_profit": "-42.63亿元",
+      "operating_cash_flow": "98.93亿元",
+      "capex": "170.16亿元",
+      "debt": "813.78亿元",
+      "cash": "194.29亿元",
+      "asset_liability_ratio": "62.1%",
+      "finance_cost": "30.54亿元",
+      "source_type": "ifind_wcquery_structured",
+      "binding_status": "verified"
+    },
+    {
+      "statement_date": "2024-12-31",
+      "query_period": "2024年报",
+      "revenue": "1379.47亿元",
+      "gross_margin": "19.1%",
+      "net_profit": "178.81亿元",
+      "operating_cash_flow": "375.43亿元",
+      "capex": "123.81亿元",
+      "debt": "772.58亿元",
+      "cash": "169.52亿元",
+      "asset_liability_ratio": "58.7%",
+      "finance_cost": "29.75亿元",
+      "source_type": "ifind_wcquery_structured",
+      "binding_status": "verified"
+    },
+    {
+      "statement_date": "2025-03-31",
+      "query_period": "2025一季报",
+      "revenue": "360.61亿元",
+      "gross_margin": "18.2%",
+      "net_profit": "44.91亿元",
+      "operating_cash_flow": "75.06亿元",
+      "capex": "28.67亿元",
+      "debt": "860.08亿元",
+      "cash": "235.66亿元",
+      "asset_liability_ratio": "59.2%",
+      "finance_cost": "7.37亿元",
+      "source_type": "ifind_wcquery_structured",
+      "binding_status": "verified"
+    },
+    {
+      "statement_date": "2025-06-30",
+      "query_period": "2025中报",
+      "revenue": "764.63亿元",
+      "gross_margin": "19.0%",
+      "net_profit": "105.30亿元",
+      "operating_cash_flow": "173.51亿元",
+      "capex": "52.26亿元",
+      "debt": "781.51亿元",
+      "cash": "202.85亿元",
+      "asset_liability_ratio": "56.1%",
+      "finance_cost": "14.11亿元",
+      "source_type": "ifind_wcquery_structured",
+      "binding_status": "verified"
+    },
+    {
+      "statement_date": "2025-09-30",
+      "query_period": "2025三季报",
+      "revenue": "1117.90亿元",
+      "gross_margin": "18.7%",
+      "net_profit": "147.79亿元",
+      "operating_cash_flow": "285.80亿元",
+      "capex": "72.87亿元",
+      "debt": "709.11亿元",
+      "cash": "190.35亿元",
+      "asset_liability_ratio": "55.5%",
+      "finance_cost": "19.51亿元",
+      "source_type": "ifind_wcquery_structured",
+      "binding_status": "verified"
+    },
+    {
+      "statement_date": "2025-12-31",
+      "query_period": "2025年报",
+      "revenue": "1441.45亿元",
+      "gross_margin": "17.8%",
+      "net_profit": "154.87亿元",
+      "operating_cash_flow": "300.56亿元",
+      "capex": "95.29亿元",
+      "debt": "709.27亿元",
+      "cash": "138.62亿元",
+      "asset_liability_ratio": "54.2%",
+      "finance_cost": "24.58亿元",
+      "source_type": "ifind_wcquery_structured",
+      "binding_status": "verified"
+    }
+  ],
+  "history_source": "ifind_wcquery_structured",
+  "evidence_status_by_field": {
+    "revenue": "verified",
+    "gross_margin": "verified",
+    "net_profit": "verified",
+    "operating_cash_flow": "verified",
+    "capex": "verified",
+    "debt": "verified",
+    "cash": "verified",
+    "asset_liability_ratio": "verified",
+    "finance_cost": "verified"
+  },
+  "source_refs": [
+    {
+      "field_name": "revenue",
+      "source_date": "2025-12-31",
+      "source_type": "ifind_wcquery_structured",
+      "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\derived\\ifind\\company_financial_ifind_latest.json",
+      "snippet": "营业收入: 1441.45亿元（iFinD WCQuery 结构化提取，口径 2025年报）",
+      "query_string": "002714.SZ 2025年报 营业收入 归属于母公司所有者的净利润 经营活动产生的现金流量净额 资产负债率 货币资金 带息债务 销售毛利率 财务费用 购建固定资产、无形资产和其他长期资产支付的现金",
+      "binding_status": "verified"
+    },
+    {
+      "field_name": "gross_margin",
+      "source_date": "2025-12-31",
+      "source_type": "ifind_wcquery_structured",
+      "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\derived\\ifind\\company_financial_ifind_latest.json",
+      "snippet": "销售毛利率: 17.8%（iFinD WCQuery 结构化提取，口径 2025年报）",
+      "query_string": "002714.SZ 2025年报 营业收入 归属于母公司所有者的净利润 经营活动产生的现金流量净额 资产负债率 货币资金 带息债务 销售毛利率 财务费用 购建固定资产、无形资产和其他长期资产支付的现金",
+      "binding_status": "verified"
+    },
+    {
+      "field_name": "net_profit",
+      "source_date": "2025-12-31",
+      "source_type": "ifind_wcquery_structured",
+      "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\derived\\ifind\\company_financial_ifind_latest.json",
+      "snippet": "归母净利润: 154.87亿元（iFinD WCQuery 结构化提取，口径 2025年报）",
+      "query_string": "002714.SZ 2025年报 营业收入 归属于母公司所有者的净利润 经营活动产生的现金流量净额 资产负债率 货币资金 带息债务 销售毛利率 财务费用 购建固定资产、无形资产和其他长期资产支付的现金",
+      "binding_status": "verified"
+    },
+    {
+      "field_name": "operating_cash_flow",
+      "source_date": "2025-12-31",
+      "source_type": "ifind_wcquery_structured",
+      "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\derived\\ifind\\company_financial_ifind_latest.json",
+      "snippet": "经营现金流净额: 300.56亿元（iFinD WCQuery 结构化提取，口径 2025年报）",
+      "query_string": "002714.SZ 2025年报 营业收入 归属于母公司所有者的净利润 经营活动产生的现金流量净额 资产负债率 货币资金 带息债务 销售毛利率 财务费用 购建固定资产、无形资产和其他长期资产支付的现金",
+      "binding_status": "verified"
+    },
+    {
+      "field_name": "capex",
+      "source_date": "2025-12-31",
+      "source_type": "ifind_wcquery_structured",
+      "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\derived\\ifind\\company_financial_ifind_latest.json",
+      "snippet": "资本开支代理: 95.29亿元（iFinD WCQuery 结构化提取，口径 2025年报）",
+      "query_string": "002714.SZ 2025年报 营业收入 归属于母公司所有者的净利润 经营活动产生的现金流量净额 资产负债率 货币资金 带息债务 销售毛利率 财务费用 购建固定资产、无形资产和其他长期资产支付的现金",
+      "binding_status": "verified"
+    },
+    {
+      "field_name": "debt",
+      "source_date": "2025-12-31",
+      "source_type": "ifind_wcquery_structured",
+      "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\derived\\ifind\\company_financial_ifind_latest.json",
+      "snippet": "带息债务: 709.27亿元（iFinD WCQuery 结构化提取，口径 2025年报）",
+      "query_string": "002714.SZ 2025年报 营业收入 归属于母公司所有者的净利润 经营活动产生的现金流量净额 资产负债率 货币资金 带息债务 销售毛利率 财务费用 购建固定资产、无形资产和其他长期资产支付的现金",
+      "binding_status": "verified"
+    },
+    {
+      "field_name": "cash",
+      "source_date": "2025-12-31",
+      "source_type": "ifind_wcquery_structured",
+      "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\derived\\ifind\\company_financial_ifind_latest.json",
+      "snippet": "货币资金: 138.62亿元（iFinD WCQuery 结构化提取，口径 2025年报）",
+      "query_string": "002714.SZ 2025年报 营业收入 归属于母公司所有者的净利润 经营活动产生的现金流量净额 资产负债率 货币资金 带息债务 销售毛利率 财务费用 购建固定资产、无形资产和其他长期资产支付的现金",
+      "binding_status": "verified"
+    },
+    {
+      "field_name": "asset_liability_ratio",
+      "source_date": "2025-12-31",
+      "source_type": "ifind_wcquery_structured",
+      "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\derived\\ifind\\company_financial_ifind_latest.json",
+      "snippet": "资产负债率: 54.2%（iFinD WCQuery 结构化提取，口径 2025年报）",
+      "query_string": "002714.SZ 2025年报 营业收入 归属于母公司所有者的净利润 经营活动产生的现金流量净额 资产负债率 货币资金 带息债务 销售毛利率 财务费用 购建固定资产、无形资产和其他长期资产支付的现金",
+      "binding_status": "verified"
+    },
+    {
+      "field_name": "finance_cost",
+      "source_date": "2025-12-31",
+      "source_type": "ifind_wcquery_structured",
+      "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\derived\\ifind\\company_financial_ifind_latest.json",
+      "snippet": "财务费用: 24.58亿元（iFinD WCQuery 结构化提取，口径 2025年报）",
+      "query_string": "002714.SZ 2025年报 营业收入 归属于母公司所有者的净利润 经营活动产生的现金流量净额 资产负债率 货币资金 带息债务 销售毛利率 财务费用 购建固定资产、无形资产和其他长期资产支付的现金",
+      "binding_status": "verified"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "company_name": "神农集团",
+  "as_of_date": "2026-04-14",
+  "cycle_position": "底部磨底段里的低成本效率样本",
+  "headline_judgment": "神农集团 当前更像 低成本效率与区域经营样本，主看 中高 price beta 与 高 cost beta 的兑现，但证据强度仍受字段完整度限制。",
+  "price_beta": "中高",
+  "cost_beta": "高",
+  "volume_beta": "中",
+  "balance_sheet_constraint": "中",
+  "latest_operating_take": "成本锚 完全成本 12.4元/公斤（公司披露摘录 / 2025-09-05）；效率锚 PSY 29.5（知识星球多源印证（2篇） / 2026-01-30）；母猪锚 能繁母猪 13.6 万头（公司披露摘录 / 2025-09-05）；月报 2026-03 / 同比 -9.9%",
+  "latest_market_take": "1m 相对 basket +3.3%；3m 相对 basket +4.8%；6m 相对 basket +7.4%",
+  "latest_evidence_mix": {
+    "candidate-long-term": 1,
+    "company-disclosure-extracted": 2,
+    "historical-candidate": 1,
+    "support-candidate": 2,
+    "verified": 2
+  },
+  "next_confirmations": [
+    "继续看月报、成本和市场层是否同步验证"
+  ],
+  "open_gaps": [
+    "psy_latest: keep-support-candidate | 多源一致，可继续作为 support 展示；当前底层效率汇总里会抓到“力争 31”这一目标值，但目标值不能替代 2025 实际 PSY。"
+  ]
+}

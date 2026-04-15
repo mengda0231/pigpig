@@ -1,0 +1,185 @@
+{
+  "company_name": "巨星农牧",
+  "reporting_period": "2025三季报",
+  "revenue": "56.39亿元",
+  "gross_margin": "10.4%",
+  "net_profit": "1.07亿元",
+  "operating_cash_flow": "9.70亿元",
+  "capex": "9.06亿元",
+  "debt": "40.68亿元",
+  "cash": "6.16亿元",
+  "asset_liability_ratio": "66.6%",
+  "finance_cost": "1.48亿元",
+  "history_rows": [
+    {
+      "statement_date": "2023-12-31",
+      "query_period": "2023年报",
+      "revenue": "40.41亿元",
+      "gross_margin": "-0.4%",
+      "net_profit": "-6.45亿元",
+      "operating_cash_flow": "-1.05亿元",
+      "capex": "10.04亿元",
+      "debt": "33.79亿元",
+      "cash": "4.46亿元",
+      "asset_liability_ratio": "59.9%",
+      "finance_cost": "1.07亿元",
+      "source_type": "ifind_wcquery_structured",
+      "binding_status": "verified"
+    },
+    {
+      "statement_date": "2024-12-31",
+      "query_period": "2024年报",
+      "revenue": "60.78亿元",
+      "gross_margin": "19.2%",
+      "net_profit": "5.19亿元",
+      "operating_cash_flow": "12.65亿元",
+      "capex": "10.42亿元",
+      "debt": "37.96亿元",
+      "cash": "5.77亿元",
+      "asset_liability_ratio": "61.9%",
+      "finance_cost": "2.05亿元",
+      "source_type": "ifind_wcquery_structured",
+      "binding_status": "verified"
+    },
+    {
+      "statement_date": "2025-03-31",
+      "query_period": "2025一季报",
+      "revenue": "16.45亿元",
+      "gross_margin": "17.5%",
+      "net_profit": "1.30亿元",
+      "operating_cash_flow": "2.58亿元",
+      "capex": "3.12亿元",
+      "debt": "38.13亿元",
+      "cash": "6.15亿元",
+      "asset_liability_ratio": "62.9%",
+      "finance_cost": "0.52亿元",
+      "source_type": "ifind_wcquery_structured",
+      "binding_status": "verified"
+    },
+    {
+      "statement_date": "2025-06-30",
+      "query_period": "2025中报",
+      "revenue": "37.17亿元",
+      "gross_margin": "13.7%",
+      "net_profit": "1.81亿元",
+      "operating_cash_flow": "6.02亿元",
+      "capex": "5.27亿元",
+      "debt": "39.35亿元",
+      "cash": "6.70亿元",
+      "asset_liability_ratio": "64.6%",
+      "finance_cost": "0.99亿元",
+      "source_type": "ifind_wcquery_structured",
+      "binding_status": "verified"
+    },
+    {
+      "statement_date": "2025-09-30",
+      "query_period": "2025三季报",
+      "revenue": "56.39亿元",
+      "gross_margin": "10.4%",
+      "net_profit": "1.07亿元",
+      "operating_cash_flow": "9.70亿元",
+      "capex": "9.06亿元",
+      "debt": "40.68亿元",
+      "cash": "6.16亿元",
+      "asset_liability_ratio": "66.6%",
+      "finance_cost": "1.48亿元",
+      "source_type": "ifind_wcquery_structured",
+      "binding_status": "verified"
+    }
+  ],
+  "history_source": "ifind_wcquery_structured",
+  "evidence_status_by_field": {
+    "revenue": "verified",
+    "gross_margin": "verified",
+    "net_profit": "verified",
+    "operating_cash_flow": "verified",
+    "capex": "verified",
+    "debt": "verified",
+    "cash": "verified",
+    "asset_liability_ratio": "verified",
+    "finance_cost": "verified"
+  },
+  "source_refs": [
+    {
+      "field_name": "revenue",
+      "source_date": "2025-09-30",
+      "source_type": "ifind_wcquery_structured",
+      "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\derived\\ifind\\company_financial_ifind_latest.json",
+      "snippet": "营业收入: 56.39亿元（iFinD WCQuery 结构化提取，口径 2025三季报）",
+      "query_string": "603477.SH 2025三季报 营业收入 归属于母公司所有者的净利润 经营活动产生的现金流量净额 资产负债率 货币资金 带息债务 销售毛利率 财务费用 购建固定资产、无形资产和其他长期资产支付的现金",
+      "binding_status": "verified"
+    },
+    {
+      "field_name": "gross_margin",
+      "source_date": "2025-09-30",
+      "source_type": "ifind_wcquery_structured",
+      "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\derived\\ifind\\company_financial_ifind_latest.json",
+      "snippet": "销售毛利率: 10.4%（iFinD WCQuery 结构化提取，口径 2025三季报）",
+      "query_string": "603477.SH 2025三季报 营业收入 归属于母公司所有者的净利润 经营活动产生的现金流量净额 资产负债率 货币资金 带息债务 销售毛利率 财务费用 购建固定资产、无形资产和其他长期资产支付的现金",
+      "binding_status": "verified"
+    },
+    {
+      "field_name": "net_profit",
+      "source_date": "2025-09-30",
+      "source_type": "ifind_wcquery_structured",
+      "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\derived\\ifind\\company_financial_ifind_latest.json",
+      "snippet": "归母净利润: 1.07亿元（iFinD WCQuery 结构化提取，口径 2025三季报）",
+      "query_string": "603477.SH 2025三季报 营业收入 归属于母公司所有者的净利润 经营活动产生的现金流量净额 资产负债率 货币资金 带息债务 销售毛利率 财务费用 购建固定资产、无形资产和其他长期资产支付的现金",
+      "binding_status": "verified"
+    },
+    {
+      "field_name": "operating_cash_flow",
+      "source_date": "2025-09-30",
+      "source_type": "ifind_wcquery_structured",
+      "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\derived\\ifind\\company_financial_ifind_latest.json",
+      "snippet": "经营现金流净额: 9.70亿元（iFinD WCQuery 结构化提取，口径 2025三季报）",
+      "query_string": "603477.SH 2025三季报 营业收入 归属于母公司所有者的净利润 经营活动产生的现金流量净额 资产负债率 货币资金 带息债务 销售毛利率 财务费用 购建固定资产、无形资产和其他长期资产支付的现金",
+      "binding_status": "verified"
+    },
+    {
+      "field_name": "capex",
+      "source_date": "2025-09-30",
+      "source_type": "ifind_wcquery_structured",
+      "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\derived\\ifind\\company_financial_ifind_latest.json",
+      "snippet": "资本开支代理: 9.06亿元（iFinD WCQuery 结构化提取，口径 2025三季报）",
+      "query_string": "603477.SH 2025三季报 营业收入 归属于母公司所有者的净利润 经营活动产生的现金流量净额 资产负债率 货币资金 带息债务 销售毛利率 财务费用 购建固定资产、无形资产和其他长期资产支付的现金",
+      "binding_status": "verified"
+    },
+    {
+      "field_name": "debt",
+      "source_date": "2025-09-30",
+      "source_type": "ifind_wcquery_structured",
+      "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\derived\\ifind\\company_financial_ifind_latest.json",
+      "snippet": "带息债务: 40.68亿元（iFinD WCQuery 结构化提取，口径 2025三季报）",
+      "query_string": "603477.SH 2025三季报 营业收入 归属于母公司所有者的净利润 经营活动产生的现金流量净额 资产负债率 货币资金 带息债务 销售毛利率 财务费用 购建固定资产、无形资产和其他长期资产支付的现金",
+      "binding_status": "verified"
+    },
+    {
+      "field_name": "cash",
+      "source_date": "2025-09-30",
+      "source_type": "ifind_wcquery_structured",
+      "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\derived\\ifind\\company_financial_ifind_latest.json",
+      "snippet": "货币资金: 6.16亿元（iFinD WCQuery 结构化提取，口径 2025三季报）",
+      "query_string": "603477.SH 2025三季报 营业收入 归属于母公司所有者的净利润 经营活动产生的现金流量净额 资产负债率 货币资金 带息债务 销售毛利率 财务费用 购建固定资产、无形资产和其他长期资产支付的现金",
+      "binding_status": "verified"
+    },
+    {
+      "field_name": "asset_liability_ratio",
+      "source_date": "2025-09-30",
+      "source_type": "ifind_wcquery_structured",
+      "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\derived\\ifind\\company_financial_ifind_latest.json",
+      "snippet": "资产负债率: 66.6%（iFinD WCQuery 结构化提取，口径 2025三季报）",
+      "query_string": "603477.SH 2025三季报 营业收入 归属于母公司所有者的净利润 经营活动产生的现金流量净额 资产负债率 货币资金 带息债务 销售毛利率 财务费用 购建固定资产、无形资产和其他长期资产支付的现金",
+      "binding_status": "verified"
+    },
+    {
+      "field_name": "finance_cost",
+      "source_date": "2025-09-30",
+      "source_type": "ifind_wcquery_structured",
+      "source_path": "F:\\Codex\\projects\\research-report\\notes\\pig-industry-data-lab\\data\\derived\\ifind\\company_financial_ifind_latest.json",
+      "snippet": "财务费用: 1.48亿元（iFinD WCQuery 结构化提取，口径 2025三季报）",
+      "query_string": "603477.SH 2025三季报 营业收入 归属于母公司所有者的净利润 经营活动产生的现金流量净额 资产负债率 货币资金 带息债务 销售毛利率 财务费用 购建固定资产、无形资产和其他长期资产支付的现金",
+      "binding_status": "verified"
+    }
+  ]
+}

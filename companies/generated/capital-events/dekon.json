@@ -1,0 +1,57 @@
+[
+  {
+    "company_name": "德康农牧",
+    "event_date": "2026-04-02",
+    "event_type": "dividend",
+    "event_title": "分红",
+    "event_summary": "A：公司高度重视股东回报，2024 年上市后首个完整年度即实施超 3 亿元现金分红。",
+    "potential_readthrough": "更多反映现金创造能力与股东回报，不直接证明行业拐点。",
+    "evidence_mode": "support-candidate",
+    "source_type": "industry_file_study",
+    "source_ref": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\macro\\industry-pig-zsxq-2026-04-02-德康农牧-20260401-331b4ac0\\cursor-pdf-file-study.md"
+  },
+  {
+    "company_name": "德康农牧",
+    "event_date": "2025-09-05",
+    "event_type": "mna",
+    "event_title": "并购与资产整合",
+    "event_summary": "布局阶段（2011-2015年）：2011年收购重庆特驱42%股权整合资源，2013年从加拿大引进优质种猪构建核心种群，2015年提出“号家2020年引|进图佩克种猪实现基因组选育突破，同年生猪出栏量达137万头。",
+    "potential_readthrough": "并购与整合会改变资产结构，兑现仍要看经营与现金流。",
+    "evidence_mode": "support-candidate",
+    "source_type": "company_file_study",
+    "source_ref": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\company\\industry-pig-zsxq-2025-09-05-德康农牧-20250904-b439fae9\\cursor-pdf-file-study.md"
+  },
+  {
+    "company_name": "德康农牧",
+    "event_date": "2026-04-02",
+    "event_type": "capex",
+    "event_title": "资本开支",
+    "event_summary": "2026 年公司以降本增效、轻资产扩张、资金安全为核心，生猪全成本设定基础目标 11.6 元／公斤、挑战目标 11.3 元／公斤，3 月成本已降至11.9 元／公斤，资本开支预算 8 亿元，以二号农场与百村百万工程为主要扩张模式，坚持联农带农，持续优化PSY、料肉比等核心生产指标对 标国际先进养殖水平。",
+    "potential_readthrough": "资本开支变化会改变现金流和扩张节奏，但必须回到经营兑现验证。",
+    "evidence_mode": "support-candidate",
+    "source_type": "industry_file_study",
+    "source_ref": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\macro\\industry-pig-zsxq-2026-04-02-德康农牧-20260401-331b4ac0\\cursor-pdf-file-study.md"
+  },
+  {
+    "company_name": "德康农牧",
+    "event_date": "2025-06-16",
+    "event_type": "capex",
+    "event_title": "资本开支",
+    "event_summary": "这种模式优势明显，公司无需在种猪场建设上投入大量资本开支，在相同资金投入的情况下，能够撬动更大的经营杠杆，从而实现更多产能的饲养。",
+    "potential_readthrough": "资本开支变化会改变现金流和扩张节奏，但必须回到经营兑现验证。",
+    "evidence_mode": "support-candidate",
+    "source_type": "industry_file_study",
+    "source_ref": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\macro\\industry-pig-zsxq-2025-06-16-德康农牧-20250616-fa744150\\cursor-pdf-file-study.md"
+  },
+  {
+    "company_name": "德康农牧",
+    "event_date": "2025-06-04",
+    "event_type": "refinancing",
+    "event_title": "再融资",
+    "event_summary": "这些措施使得公司在非洲豬瘟的影响下，依然保持稳定增长态势，从而实现了较高的利润回报。",
+    "potential_readthrough": "再融资改善流动性，但不能把融资动作直接等于经营修复。",
+    "evidence_mode": "support-candidate",
+    "source_type": "company_file_study",
+    "source_ref": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\company\\industry-pig-zsxq-2025-06-04-德康农牧-20250604-26eafffe\\cursor-pdf-file-study.md"
+  }
+]

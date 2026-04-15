@@ -1,0 +1,25 @@
+{
+  "company_name": "傲农生物",
+  "as_of_date": "2026-04-14",
+  "cycle_position": "底部磨底段里的重整后高波动样本",
+  "headline_judgment": "傲农生物 当前更像 重整与恢复样本，主看 高 price beta 与 中 cost beta 的兑现，但证据强度仍受字段完整度限制。",
+  "price_beta": "高",
+  "cost_beta": "中",
+  "volume_beta": "高",
+  "balance_sheet_constraint": "很高",
+  "latest_operating_take": "成本锚 完全成本 6.3-6.4元/斤（知识星球摘录 / 2026-03-29）；效率锚 PSY 28.1（公司披露摘录 / 2025-08-26）；母猪锚 能繁母猪 11.5 万头（公司披露摘录 / 2025-08-26）；月报 2026-03 / 同比 41.3%",
+  "latest_market_take": "1m 相对 basket -1.9%；3m 相对 basket -6.6%；6m 相对 basket -13.9%",
+  "latest_evidence_mix": {
+    "company-disclosure-extracted": 2,
+    "derived-from-reporting-mix": 1,
+    "historical-candidate": 1,
+    "pending": 2,
+    "support-candidate": 2
+  },
+  "next_confirmations": [
+    "2027 目标"
+  ],
+  "open_gaps": [
+    "2027 目标"
+  ]
+}

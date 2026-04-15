@@ -1,0 +1,35 @@
+[
+  {
+    "company_name": "新希望",
+    "event_date": "",
+    "event_type": "mna",
+    "event_title": "并购与资产整合",
+    "event_summary": "2017 年，收购本香农业 70%的股权后，公司打开西北市场，并形成完整的猪肉产业链；",
+    "potential_readthrough": "并购与整合会改变资产结构，兑现仍要看经营与现金流。",
+    "evidence_mode": "support-candidate",
+    "source_type": "manual_sellside_report",
+    "source_ref": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\mixed\\industry-pig-manual-20221218-民生证券-新希望-000876-SZ-饲料养殖双扬帆-国际农牧食品巨头蓄势待发-84bd9889\\cursor-pdf-file-study.md"
+  },
+  {
+    "company_name": "新希望",
+    "event_date": "",
+    "event_type": "capex",
+    "event_title": "资本开支",
+    "event_summary": "连续减少资本开支，... | 13 | 页 13 | industry-variable | low",
+    "potential_readthrough": "资本开支变化会改变现金流和扩张节奏，但必须回到经营兑现验证。",
+    "evidence_mode": "support-candidate",
+    "source_type": "manual_sellside_report",
+    "source_ref": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\mixed\\industry-pig-manual-20221218-民生证券-新希望-000876-SZ-饲料养殖双扬帆-国际农牧食品巨头蓄势待发-84bd9889\\cursor-pdf-file-study.md"
+  },
+  {
+    "company_name": "新希望",
+    "event_date": "2026-02-01",
+    "event_type": "refinancing",
+    "event_title": "再融资",
+    "event_summary": "A：定增方面，公司积极配合交易所推进审核工作，2026 年1月上旬收到交易所通知，同意将募资规模从38亿元调整至33.32亿元具前已 完成相关审议和披露程序，更新了中报材料业公...",
+    "potential_readthrough": "再融资改善流动性，但不能把融资动作直接等于经营修复。",
+    "evidence_mode": "support-candidate",
+    "source_type": "company_file_study",
+    "source_ref": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\company\\industry-pig-zsxq-2026-02-01-新希望-20260130-68dd069b\\cursor-pdf-file-study.md"
+  }
+]
