@@ -57,7 +57,7 @@
   },
   "birth_pressure_summary": {
     "label": "未来出生端扩张压力中性偏强",
-    "score": -1.7000000000000002,
+    "score": -0.9,
     "driver_summary": "官方能繁同比 -2.90% 仍为负；官方能繁环比 -1.80%；涌益母猪镜像环比 -0.57%；Mysteel 候选样本较上期 +3.14",
     "industry_direction": "上半年供应压力仍大，缓和拐点尚待确认",
     "first_order_path": "母猪分母 + 仔猪价格 + 候选样本变动 + support 时间线共同决定未来 3-8 个月的出生端压力判断。",
@@ -69,9 +69,9 @@
     "piglet_price_mom": 10.3,
     "yongyi_sow_mom": -0.57,
     "mysteel_newborn_change": 3.14,
-    "support_up": 9,
-    "support_neutral": 5,
-    "support_down": 13,
+    "support_up": 11,
+    "support_neutral": 8,
+    "support_down": 8,
     "tracked_weighted_yoy": 9.574037397439994,
     "carcass_weight_kg": 88.98,
     "sub_signals": [
@@ -99,7 +99,7 @@
   "high_frequency_directionals": [
     {
       "metric": "出生端压力综合判断",
-      "latest_state": "未来出生端扩张压力中性偏强；综合分 -1.7；官方能繁同比 -2.90% 仍为负；官方能繁环比 -1.80%；涌益母猪镜像环比 -0.57%；Mysteel 候选样本较上期 +3.14",
+      "latest_state": "未来出生端扩张压力中性偏强；综合分 -0.9；官方能繁同比 -2.90% 仍为负；官方能繁环比 -1.80%；涌益母猪镜像环比 -0.57%；Mysteel 候选样本较上期 +3.14",
       "direction_to_industry": "上半年供应压力仍大，缓和拐点尚待确认",
       "first_order_path": "母猪分母 + 仔猪价格 + 候选样本变动 + support 时间线共同决定未来 3-8 个月的出生端压力判断。",
       "what_it_supports": "支持当前把出生端看作“未来出生端扩张压力中性偏强”，而不是只根据单一母猪或单一仔猪变量下结论。",

@@ -34,6 +34,20 @@
       "avg_cost_latest": "company-disclosure-extracted"
     },
     "source_meta_by_field": {
+      "guidance_2026": {
+        "source_label": "年报候选 | 2026-03-28 | 2025年年度报告",
+        "source_date": "2026-03-28",
+        "source_type": "annual_report",
+        "source_path": "",
+        "notes": "2026 年，公司预计销售商品猪7,500 万头-8,100 万头"
+      },
+      "guidance_2027": {
+        "source_label": "",
+        "source_date": "",
+        "source_type": "",
+        "source_path": "",
+        "notes": ""
+      },
       "sow_inventory_latest": {
         "source_label": "公司披露摘录",
         "source_date": "2025-10-10",
@@ -94,6 +108,20 @@
       "avg_cost_latest": "company-disclosure-extracted"
     },
     "source_meta_by_field": {
+      "guidance_2026": {
+        "source_label": "support 候选 | 2025-09-04 | industry-pig-zsxq-2025-...",
+        "source_date": "2025-09-04",
+        "source_type": "support-candidate",
+        "source_path": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\company\\industry-pig-zsxq-2025-09-04-温氏股份-20250903-e161d3f3\\cursor-pdf-file-study.md",
+        "notes": "；育种研发始于1998年，中兴种业种猪销量居行业第一，PSY从25提高到27.5 左右 A 奥Ka姆剃刀 未来出栏量预期：根据最新PSY数据及现有产能调控，预计2026年出栏量可达3800万至3900万头，全年利润预期可观。 ## Q&A ## Q：温氏股份主要业务及其近年来的发展情况如何？ A：温氏股份主要业务涵盖生猪养殖和禽类养 殖独家其中黄羽肉鸡养殖较为突出。独今年上半年考(2025年），行业整体亏损，不过自8月中旬起，黄羽..."
+      },
+      "guidance_2027": {
+        "source_label": "",
+        "source_date": "",
+        "source_type": "",
+        "source_path": "",
+        "notes": ""
+      },
       "sow_inventory_latest": {
         "source_label": "公司披露摘录",
         "source_date": "2025-02-14",
@@ -154,6 +182,20 @@
       "avg_cost_latest": "company-disclosure-extracted"
     },
     "source_meta_by_field": {
+      "guidance_2026": {
+        "source_label": "",
+        "source_date": "",
+        "source_type": "",
+        "source_path": "",
+        "notes": ""
+      },
+      "guidance_2027": {
+        "source_label": "",
+        "source_date": "",
+        "source_type": "",
+        "source_path": "",
+        "notes": ""
+      },
       "sow_inventory_latest": {
         "source_label": "公司披露摘录",
         "source_date": "2025-09-02",
@@ -214,6 +256,20 @@
       "avg_cost_latest": "company-disclosure-extracted"
     },
     "source_meta_by_field": {
+      "guidance_2026": {
+        "source_label": "",
+        "source_date": "",
+        "source_type": "",
+        "source_path": "",
+        "notes": ""
+      },
+      "guidance_2027": {
+        "source_label": "",
+        "source_date": "",
+        "source_type": "",
+        "source_path": "",
+        "notes": ""
+      },
       "sow_inventory_latest": {
         "source_label": "知识星球纪要补录",
         "source_date": "2026-01-17",
@@ -274,6 +330,20 @@
       "avg_cost_latest": "company-disclosure-extracted"
     },
     "source_meta_by_field": {
+      "guidance_2026": {
+        "source_label": "support 候选 | 2026-02-27 | industry-pig-zsxq-2026-...",
+        "source_date": "2026-02-27",
+        "source_type": "support-candidate",
+        "source_path": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\company\\industry-pig-zsxq-2026-02-27-神农集团-20260225-6fbf3270\\cursor-pdf-file-study.md",
+        "notes": "- 材料摘录（页 8）：Q：公司 2025 年通过的母猪场项目推进情况如何？这些项目将对 2026 年出栏量产生怎样的支撐？ A：2025 年公司审议通过的两三个母猪场项目正正常推进，目前已陆续进入交付阶段。这些项目将为2026年出栏量增长提供关键支撑预计可 带动出栏量增长约50万头，助力2026年350万头出栏目标的实现。从交付及生产情况来看，部分项目可提前交付并实现全年生产，充分发挥产能；部分项目中途交付，无法实现满负荷运 |..."
+      },
+      "guidance_2027": {
+        "source_label": "年报候选 | 2025-04-29 | 云南神农农业产业集团股份有限公司2024年年度报告",
+        "source_date": "2025-04-29",
+        "source_type": "annual_report",
+        "source_path": "",
+        "notes": "公司力争 于2027 年实现出栏生猪500 万头以上的目标"
+      },
       "sow_inventory_latest": {
         "source_label": "公司披露摘录",
         "source_date": "2025-09-05",
@@ -334,6 +404,20 @@
       "avg_cost_latest": "company-disclosure-extracted"
     },
     "source_meta_by_field": {
+      "guidance_2026": {
+        "source_label": "",
+        "source_date": "",
+        "source_type": "",
+        "source_path": "",
+        "notes": ""
+      },
+      "guidance_2027": {
+        "source_label": "",
+        "source_date": "",
+        "source_type": "",
+        "source_path": "",
+        "notes": ""
+      },
       "sow_inventory_latest": {
         "source_label": "",
         "source_date": "",
@@ -394,6 +478,20 @@
       "avg_cost_latest": "support-candidate"
     },
     "source_meta_by_field": {
+      "guidance_2026": {
+        "source_label": "support 候选 | 2025-06-04 | industry-pig-zsxq-2025-...",
+        "source_date": "2025-06-04",
+        "source_type": "support-candidate",
+        "source_path": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\company\\industry-pig-zsxq-2025-06-04-德康农牧-20250604-26eafffe\\cursor-pdf-file-study.md",
+        "notes": "5 万头核心种群及 14.8 万头纯种群为基础，可提供远期 3,000 万头仔猪的生产能力。中期规划方面，2025 年计划出栏1,100万头，同比增长 25%；2026 年计划出栏1,500万头，同比增长 36%。 Q：目前德康农牧估值情况如何？ A：截至 2025 年 6 月 4 日，德康发布财报以来，基本面持续改善带动了流动性提升，其日均换手率约为 1%，较 2024 年有显著改... | 10 | 页 10 | fact |..."
+      },
+      "guidance_2027": {
+        "source_label": "",
+        "source_date": "",
+        "source_type": "",
+        "source_path": "",
+        "notes": ""
+      },
       "sow_inventory_latest": {
         "source_label": "",
         "source_date": "",
@@ -461,6 +559,20 @@
       "avg_cost_latest": "support-candidate"
     },
     "source_meta_by_field": {
+      "guidance_2026": {
+        "source_label": "",
+        "source_date": "",
+        "source_type": "",
+        "source_path": "",
+        "notes": ""
+      },
+      "guidance_2027": {
+        "source_label": "",
+        "source_date": "",
+        "source_type": "",
+        "source_path": "",
+        "notes": ""
+      },
       "sow_inventory_latest": {
         "source_label": "公司披露摘录",
         "source_date": "2025-04-25",
@@ -521,6 +633,20 @@
       "avg_cost_latest": "company-disclosure-extracted"
     },
     "source_meta_by_field": {
+      "guidance_2026": {
+        "source_label": "",
+        "source_date": "",
+        "source_type": "",
+        "source_path": "",
+        "notes": ""
+      },
+      "guidance_2027": {
+        "source_label": "",
+        "source_date": "",
+        "source_type": "",
+        "source_path": "",
+        "notes": ""
+      },
       "sow_inventory_latest": {
         "source_label": "2024年年报经营披露",
         "source_date": "2025-03-31",
@@ -581,6 +707,20 @@
       "avg_cost_latest": "support-candidate"
     },
     "source_meta_by_field": {
+      "guidance_2026": {
+        "source_label": "support 候选 | 2026-03-29 | industry-pig-zsxq-2026-...",
+        "source_date": "2026-03-29",
+        "source_type": "support-candidate",
+        "source_path": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\company\\industry-pig-zsxq-2026-03-29-傲农生物-20260327-f32706bf\\cursor-pdf-file-study.md",
+        "notes": "全年营收约80亿元，战略聚焦闽赣区域，剥离北方低效商能末来2- 3年无需大规模资本开支，步入稳健经营修复考期。 2.饲料为核心业务，2025年外销180万吨， 2026年目标外销210-220万吨，远期规划恢复至 300-400万吨；生猪养殖2025年出栏170万头， 2026年目标230-250万头，能繁母猪存栏10万 头，上限锁定14-16万头。 3.生猪育肥完全成本6.3-6.4元/斤，受原料涨价上调全年成本目标；食品板块推..."
+      },
+      "guidance_2027": {
+        "source_label": "",
+        "source_date": "",
+        "source_type": "",
+        "source_path": "",
+        "notes": ""
+      },
       "sow_inventory_latest": {
         "source_label": "公司披露摘录",
         "source_date": "2025-08-26",
@@ -641,6 +781,20 @@
       "avg_cost_latest": "company-disclosure-extracted"
     },
     "source_meta_by_field": {
+      "guidance_2026": {
+        "source_label": "",
+        "source_date": "",
+        "source_type": "",
+        "source_path": "",
+        "notes": ""
+      },
+      "guidance_2027": {
+        "source_label": "",
+        "source_date": "",
+        "source_type": "",
+        "source_path": "",
+        "notes": ""
+      },
       "sow_inventory_latest": {
         "source_label": "",
         "source_date": "",
@@ -701,6 +855,20 @@
       "avg_cost_latest": "company-disclosure-extracted"
     },
     "source_meta_by_field": {
+      "guidance_2026": {
+        "source_label": "support 候选 | 2025-08-31 | industry-pig-zsxq-2025-...",
+        "source_date": "2025-08-31",
+        "source_type": "support-candidate",
+        "source_path": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\company\\industry-pig-zsxq-2025-08-31-东瑞股份-20250829-969e80b4\\cursor-pdf-file-study.md",
+        "notes": "期间费用1.39 元／公斤），上半年完全成本 15.04 元／公斤；7 月完全成本 14.18 元／公斤（较 6 月增0.3 元），计划年底前降至 14元以下、2026 年降至 13 元左右，通过扩大规模、提高幼猪占比、引进高产种猪等实现。出栏规划上，2025年计划出栏30万头，预计实际 20-26 万头（与 2024 年相近），2026 年计划 30-35 万头；供港方面，香港市场需求未完全恢复（当前约 110 万头／年，疫情前..."
+      },
+      "guidance_2027": {
+        "source_label": "",
+        "source_date": "",
+        "source_type": "",
+        "source_path": "",
+        "notes": ""
+      },
       "sow_inventory_latest": {
         "source_label": "公司披露摘录",
         "source_date": "2025-01-20",
@@ -761,6 +929,20 @@
       "avg_cost_latest": "support-candidate"
     },
     "source_meta_by_field": {
+      "guidance_2026": {
+        "source_label": "",
+        "source_date": "",
+        "source_type": "",
+        "source_path": "",
+        "notes": ""
+      },
+      "guidance_2027": {
+        "source_label": "",
+        "source_date": "",
+        "source_type": "",
+        "source_path": "",
+        "notes": ""
+      },
       "sow_inventory_latest": {
         "source_label": "公司披露摘录",
         "source_date": "2025-08-23",

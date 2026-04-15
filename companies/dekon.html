@@ -87,6 +87,70 @@
         grid-template-columns:repeat(2,minmax(0,1fr));
         margin-top:1.1rem;
       }
+      .guidance-highlight {
+        margin-top:1rem;
+        padding:18px 20px;
+        border-radius:22px;
+        border:1px solid rgba(158,123,47,0.2);
+        background:linear-gradient(135deg, rgba(251,245,224,0.96), rgba(255,250,242,0.9));
+        box-shadow:var(--shadow);
+      }
+      .guidance-hero-top {
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:space-between;
+        gap:0.85rem;
+        align-items:flex-start;
+      }
+      .guidance-hero-top h3 {
+        margin:0.22rem 0 0;
+        font-size:1.15rem;
+      }
+      .guidance-badge-row {
+        display:flex;
+        flex-wrap:wrap;
+        gap:0.45rem;
+        justify-content:flex-end;
+      }
+      .guidance-value-row {
+        display:grid;
+        grid-template-columns:minmax(0,1.1fr) minmax(280px,0.9fr);
+        gap:1rem;
+        align-items:start;
+        margin-top:0.95rem;
+      }
+      .guidance-value {
+        display:flex;
+        align-items:center;
+        flex-wrap:wrap;
+        gap:0.6rem;
+        font-size:1.28rem;
+      }
+      .guidance-meta {
+        display:grid;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:0.75rem;
+      }
+      .guidance-meta p {
+        margin:0;
+        display:grid;
+        gap:0.24rem;
+        padding:0.82rem 0.88rem;
+        border-radius:16px;
+        border:1px solid rgba(64,54,40,0.1);
+        background:rgba(255,255,255,0.74);
+      }
+      .guidance-meta strong {
+        font-size:0.76rem;
+        color:var(--muted);
+        letter-spacing:0.08em;
+        text-transform:uppercase;
+      }
+      .guidance-note {
+        margin:0.9rem 0 0;
+        color:var(--ink-soft);
+        line-height:1.6;
+      }
       .priority-card {
         padding:16px 18px;
         border-radius:18px;
@@ -361,6 +425,9 @@
         .hero-side .metric-strip-grid {
           grid-template-columns:repeat(2,minmax(0,1fr));
         }
+        .guidance-value-row {
+          grid-template-columns:1fr;
+        }
       }
       @media (max-width:1100px) {
         .hero-shell, .detail-grid, .summary-grid, .priority-grid, .hero-quick-grid, .chart-stack, .hero-side {
@@ -486,9 +553,36 @@
         gap:0.4rem;
       }
       .note-card-body {
+        display:grid;
+        gap:0.7rem;
         margin-top:0;
         color:var(--ink);
         line-height:1.7;
+      }
+      .note-adoption {
+        margin:0;
+        color:var(--ink-soft);
+      }
+      .note-full-quote {
+        padding:0.78rem 0.88rem;
+        border-radius:14px;
+        border:1px solid rgba(64,54,40,0.08);
+        background:rgba(255,255,255,0.88);
+        line-height:1.75;
+        white-space:normal;
+      }
+      .note-quote-toggle {
+        border:1px solid rgba(64,54,40,0.1);
+        border-radius:14px;
+        padding:0.68rem 0.8rem;
+        background:rgba(255,255,255,0.84);
+      }
+      .note-quote-toggle summary {
+        cursor:pointer;
+        font-weight:700;
+      }
+      .note-quote-toggle .note-full-quote {
+        margin-top:0.68rem;
       }
       .note-link {
         margin-top:0.62rem;
@@ -563,14 +657,38 @@
               <span class="hero-pill">6/8 字段已绑定</span>
               <span class="hero-pill">暂无最新补充线索</span>
             </div>
+            
+      <article class="guidance-highlight">
+        <div class="guidance-hero-top">
+          <div>
+            <span class="eyebrow">2026 Guidance</span>
+            <h3>2026 出栏规划</h3>
+          </div>
+          <div class="guidance-badge-row">
+            <span class="data-badge badge-target data-badge-compact">target</span>
+            <span class="data-badge badge-support data-badge-compact">support候选</span>
+            <span class="data-badge badge-support data-badge-compact">support 候选 | 2025-06-04 | industry-pig-zsxq-2025-...</span>
+            <span class="data-badge badge-neutral data-badge-compact">2025-06-04</span>
+          </div>
+        </div>
+        <div class="guidance-value-row">
+          <div class="guidance-value"><span class="inline-value inline-target">1500 万头</span></div>
+          <div class="guidance-meta">
+            <p><strong>来源日期</strong><span>2025-06-04</span></p>
+            <p><strong>当前采用</strong><span>support候选</span></p>
+          </div>
+        </div>
+        <p class="guidance-note">5 万头核心种群及 14.8 万头纯种群为基础，可提供远期 3,000 万头仔猪的生产能力。中期规划方面，2025 年计划出栏1,100万头，同比增长 25%；2026 年计划出栏1,500万头，同比增长 36%。 Q：目前德康农牧估值情况如何？ A：截至 2025 年 6 月 4 日，德康发布财报以来，基本面持续改善带动了流动性提升，其日均换手率约为 1%，较 2024 年有显著改... | 10 | 页 10 | fact |...</p>
+      </article>
+    
             <div class="priority-grid">
               <article class="priority-card">
                 <strong>经营判断</strong>
                 <span>成本锚 成本 12.3元/公斤（知识星球多源印证（2篇） / 2026-04-02）；效率锚 PSY 27（公司披露摘录 / 2025-08-15）；经营细项 仔猪售价 475.5元/头</span>
               </article>
               <article class="priority-card">
-                <strong>市场正在交易什么</strong>
-                <span>德康农牧 的市场层优先看相对行业 basket 的强弱，而不是只看绝对涨跌。</span>
+                <strong>最新经营锚点</strong>
+                <span>暂无最新外部线索，当前仍以官方字段和本地学习层为主。</span>
               </article>
               <article class="priority-card">
                 <strong>下一步确认项</strong>
@@ -642,8 +760,8 @@
                 <div>高增长低成本样本；港股个案不能替代 A 股主链信号。</div>
               </div>
               <div class="signal-card">
-                <strong>最新补充线索</strong>
-                <div>暂无最新外部线索，当前仍以官方字段和本地学习层为主。</div>
+                <strong>市场正在交易什么</strong>
+                <div>德康农牧 的市场层优先看相对行业 basket 的强弱，而不是只看绝对涨跌。</div>
                 <div class="metric-strip-foot"><span class="data-badge badge-support data-badge-compact">暂无最新补充线索</span></div>
               </div>
             </div>
@@ -750,8 +868,8 @@
               <td>1500 万头</td>
               <td>2026</td>
               <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
-              <td><span class="data-badge badge-neutral data-badge-compact">矩阵层汇总</span></td>
-              <td>—</td>
+              <td><span class="data-badge badge-support data-badge-compact">support 候选 | 2025-06-04 | industry-pig-zsxq-2025-...</span></td>
+              <td>5 万头核心种群及 14.8 万头纯种群为基础，可提供远期 3,000 万头仔猪的生产能力。中期规划方面，2025 年计划出栏1,100万头，同比增长 25%；2026 年计划出...</td>
             </tr>
             
             <tr>
@@ -894,7 +1012,8 @@
                 
               </div>
               <div class="note-card-body">
-                港交所 2025 年报 Financial Highlights 明确披露 In 2025, we sold 10,827,982 heads of pigs in total，可直接折算为 1082.8 万头 2025 实际出栏。
+                <p class="note-adoption"><strong>当前采用方式：</strong>官方摘录，可作为字段回查依据</p>
+                <div class="note-full-quote">港交所 2025 年报 Financial Highlights 明确披露 In 2025, we sold 10,827,982 heads of pigs in total，可直接折算为 1082.8 万头 2025 实际出栏。</div>
               </div>
             </li>
         
@@ -907,7 +1026,8 @@
                 
               </div>
               <div class="note-card-body">
-                官方港交所 2025 中报确认完全成本、单头利润持续领先，但当前线程未在官方页内直接锁定 2025 全年 12.3 元/公斤这一精确点位。
+                <p class="note-adoption"><strong>当前采用方式：</strong>官方摘录，可作为字段回查依据</p>
+                <div class="note-full-quote">官方港交所 2025 中报确认完全成本、单头利润持续领先，但当前线程未在官方页内直接锁定 2025 全年 12.3 元/公斤这一精确点位。</div>
               </div>
             </li>
         </ul>
@@ -928,7 +1048,8 @@
                 
               </div>
               <div class="note-card-body">
-                1、行业：猪产能去化与鸡价格拐点共振，养殖周期双击行情启动 生猪板块新周期逻辑持续强化。
+                <p class="note-adoption"><strong>当前采用方式：</strong>研究摘录留痕，仍需与正式字段或更多来源交叉验证</p>
+                <div class="note-full-quote">1、行业：猪产能去化与鸡价格拐点共振，养殖周期双击行情启动 生猪板块新周期逻辑持续强化。</div>
               </div>
             </li>
         
@@ -941,7 +1062,8 @@
                 
               </div>
               <div class="note-card-body">
-                技术上，在公司前瞻性布局和持续深耕下，公司培育出具有强大竞争力的品种体系，通过德康Ε系和母猪生产的配套系商品肉猪饲养天龄减少12 天，料肉比降低 0.1，可带来每头生猪出栏成本可降低约 0.7-0.8元/kg，形成显著的育种优势转换为最终的成本竞争力。
+                <p class="note-adoption"><strong>当前采用方式：</strong>研究摘录留痕，仍需与正式字段或更多来源交叉验证</p>
+                <div class="note-full-quote">技术上，在公司前瞻性布局和持续深耕下，公司培育出具有强大竞争力的品种体系，通过德康Ε系和母猪生产的配套系商品肉猪饲养天龄减少12 天，料肉比降低 0.1，可带来每头生猪出栏成本可降低约 0.7-0.8元/kg，形成显著的育种优势转换为最终的成本竞争力。</div>
               </div>
             </li>
         
@@ -954,7 +1076,8 @@
                 
               </div>
               <div class="note-card-body">
-                以西南地区为例，除去头部集团场和尾部散户后的总产能约 6000 万头（约占全国出栏量的 40%）的生猪养殖农户适合公司“二号农场”模式，公司未来与适度规模农场合作空间较大。
+                <p class="note-adoption"><strong>当前采用方式：</strong>研究摘录留痕，仍需与正式字段或更多来源交叉验证</p>
+                <div class="note-full-quote">以西南地区为例，除去头部集团场和尾部散户后的总产能约 6000 万头（约占全国出栏量的 40%）的生猪养殖农户适合公司“二号农场”模式，公司未来与适度规模农场合作空间较大。</div>
               </div>
             </li>
         
@@ -967,7 +1090,8 @@
                 
               </div>
               <div class="note-card-body">
-                公司ELY 商品猪相对于市场主流的 DLY 商品猪提前12.16 天出栏，料肉比降低0.1以上，效益增长约100元/头，可使代养农户单头母猪年增效2300元。
+                <p class="note-adoption"><strong>当前采用方式：</strong>研究摘录留痕，仍需与正式字段或更多来源交叉验证</p>
+                <div class="note-full-quote">公司ELY 商品猪相对于市场主流的 DLY 商品猪提前12.16 天出栏，料肉比降低0.1以上，效益增长约100元/头，可使代养农户单头母猪年增效2300元。</div>
               </div>
             </li>
         
@@ -980,7 +1104,8 @@
                 
               </div>
               <div class="note-card-body">
-                A：截至2026年3月，公司生猪全程成活率超 过88%，120公斤标准料肉比约2.45产断奶成... | 8 | 页 8 | risk-warning | low
+                <p class="note-adoption"><strong>当前采用方式：</strong>研究摘录留痕，仍需与正式字段或更多来源交叉验证</p>
+                <div class="note-full-quote">A：截至2026年3月，公司生猪全程成活率超 过88%，120公斤标准料肉比约2.45产断奶成... | 8 | 页 8 | risk-warning | low</div>
               </div>
             </li>
         
@@ -993,7 +1118,8 @@
                 
               </div>
               <div class="note-card-body">
-                发展历程：公司历经四阶段发展，从1994-2010年饲料业务奠基，到2011- 2015年种猪育种破局、模式创新萌芽，2016－2020年技术迭代赋能、产能快速释放，2021年至今盈利与规模双突破，跻身行业头部。
+                <p class="note-adoption"><strong>当前采用方式：</strong>研究摘录留痕，仍需与正式字段或更多来源交叉验证</p>
+                <div class="note-full-quote">发展历程：公司历经四阶段发展，从1994-2010年饲料业务奠基，到2011- 2015年种猪育种破局、模式创新萌芽，2016－2020年技术迭代赋能、产能快速释放，2021年至今盈利与规模双突破，跻身行业头部。</div>
               </div>
             </li>
         </ul>
