@@ -601,6 +601,31 @@
         letter-spacing:0.1em;
         text-transform:uppercase;
       }
+      .mini-metric-grid {
+        display:grid;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:0.8rem;
+        margin-top:0.8rem;
+      }
+      .mini-metric {
+        display:grid;
+        gap:0.38rem;
+        padding:0.82rem 0.88rem;
+        border-radius:14px;
+        border:1px solid rgba(64,54,40,0.1);
+        background:rgba(255,251,244,0.76);
+      }
+      .mini-metric span {
+        font-size:0.75rem;
+        color:var(--muted);
+        letter-spacing:0.08em;
+        text-transform:uppercase;
+      }
+      .mini-metric-foot {
+        display:flex;
+        flex-wrap:wrap;
+        gap:0.35rem;
+      }
       .compact-stack {
         display:grid;
         gap:0.9rem;
@@ -751,6 +776,12 @@
             </article>
             
             <article class="metric-strip-card">
+              <strong>2026 指引</strong>
+              <div><span class="inline-value inline-support">350 万头</span></div>
+              <div class="metric-strip-foot"><span class="data-badge badge-support data-badge-compact">support候选</span><span class="data-badge badge-neutral data-badge-compact">2026-02-27</span></div>
+            </article>
+            
+            <article class="metric-strip-card">
               <strong>能繁母猪</strong>
               <div><span class="inline-value inline-official">能繁 母猪为 13.6万头</span></div>
               <div class="metric-strip-foot"><span class="data-badge badge-official data-badge-compact">公司披露摘录</span><span class="data-badge badge-neutral data-badge-compact">2025-09-05</span></div>
@@ -768,6 +799,12 @@
               <div class="metric-strip-foot"><span class="data-badge badge-official data-badge-compact">公司披露摘录</span><span class="data-badge badge-neutral data-badge-compact">2025-09-05</span></div>
             </article>
             
+            <article class="metric-strip-card">
+              <strong>仔猪成本</strong>
+              <div><span class="inline-value inline-official">仔猪成本2.9元/公斤， 饲料 成本 6.7 元/公斤，动保约 0.3 元/公斤，人工 1.5 元/公斤，折旧约 0.2 元/公斤，总部费用 约 0.8 元</span></div>
+              <div class="metric-strip-foot"><span class="data-badge badge-official data-badge-compact">公司披露摘录</span><span class="data-badge badge-neutral data-badge-compact">2025-09-05</span></div>
+            </article>
+            
               </div>
             </div>
             <div class="panel compact-stack">
@@ -781,6 +818,42 @@
                 <strong>待补缺口</strong>
                 <ul><li>psy_latest: keep-support-candidate | 多源一致，可继续作为 support 展示；当前底层效率汇总里会抓到“力争 31”这一目标值，但目标值不能替代 2025 实际 PSY。</li></ul>
               </div>
+              
+      <div class="signal-card">
+        <strong>最近财务快照</strong>
+        <div class="mini-metric-grid">
+          
+            <div class="mini-metric">
+              <span>营收</span>
+              <div><span class="inline-value inline-official">39.23亿元</span></div>
+              <div class="mini-metric-foot"><span class="data-badge badge-official data-badge-compact">已验证</span></div>
+            </div>
+            
+            <div class="mini-metric">
+              <span>净利润</span>
+              <div><span class="inline-value inline-official">4.62亿元</span></div>
+              <div class="mini-metric-foot"><span class="data-badge badge-official data-badge-compact">已验证</span></div>
+            </div>
+            
+            <div class="mini-metric">
+              <span>经营现金流</span>
+              <div><span class="inline-value inline-official">4.07亿元</span></div>
+              <div class="mini-metric-foot"><span class="data-badge badge-official data-badge-compact">已验证</span></div>
+            </div>
+            
+            <div class="mini-metric">
+              <span>有息负债</span>
+              <div><span class="inline-value inline-official">8.11亿元</span></div>
+              <div class="mini-metric-foot"><span class="data-badge badge-official data-badge-compact">已验证</span></div>
+            </div>
+            
+        </div>
+        <div class="metric-strip-foot">
+          <span class="data-badge badge-neutral data-badge-compact">2025三季报</span>
+          <span class="data-badge badge-derived data-badge-compact">iFinD/学习层优先</span>
+        </div>
+      </div>
+    
               <div class="signal-card">
                 <strong>当前研究定位</strong>
                 <div>低成本效率与区域经营样本；单家效率提升不等于全行业供给收缩加速。</div>

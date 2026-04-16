@@ -601,6 +601,31 @@
         letter-spacing:0.1em;
         text-transform:uppercase;
       }
+      .mini-metric-grid {
+        display:grid;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:0.8rem;
+        margin-top:0.8rem;
+      }
+      .mini-metric {
+        display:grid;
+        gap:0.38rem;
+        padding:0.82rem 0.88rem;
+        border-radius:14px;
+        border:1px solid rgba(64,54,40,0.1);
+        background:rgba(255,251,244,0.76);
+      }
+      .mini-metric span {
+        font-size:0.75rem;
+        color:var(--muted);
+        letter-spacing:0.08em;
+        text-transform:uppercase;
+      }
+      .mini-metric-foot {
+        display:flex;
+        flex-wrap:wrap;
+        gap:0.35rem;
+      }
       .compact-stack {
         display:grid;
         gap:0.9rem;
@@ -751,6 +776,12 @@
             </article>
             
             <article class="metric-strip-card">
+              <strong>2026 指引</strong>
+              <div><span class="inline-value inline-support">35 万头</span></div>
+              <div class="metric-strip-foot"><span class="data-badge badge-support data-badge-compact">support候选</span><span class="data-badge badge-neutral data-badge-compact">2025-08-31</span></div>
+            </article>
+            
+            <article class="metric-strip-card">
               <strong>能繁母猪</strong>
               <div><span class="inline-value inline-official">截至12月末的能繁母猪存栏数量为7.6万头</span></div>
               <div class="metric-strip-foot"><span class="data-badge badge-official data-badge-compact">公司披露摘录</span><span class="data-badge badge-neutral data-badge-compact">2025-01-20</span></div>
@@ -768,6 +799,12 @@
               <div class="metric-strip-foot"><span class="data-badge badge-official data-badge-compact">公司披露摘录</span><span class="data-badge badge-neutral data-badge-compact">2025-07-14</span></div>
             </article>
             
+            <article class="metric-strip-card">
+              <strong>断奶成本</strong>
+              <div><span class="inline-value inline-official">断奶仔猪成本？ 答：公司近期PSY约为25，断奶仔猪成本约为310元/头</span></div>
+              <div class="metric-strip-foot"><span class="data-badge badge-official data-badge-compact">公司披露摘录</span><span class="data-badge badge-neutral data-badge-compact">2025-07-14</span></div>
+            </article>
+            
               </div>
             </div>
             <div class="panel compact-stack">
@@ -781,6 +818,42 @@
                 <strong>待补缺口</strong>
                 <ul><li>2027 目标</li></ul>
               </div>
+              
+      <div class="signal-card">
+        <strong>最近财务快照</strong>
+        <div class="mini-metric-grid">
+          
+            <div class="mini-metric">
+              <span>营收</span>
+              <div><span class="inline-value inline-official">16.00亿元</span></div>
+              <div class="mini-metric-foot"><span class="data-badge badge-official data-badge-compact">已验证</span></div>
+            </div>
+            
+            <div class="mini-metric">
+              <span>净利润</span>
+              <div><span class="inline-value inline-official">0.11亿元</span></div>
+              <div class="mini-metric-foot"><span class="data-badge badge-official data-badge-compact">已验证</span></div>
+            </div>
+            
+            <div class="mini-metric">
+              <span>经营现金流</span>
+              <div><span class="inline-value inline-official">1.36亿元</span></div>
+              <div class="mini-metric-foot"><span class="data-badge badge-official data-badge-compact">已验证</span></div>
+            </div>
+            
+            <div class="mini-metric">
+              <span>有息负债</span>
+              <div><span class="inline-value inline-official">22.67亿元</span></div>
+              <div class="mini-metric-foot"><span class="data-badge badge-official data-badge-compact">已验证</span></div>
+            </div>
+            
+        </div>
+        <div class="metric-strip-foot">
+          <span class="data-badge badge-neutral data-badge-compact">2025三季报</span>
+          <span class="data-badge badge-derived data-badge-compact">iFinD/学习层优先</span>
+        </div>
+      </div>
+    
               <div class="signal-card">
                 <strong>当前研究定位</strong>
                 <div>区域性高弹性样本；区域和公司个体因素会放大波动，不能直推行业趋势。</div>

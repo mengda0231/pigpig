@@ -15,6 +15,20 @@
   },
   {
     "company_name": "唐人神",
+    "metric_family": "avg_cost_latest",
+    "metric_label": "雪球成本线索",
+    "metric_value": "公司表示2026年肥猪完全成本争取控制在12.6元/公斤左右（目标）",
+    "metric_unit": "",
+    "metric_date": "2026-02-25",
+    "actual_or_target": "target",
+    "evidence_mode": "support-candidate",
+    "binding_status": "support-candidate",
+    "source_type": "雪球转载线索（待交叉验证）",
+    "source_path": "https://xueqiu.com/1807352788/375885740",
+    "notes": "更接近官方问答转载，适合补到公司页 support 层，帮助理解公司正在追的成本目标，但不能替代最新实际成本。；动作建议：仅线索展示；状态：仅目标非实际"
+  },
+  {
+    "company_name": "唐人神",
     "metric_family": "hog_operating_cost",
     "metric_label": "运营成本",
     "metric_value": "育肥生产成本为 12.71 元/公斤，较年初下降 0.74 元/公斤",

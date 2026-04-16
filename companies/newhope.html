@@ -601,6 +601,31 @@
         letter-spacing:0.1em;
         text-transform:uppercase;
       }
+      .mini-metric-grid {
+        display:grid;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:0.8rem;
+        margin-top:0.8rem;
+      }
+      .mini-metric {
+        display:grid;
+        gap:0.38rem;
+        padding:0.82rem 0.88rem;
+        border-radius:14px;
+        border:1px solid rgba(64,54,40,0.1);
+        background:rgba(255,251,244,0.76);
+      }
+      .mini-metric span {
+        font-size:0.75rem;
+        color:var(--muted);
+        letter-spacing:0.08em;
+        text-transform:uppercase;
+      }
+      .mini-metric-foot {
+        display:flex;
+        flex-wrap:wrap;
+        gap:0.35rem;
+      }
       .compact-stack {
         display:grid;
         gap:0.9rem;
@@ -655,7 +680,7 @@
               <span class="hero-pill">底部磨底段里的成本与负债表接口样本</span>
               <span class="hero-pill">000876.SZ</span>
               <span class="hero-pill">6/8 字段已绑定</span>
-              <span class="hero-pill">暂无最新补充线索</span>
+              <span class="hero-pill">1 条补充线索</span>
             </div>
             
       <article class="guidance-highlight">
@@ -714,7 +739,7 @@
               </article>
               <article class="priority-card">
                 <strong>最新经营锚点</strong>
-                <span>暂无最新外部线索，当前仍以官方字段和本地学习层为主。</span>
+                <span>雪球成本线索；4月正常运营场线出栏肥猪完全成本已降至12.9元/公斤；2026年目标再降1-1.5元/公斤</span>
               </article>
               <article class="priority-card">
                 <strong>下一步确认项</strong>
@@ -751,6 +776,12 @@
             </article>
             
             <article class="metric-strip-card">
+              <strong>2026 指引</strong>
+              <div><span class="inline-value inline-pending">待补</span></div>
+              <div class="metric-strip-foot"><span class="data-badge badge-pending data-badge-compact">待补</span></div>
+            </article>
+            
+            <article class="metric-strip-card">
               <strong>能繁母猪</strong>
               <div><span class="inline-value inline-official">能繁母猪存栏 76 万头</span></div>
               <div class="metric-strip-foot"><span class="data-badge badge-official data-badge-compact">公司披露摘录</span><span class="data-badge badge-neutral data-badge-compact">2025-09-02</span></div>
@@ -768,6 +799,12 @@
               <div class="metric-strip-foot"><span class="data-badge badge-official data-badge-compact">公司披露摘录</span><span class="data-badge badge-neutral data-badge-compact">2026-01-31</span></div>
             </article>
             
+            <article class="metric-strip-card">
+              <strong>断奶成本</strong>
+              <div><span class="inline-value inline-official">断奶成本约 260 元/头，较 2024 年底下降 30 元/头，近几月低于 250 元/头</span></div>
+              <div class="metric-strip-foot"><span class="data-badge badge-official data-badge-compact">公司披露摘录</span><span class="data-badge badge-neutral data-badge-compact">2025-09-02</span></div>
+            </article>
+            
               </div>
             </div>
             <div class="panel compact-stack">
@@ -781,6 +818,42 @@
                 <strong>待补缺口</strong>
                 <ul><li>2026 指引</li><li>2027 目标</li></ul>
               </div>
+              
+      <div class="signal-card">
+        <strong>最近财务快照</strong>
+        <div class="mini-metric-grid">
+          
+            <div class="mini-metric">
+              <span>营收</span>
+              <div><span class="inline-value inline-official">805.04亿元</span></div>
+              <div class="mini-metric-foot"><span class="data-badge badge-official data-badge-compact">已验证</span></div>
+            </div>
+            
+            <div class="mini-metric">
+              <span>净利润</span>
+              <div><span class="inline-value inline-official">7.60亿元</span></div>
+              <div class="mini-metric-foot"><span class="data-badge badge-official data-badge-compact">已验证</span></div>
+            </div>
+            
+            <div class="mini-metric">
+              <span>经营现金流</span>
+              <div><span class="inline-value inline-official">78.35亿元</span></div>
+              <div class="mini-metric-foot"><span class="data-badge badge-official data-badge-compact">已验证</span></div>
+            </div>
+            
+            <div class="mini-metric">
+              <span>有息负债</span>
+              <div><span class="inline-value inline-official">593.65亿元</span></div>
+              <div class="mini-metric-foot"><span class="data-badge badge-official data-badge-compact">已验证</span></div>
+            </div>
+            
+        </div>
+        <div class="metric-strip-foot">
+          <span class="data-badge badge-neutral data-badge-compact">2025三季报</span>
+          <span class="data-badge badge-derived data-badge-compact">iFinD/学习层优先</span>
+        </div>
+      </div>
+    
               <div class="signal-card">
                 <strong>当前研究定位</strong>
                 <div>养殖与饲料双接口；不能把饲料链改善直接当作主链反转确认。</div>
@@ -788,7 +861,7 @@
               <div class="signal-card">
                 <strong>市场正在交易什么</strong>
                 <div>1m 相对 basket +3.7%；3m 相对 basket -3.1%；6m 相对 basket -0.4%</div>
-                <div class="metric-strip-foot"><span class="data-badge badge-support data-badge-compact">暂无最新补充线索</span></div>
+                <div class="metric-strip-foot"><span class="data-badge badge-support data-badge-compact">1 条补充线索</span><span class="data-badge badge-neutral data-badge-compact">2025-05-15</span></div>
               </div>
             </div>
           </aside>
@@ -1091,6 +1164,28 @@
               <div class="note-card-body">
                 <p class="note-adoption"><strong>当前采用方式：</strong>研究摘录留痕，仍需与正式字段或更多来源交叉验证</p>
                 <div class="note-full-quote">目前，公司仍在积极优化种群结构、调整饲料配方、提高养殖管理水平，从窝均健仔数、料肉比、肉猪上市率三个影响养殖成本的关键指标来看，公司都尚未完全恢复到疫情前水平，意味着成本有仍多维度的改善空间，公司预计 2022 年底成本下降至 16 元/公斤。</div>
+              </div>
+            </li>
+        </ul>
+            </section>
+            
+            <section class="note-group note-group-external-clue">
+              <div class="note-group-head">
+                <h4>补充线索</h4>
+                <span class="data-badge badge-neutral data-badge-compact">1 条</span>
+              </div>
+              <ul class="list-clean source-list">
+            <li class="note-card external-clue">
+              <div class="note-card-rail">
+                <div class="note-card-head">
+                  <strong>雪球成本线索</strong>
+                  <div class="note-badges"><span class="data-badge badge-neutral data-badge-compact">补充线索</span><span class="data-badge badge-neutral data-badge-compact">2025-05-15</span><span class="data-badge badge-support data-badge-compact">雪球线索（待交叉验证）</span><span class="data-badge badge-support data-badge-compact">线索展示</span><span class="data-badge badge-neutral data-badge-compact">有价值但非硬字段</span></div>
+                </div>
+                <div class="small-note note-link"><a href="https://xueqiu.com/8236747946/337946872" target="_blank" rel="noopener noreferrer">打开原始链接</a></div>
+              </div>
+              <div class="note-card-body">
+                <p class="note-adoption"><strong>当前采用方式：</strong>线索展示</p>
+                <div class="note-full-quote">4月正常运营场线出栏肥猪完全成本已降至12.9元/公斤；2026年目标再降1-1.5元/公斤；这条线索能补强公司页首屏对“成本修复 + 来年降本目标”的判断，但仍是二手交流转载，保留为 support 层更合适。</div>
               </div>
             </li>
         </ul>
@@ -1718,6 +1813,17 @@
               <td><span class="data-badge badge-official data-badge-compact">公司披露摘录</span></td>
               <td><span class="data-badge badge-official data-badge-compact">公司披露PDF</span></td>
               <td>，提升自 育肥场线使用效率，2025 年 6 月末公司一体化自养与合作放养的存栏量比例约为 37:63，自养占比相比 2024 年末进一步 提高。通过加强一线生产管理，多项生产指标和成本...</td>
+            </tr>
+            
+            <tr>
+              <td>雪球成本线索</td>
+              <td>4月正常运营场线出栏肥猪完全成本已降至12.9元/公斤；2026年目标再降1-1.5元/公斤</td>
+              <td>2025-05-15</td>
+              <td><span class="data-badge badge-target data-badge-compact">target</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support-candidate</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">support候选</span></td>
+              <td><span class="data-badge badge-support data-badge-compact">雪球线索（待交叉验证）</span></td>
+              <td>这条线索能补强公司页首屏对“成本修复 + 来年降本目标”的判断，但仍是二手交流转载，保留为 support 层更合适。；动作建议：线索展示；状态：有价值但非硬字段</td>
             </tr>
             
             <tr>

@@ -601,6 +601,31 @@
         letter-spacing:0.1em;
         text-transform:uppercase;
       }
+      .mini-metric-grid {
+        display:grid;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:0.8rem;
+        margin-top:0.8rem;
+      }
+      .mini-metric {
+        display:grid;
+        gap:0.38rem;
+        padding:0.82rem 0.88rem;
+        border-radius:14px;
+        border:1px solid rgba(64,54,40,0.1);
+        background:rgba(255,251,244,0.76);
+      }
+      .mini-metric span {
+        font-size:0.75rem;
+        color:var(--muted);
+        letter-spacing:0.08em;
+        text-transform:uppercase;
+      }
+      .mini-metric-foot {
+        display:flex;
+        flex-wrap:wrap;
+        gap:0.35rem;
+      }
       .compact-stack {
         display:grid;
         gap:0.9rem;
@@ -751,6 +776,12 @@
             </article>
             
             <article class="metric-strip-card">
+              <strong>2026 指引</strong>
+              <div><span class="inline-value inline-pending">待补</span></div>
+              <div class="metric-strip-foot"><span class="data-badge badge-pending data-badge-compact">待补</span></div>
+            </article>
+            
+            <article class="metric-strip-card">
               <strong>能繁母猪</strong>
               <div><span class="inline-value inline-support">目前能繁母猪存量规模控制在 18 万头左右</span></div>
               <div class="metric-strip-foot"><span class="data-badge badge-support data-badge-compact">support候选</span><span class="data-badge badge-neutral data-badge-compact">2026-01-17</span></div>
@@ -768,6 +799,12 @@
               <div class="metric-strip-foot"><span class="data-badge badge-official data-badge-compact">公司披露摘录</span><span class="data-badge badge-neutral data-badge-compact">2025-03-22</span></div>
             </article>
             
+            <article class="metric-strip-card">
+              <strong>断奶成本</strong>
+              <div><span class="inline-value inline-support">断奶仔猪成本 330 元/头</span></div>
+              <div class="metric-strip-foot"><span class="data-badge badge-support data-badge-compact">support候选</span></div>
+            </article>
+            
               </div>
             </div>
             <div class="panel compact-stack">
@@ -781,6 +818,42 @@
                 <strong>待补缺口</strong>
                 <ul><li>2026 指引</li><li>2027 目标</li><li>sow_inventory_latest: keep-support-candidate | 知识星球有 18 万头线索，但官方 2025 披露未给绝对值；公开网更多是产能或种猪口径，不能直接改写为最新能繁母猪存栏。</li></ul>
               </div>
+              
+      <div class="signal-card">
+        <strong>最近财务快照</strong>
+        <div class="mini-metric-grid">
+          
+            <div class="mini-metric">
+              <span>营收</span>
+              <div><span class="inline-value inline-official">56.39亿元</span></div>
+              <div class="mini-metric-foot"><span class="data-badge badge-official data-badge-compact">已验证</span></div>
+            </div>
+            
+            <div class="mini-metric">
+              <span>净利润</span>
+              <div><span class="inline-value inline-official">1.07亿元</span></div>
+              <div class="mini-metric-foot"><span class="data-badge badge-official data-badge-compact">已验证</span></div>
+            </div>
+            
+            <div class="mini-metric">
+              <span>经营现金流</span>
+              <div><span class="inline-value inline-official">9.70亿元</span></div>
+              <div class="mini-metric-foot"><span class="data-badge badge-official data-badge-compact">已验证</span></div>
+            </div>
+            
+            <div class="mini-metric">
+              <span>有息负债</span>
+              <div><span class="inline-value inline-official">40.68亿元</span></div>
+              <div class="mini-metric-foot"><span class="data-badge badge-official data-badge-compact">已验证</span></div>
+            </div>
+            
+        </div>
+        <div class="metric-strip-foot">
+          <span class="data-badge badge-neutral data-badge-compact">2025三季报</span>
+          <span class="data-badge badge-derived data-badge-compact">iFinD/学习层优先</span>
+        </div>
+      </div>
+    
               <div class="signal-card">
                 <strong>当前研究定位</strong>
                 <div>高弹性成长龙头；单个高弹性样本不能定义行业利润中枢。</div>

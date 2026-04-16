@@ -601,6 +601,31 @@
         letter-spacing:0.1em;
         text-transform:uppercase;
       }
+      .mini-metric-grid {
+        display:grid;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:0.8rem;
+        margin-top:0.8rem;
+      }
+      .mini-metric {
+        display:grid;
+        gap:0.38rem;
+        padding:0.82rem 0.88rem;
+        border-radius:14px;
+        border:1px solid rgba(64,54,40,0.1);
+        background:rgba(255,251,244,0.76);
+      }
+      .mini-metric span {
+        font-size:0.75rem;
+        color:var(--muted);
+        letter-spacing:0.08em;
+        text-transform:uppercase;
+      }
+      .mini-metric-foot {
+        display:flex;
+        flex-wrap:wrap;
+        gap:0.35rem;
+      }
       .compact-stack {
         display:grid;
         gap:0.9rem;
@@ -691,7 +716,7 @@
           <div class="guidance-badge-row">
             <span class="data-badge badge-pending data-badge-compact">pending</span>
             <span class="data-badge badge-target data-badge-compact">以硬指引为主</span>
-            <span class="data-badge badge-support data-badge-compact">support 候选 | 2025-09-04 | industry-pig-zsxq-2025-...</span>
+            <span class="data-badge badge-target data-badge-compact">2026 指引主字段</span>
             <span class="data-badge badge-neutral data-badge-compact">2025-09-04</span>
           </div>
         </div>
@@ -751,6 +776,12 @@
             </article>
             
             <article class="metric-strip-card">
+              <strong>2026 指引</strong>
+              <div><span class="inline-value inline-support">3800 - 3900 万头</span></div>
+              <div class="metric-strip-foot"><span class="data-badge badge-support data-badge-compact">support候选</span><span class="data-badge badge-neutral data-badge-compact">2025-09-04</span></div>
+            </article>
+            
+            <article class="metric-strip-card">
               <strong>能繁母猪</strong>
               <div><span class="inline-value inline-official">能繁母猪为178 万头</span></div>
               <div class="metric-strip-foot"><span class="data-badge badge-official data-badge-compact">公司披露摘录</span><span class="data-badge badge-neutral data-badge-compact">2025-02-14</span></div>
@@ -768,6 +799,12 @@
               <div class="metric-strip-foot"><span class="data-badge badge-official data-badge-compact">公司披露摘录</span><span class="data-badge badge-neutral data-badge-compact">2025-12-18</span></div>
             </article>
             
+            <article class="metric-strip-card">
+              <strong>仔猪经营</strong>
+              <div><span class="inline-value inline-pending">待补</span></div>
+              <div class="metric-strip-foot"><span class="data-badge badge-pending data-badge-compact">待补</span></div>
+            </article>
+            
               </div>
             </div>
             <div class="panel compact-stack">
@@ -781,6 +818,42 @@
                 <strong>待补缺口</strong>
                 <ul><li>2027 目标</li></ul>
               </div>
+              
+      <div class="signal-card">
+        <strong>最近财务快照</strong>
+        <div class="mini-metric-grid">
+          
+            <div class="mini-metric">
+              <span>营收</span>
+              <div><span class="inline-value inline-official">757.88亿元</span></div>
+              <div class="mini-metric-foot"><span class="data-badge badge-official data-badge-compact">已验证</span></div>
+            </div>
+            
+            <div class="mini-metric">
+              <span>净利润</span>
+              <div><span class="inline-value inline-official">52.56亿元</span></div>
+              <div class="mini-metric-foot"><span class="data-badge badge-official data-badge-compact">已验证</span></div>
+            </div>
+            
+            <div class="mini-metric">
+              <span>经营现金流</span>
+              <div><span class="inline-value inline-official">81.99亿元</span></div>
+              <div class="mini-metric-foot"><span class="data-badge badge-official data-badge-compact">已验证</span></div>
+            </div>
+            
+            <div class="mini-metric">
+              <span>有息负债</span>
+              <div><span class="inline-value inline-official">221.58亿元</span></div>
+              <div class="mini-metric-foot"><span class="data-badge badge-official data-badge-compact">已验证</span></div>
+            </div>
+            
+        </div>
+        <div class="metric-strip-foot">
+          <span class="data-badge badge-neutral data-badge-compact">2025三季报</span>
+          <span class="data-badge badge-derived data-badge-compact">iFinD/学习层优先</span>
+        </div>
+      </div>
+    
               <div class="signal-card">
                 <strong>当前研究定位</strong>
                 <div>猪禽混合经营的龙头对照；猪和禽不能混在一条链里解释，股价也不只反映猪价。</div>
@@ -939,7 +1012,7 @@
               <td>当前没有高于 2026 指引的新前瞻</td>
               <td>2025-09-04</td>
               <td><span class="data-badge badge-target data-badge-compact">以硬指引为主</span></td>
-              <td><span class="data-badge badge-support data-badge-compact">support 候选 | 2025-09-04 | industry-pig-zsxq-2025-...</span></td>
+              <td><span class="data-badge badge-target data-badge-compact">2026 指引主字段</span></td>
               <td>首屏仍以前置 2026 出栏规划为主；现有交流和纪要没有更长周期、结构性或已交叉验证的新增猪主链展望，因此暂不额外抬升为前置候选卡。</td>
             </tr>
             
