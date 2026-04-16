@@ -8019,7 +8019,10 @@
       "evidence_tier": "official-derived",
       "readthrough": "这条线来自白条出厂价格周报里的省份日表拼接，页面默认展示 5 日中位，优先看白条承接和下游节奏，不把日度噪音直接放大成行业结论。",
       "failure_mode": "如果把它直接当成全国生猪价，会系统性高估当前价格水平并误判行业状态。",
-      "stale_after_days": 10
+      "stale_after_days": 10,
+      "current_judgment": "白条日度中位仍在 5 日中位 12.21 元/公斤 附近，短线更像承接偏弱，没有形成顺畅走强。",
+      "judgment_tone": "cautious",
+      "judgment_basis": "原始最新 12.09 元/公斤；更新 2026-04-10。"
     },
     {
       "panel_id": "daily_mysteel_public_mirror",
@@ -10998,7 +11001,10 @@
       "evidence_tier": "candidate-mirror",
       "readthrough": "这组 Mysteel 浏览器公共图表能补官方日度空窗，当前读法仍是现货偏弱、白条承接一般，只作为高频候选镜像使用。",
       "failure_mode": "公共图表来自浏览器可见接口，不等于官方主序列；可以补窗，但不能覆盖官方价格和行业状态判断。",
-      "stale_after_days": 10
+      "stale_after_days": 10,
+      "current_judgment": "Mysteel 日度镜像里，现货约 8.67 元/公斤、白条约 11.55 元/公斤，近端仍偏弱。",
+      "judgment_tone": "cautious",
+      "judgment_basis": "这张图只放高频候选镜像，方向可参考，但不替代官方主序列。"
     },
     {
       "panel_id": "daily_mysteel_public_basis",
@@ -15918,7 +15924,10 @@
       "evidence_tier": "candidate-mirror",
       "readthrough": "区域基差镜像适合看局部供需张力是否收敛，但它仍是候选镜像层，不单独改写全国现货判断。",
       "failure_mode": "区域基差更容易受局部流通、节奏与交易结构干扰，不能替代官方周度区域价差主序列。",
-      "stale_after_days": 10
+      "stale_after_days": 10,
+      "current_judgment": "河南/广东区域基差仍未明显收敛，更像局部张力分化，而不是全国一致性紧平衡。",
+      "judgment_tone": "neutral",
+      "judgment_basis": "河南 -115；广东 -145。"
     },
     {
       "panel_id": "daily_equity_mirror",
@@ -45890,7 +45899,10 @@
       "evidence_tier": "market-derived",
       "readthrough": "股价层经常先动，但这里只把它当镜像，不让它改写行业事实。",
       "failure_mode": "若现货和月报不跟，股价先强常常只是预期交易。",
-      "stale_after_days": 10
+      "stale_after_days": 10,
+      "current_judgment": "权益层仍只作为预期镜像，不能抢在行业数据之前定义现实状态。",
+      "judgment_tone": "neutral",
+      "judgment_basis": "这张图用于看谁先动，不用于替代现货、利润和供给判断。"
     }
   ],
   "weekly_panels": [
@@ -48757,7 +48769,10 @@
       "evidence_tier": "official",
       "readthrough": "这张图把官网上最常被混淆的三条官方价格线放在一起，并额外叠加 Mysteel 与涌益的公开价格镜像。月度出场价是主序列，周度收购价是高频锚，白条出厂价属于下游承接层；第三方只用于看市场节奏，不进入官方并表。",
       "failure_mode": "如果不看图例和来源，最容易把白条价误读成活猪价格，或者把第三方候选镜像误当成官方主序列。",
-      "stale_after_days": 14
+      "stale_after_days": 14,
+      "current_judgment": "官方近端高频和第三方镜像没有共振出强势现货，当前更像弱平衡下的分层价格。",
+      "judgment_tone": "cautious",
+      "judgment_basis": "月度出场价 12.54 元/公斤；周度收购价 11.4 元/公斤；周度白条价 15.19 元/公斤。"
     },
     {
       "panel_id": "weekly_official_hog_purchase",
@@ -49814,7 +49829,10 @@
       "evidence_tier": "official",
       "readthrough": "这是当前官网上更接近近端交易现实的官方周度主锚。它给的是生猪收购价，不是月度生猪出场价，但比白条价更适合做近端生猪判断。",
       "failure_mode": "收购价和月度出场价不是同一口径，不能直接把周度收购价当成月度出场价去回填长周期主表。",
-      "stale_after_days": 14
+      "stale_after_days": 14,
+      "current_judgment": "官方周度收购价仍是近端偏弱锚点，白条也没有给出强承接扩张。",
+      "judgment_tone": "cautious",
+      "judgment_basis": "生猪收购价 11.4 元/公斤；白条出厂价 15.19 元/公斤。"
     },
     {
       "panel_id": "weekly_spread_weight",
@@ -53163,7 +53181,10 @@
       "evidence_tier": "official-derived",
       "readthrough": "这组派生指标来自白条出厂价周报，更适合看屠宰和下游承接层，而不是直接替代活猪价格主序列。",
       "failure_mode": "单周异动可能来自节奏扰动；同时它是白条层指标，不该越权解释成活猪价格本身。",
-      "stale_after_days": 14
+      "stale_after_days": 14,
+      "current_judgment": "均重偏高而价差没有顺畅改善，近端更像供给释放仍在继续。",
+      "judgment_tone": "cautious",
+      "judgment_basis": "价差 3.25；均重 88.98 kg。"
     },
     {
       "panel_id": "weekly_candidate_mirror",
@@ -55852,7 +55873,10 @@
       "evidence_tier": "candidate-mirror",
       "readthrough": "这组养猪网周度镜像已经和官方月度仔猪价、猪粮比做过长期强对齐校验，适合用来补官方月度空窗，读的是补栏情绪和现金流压力，不再和别的口径混在一起。",
       "failure_mode": "它仍然是高频补窗镜像，不是官方主存储；如果拿它直接覆盖官方月度主表，仍会把高频波动误当趋势兑现。",
-      "stale_after_days": 21
+      "stale_after_days": 21,
+      "current_judgment": "仔猪价和猪粮比仍在高位附近，补栏温度没有快速塌下去，但也未单独确认行情反转。",
+      "judgment_tone": "constructive",
+      "judgment_basis": "仔猪 27.67；猪粮比 5.5。"
     },
     {
       "panel_id": "weekly_mysteel_meta_spreads",
@@ -56111,7 +56135,10 @@
       "evidence_tier": "candidate-mirror",
       "readthrough": "这组公网补链更适合看近端结构而不是看绝对价格。当前仍是标肥倒挂、毛白为正，说明肥标结构没有出现强逆转，下游承接也未显著走强。",
       "failure_mode": "移动页 meta 只有压缩后的摘要数字，没有正文表格和样本注释；适合看方向和斜率，不适合单独设硬阈值。",
-      "stale_after_days": 10
+      "stale_after_days": 10,
+      "current_judgment": "标肥结构仍偏弱，下游承接也没有出现强逆转，近端结构压力仍在。",
+      "judgment_tone": "cautious",
+      "judgment_basis": "标肥价差 -0.58 元/公斤；毛白价差 2.88 元/公斤。"
     },
     {
       "panel_id": "weekly_mysteel_meta_profit",
@@ -56322,7 +56349,10 @@
       "evidence_tier": "candidate-mirror",
       "readthrough": "利润镜像补的是现金流压力层。当前两种口径仍在深亏区间，说明行业近端更多是亏损拖慢补栏，而不是盈利驱动的扩张。",
       "failure_mode": "利润与二育成本来自移动页摘要，日期未必完全同步；可以辅助判断压力方向，但不能替代公司成本和官方利润主表。",
-      "stale_after_days": 10
+      "stale_after_days": 10,
+      "current_judgment": "两种利润口径仍在深亏区间，行业近端更像被现金流压力拖着走，而不是盈利修复带动扩张。",
+      "judgment_tone": "cautious",
+      "judgment_basis": "自繁自养 -398.69 元/头；外购仔猪 -331.31 元/头。"
     }
   ],
   "monthly_panels": [
@@ -56758,7 +56788,10 @@
       "readthrough": "母猪下行说明远端供给收缩方向仍在，但它不直接决定眼前一两周的猪价。",
       "failure_mode": "效率提升会让同样母猪数量对应更高出栏，不能机械套旧周期。",
       "stale_after_days": 45,
-      "panel_label": "远端供给总量锚"
+      "panel_label": "远端供给总量锚",
+      "current_judgment": "远端供给分母仍在收缩，旧周期里最重要的长期方向变量还没有反转。",
+      "judgment_tone": "constructive",
+      "judgment_basis": "最新 3961 万头；同比 -2.9%。"
     },
     {
       "panel_id": "monthly_official_price",
@@ -57215,7 +57248,10 @@
       "evidence_tier": "official",
       "readthrough": "仔猪价能提示补栏情绪，但最终要和母猪、均重、利润一起看。",
       "failure_mode": "单看仔猪价格，容易把补栏情绪误判成供给拐点已经兑现。",
-      "stale_after_days": 45
+      "stale_after_days": 45,
+      "current_judgment": "出栏价仍弱于仔猪价，现实现货与补栏情绪之间仍有分层，不能只因仔猪强就直接乐观外推。",
+      "judgment_tone": "neutral",
+      "judgment_basis": "出栏价 12.54 元/公斤；仔猪价 27.57 元/公斤。"
     },
     {
       "panel_id": "monthly_profit_ratio",
@@ -58019,7 +58055,10 @@
           "label": "support / inferred continuation",
           "source_tier": "support-candidate"
         }
-      ]
+      ],
+      "current_judgment": "盈利仍未进入强修复区，去化逻辑还在，但还没到能轻松支撑行业扩张的阶段。",
+      "judgment_tone": "cautious",
+      "judgment_basis": "官方规模场 -57 元/头；官方散户 -109 元/头；延伸最新 2026-04-28。"
     },
     {
       "panel_id": "monthly_cost",
@@ -58657,7 +58696,10 @@
           "label": "长历史候选",
           "source_tier": "support-candidate"
         }
-      ]
+      ],
+      "current_judgment": "成本端没有形成新的反杀，当前行业压力主因仍是价格和供给兑现，而不是原料重新失控。",
+      "judgment_tone": "neutral",
+      "judgment_basis": "玉米 2.27；豆粕 3020；长历史候选 3.36 元/公斤。"
     },
     {
       "panel_id": "monthly_shipments",
@@ -58827,7 +58869,10 @@
       "evidence_tier": "company-disclosure",
       "readthrough": "公司月报不能代表全行业，但能帮助识别龙头是否还在持续加量。",
       "failure_mode": "若把龙头月报直接当行业总量，会高估龙头对行业状态的解释力。",
-      "stale_after_days": 35
+      "stale_after_days": 35,
+      "current_judgment": "龙头跟踪池月报仍在提示现实供给不松，近端“出栏还在兑现”比“收缩已传导”更成立。",
+      "judgment_tone": "cautious",
+      "judgment_basis": "最新月出栏 1565.44 万头；样本 A 股主链池。"
     },
     {
       "panel_id": "monthly_slaughter",
@@ -60131,7 +60176,10 @@
       "evidence_tier": "official",
       "readthrough": "屠宰量更多是供给吸收与需求承接的同步指标，不适合单独拿来抢跑周期。现在把官方月度和养猪网强镜像放在一起，可以更直观看官方滞后阶段的补窗是否可信。",
       "failure_mode": "节日与季节性会显著扰动月度屠宰量；另外养猪网虽然整体强对齐，但 2024-04 存在明显异常点，不能无脑并表。",
-      "stale_after_days": 45
+      "stale_after_days": 45,
+      "current_judgment": "屠宰量抬升更像供给释放与吸收并行，暂不等于需求单边明显转强。",
+      "judgment_tone": "neutral",
+      "judgment_basis": "最新 3177；同比 +40.7%；养猪网镜像 4404。"
     },
     {
       "panel_id": "monthly_structural_anchor",
@@ -60337,7 +60385,10 @@
       "readthrough": "这张图读的是结构锚，不是近端节奏。季末生猪存栏决定行业总盘子，报告期出栏量和人均消费帮助判断当年供给兑现与消费承接，但它们都是稀疏口径，不能按月度连续趋势去机械外推。",
       "failure_mode": "最容易犯的错，是把季末存栏、半年累计出栏和全年出栏画成一条连续月线并据此判断短期拐点；这几条只能读结构，不适合抢跑现货节奏。",
       "stale_after_days": 120,
-      "panel_label": "结构总盘子锚"
+      "panel_label": "结构总盘子锚",
+      "current_judgment": "行业总盘子仍大，当前更像在消化供给而不是已经进入明显紧缺阶段。",
+      "judgment_tone": "neutral",
+      "judgment_basis": "季末生猪存栏 42967 万头；报告期出栏量 71973 万头。"
     },
     {
       "panel_id": "monthly_trade",
@@ -60956,7 +61007,10 @@
       "readthrough": "进口量更像外部补充供给的边界变量。它通常难以单独改写周期方向，但能帮助判断国内供需偏紧时外部供给是否在缓冲价格波动。",
       "failure_mode": "进口只是一层补充，不能脱离国内母猪、出栏、均重和屠宰吸收去单独判断猪价方向；杂碎进口也不能直接等同商品猪供给。",
       "stale_after_days": 45,
-      "panel_label": "外部供给补充锚"
+      "panel_label": "外部供给补充锚",
+      "current_judgment": "进口同比继续走弱，外部供给对国内价格的缓冲作用有限，主矛盾仍在国内供给链。",
+      "judgment_tone": "constructive",
+      "judgment_basis": "猪肉进口 5.21 万吨；猪肉同比 -37.3%。"
     },
     {
       "panel_id": "monthly_absorption_proxy_long",
@@ -64202,7 +64256,10 @@
           "source_tier": "support-candidate"
         }
       ],
-      "panel_label": "下游承接主趋势图"
+      "panel_label": "下游承接主趋势图",
+      "current_judgment": "先看均重，再看屠宰量是否同步改善",
+      "judgment_tone": "cautious",
+      "judgment_basis": "均重偏高 + 屠宰量未明显改善"
     },
     {
       "panel_id": "monthly_yongyi_public_home",
@@ -64932,7 +64989,10 @@
           "full_quote": "供需层面呈现“供过于求”格局，新生仔猪数量同比 2025 年增幅超 8%，市场供应充裕。",
           "tone": "neutral"
         }
-      ]
+      ],
+      "current_judgment": "涌益样本母猪继续下行，补的是月间收缩方向，而不是绝对规模结论。",
+      "judgment_tone": "constructive",
+      "judgment_basis": "样本能繁 115.24 万头；环比 -0.57%。"
     },
     {
       "panel_id": "monthly_birth_pressure_index",
@@ -65677,7 +65737,10 @@
           "source_tier": "support-candidate"
         }
       ],
-      "panel_label": "出生端主趋势图"
+      "panel_label": "出生端主趋势图",
+      "current_judgment": "未来出生端扩张压力中性偏强",
+      "judgment_tone": "cautious",
+      "judgment_basis": "先看母猪分母，再看仔猪价格是否同步抬升"
     },
     {
       "panel_id": "monthly_birth_proxy_long",
@@ -66613,7 +66676,10 @@
           "source_tier": "candidate-mirror"
         }
       ],
-      "panel_label": "出生端长历史定位图"
+      "panel_label": "出生端长历史定位图",
+      "current_judgment": "从长历史位置看，出生端并不处在轻松区间，补栏温度仍偏高位。",
+      "judgment_tone": "neutral",
+      "judgment_basis": "官方仔猪价 27.57 元/公斤；养猪网仔猪月均 27.57 元/公斤。"
     },
     {
       "panel_id": "monthly_birth_rhythm",
@@ -67356,7 +67422,10 @@
           "source_tier": "support-candidate"
         }
       ],
-      "panel_label": "节奏补充图"
+      "panel_label": "节奏补充图",
+      "current_judgment": "近几个月节奏样本还没给出一致性放缓，短窗出生端温度仍偏高。",
+      "judgment_tone": "cautious",
+      "judgment_basis": "涌益样本能繁 115.24 万头；新生仔猪 581.18 万头；仔猪销量 47.2 万头。"
     }
   ],
   "logic_sections": [
@@ -70231,7 +70300,10 @@
           "evidence_tier": "official",
           "readthrough": "这张图把官网上最常被混淆的三条官方价格线放在一起，并额外叠加 Mysteel 与涌益的公开价格镜像。月度出场价是主序列，周度收购价是高频锚，白条出厂价属于下游承接层；第三方只用于看市场节奏，不进入官方并表。",
           "failure_mode": "如果不看图例和来源，最容易把白条价误读成活猪价格，或者把第三方候选镜像误当成官方主序列。",
-          "stale_after_days": 14
+          "stale_after_days": 14,
+          "current_judgment": "官方近端高频和第三方镜像没有共振出强势现货，当前更像弱平衡下的分层价格。",
+          "judgment_tone": "cautious",
+          "judgment_basis": "月度出场价 12.54 元/公斤；周度收购价 11.4 元/公斤；周度白条价 15.19 元/公斤。"
         },
         {
           "panel_id": "weekly_spread_weight",
@@ -73580,7 +73652,10 @@
           "evidence_tier": "official-derived",
           "readthrough": "这组派生指标来自白条出厂价周报，更适合看屠宰和下游承接层，而不是直接替代活猪价格主序列。",
           "failure_mode": "单周异动可能来自节奏扰动；同时它是白条层指标，不该越权解释成活猪价格本身。",
-          "stale_after_days": 14
+          "stale_after_days": 14,
+          "current_judgment": "均重偏高而价差没有顺畅改善，近端更像供给释放仍在继续。",
+          "judgment_tone": "cautious",
+          "judgment_basis": "价差 3.25；均重 88.98 kg。"
         },
         {
           "panel_id": "monthly_absorption_proxy_long",
@@ -76826,7 +76901,10 @@
               "source_tier": "support-candidate"
             }
           ],
-          "panel_label": "下游承接主趋势图"
+          "panel_label": "下游承接主趋势图",
+          "current_judgment": "先看均重，再看屠宰量是否同步改善",
+          "judgment_tone": "cautious",
+          "judgment_basis": "均重偏高 + 屠宰量未明显改善"
         }
       ]
     },
@@ -77640,7 +77718,10 @@
               "label": "support / inferred continuation",
               "source_tier": "support-candidate"
             }
-          ]
+          ],
+          "current_judgment": "盈利仍未进入强修复区，去化逻辑还在，但还没到能轻松支撑行业扩张的阶段。",
+          "judgment_tone": "cautious",
+          "judgment_basis": "官方规模场 -57 元/头；官方散户 -109 元/头；延伸最新 2026-04-28。"
         },
         {
           "panel_id": "monthly_birth_pressure_index",
@@ -78385,7 +78466,10 @@
               "source_tier": "support-candidate"
             }
           ],
-          "panel_label": "出生端主趋势图"
+          "panel_label": "出生端主趋势图",
+          "current_judgment": "未来出生端扩张压力中性偏强",
+          "judgment_tone": "cautious",
+          "judgment_basis": "先看母猪分母，再看仔猪价格是否同步抬升"
         },
         {
           "panel_id": "monthly_birth_proxy_long",
@@ -79321,7 +79405,10 @@
               "source_tier": "candidate-mirror"
             }
           ],
-          "panel_label": "出生端长历史定位图"
+          "panel_label": "出生端长历史定位图",
+          "current_judgment": "从长历史位置看，出生端并不处在轻松区间，补栏温度仍偏高位。",
+          "judgment_tone": "neutral",
+          "judgment_basis": "官方仔猪价 27.57 元/公斤；养猪网仔猪月均 27.57 元/公斤。"
         },
         {
           "panel_id": "monthly_birth_rhythm",
@@ -80064,7 +80151,10 @@
               "source_tier": "support-candidate"
             }
           ],
-          "panel_label": "节奏补充图"
+          "panel_label": "节奏补充图",
+          "current_judgment": "近几个月节奏样本还没给出一致性放缓，短窗出生端温度仍偏高。",
+          "judgment_tone": "cautious",
+          "judgment_basis": "涌益样本能繁 115.24 万头；新生仔猪 581.18 万头；仔猪销量 47.2 万头。"
         }
       ]
     },
@@ -110046,7 +110136,10 @@
           "evidence_tier": "market-derived",
           "readthrough": "股价层经常先动，但这里只把它当镜像，不让它改写行业事实。",
           "failure_mode": "若现货和月报不跟，股价先强常常只是预期交易。",
-          "stale_after_days": 10
+          "stale_after_days": 10,
+          "current_judgment": "权益层仍只作为预期镜像，不能抢在行业数据之前定义现实状态。",
+          "judgment_tone": "neutral",
+          "judgment_basis": "这张图用于看谁先动，不用于替代现货、利润和供给判断。"
         },
         {
           "panel_id": "monthly_shipments",
@@ -110216,7 +110309,10 @@
           "evidence_tier": "company-disclosure",
           "readthrough": "公司月报不能代表全行业，但能帮助识别龙头是否还在持续加量。",
           "failure_mode": "若把龙头月报直接当行业总量，会高估龙头对行业状态的解释力。",
-          "stale_after_days": 35
+          "stale_after_days": 35,
+          "current_judgment": "龙头跟踪池月报仍在提示现实供给不松，近端“出栏还在兑现”比“收缩已传导”更成立。",
+          "judgment_tone": "cautious",
+          "judgment_basis": "最新月出栏 1565.44 万头；样本 A 股主链池。"
         }
       ]
     }
