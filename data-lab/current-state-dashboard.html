@@ -29,10 +29,11 @@
       .hero-birth-copy p { margin:0.42rem 0 0; max-width:none; }
       .hero-birth-links { display:flex; flex-wrap:wrap; gap:0.65rem; margin-top:1rem; }
       .hero-birth-signal-grid { display:grid; grid-template-columns:1fr; gap:0.7rem; margin-top:1rem; }
-      .hero-birth-signal { display:grid; grid-template-columns:minmax(130px,0.5fr) minmax(0,1.5fr); gap:0.1rem 0.9rem; align-items:start; padding:0.86rem 0.92rem; border-radius:16px; border:1px solid rgba(64,54,40,0.1); background:rgba(255,255,255,0.72); }
-      .hero-birth-signal strong { grid-column:1; display:block; margin:0; font-size:0.78rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--muted); }
-      .hero-birth-signal b { grid-column:1; display:block; font-size:0.98rem; margin:0.14rem 0 0; color:var(--ink); line-height:1.35; }
-      .hero-birth-signal p { grid-column:2; grid-row:1 / span 2; margin:0; font-size:0.85rem; line-height:1.5; color:var(--ink-soft); }
+      .hero-birth-signal { display:grid; grid-template-columns:minmax(158px,0.56fr) minmax(0,1.44fr); gap:0.26rem 1rem; align-items:start; padding:0.92rem 0.96rem; border-radius:16px; border:1px solid rgba(64,54,40,0.1); background:rgba(255,255,255,0.72); }
+      .hero-birth-signal strong { grid-column:1; display:block; margin:0; font-size:0.78rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--muted); line-height:1.35; }
+      .hero-birth-signal b { grid-column:1; display:block; font-size:0.98rem; margin:0.12rem 0 0; color:var(--ink); line-height:1.4; overflow-wrap:anywhere; }
+      .hero-birth-signal p { grid-column:2; grid-row:auto; margin:0; min-width:0; font-size:0.85rem; line-height:1.52; color:var(--ink-soft); overflow-wrap:anywhere; }
+      .hero-birth-signal .small-note { margin-top:0.1rem; font-size:0.8rem; color:var(--muted); line-height:1.48; }
       .birth-evidence-section { padding-top:0; }
       .birth-evidence-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1rem; }
       .birth-evidence-card { padding:1rem 1.05rem; border:1px solid var(--line); border-radius:18px; background:linear-gradient(180deg, rgba(255,251,244,0.94), rgba(255,255,255,0.84)); box-shadow:var(--shadow); }
