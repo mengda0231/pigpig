@@ -40,13 +40,19 @@
         position:relative;
         z-index:1;
         display:grid;
-        grid-template-columns:1fr;
-        gap:1.1rem;
+        grid-template-columns:minmax(0,1.14fr) minmax(340px,0.86fr);
+        gap:1.15rem 1.2rem;
         align-items:start;
       }
       .hero-copy, .hero-side { position:relative; z-index:1; }
-      .hero-copy h1 { max-width:9ch; }
-      .hero-lead { max-width:60ch; font-size:1.08rem; color:var(--ink); }
+      .hero-copy h1 {
+        max-width:11ch;
+        font-size:clamp(2.4rem, 3.8vw, 4.2rem);
+        line-height:1.05;
+        text-wrap:balance;
+        overflow-wrap:anywhere;
+      }
+      .hero-lead { max-width:62ch; font-size:1.04rem; line-height:1.64; color:var(--ink); }
       .hero-pill-row, .hero-actions, .meta-strip, .chart-meta, .chart-boxes, .section-anchor-nav {
         display:flex;
         flex-wrap:wrap;
@@ -84,12 +90,12 @@
         gap:1rem;
       }
       .priority-grid {
-        grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+        grid-template-columns:repeat(2,minmax(0,1fr));
         margin-top:1.1rem;
       }
       .hero-outlook-grid {
         display:grid;
-        grid-template-columns:repeat(2,minmax(0,1fr));
+        grid-template-columns:1fr;
         gap:1rem;
         align-items:start;
       }
@@ -120,7 +126,7 @@
       }
       .guidance-value-row {
         display:grid;
-        grid-template-columns:minmax(0,1.1fr) minmax(280px,0.9fr);
+        grid-template-columns:1fr;
         gap:1rem;
         align-items:start;
         margin-top:0.95rem;
@@ -164,6 +170,7 @@
         background:rgba(255,251,244,0.72);
         display:grid;
         gap:0.45rem;
+        align-content:start;
       }
       .priority-card strong {
         display:block;
@@ -190,7 +197,7 @@
       }
       .hero-side {
         display:grid;
-        grid-template-columns:repeat(2,minmax(280px,1fr));
+        grid-template-columns:1fr;
         gap:1rem;
         align-items:start;
       }
@@ -438,6 +445,9 @@
         margin-bottom:0.8rem;
       }
       @media (max-width:1280px) {
+        .hero-shell {
+          grid-template-columns:1fr;
+        }
         .hero-side {
           grid-template-columns:1fr;
         }
@@ -450,6 +460,9 @@
       }
       @media (max-width:1100px) {
         .hero-shell, .detail-grid, .summary-grid, .priority-grid, .hero-quick-grid, .chart-stack, .hero-side {
+          grid-template-columns:1fr;
+        }
+        .hero-outlook-grid {
           grid-template-columns:1fr;
         }
         .chart-card-span-2 {
@@ -578,6 +591,7 @@
         margin-top:0;
         color:var(--ink);
         line-height:1.7;
+        min-width:0;
       }
       .note-summary {
         margin:0;
@@ -756,7 +770,7 @@
             <p><strong>使用边界</strong><span>前置展示，但不替代硬出栏指引字段</span></p>
           </div>
         </div>
-        <p class="guidance-note"><strong>摘要：</strong>当前没有找到足够稳定、且可直接服务猪主链判断的未来展望口径，先保留空位，等待后续公司交流、月报或正式披露补链</p><details class="note-quote-toggle" style="margin-top:0.9rem;"><summary>查看完整原句</summary><div class="note-full-quote">当前没有找到足够稳定、且可直接服务猪主链判断的未来展望口径，先保留空位，等待后续公司交流、月报或正式披露补链。</div></details>
+        <p class="guidance-note"><strong>摘要：</strong>当前没有找到足够稳定、且可直接服务猪主链判断的未来展望口径，先保留空位，等待后续公司交流、月报或正式披露补链</p><p class="note-full-quote"><strong>原句：</strong>当前没有找到足够稳定、且可直接服务猪主链判断的未来展望口径，先保留空位，等待后续公司交流、月报或正式披露补链。</p>
       </article>
     
             </div>
@@ -1152,7 +1166,7 @@
               <div class="note-card-body">
                 <p class="note-summary"><strong>摘要：</strong>官方 2025 半年报只提到“上半年母猪场 PSY 有效提升，实现仔猪成本下降”，未给出明确数值</p>
                 <p class="note-adoption"><strong>当前采用方式：</strong>官方摘录，可作为字段回查依据</p>
-                <details class="note-quote-toggle"><summary>查看完整原句</summary><div class="note-full-quote">官方 2025 半年报只提到“上半年母猪场 PSY 有效提升，实现仔猪成本下降”，未给出明确数值。</div></details>
+                <p class="note-full-quote"><strong>原句：</strong>官方 2025 半年报只提到“上半年母猪场 PSY 有效提升，实现仔猪成本下降”，未给出明确数值。</p>
               </div>
             </li>
         
@@ -1167,7 +1181,7 @@
               <div class="note-card-body">
                 <p class="note-summary"><strong>摘要：</strong>官方 2024 年报正文提到逐步提升 PSY 水平，但依然未提供可绑定的最新具体数值</p>
                 <p class="note-adoption"><strong>当前采用方式：</strong>官方摘录，可作为字段回查依据</p>
-                <details class="note-quote-toggle"><summary>查看完整原句</summary><div class="note-full-quote">官方 2024 年报正文提到逐步提升 PSY 水平，但依然未提供可绑定的最新具体数值。</div></details>
+                <p class="note-full-quote"><strong>原句：</strong>官方 2024 年报正文提到逐步提升 PSY 水平，但依然未提供可绑定的最新具体数值。</p>
               </div>
             </li>
         </ul>
@@ -1190,7 +1204,7 @@
               <div class="note-card-body">
                 <p class="note-summary"><strong>摘要：</strong>20240111-中金公司-新五丰（600975.SH）：产能足、资产轻，湖南养殖龙头厚积薄发.pdf</p>
                 <p class="note-adoption"><strong>当前采用方式：</strong>研究摘录留痕，仍需与正式字段或更多来源交叉验证</p>
-                <details class="note-quote-toggle"><summary>查看完整原句</summary><div class="note-full-quote">20240111-中金公司-新五丰（600975.SH）：产能足、资产轻，湖南养殖龙头厚积薄发.pdf</div></details>
+                <p class="note-full-quote"><strong>原句：</strong>20240111-中金公司-新五丰（600975.SH）：产能足、资产轻，湖南养殖龙头厚积薄发.pdf</p>
               </div>
             </li>
         
@@ -1205,7 +1219,7 @@
               <div class="note-card-body">
                 <p class="note-summary"><strong>摘要：</strong>我们认为，随着天心种业并购整合推进，及租赁产能逐步爬坡，公司有望通过产能利用率提升、管理激励提效、高PSY 法系种猪引进、降低饲料增重成本、提升全程存活率五维度，摊薄固定成本、降低仔猪成本及育肥成本，实现降本提效</p>
                 <p class="note-adoption"><strong>当前采用方式：</strong>研究摘录留痕，仍需与正式字段或更多来源交叉验证</p>
-                <details class="note-quote-toggle"><summary>查看完整原句</summary><div class="note-full-quote">我们认为，随着天心种业并购整合推进，及租赁产能逐步爬坡，公司有望通过产能利用率提升、管理激励提效、高PSY 法系种猪引进、降低饲料增重成本、提升全程存活率五维度，摊薄固定成本、降低仔猪成本及育肥成本，实现降本提效。</div></details>
+                <p class="note-full-quote"><strong>原句：</strong>我们认为，随着天心种业并购整合推进，及租赁产能逐步爬坡，公司有望通过产能利用率提升、管理激励提效、高PSY 法系种猪引进、降低饲料增重成本、提升全程存活率五维度，摊薄固定成本、降低仔猪成本及育肥成本，实现降本提效。</p>
               </div>
             </li>
         </ul>

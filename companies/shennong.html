@@ -40,13 +40,19 @@
         position:relative;
         z-index:1;
         display:grid;
-        grid-template-columns:1fr;
-        gap:1.1rem;
+        grid-template-columns:minmax(0,1.14fr) minmax(340px,0.86fr);
+        gap:1.15rem 1.2rem;
         align-items:start;
       }
       .hero-copy, .hero-side { position:relative; z-index:1; }
-      .hero-copy h1 { max-width:9ch; }
-      .hero-lead { max-width:60ch; font-size:1.08rem; color:var(--ink); }
+      .hero-copy h1 {
+        max-width:11ch;
+        font-size:clamp(2.4rem, 3.8vw, 4.2rem);
+        line-height:1.05;
+        text-wrap:balance;
+        overflow-wrap:anywhere;
+      }
+      .hero-lead { max-width:62ch; font-size:1.04rem; line-height:1.64; color:var(--ink); }
       .hero-pill-row, .hero-actions, .meta-strip, .chart-meta, .chart-boxes, .section-anchor-nav {
         display:flex;
         flex-wrap:wrap;
@@ -84,12 +90,12 @@
         gap:1rem;
       }
       .priority-grid {
-        grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+        grid-template-columns:repeat(2,minmax(0,1fr));
         margin-top:1.1rem;
       }
       .hero-outlook-grid {
         display:grid;
-        grid-template-columns:repeat(2,minmax(0,1fr));
+        grid-template-columns:1fr;
         gap:1rem;
         align-items:start;
       }
@@ -120,7 +126,7 @@
       }
       .guidance-value-row {
         display:grid;
-        grid-template-columns:minmax(0,1.1fr) minmax(280px,0.9fr);
+        grid-template-columns:1fr;
         gap:1rem;
         align-items:start;
         margin-top:0.95rem;
@@ -164,6 +170,7 @@
         background:rgba(255,251,244,0.72);
         display:grid;
         gap:0.45rem;
+        align-content:start;
       }
       .priority-card strong {
         display:block;
@@ -190,7 +197,7 @@
       }
       .hero-side {
         display:grid;
-        grid-template-columns:repeat(2,minmax(280px,1fr));
+        grid-template-columns:1fr;
         gap:1rem;
         align-items:start;
       }
@@ -438,6 +445,9 @@
         margin-bottom:0.8rem;
       }
       @media (max-width:1280px) {
+        .hero-shell {
+          grid-template-columns:1fr;
+        }
         .hero-side {
           grid-template-columns:1fr;
         }
@@ -450,6 +460,9 @@
       }
       @media (max-width:1100px) {
         .hero-shell, .detail-grid, .summary-grid, .priority-grid, .hero-quick-grid, .chart-stack, .hero-side {
+          grid-template-columns:1fr;
+        }
+        .hero-outlook-grid {
           grid-template-columns:1fr;
         }
         .chart-card-span-2 {
@@ -578,6 +591,7 @@
         margin-top:0;
         color:var(--ink);
         line-height:1.7;
+        min-width:0;
       }
       .note-summary {
         margin:0;
@@ -730,7 +744,7 @@
             <p><strong>当前采用</strong><span>support候选</span></p>
           </div>
         </div>
-        <p class="guidance-note"><strong>摘要：</strong>- 材料摘录（页 8）：Q：公司 2025 年通过的母猪场项目推进情况如何？这些项目将对 2026 年出栏量产生怎样的支撐？ A：2025 年公司审议通过的两三个母猪场项目正正常推进，目前已陆续进入交付阶段；这些项目将为2026年出栏量增长提供关键支撑预计可 带动出栏量增长...</p><details class="note-quote-toggle" style="margin-top:0.9rem;"><summary>查看完整说明</summary><div class="note-full-quote">- 材料摘录（页 8）：Q：公司 2025 年通过的母猪场项目推进情况如何？这些项目将对 2026 年出栏量产生怎样的支撐？ A：2025 年公司审议通过的两三个母猪场项目正正常推进，目前已陆续进入交付阶段。这些项目将为2026年出栏量增长提供关键支撑预计可 带动出栏量增长约50万头，助力2026年350万头出栏目标的实现。从交付及生产情况来看，部分项目可提前交付并实现全年生产，充分发挥产能；部分项目中途交付，无法实现满负荷运 |...</div></details>
+        <p class="guidance-note"><strong>摘要：</strong>- 材料摘录（页 8）：Q：公司 2025 年通过的母猪场项目推进情况如何？这些项目将对 2026 年出栏量产生怎样的支撐？ A：2025 年公司审议通过的两三个母猪场项目正正常推进，目前已陆续进入交付阶段；这些项目将为2026年出栏量增长提供关键支撑预计可 带动出栏量增长约50万头，助力2026年350万头出栏目标的实现</p><details class="note-quote-toggle"><summary>查看完整说明</summary><div class="note-full-quote">- 材料摘录（页 8）：Q：公司 2025 年通过的母猪场项目推进情况如何？这些项目将对 2026 年出栏量产生怎样的支撐？ A：2025 年公司审议通过的两三个母猪场项目正正常推进，目前已陆续进入交付阶段。这些项目将为2026年出栏量增长提供关键支撑预计可 带动出栏量增长约50万头，助力2026年350万头出栏目标的实现。从交付及生产情况来看，部分项目可提前交付并实现全年生产，充分发挥产能；部分项目中途交付，无法实现满负荷运 |...</div></details>
       </article>
     
               
@@ -756,7 +770,7 @@
             <p><strong>使用边界</strong><span>前置展示，但不替代硬出栏指引字段</span></p>
           </div>
         </div>
-        <p class="guidance-note"><strong>摘要：</strong>力争 于2027 年实现出栏生猪500 万头以上的目标</p><details class="note-quote-toggle" style="margin-top:0.9rem;"><summary>查看完整原句</summary><div class="note-full-quote">公司力争 于2027 年实现出栏生猪500 万头以上的目标</div></details>
+        <p class="guidance-note"><strong>摘要：</strong>力争 于2027 年实现出栏生猪500 万头以上的目标</p><p class="note-full-quote"><strong>原句：</strong>公司力争 于2027 年实现出栏生猪500 万头以上的目标</p>
       </article>
     
             </div>
@@ -1152,7 +1166,7 @@
               <div class="note-card-body">
                 <p class="note-summary"><strong>摘要：</strong>企业一直按要求每月填报生猪出栏量、母猪存栏量等基础数据，2025年11月或12月农业部 曾要求头部养殖企业填报2026年出栏目标计划及 2026 年1月能繁母猪调控数据，公司已按要求完成相关填报工作</p>
                 <p class="note-adoption"><strong>当前采用方式：</strong>研究摘录留痕，仍需与正式字段或更多来源交叉验证</p>
-                <details class="note-quote-toggle"><summary>查看完整原句</summary><div class="note-full-quote">企业一直按要求每月填报生猪出栏量、母猪存栏量等基础数据，2025年11月或12月农业部 曾要求头部养殖企业填报2026年出栏目标计划及 2026 年1月能繁母猪调控数据，公司已按要求完成相关填报工作。</div></details>
+                <p class="note-full-quote"><strong>原句：</strong>企业一直按要求每月填报生猪出栏量、母猪存栏量等基础数据，2025年11月或12月农业部 曾要求头部养殖企业填报2026年出栏目标计划及 2026 年1月能繁母猪调控数据，公司已按要求完成相关填报工作。</p>
               </div>
             </li>
         
@@ -1167,7 +1181,7 @@
               <div class="note-card-body">
                 <p class="note-summary"><strong>摘要：</strong>在国家产能调控持续推进的情况下，公司2026年出栏量保底目标为350万头</p>
                 <p class="note-adoption"><strong>当前采用方式：</strong>研究摘录留痕，仍需与正式字段或更多来源交叉验证</p>
-                <details class="note-quote-toggle"><summary>查看完整原句</summary><div class="note-full-quote">A：在国家产能调控持续推进的情况下，公司2026年出栏量保底目标为350万头。</div></details>
+                <p class="note-full-quote"><strong>原句：</strong>A：在国家产能调控持续推进的情况下，公司2026年出栏量保底目标为350万头。</p>
               </div>
             </li>
         
@@ -1182,7 +1196,7 @@
               <div class="note-card-body">
                 <p class="note-summary"><strong>摘要：</strong>今年成本保持行业前列，明年有着怎样的成本目标以及出栏量规划呢?</p>
                 <p class="note-adoption"><strong>当前采用方式：</strong>研究摘录留痕，仍需与正式字段或更多来源交叉验证</p>
-                <details class="note-quote-toggle"><summary>查看完整原句</summary><div class="note-full-quote">Q：公司今年成本保持行业前列，明年有着怎样的成本目标以及出栏量规划呢?</div></details>
+                <p class="note-full-quote"><strong>原句：</strong>Q：公司今年成本保持行业前列，明年有着怎样的成本目标以及出栏量规划呢?</p>
               </div>
             </li>
         
@@ -1197,7 +1211,7 @@
               <div class="note-card-body">
                 <p class="note-summary"><strong>摘要：</strong>生猪养殖业务方面①出栏量：2023年公司实际出栏152.04万头，2024/2025年分别计划出栏250/350万头</p>
                 <p class="note-adoption"><strong>当前采用方式：</strong>研究摘录留痕，仍需与正式字段或更多来源交叉验证</p>
-                <details class="note-quote-toggle"><summary>查看完整原句</summary><div class="note-full-quote">生猪养殖业务方面①出栏量：2023年公司实际出栏152.04万头，2024/2025年分别计划出栏250/350万头；</div></details>
+                <p class="note-full-quote"><strong>原句：</strong>生猪养殖业务方面①出栏量：2023年公司实际出栏152.04万头，2024/2025年分别计划出栏250/350万头；</p>
               </div>
             </li>
         
@@ -1212,7 +1226,7 @@
               <div class="note-card-body">
                 <p class="note-summary"><strong>摘要：</strong>2018-2023年公司生猪出栏量从 22.2 万头上升至152 万头，生猪外销量从6.4 万头上升至120.8 万头，年复合增长率分别达到 46.9%、79.9%</p>
                 <p class="note-adoption"><strong>当前采用方式：</strong>研究摘录留痕，仍需与正式字段或更多来源交叉验证</p>
-                <details class="note-quote-toggle"><summary>查看完整原句</summary><div class="note-full-quote">2018-2023年公司生猪出栏量从 22.2 万头上升至152 万头，生猪外销量从6.4 万头上升至120.8 万头，年复合增长率分别达到 46.9%、79.9%。</div></details>
+                <p class="note-full-quote"><strong>原句：</strong>2018-2023年公司生猪出栏量从 22.2 万头上升至152 万头，生猪外销量从6.4 万头上升至120.8 万头，年复合增长率分别达到 46.9%、79.9%。</p>
               </div>
             </li>
         
@@ -1227,7 +1241,7 @@
               <div class="note-card-body">
                 <p class="note-summary"><strong>摘要：</strong>政策应对：生猪产能调控政策预计短期持续，9月能繁母猪数量13.9万头，将根据国家调控政策指引规划安排，与地方农业农村部门保持沟通协调</p>
                 <p class="note-adoption"><strong>当前采用方式：</strong>研究摘录留痕，仍需与正式字段或更多来源交叉验证</p>
-                <details class="note-quote-toggle"><summary>查看完整原句</summary><div class="note-full-quote">政策应对：生猪产能调控政策预计短期持续，9月能繁母猪数量13.9万头，将根据国家调控政策指引规划安排，与地方农业农村部门保持沟通协调。</div></details>
+                <p class="note-full-quote"><strong>原句：</strong>政策应对：生猪产能调控政策预计短期持续，9月能繁母猪数量13.9万头，将根据国家调控政策指引规划安排，与地方农业农村部门保持沟通协调。</p>
               </div>
             </li>
         
@@ -1242,7 +1256,7 @@
               <div class="note-card-body">
                 <p class="note-summary"><strong>摘要：</strong>2025-2026年云南及周边地区的疫病情况如何，对产能有何影响？</p>
                 <p class="note-adoption"><strong>当前采用方式：</strong>研究摘录留痕，仍需与正式字段或更多来源交叉验证</p>
-                <details class="note-quote-toggle"><summary>查看完整原句</summary><div class="note-full-quote">Q：2025-2026年云南及周边地区的疫病情况如何，对产能有何影响？</div></details>
+                <p class="note-full-quote"><strong>原句：</strong>Q：2025-2026年云南及周边地区的疫病情况如何，对产能有何影响？</p>
               </div>
             </li>
         
@@ -1257,7 +1271,7 @@
               <div class="note-card-body">
                 <p class="note-summary"><strong>摘要：</strong>全年完全成本12.3元，生产成本11.4元（饲料成本 6.6-6.7元立猪崽成本2.8元等），总部费用摊销0.9元，12月成本降至12.1元，PSY提升1.5个点至29.5以上，出栏307万头，成本持续下降且处于行业第一梯队</p>
                 <p class="note-adoption"><strong>当前采用方式：</strong>研究摘录留痕，仍需与正式字段或更多来源交叉验证</p>
-                <details class="note-quote-toggle"><summary>查看完整原句</summary><div class="note-full-quote">全年完全成本12.3元，生产成本11.4元（饲料成本 6.6-6.7元立猪崽成本2.8元等），总部费用摊销0.9元，12月成本降至12.1元，PSY提升1.5个点至29.5以上，出栏307万头，成本持续下降且处于行业第一梯队。</div></details>
+                <p class="note-full-quote"><strong>原句：</strong>全年完全成本12.3元，生产成本11.4元（饲料成本 6.6-6.7元立猪崽成本2.8元等），总部费用摊销0.9元，12月成本降至12.1元，PSY提升1.5个点至29.5以上，出栏307万头，成本持续下降且处于行业第一梯队。</p>
               </div>
             </li>
         </ul>

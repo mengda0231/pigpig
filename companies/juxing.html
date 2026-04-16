@@ -40,13 +40,19 @@
         position:relative;
         z-index:1;
         display:grid;
-        grid-template-columns:1fr;
-        gap:1.1rem;
+        grid-template-columns:minmax(0,1.14fr) minmax(340px,0.86fr);
+        gap:1.15rem 1.2rem;
         align-items:start;
       }
       .hero-copy, .hero-side { position:relative; z-index:1; }
-      .hero-copy h1 { max-width:9ch; }
-      .hero-lead { max-width:60ch; font-size:1.08rem; color:var(--ink); }
+      .hero-copy h1 {
+        max-width:11ch;
+        font-size:clamp(2.4rem, 3.8vw, 4.2rem);
+        line-height:1.05;
+        text-wrap:balance;
+        overflow-wrap:anywhere;
+      }
+      .hero-lead { max-width:62ch; font-size:1.04rem; line-height:1.64; color:var(--ink); }
       .hero-pill-row, .hero-actions, .meta-strip, .chart-meta, .chart-boxes, .section-anchor-nav {
         display:flex;
         flex-wrap:wrap;
@@ -84,12 +90,12 @@
         gap:1rem;
       }
       .priority-grid {
-        grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+        grid-template-columns:repeat(2,minmax(0,1fr));
         margin-top:1.1rem;
       }
       .hero-outlook-grid {
         display:grid;
-        grid-template-columns:repeat(2,minmax(0,1fr));
+        grid-template-columns:1fr;
         gap:1rem;
         align-items:start;
       }
@@ -120,7 +126,7 @@
       }
       .guidance-value-row {
         display:grid;
-        grid-template-columns:minmax(0,1.1fr) minmax(280px,0.9fr);
+        grid-template-columns:1fr;
         gap:1rem;
         align-items:start;
         margin-top:0.95rem;
@@ -164,6 +170,7 @@
         background:rgba(255,251,244,0.72);
         display:grid;
         gap:0.45rem;
+        align-content:start;
       }
       .priority-card strong {
         display:block;
@@ -190,7 +197,7 @@
       }
       .hero-side {
         display:grid;
-        grid-template-columns:repeat(2,minmax(280px,1fr));
+        grid-template-columns:1fr;
         gap:1rem;
         align-items:start;
       }
@@ -438,6 +445,9 @@
         margin-bottom:0.8rem;
       }
       @media (max-width:1280px) {
+        .hero-shell {
+          grid-template-columns:1fr;
+        }
         .hero-side {
           grid-template-columns:1fr;
         }
@@ -450,6 +460,9 @@
       }
       @media (max-width:1100px) {
         .hero-shell, .detail-grid, .summary-grid, .priority-grid, .hero-quick-grid, .chart-stack, .hero-side {
+          grid-template-columns:1fr;
+        }
+        .hero-outlook-grid {
           grid-template-columns:1fr;
         }
         .chart-card-span-2 {
@@ -578,6 +591,7 @@
         margin-top:0;
         color:var(--ink);
         line-height:1.7;
+        min-width:0;
       }
       .note-summary {
         margin:0;
@@ -756,7 +770,7 @@
             <p><strong>使用边界</strong><span>前置展示，但不替代硬出栏指引字段</span></p>
           </div>
         </div>
-        <p class="guidance-note"><strong>摘要：</strong>18 万头对应约 500 万头投苗量；公司未给出 2026 年量化出栏目标</p><details class="note-quote-toggle" style="margin-top:0.9rem;"><summary>查看完整原句</summary><div class="note-full-quote">纪要称 18 万头对应约 500 万头投苗量；公司未给出 2026 年量化出栏目标</div></details>
+        <p class="guidance-note"><strong>摘要：</strong>18 万头对应约 500 万头投苗量；公司未给出 2026 年量化出栏目标</p><p class="note-full-quote"><strong>原句：</strong>纪要称 18 万头对应约 500 万头投苗量；公司未给出 2026 年量化出栏目标</p>
       </article>
     
             </div>
@@ -1152,7 +1166,7 @@
               <div class="note-card-body">
                 <p class="note-summary"><strong>摘要：</strong>官方 2025 披露中能看到成本目标、育种与效率框架，但未直接给出最新能繁母猪存栏绝对值</p>
                 <p class="note-adoption"><strong>当前采用方式：</strong>官方摘录，可作为字段回查依据</p>
-                <details class="note-quote-toggle"><summary>查看完整原句</summary><div class="note-full-quote">官方 2025 披露中能看到成本目标、育种与效率框架，但未直接给出最新能繁母猪存栏绝对值。</div></details>
+                <p class="note-full-quote"><strong>原句：</strong>官方 2025 披露中能看到成本目标、育种与效率框架，但未直接给出最新能繁母猪存栏绝对值。</p>
               </div>
             </li>
         
@@ -1167,7 +1181,7 @@
               <div class="note-card-body">
                 <p class="note-summary"><strong>摘要：</strong>官方 2025 披露提到 PSY、料肉比等效率指标改善，但未给最新 PSY 实际值，只给到成本目标和育种方向</p>
                 <p class="note-adoption"><strong>当前采用方式：</strong>官方摘录，可作为字段回查依据</p>
-                <details class="note-quote-toggle"><summary>查看完整原句</summary><div class="note-full-quote">官方 2025 披露提到 PSY、料肉比等效率指标改善，但未给最新 PSY 实际值，只给到成本目标和育种方向。</div></details>
+                <p class="note-full-quote"><strong>原句：</strong>官方 2025 披露提到 PSY、料肉比等效率指标改善，但未给最新 PSY 实际值，只给到成本目标和育种方向。</p>
               </div>
             </li>
         </ul>
@@ -1190,7 +1204,7 @@
               <div class="note-card-body">
                 <p class="note-summary"><strong>摘要：</strong>受行业周期、猪价、产能及政策等多重变量影响，2026年公司暂未设定量化出栏目标，核心聚焦能力建设与资源配置优化</p>
                 <p class="note-adoption"><strong>当前采用方式：</strong>研究摘录留痕，仍需与正式字段或更多来源交叉验证</p>
-                <details class="note-quote-toggle"><summary>查看完整原句</summary><div class="note-full-quote">A：受行业周期、猪价、产能及政策等多重变量影响，2026年公司暂未设定量化出栏目标，核心聚焦能力建设与资源配置优化。</div></details>
+                <p class="note-full-quote"><strong>原句：</strong>A：受行业周期、猪价、产能及政策等多重变量影响，2026年公司暂未设定量化出栏目标，核心聚焦能力建设与资源配置优化。</p>
               </div>
             </li>
         
@@ -1205,7 +1219,7 @@
               <div class="note-card-body">
                 <p class="note-summary"><strong>摘要：</strong>出栏方面，2022 年，公司生猪出栏量达 153 万头，其中 20-22 年出栏 CAGR 为168%，增速位列上市猪企第一名</p>
                 <p class="note-adoption"><strong>当前采用方式：</strong>研究摘录留痕，仍需与正式字段或更多来源交叉验证</p>
-                <details class="note-quote-toggle"><summary>查看完整原句</summary><div class="note-full-quote">出栏方面，2022 年，公司生猪出栏量达 153 万头，其中 20-22 年出栏 CAGR 为168%，增速位列上市猪企第一名。</div></details>
+                <p class="note-full-quote"><strong>原句：</strong>出栏方面，2022 年，公司生猪出栏量达 153 万头，其中 20-22 年出栏 CAGR 为168%，增速位列上市猪企第一名。</p>
               </div>
             </li>
         
@@ -1220,7 +1234,7 @@
               <div class="note-card-body">
                 <p class="note-summary"><strong>摘要：</strong>据我们测算，公司 1Q23 实现生猪养殖完全成本16.6 元/千克、断奶仔猪成本 330 元/头，低于行业平均水平</p>
                 <p class="note-adoption"><strong>当前采用方式：</strong>研究摘录留痕，仍需与正式字段或更多来源交叉验证</p>
-                <details class="note-quote-toggle"><summary>查看完整原句</summary><div class="note-full-quote">据我们测算，公司 1Q23 实现生猪养殖完全成本16.6 元/千克、断奶仔猪成本 330 元/头，低于行业平均水平。</div></details>
+                <p class="note-full-quote"><strong>原句：</strong>据我们测算，公司 1Q23 实现生猪养殖完全成本16.6 元/千克、断奶仔猪成本 330 元/头，低于行业平均水平。</p>
               </div>
             </li>
         
@@ -1235,7 +1249,7 @@
               <div class="note-card-body">
                 <p class="note-summary"><strong>摘要：</strong>具体来看，全群PSY（每头母猪每年提供断奶仔猪头数）超30，料比控制在2.5以内，商品肥猪完全成本降至6元/斤，为2026年创新发展奠定了高质量基础</p>
                 <p class="note-adoption"><strong>当前采用方式：</strong>研究摘录留痕，仍需与正式字段或更多来源交叉验证</p>
-                <details class="note-quote-toggle"><summary>查看完整原句</summary><div class="note-full-quote">具体来看，全群PSY（每头母猪每年提供断奶仔猪头数）超30，料比控制在2.5以内，商品肥猪完全成本降至6元/斤，为2026年创新发展奠定了高质量基础。</div></details>
+                <p class="note-full-quote"><strong>原句：</strong>具体来看，全群PSY（每头母猪每年提供断奶仔猪头数）超30，料比控制在2.5以内，商品肥猪完全成本降至6元/斤，为2026年创新发展奠定了高质量基础。</p>
               </div>
             </li>
         </ul>
@@ -1258,7 +1272,7 @@
               <div class="note-card-body">
                 <p class="note-summary"><strong>摘要：</strong>PSY 突破30；完全成本降至6.0元/斤以内</p>
                 <p class="note-adoption"><strong>当前采用方式：</strong>可作最新 support 展示</p>
-                <details class="note-quote-toggle"><summary>查看完整原句</summary><div class="note-full-quote">PSY 突破30；完全成本降至6.0元/斤以内；料肉比约2.5；与现有知识星球口径方向一致，可作为最新交流层 corroboration；但仍不是公司官方原始披露。</div></details>
+                <p class="note-full-quote"><strong>原句：</strong>PSY 突破30；完全成本降至6.0元/斤以内；料肉比约2.5；与现有知识星球口径方向一致，可作为最新交流层 corroboration；但仍不是公司官方原始披露。</p>
               </div>
             </li>
         </ul>
