@@ -84,8 +84,14 @@
         gap:1rem;
       }
       .priority-grid {
-        grid-template-columns:repeat(2,minmax(0,1fr));
+        grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
         margin-top:1.1rem;
+      }
+      .hero-outlook-grid {
+        display:grid;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:1rem;
+        align-items:start;
       }
       .guidance-highlight {
         margin-top:1rem;
@@ -156,14 +162,27 @@
         border-radius:18px;
         border:1px solid rgba(64,54,40,0.12);
         background:rgba(255,251,244,0.72);
+        display:grid;
+        gap:0.45rem;
       }
       .priority-card strong {
         display:block;
-        margin-bottom:0.35rem;
         font-size:0.78rem;
         color:var(--muted);
         letter-spacing:0.1em;
         text-transform:uppercase;
+      }
+      .priority-summary {
+        margin:0;
+        color:var(--ink);
+        line-height:1.62;
+        overflow-wrap:anywhere;
+      }
+      .priority-foot {
+        margin:0;
+        color:var(--muted);
+        font-size:0.82rem;
+        line-height:1.5;
       }
       .priority-card ul {
         margin:0;
@@ -514,7 +533,7 @@
       .source-list li + li { margin-top:0.8rem; }
       .note-card {
         display:grid;
-        grid-template-columns:minmax(230px,0.76fr) minmax(0,1.24fr);
+        grid-template-columns:minmax(210px,0.68fr) minmax(0,1.32fr);
         gap:0.9rem;
         align-items:start;
         padding:14px 16px;
@@ -546,6 +565,7 @@
         flex-direction:column;
         gap:0.55rem;
         align-items:flex-start;
+        min-width:0;
       }
       .note-badges {
         display:flex;
@@ -558,6 +578,12 @@
         margin-top:0;
         color:var(--ink);
         line-height:1.7;
+      }
+      .note-summary {
+        margin:0;
+        color:var(--ink);
+        line-height:1.62;
+        overflow-wrap:anywhere;
       }
       .note-adoption {
         margin:0;
@@ -631,7 +657,7 @@
         gap:0.9rem;
       }
       @media (max-width: 1180px) {
-        .hero-shell, .detail-grid, .metrics-grid, .event-grid, .overview-grid, .priority-grid, .metric-strip-grid, .hero-quick-grid {
+        .hero-shell, .detail-grid, .metrics-grid, .event-grid, .overview-grid, .priority-grid, .metric-strip-grid, .hero-quick-grid, .hero-outlook-grid {
           grid-template-columns:1fr;
         }
         .event-card, .note-card {
@@ -682,7 +708,8 @@
               <span class="hero-pill">6/8 字段已绑定</span>
               <span class="hero-pill">暂无最新补充线索</span>
             </div>
-            
+            <div class="hero-outlook-grid">
+              
       <article class="guidance-highlight">
         <div class="guidance-hero-top">
           <div>
@@ -706,7 +733,7 @@
         <p class="guidance-note">当前还没有绑定到可交叉验证的 2026 出栏规划口径。若公司只披露了降本目标、经营目标或资本动作，我们不会拿这些内容替代出栏指引。</p>
       </article>
     
-            
+              
       <article class="guidance-highlight outlook-highlight">
         <div class="guidance-hero-top">
           <div>
@@ -729,17 +756,20 @@
             <p><strong>使用边界</strong><span>前置展示，但不替代硬出栏指引字段</span></p>
           </div>
         </div>
-        <p class="guidance-note">重整完成后 3 年内，实现上市公 司年生猪上市规模达到 1200 万头。⑥在本次重整完成后 2 年内，实现上 市公司母猪场平均 PSY(单头母猪年产猪苗数量)达到 25 头以上，生猪养 殖料肉比低于 2.7，断奶苗综合成本低于 390 元/头，生猪上市综合成本 较 2023 年水平下降 1.5 元/斤以上；在双胞...</p>
+        <p class="guidance-note"><strong>摘要：</strong>重整完成后 3 年内，实现上市公 司年生猪上市规模达到 1200 万头；⑥在本次重整完成后 2 年内，实现上 市公司母猪场平均 PSY(单头母猪年产猪苗数量)达到 25 头以上，生猪养 殖料肉比低于 2.7，断奶苗综合成本低于 3...</p><details class="note-quote-toggle" style="margin-top:0.9rem;"><summary>查看完整原句</summary><div class="note-full-quote">重整完成后 3 年内，实现上市公 司年生猪上市规模达到 1200 万头。⑥在本次重整完成后 2 年内，实现上 市公司母猪场平均 PSY(单头母猪年产猪苗数量)达到 25 头以上，生猪养 殖料肉比低于 2.7，断奶苗综合成本低于 390 元/头，生猪上市综合成本 较 2023 年水平下降 1.5 元/斤以上；在双胞...</div></details>
       </article>
     
+            </div>
             <div class="priority-grid">
               <article class="priority-card">
                 <strong>经营判断</strong>
-                <span>成本锚 完全成本 13.8元/公斤（知识星球摘录）；效率锚 PSY 26（公司披露摘录 / 2025-04-25）；母猪锚 能繁母猪 27.5 万头（公司披露摘录 / 2025-04-25）；月报 2026-03 / 同比 49.7%</span>
+                <p class="priority-summary">成本锚 完全成本 13.8元/公斤（知识星球摘录）；效率锚 PSY 26（公司披露摘录 / 2025-04-25）</p>
+                <p class="priority-foot">这是当前首屏采用的经营锚点摘要，详细字段仍以下方硬表和图表为准。</p>
               </article>
               <article class="priority-card">
                 <strong>最新经营锚点</strong>
-                <span>暂无最新外部线索，当前仍以官方字段和本地学习层为主。</span>
+                <p class="priority-summary">暂无最新外部线索，当前仍以官方字段和本地学习层为主</p>
+                <p class="priority-foot">补充线索只服务观察优先级，不直接改写硬字段。</p>
               </article>
               <article class="priority-card">
                 <strong>下一步确认项</strong>
@@ -1120,8 +1150,9 @@
                 
               </div>
               <div class="note-card-body">
+                <p class="note-summary"><strong>摘要：</strong>使用能繁母猪存栏量、PSY、育肥成活率相乘，我们预估 2024、2025、2026生猪出栏量分别为392.7、702.4、985.8万头，并且假设2024Q4、2025和2026 年仔猪和商品猪占比各为 50%</p>
                 <p class="note-adoption"><strong>当前采用方式：</strong>研究摘录留痕，仍需与正式字段或更多来源交叉验证</p>
-                <div class="note-full-quote">使用能繁母猪存栏量、PSY、育肥成活率相乘，我们预估 2024、2025、2026生猪出栏量分别为392.7、702.4、985.8万头，并且假设2024Q4、2025和2026 年仔猪和商品猪占比各为 50%。</div>
+                <details class="note-quote-toggle"><summary>查看完整原句</summary><div class="note-full-quote">使用能繁母猪存栏量、PSY、育肥成活率相乘，我们预估 2024、2025、2026生猪出栏量分别为392.7、702.4、985.8万头，并且假设2024Q4、2025和2026 年仔猪和商品猪占比各为 50%。</div></details>
               </div>
             </li>
         
@@ -1134,8 +1165,9 @@
                 
               </div>
               <div class="note-card-body">
+                <p class="note-summary"><strong>摘要：</strong>众号：奥KA姆剃刀 业务规划：2026 年出栏量随母猪存栏保持稳定（现有母猪存栏约 30 万头），出栏均重130 公 斤（无强制下调要求），变量在于“公司+农 户”模式恢复进度（此前占比约 90%）</p>
                 <p class="note-adoption"><strong>当前采用方式：</strong>研究摘录留痕，仍需与正式字段或更多来源交叉验证</p>
-                <div class="note-full-quote">众号：奥KA姆剃刀 业务规划：2026 年出栏量随母猪存栏保持稳定（现有母猪存栏约 30 万头），出栏均重130 公 斤（无强制下调要求），变量在于“公司+农 户”模式恢复进度（此前占比约 90%）；</div>
+                <details class="note-quote-toggle"><summary>查看完整原句</summary><div class="note-full-quote">众号：奥KA姆剃刀 业务规划：2026 年出栏量随母猪存栏保持稳定（现有母猪存栏约 30 万头），出栏均重130 公 斤（无强制下调要求），变量在于“公司+农 户”模式恢复进度（此前占比约 90%）；</div></details>
               </div>
             </li>
         
@@ -1148,8 +1180,9 @@
                 
               </div>
               <div class="note-card-body">
+                <p class="note-summary"><strong>摘要：</strong>使用能繁母猪存栏量、PSY、育肥成活率相乘，我们预估 2024、2025、2026生猪出栏量分别为392.7、702.4、985.8万头，并且假设2024Q4、2025和2026 年仔猪和商品猪占比各为 50%</p>
                 <p class="note-adoption"><strong>当前采用方式：</strong>研究摘录留痕，仍需与正式字段或更多来源交叉验证</p>
-                <div class="note-full-quote">使用能繁母猪存栏量、PSY、育肥成活率相乘，我们预估 2024、2025、2026生猪出栏量分别为392.7、702.4、985.8万头，并且假设2024Q4、2025和2026 年仔猪和商品猪占比各为 50%。</div>
+                <details class="note-quote-toggle"><summary>查看完整原句</summary><div class="note-full-quote">使用能繁母猪存栏量、PSY、育肥成活率相乘，我们预估 2024、2025、2026生猪出栏量分别为392.7、702.4、985.8万头，并且假设2024Q4、2025和2026 年仔猪和商品猪占比各为 50%。</div></details>
               </div>
             </li>
         
@@ -1162,8 +1195,9 @@
                 
               </div>
               <div class="note-card-body">
+                <p class="note-summary"><strong>摘要：</strong>核心生产指标显著改善，截至 2025年11 月底，生猪上市率约 93%，PSY 约 27头，料肉比27，成本较2023年下降约5元／ 公芹</p>
                 <p class="note-adoption"><strong>当前采用方式：</strong>研究摘录留痕，仍需与正式字段或更多来源交叉验证</p>
-                <div class="note-full-quote">核心生产指标显著改善，截至 2025年11 月底，生猪上市率约 93%，PSY 约 27头，料肉比27，成本较2023年下降约5元／ 公芹。</div>
+                <details class="note-quote-toggle"><summary>查看完整原句</summary><div class="note-full-quote">核心生产指标显著改善，截至 2025年11 月底，生猪上市率约 93%，PSY 约 27头，料肉比27，成本较2023年下降约5元／ 公芹。</div></details>
               </div>
             </li>
         
@@ -1176,8 +1210,9 @@
                 
               </div>
               <div class="note-card-body">
+                <p class="note-summary"><strong>摘要：</strong>这一出栏结构对公司经营的核心影响体现在现金 流层面信仔猪出栏周期短、变现速度快，独在业思考2025 年猪价下行的背景下，能帮助公司快速回笼资金，缓解经营压力，保障现金流稳健</p>
                 <p class="note-adoption"><strong>当前采用方式：</strong>研究摘录留痕，仍需与正式字段或更多来源交叉验证</p>
-                <div class="note-full-quote">这一出栏结构对公司经营的核心影响体现在现金 流层面信仔猪出栏周期短、变现速度快，独在业思考2025 年猪价下行的背景下，能帮助公司快速回笼资金，缓解经营压力，保障现金流稳健。</div>
+                <details class="note-quote-toggle"><summary>查看完整原句</summary><div class="note-full-quote">这一出栏结构对公司经营的核心影响体现在现金 流层面信仔猪出栏周期短、变现速度快，独在业思考2025 年猪价下行的背景下，能帮助公司快速回笼资金，缓解经营压力，保障现金流稳健。</div></details>
               </div>
             </li>
         </ul>

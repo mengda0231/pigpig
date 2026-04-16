@@ -84,8 +84,14 @@
         gap:1rem;
       }
       .priority-grid {
-        grid-template-columns:repeat(2,minmax(0,1fr));
+        grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
         margin-top:1.1rem;
+      }
+      .hero-outlook-grid {
+        display:grid;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:1rem;
+        align-items:start;
       }
       .guidance-highlight {
         margin-top:1rem;
@@ -156,14 +162,27 @@
         border-radius:18px;
         border:1px solid rgba(64,54,40,0.12);
         background:rgba(255,251,244,0.72);
+        display:grid;
+        gap:0.45rem;
       }
       .priority-card strong {
         display:block;
-        margin-bottom:0.35rem;
         font-size:0.78rem;
         color:var(--muted);
         letter-spacing:0.1em;
         text-transform:uppercase;
+      }
+      .priority-summary {
+        margin:0;
+        color:var(--ink);
+        line-height:1.62;
+        overflow-wrap:anywhere;
+      }
+      .priority-foot {
+        margin:0;
+        color:var(--muted);
+        font-size:0.82rem;
+        line-height:1.5;
       }
       .priority-card ul {
         margin:0;
@@ -514,7 +533,7 @@
       .source-list li + li { margin-top:0.8rem; }
       .note-card {
         display:grid;
-        grid-template-columns:minmax(230px,0.76fr) minmax(0,1.24fr);
+        grid-template-columns:minmax(210px,0.68fr) minmax(0,1.32fr);
         gap:0.9rem;
         align-items:start;
         padding:14px 16px;
@@ -546,6 +565,7 @@
         flex-direction:column;
         gap:0.55rem;
         align-items:flex-start;
+        min-width:0;
       }
       .note-badges {
         display:flex;
@@ -558,6 +578,12 @@
         margin-top:0;
         color:var(--ink);
         line-height:1.7;
+      }
+      .note-summary {
+        margin:0;
+        color:var(--ink);
+        line-height:1.62;
+        overflow-wrap:anywhere;
       }
       .note-adoption {
         margin:0;
@@ -631,7 +657,7 @@
         gap:0.9rem;
       }
       @media (max-width: 1180px) {
-        .hero-shell, .detail-grid, .metrics-grid, .event-grid, .overview-grid, .priority-grid, .metric-strip-grid, .hero-quick-grid {
+        .hero-shell, .detail-grid, .metrics-grid, .event-grid, .overview-grid, .priority-grid, .metric-strip-grid, .hero-quick-grid, .hero-outlook-grid {
           grid-template-columns:1fr;
         }
         .event-card, .note-card {
@@ -682,7 +708,8 @@
               <span class="hero-pill">5/8 字段已绑定</span>
               <span class="hero-pill">1 条补充线索</span>
             </div>
-            
+            <div class="hero-outlook-grid">
+              
       <article class="guidance-highlight">
         <div class="guidance-hero-top">
           <div>
@@ -706,7 +733,7 @@
         <p class="guidance-note">当前还没有绑定到可交叉验证的 2026 出栏规划口径。若公司只披露了降本目标、经营目标或资本动作，我们不会拿这些内容替代出栏指引。</p>
       </article>
     
-            
+              
       <article class="guidance-highlight outlook-highlight">
         <div class="guidance-hero-top">
           <div>
@@ -729,17 +756,20 @@
             <p><strong>使用边界</strong><span>前置展示，但不替代硬出栏指引字段</span></p>
           </div>
         </div>
-        <p class="guidance-note">当前没有找到足够稳定、且可直接服务猪主链判断的未来展望口径，先保留空位，等待后续公司交流、月报或正式披露补链。</p>
+        <p class="guidance-note"><strong>摘要：</strong>当前没有找到足够稳定、且可直接服务猪主链判断的未来展望口径，先保留空位，等待后续公司交流、月报或正式披露补链</p><details class="note-quote-toggle" style="margin-top:0.9rem;"><summary>查看完整原句</summary><div class="note-full-quote">当前没有找到足够稳定、且可直接服务猪主链判断的未来展望口径，先保留空位，等待后续公司交流、月报或正式披露补链。</div></details>
       </article>
     
+            </div>
             <div class="priority-grid">
               <article class="priority-card">
                 <strong>经营判断</strong>
-                <span>成本锚 完全成本 13.31元/公斤（公司披露摘录 / 2026-02-03）；母猪锚 能繁母猪 26.2 万头（2024年年报经营披露 / 2025-03-31）；月报 2026-03 / 同比 20.5%</span>
+                <p class="priority-summary">成本锚 完全成本 13.31元/公斤（公司披露摘录 / 2026-02-03）；母猪锚 能繁母猪 26.2 万头（2024年年报经营披露 / 2025-03-31）</p>
+                <p class="priority-foot">这是当前首屏采用的经营锚点摘要，详细字段仍以下方硬表和图表为准。</p>
               </article>
               <article class="priority-card">
                 <strong>最新经营锚点</strong>
-                <span>雪球PSY线索；PSY 已达 24.34 头</span>
+                <p class="priority-summary">PSY 已达 24.34 头</p>
+                <p class="priority-foot">补充线索只服务观察优先级，不直接改写硬字段。</p>
               </article>
               <article class="priority-card">
                 <strong>下一步确认项</strong>
@@ -1120,8 +1150,9 @@
                 
               </div>
               <div class="note-card-body">
+                <p class="note-summary"><strong>摘要：</strong>当前线程已纳入 2026-02 官方 IR 记录，但仍未找到最新 PSY 实际值</p>
                 <p class="note-adoption"><strong>当前采用方式：</strong>官方摘录，可作为字段回查依据</p>
-                <div class="note-full-quote">当前线程已纳入 2026-02 官方 IR 记录，但仍未找到最新 PSY 实际值。</div>
+                <details class="note-quote-toggle"><summary>查看完整原句</summary><div class="note-full-quote">当前线程已纳入 2026-02 官方 IR 记录，但仍未找到最新 PSY 实际值。</div></details>
               </div>
             </li>
         
@@ -1134,8 +1165,9 @@
                 
               </div>
               <div class="note-card-body">
+                <p class="note-summary"><strong>摘要：</strong>官方 2025 半年报更多披露母猪场产能利用率、在养母猪场满负荷与成本下降方向，仍未量化最新 PSY</p>
                 <p class="note-adoption"><strong>当前采用方式：</strong>官方摘录，可作为字段回查依据</p>
-                <div class="note-full-quote">官方 2025 半年报更多披露母猪场产能利用率、在养母猪场满负荷与成本下降方向，仍未量化最新 PSY。</div>
+                <details class="note-quote-toggle"><summary>查看完整原句</summary><div class="note-full-quote">官方 2025 半年报更多披露母猪场产能利用率、在养母猪场满负荷与成本下降方向，仍未量化最新 PSY。</div></details>
               </div>
             </li>
         
@@ -1148,8 +1180,9 @@
                 
               </div>
               <div class="note-card-body">
+                <p class="note-summary"><strong>摘要：</strong>官方 2025 披露已锁定能繁母猪与成本，但未提取到最新 PSY 数值</p>
                 <p class="note-adoption"><strong>当前采用方式：</strong>官方摘录，可作为字段回查依据</p>
-                <div class="note-full-quote">官方 2025 披露已锁定能繁母猪与成本，但未提取到最新 PSY 数值。</div>
+                <details class="note-quote-toggle"><summary>查看完整原句</summary><div class="note-full-quote">官方 2025 披露已锁定能繁母猪与成本，但未提取到最新 PSY 数值。</div></details>
               </div>
             </li>
         </ul>
@@ -1170,8 +1203,9 @@
                 <div class="small-note note-link"><a href="https://xueqiu.com/1068984205/374917788" target="_blank" rel="noopener noreferrer">打开原始链接</a></div>
               </div>
               <div class="note-card-body">
+                <p class="note-summary"><strong>摘要：</strong>PSY 已达 24.34 头</p>
                 <p class="note-adoption"><strong>当前采用方式：</strong>线索展示</p>
-                <div class="note-full-quote">PSY 已达 24.34 头；这正好对应当前页面缺口，但目前只见单一雪球口径，仍需交叉验证后再决定是否进 latest support。</div>
+                <details class="note-quote-toggle"><summary>查看完整原句</summary><div class="note-full-quote">PSY 已达 24.34 头；这正好对应当前页面缺口，但目前只见单一雪球口径，仍需交叉验证后再决定是否进 latest support。</div></details>
               </div>
             </li>
         </ul>

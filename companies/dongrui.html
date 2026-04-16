@@ -84,8 +84,14 @@
         gap:1rem;
       }
       .priority-grid {
-        grid-template-columns:repeat(2,minmax(0,1fr));
+        grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
         margin-top:1.1rem;
+      }
+      .hero-outlook-grid {
+        display:grid;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:1rem;
+        align-items:start;
       }
       .guidance-highlight {
         margin-top:1rem;
@@ -156,14 +162,27 @@
         border-radius:18px;
         border:1px solid rgba(64,54,40,0.12);
         background:rgba(255,251,244,0.72);
+        display:grid;
+        gap:0.45rem;
       }
       .priority-card strong {
         display:block;
-        margin-bottom:0.35rem;
         font-size:0.78rem;
         color:var(--muted);
         letter-spacing:0.1em;
         text-transform:uppercase;
+      }
+      .priority-summary {
+        margin:0;
+        color:var(--ink);
+        line-height:1.62;
+        overflow-wrap:anywhere;
+      }
+      .priority-foot {
+        margin:0;
+        color:var(--muted);
+        font-size:0.82rem;
+        line-height:1.5;
       }
       .priority-card ul {
         margin:0;
@@ -514,7 +533,7 @@
       .source-list li + li { margin-top:0.8rem; }
       .note-card {
         display:grid;
-        grid-template-columns:minmax(230px,0.76fr) minmax(0,1.24fr);
+        grid-template-columns:minmax(210px,0.68fr) minmax(0,1.32fr);
         gap:0.9rem;
         align-items:start;
         padding:14px 16px;
@@ -546,6 +565,7 @@
         flex-direction:column;
         gap:0.55rem;
         align-items:flex-start;
+        min-width:0;
       }
       .note-badges {
         display:flex;
@@ -558,6 +578,12 @@
         margin-top:0;
         color:var(--ink);
         line-height:1.7;
+      }
+      .note-summary {
+        margin:0;
+        color:var(--ink);
+        line-height:1.62;
+        overflow-wrap:anywhere;
       }
       .note-adoption {
         margin:0;
@@ -631,7 +657,7 @@
         gap:0.9rem;
       }
       @media (max-width: 1180px) {
-        .hero-shell, .detail-grid, .metrics-grid, .event-grid, .overview-grid, .priority-grid, .metric-strip-grid, .hero-quick-grid {
+        .hero-shell, .detail-grid, .metrics-grid, .event-grid, .overview-grid, .priority-grid, .metric-strip-grid, .hero-quick-grid, .hero-outlook-grid {
           grid-template-columns:1fr;
         }
         .event-card, .note-card {
@@ -682,7 +708,8 @@
               <span class="hero-pill">7/8 字段已绑定</span>
               <span class="hero-pill">1 条补充线索</span>
             </div>
-            
+            <div class="hero-outlook-grid">
+              
       <article class="guidance-highlight">
         <div class="guidance-hero-top">
           <div>
@@ -703,10 +730,10 @@
             <p><strong>当前采用</strong><span>support候选</span></p>
           </div>
         </div>
-        <p class="guidance-note">期间费用1.39 元／公斤），上半年完全成本 15.04 元／公斤；7 月完全成本 14.18 元／公斤（较 6 月增0.3 元），计划年底前降至 14元以下、2026 年降至 13 元左右，通过扩大规模、提高幼猪占比、引进高产种猪等实现。出栏规划上，2025年计划出栏30万头，预计实际 20-26 万头（与 2024 年相近），2026 年计划 30-35 万头；供港方面，香港市场需求未完全恢复（当前约 110 万头／年，疫情前...</p>
+        <p class="guidance-note"><strong>摘要：</strong>期间费用1.39 元／公斤），上半年完全成本 15.04 元／公斤；7 月完全成本 14.18 元／公斤（较 6 月增0.3 元），计划年底前降至 14元以下、2026 年降至 13 元左右，通过扩大规模、提高幼猪占比、引进高产种猪等实现</p><details class="note-quote-toggle" style="margin-top:0.9rem;"><summary>查看完整说明</summary><div class="note-full-quote">期间费用1.39 元／公斤），上半年完全成本 15.04 元／公斤；7 月完全成本 14.18 元／公斤（较 6 月增0.3 元），计划年底前降至 14元以下、2026 年降至 13 元左右，通过扩大规模、提高幼猪占比、引进高产种猪等实现。出栏规划上，2025年计划出栏30万头，预计实际 20-26 万头（与 2024 年相近），2026 年计划 30-35 万头；供港方面，香港市场需求未完全恢复（当前约 110 万头／年，疫情前...</div></details>
       </article>
     
-            
+              
       <article class="guidance-highlight outlook-highlight">
         <div class="guidance-hero-top">
           <div>
@@ -729,17 +756,20 @@
             <p><strong>使用边界</strong><span>前置展示，但不替代硬出栏指引字段</span></p>
           </div>
         </div>
-        <p class="guidance-note">自繁 自养的商品猪完全成本为14.5元/公斤，随着公司产能利用率的提升，自繁自养 商品猪完全成本有望进一步下降。 3 3、公司“公司+农户”目前的进展情况？代养的总体规划目标？ 答：公司今年代养部分出栏约6万头，目标在未来三年实现100万头的出栏。 4、公司的分红规划是？ 答： 公司现处于快速发展阶段， 资本性开...</p>
+        <p class="guidance-note"><strong>摘要：</strong>自繁 自养的商品猪完全成本为14.5元/公斤，随着公司产能利用率的提升，自繁自养 商品猪完全成本有望进一步下降；3 3、公司“公司+农户”目前的进展情况？代养的总体规划目标？ 答：公司今年代养部分出栏约6万头，目标在未来三年实现1...</p><details class="note-quote-toggle" style="margin-top:0.9rem;"><summary>查看完整原句</summary><div class="note-full-quote">自繁 自养的商品猪完全成本为14.5元/公斤，随着公司产能利用率的提升，自繁自养 商品猪完全成本有望进一步下降。 3 3、公司“公司+农户”目前的进展情况？代养的总体规划目标？ 答：公司今年代养部分出栏约6万头，目标在未来三年实现100万头的出栏。 4、公司的分红规划是？ 答： 公司现处于快速发展阶段， 资本性开...</div></details>
       </article>
     
+            </div>
             <div class="priority-grid">
               <article class="priority-card">
                 <strong>经营判断</strong>
-                <span>成本锚 完全成本 13.5元/公斤（公司披露摘录 / 2025-07-14）；效率锚 PSY 22（公司披露摘录 / 2025-01-20）；母猪锚 能繁母猪 7.6 万头（公司披露摘录 / 2025-01-20）；月报 2026-03 / 同比 45.8%</span>
+                <p class="priority-summary">成本锚 完全成本 13.5元/公斤（公司披露摘录 / 2025-07-14）；效率锚 PSY 22（公司披露摘录 / 2025-01-20）</p>
+                <p class="priority-foot">这是当前首屏采用的经营锚点摘要，详细字段仍以下方硬表和图表为准。</p>
               </article>
               <article class="priority-card">
                 <strong>最新经营锚点</strong>
-                <span>雪球成本线索；2025年12月商品猪完全成本13.93元/公斤；目标降本至13元/公斤；2026H1按13.5元/公斤测算</span>
+                <p class="priority-summary">2025年12月商品猪完全成本13.93元/公斤；目标降本至13元/公斤</p>
+                <p class="priority-foot">补充线索只服务观察优先级，不直接改写硬字段。</p>
               </article>
               <article class="priority-card">
                 <strong>下一步确认项</strong>
@@ -1120,8 +1150,9 @@
                 
               </div>
               <div class="note-card-body">
+                <p class="note-summary"><strong>摘要：</strong>东瑞股份对 2025 年和 2026 年的供港生猪数量制定了可持续的规划，同时密切关注行业竞争动态2025年公司计划供港生猪出栏30万头， 但考虑到香港市场需求尚未完全恢复（当前年需求量约110 万头，疫情前为160-...</p>
                 <p class="note-adoption"><strong>当前采用方式：</strong>研究摘录留痕，仍需与正式字段或更多来源交叉验证</p>
-                <div class="note-full-quote">A:东瑞股份对 2025 年和 2026 年的供港生猪数量制定了可持续的规划，同时密切关注行业竞争动态2025年公司计划供港生猪出栏30万头， 但考虑到香港市场需求尚未完全恢复（当前年需求量约110 万头，疫情前为160-170万头），且内地供港货源充足（日均超 3000 头）导致供港生猪价格较低（价差约1元／公斤以内），预计实际出栏量可能与 2024 年相近，为 20-26 万头，希望下半年能实现突破；</div>
+                <details class="note-quote-toggle"><summary>查看完整原句</summary><div class="note-full-quote">A:东瑞股份对 2025 年和 2026 年的供港生猪数量制定了可持续的规划，同时密切关注行业竞争动态2025年公司计划供港生猪出栏30万头， 但考虑到香港市场需求尚未完全恢复（当前年需求量约110 万头，疫情前为160-170万头），且内地供港货源充足（日均超 3000 头）导致供港生猪价格较低（价差约1元／公斤以内），预计实际出栏量可能与 2024 年相近，为 20-26 万头，希望下半年能实现突破；</div></details>
               </div>
             </li>
         
@@ -1134,8 +1165,9 @@
                 
               </div>
               <div class="note-card-body">
+                <p class="note-summary"><strong>摘要：</strong>2.3 行业去化趋势难改，去化时间仍需积累 2.3.1 行业去化趋势难改 统计局、农业部数据，2018 年4季末-2019 年3季末，受非瘟疫情影响，能繁母猪存栏量累计下降29.6%; 2021 年2季末-2022年1...</p>
                 <p class="note-adoption"><strong>当前采用方式：</strong>研究摘录留痕，仍需与正式字段或更多来源交叉验证</p>
-                <details class="note-quote-toggle"><summary>展开完整原句</summary><div class="note-full-quote">2.3 行业去化趋势难改，去化时间仍需积累 2.3.1 行业去化趋势难改 统计局、农业部数据，2018 年4季末-2019 年3季末，受非瘟疫情影响，能繁母猪存栏量累计下降29.6%; 2021 年2季末-2022年1季末，受此前产能大幅扩张、二次育肥、压栏等多重因素影响，猪价高位崩盘，能繁母猪存栏量累计下降 8.3%;2023 年 12 月以来，猪价持续低迷，同时叠加1-2 月北方非瘟疫情影响，能繁母猪存栏量重新进入下行通道，累计降幅 2.7%。</div></details>
+                <details class="note-quote-toggle"><summary>查看完整原句</summary><div class="note-full-quote">2.3 行业去化趋势难改，去化时间仍需积累 2.3.1 行业去化趋势难改 统计局、农业部数据，2018 年4季末-2019 年3季末，受非瘟疫情影响，能繁母猪存栏量累计下降29.6%; 2021 年2季末-2022年1季末，受此前产能大幅扩张、二次育肥、压栏等多重因素影响，猪价高位崩盘，能繁母猪存栏量累计下降 8.3%;2023 年 12 月以来，猪价持续低迷，同时叠加1-2 月北方非瘟疫情影响，能繁母猪存栏量重新进入下行通道，累计降幅 2.7%。</div></details>
               </div>
             </li>
         
@@ -1148,8 +1180,9 @@
                 
               </div>
               <div class="note-card-body">
+                <p class="note-summary"><strong>摘要：</strong>成本方面，2025 年二季度完全成本 14.7 元／公斤（销售成本 13.32 元／公斤，含饲料 8.48 元／公斤</p>
                 <p class="note-adoption"><strong>当前采用方式：</strong>研究摘录留痕，仍需与正式字段或更多来源交叉验证</p>
-                <div class="note-full-quote">成本方面，2025 年二季度完全成本 14.7 元／公斤（销售成本 13.32 元／公斤，含饲料 8.48 元／公斤；</div>
+                <details class="note-quote-toggle"><summary>查看完整原句</summary><div class="note-full-quote">成本方面，2025 年二季度完全成本 14.7 元／公斤（销售成本 13.32 元／公斤，含饲料 8.48 元／公斤；</div></details>
               </div>
             </li>
         </ul>
@@ -1170,8 +1203,9 @@
                 <div class="small-note note-link"><a href="https://xueqiu.com/9947252743/382733895" target="_blank" rel="noopener noreferrer">打开原始链接</a></div>
               </div>
               <div class="note-card-body">
+                <p class="note-summary"><strong>摘要：</strong>2025年12月商品猪完全成本13.93元/公斤；目标降本至13元/公斤</p>
                 <p class="note-adoption"><strong>当前采用方式：</strong>仅线索展示</p>
-                <div class="note-full-quote">2025年12月商品猪完全成本13.93元/公斤；目标降本至13元/公斤；2026H1按13.5元/公斤测算；对尾部成本梯队判断有帮助，但更像作者加工后的比较贴，不适合直接回填当前主表。</div>
+                <details class="note-quote-toggle"><summary>查看完整原句</summary><div class="note-full-quote">2025年12月商品猪完全成本13.93元/公斤；目标降本至13元/公斤；2026H1按13.5元/公斤测算；对尾部成本梯队判断有帮助，但更像作者加工后的比较贴，不适合直接回填当前主表。</div></details>
               </div>
             </li>
         </ul>

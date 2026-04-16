@@ -12,16 +12,17 @@
     <link rel="stylesheet" href="../assets/site.css" />
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
     <style>
-      .hero-judgment { position:relative; overflow:hidden; display:grid; grid-template-columns:minmax(0,1.3fr) minmax(340px,0.82fr); gap:1rem; }
+      .hero-judgment { position:relative; overflow:hidden; display:grid; grid-template-columns:minmax(0,1.24fr) minmax(320px,0.82fr); gap:1rem; }
       .hero-judgment::before { position:absolute; inset:-18% auto auto -8%; width:360px; height:360px; border-radius:50%; background:radial-gradient(circle, rgba(184,104,62,0.26), transparent 68%); content:""; pointer-events:none; }
       .hero-judgment::after { position:absolute; inset:auto -12% -18% auto; width:380px; height:380px; border-radius:50%; background:radial-gradient(circle, rgba(83,96,65,0.18), transparent 72%); content:""; pointer-events:none; }
       .hero-copy, .hero-side { position:relative; z-index:1; }
-      .hero-copy h1 { max-width:12ch; }
+      .hero-copy h1 { max-width:10ch; line-height:1.02; overflow-wrap:anywhere; word-break:break-word; }
       .hero-copy .headline { margin-top:1rem; font-size:1.08rem; color:var(--ink); max-width:60ch; }
       .hero-actions { display:flex; flex-wrap:wrap; gap:0.75rem; margin-top:1.15rem; }
       .hero-birth-section { padding-top:0; }
       .hero-followup-section { padding-top:0; }
       .hero-birth-band { display:grid; grid-template-columns:minmax(0,1.15fr) minmax(280px,0.9fr); gap:1rem; padding:18px; border:1px solid rgba(83,96,65,0.16); border-radius:22px; background:linear-gradient(135deg, rgba(244, 250, 248, 0.96), rgba(255, 248, 238, 0.9)); box-shadow:0 18px 38px rgba(58,45,31,0.08); }
+      .hero-birth-band > * { min-width:0; }
       .hero-birth-top { display:flex; align-items:center; gap:0.6rem; flex-wrap:wrap; }
       .hero-birth-eyebrow { margin-bottom:0; }
       .hero-birth-eyebrow::before { display:none; }
@@ -179,10 +180,13 @@
       .event-band-card .support-note-guardrail,
       .event-band-card .support-note-quote,
       .event-band-card .support-note-quote-toggle { background:rgba(255,255,255,0.88); }
-      .support-note-board { display:grid; grid-template-columns:1fr; gap:0.75rem; margin-top:1rem; }
-      .support-note-board h4 { grid-column:1 / -1; margin:0; font-size:0.92rem; color:var(--ink); }
-      .support-note-group { display:grid; gap:0.75rem; margin-top:0.2rem; }
-      .support-note-group-title { margin:0; font-size:0.84rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); }
+.support-note-board { display:grid; grid-template-columns:1fr; gap:0.75rem; margin-top:1rem; }
+.support-note-board h4 { grid-column:1 / -1; margin:0; font-size:0.92rem; color:var(--ink); }
+.support-note-fold { border:1px solid rgba(64,54,40,0.12); border-radius:16px; background:rgba(255,255,255,0.72); padding:0.75rem 0.9rem; }
+.support-note-fold summary { cursor:pointer; font-weight:700; color:var(--ink); line-height:1.5; }
+.support-note-fold[open] summary { margin-bottom:0.75rem; }
+.support-note-group { display:grid; gap:0.75rem; margin-top:0.2rem; }
+.support-note-group-title { margin:0; font-size:0.84rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); }
       .support-note-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0.75rem; }
       .support-note-card { display:grid; grid-template-columns:minmax(190px,0.54fr) minmax(0,1.46fr); gap:0.95rem; align-items:start; padding:0.9rem 1rem; border-radius:16px; border:1px solid rgba(64,54,40,0.12); background:rgba(255,255,255,0.76); }
       .support-note-card.note-up { border-color:rgba(180,91,40,0.24); background:rgba(255,246,239,0.9); }
@@ -753,7 +757,7 @@
                 <div class="gateway-meta"><strong>母猪锚</strong><div class="gateway-value">能繁母猪存栏 76 万头<div style="margin-top:4px;font-size:0.74rem;color:#7b7f86;line-height:1.35;">口径日 2025-09-02 · 旧口径</div></div></div>
                 <div class="gateway-meta"><strong>效率锚</strong><div class="gateway-value">PSY 为 25.4<div style="margin-top:4px;font-size:0.74rem;color:#7b7f86;line-height:1.35;">口径日 2025-09-02 · 旧口径</div></div></div>
               </div>
-              <p class="gateway-evidence"><strong>补充线索：</strong>暂无最新补充线索</p>
+              <p class="gateway-evidence"><strong>补充线索：</strong>1 条补充线索 / 成本；4月正常运营场线出栏肥猪完全成本已降至12.9元/公斤；2026年目标再降1-1.5元/公斤</p>
               <p class="gateway-evidence"><strong>证据边界：</strong>出栏23:历史口径候选 | 出栏24:已验证 | 出栏25:已验证 | 指引26:待补 | 指引27:待补 | 母猪:公司披露摘录 | PSY:公司披露摘录 | 成本:公司披露摘录</p>
             </article>
             
@@ -1477,7 +1481,7 @@
               <td>完全成本 12.2元/公斤<div style="margin-top:4px;font-size:0.74rem;color:#7b7f86;line-height:1.35;">口径日 2026-01-31 · 历史口径</div></td>
               <td>9.5%</td>
               <td>10.6%</td>
-              <td>暂无最新补充线索<div style="margin-top:4px;font-size:0.74rem;color:#7b7f86;line-height:1.35;">—</div></td>
+              <td>1 条补充线索<div style="margin-top:4px;font-size:0.74rem;color:#7b7f86;line-height:1.35;">成本；4月正常运营场线出栏肥猪完全成本已降至12.9元/公斤；2026年目标再降1-1.5元/公斤</div></td>
               <td>出栏23:历史口径候选 | 出栏24:已验证 | 出栏25:已验证 | 指引26:待补 | 指引27:待补 | 母猪:公司披露摘录 | PSY:公司披露摘录 | 成本:公司披露摘录</td>
               <td>2023年年度报告；12/12 月报或拆分已覆盖；12/12 月报或拆分已覆盖；公司披露摘录 | 2025-09-02 | high；公司披露摘录 | 2025-09-02 | high；成本口径日 | 2026-01-31；由经营指标官方摘录回填成本字段：完全成本全年平均下...；经营细项: 断奶成本 260元/头 / 断奶成本变化 较上年下降250元/头 / 料肉比 2.6</td>
             </tr>
@@ -1622,7 +1626,7 @@
               <td>运营成本 12.71元/公斤<div style="margin-top:4px;font-size:0.74rem;color:#7b7f86;line-height:1.35;">口径日 2025-08-30 · 旧口径</div></td>
               <td>2.9%</td>
               <td>待补</td>
-              <td>暂无最新补充线索<div style="margin-top:4px;font-size:0.74rem;color:#7b7f86;line-height:1.35;">—</div></td>
+              <td>1 条补充线索<div style="margin-top:4px;font-size:0.74rem;color:#7b7f86;line-height:1.35;">成本；公司表示2026年肥猪完全成本争取控制在12.6元/公斤左右（目标）</div></td>
               <td>出栏23:历史口径候选 | 出栏24:已验证 | 出栏25:已验证 | 指引26:待补 | 指引27:待补 | 母猪:待补 | PSY:待补 | 成本:公司披露摘录</td>
               <td>2023年年度报告；12/12 月报或拆分已覆盖；12/12 月报或拆分已覆盖；公司披露摘录 | 2024-08-31 | medium；成本口径日 | 2025-08-30；由经营指标官方摘录回填成本字段：育肥生产成本为 1...；经营细项: 断奶成本变化 较上年下降46.34元/头；字段校正 | 现有 2024 年官方材料仅能支持旧时点或能力表述，尚不足以...</td>
             </tr>
@@ -1942,6 +1946,20 @@
           .replace(/>/g, "&gt;")
           .replace(/"/g, "&quot;")
           .replace(/'/g, "&#39;");
+        const truncateText = (value, limit = 96) => {
+          const clean = String(value || "").replace(/\s+/g, " ").trim();
+          if (!clean) {
+            return "";
+          }
+          return clean.length > limit ? `${clean.slice(0, limit - 1)}…` : clean;
+        };
+        const summarizeEventPreview = (items, limit = 108) => {
+          const parts = (items || [])
+            .slice(0, 3)
+            .map((item) => truncateText(item.takeaway || item.headline || item.full_quote || "", 34))
+            .filter(Boolean);
+          return truncateText(parts.join(" / "), limit);
+        };
         const renderSourcePill = (label, sourceTier) => {
           if (!label) {
             return "";
@@ -2103,9 +2121,22 @@
             </article>
           `;
         };
-        const renderEventGroup = (title, items) => {
+        const renderEventGroup = (title, items, options = {}) => {
           if (!items.length) {
             return "";
+          }
+          const preview = summarizeEventPreview(items, 108);
+          if (options.collapsed) {
+            return `
+              <details class="support-note-fold">
+                <summary>${title} · ${items.length} 条${preview ? ` · ${escapeHtml(preview)}` : ""}</summary>
+                <section class="support-note-group">
+                  <div class="support-note-grid">
+                    ${items.map((item) => renderEventNote(item)).join("")}
+                  </div>
+                </section>
+              </details>
+            `;
           }
           return `
             <section class="support-note-group">
@@ -2167,7 +2198,7 @@
               <div class="support-note-board">
                 <h4>${panel.event_notes_title || "关键事件摘录"}</h4>
                 ${renderEventGroup("已纳入当前判断", boundEventNotes)}
-                ${renderEventGroup("仅作观察线索", watchEventNotes)}
+                ${renderEventGroup("仅作观察线索", watchEventNotes, { collapsed: true })}
               </div>
             `
           : "";
