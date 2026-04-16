@@ -2,6 +2,84 @@
   "company_name": "德康农牧",
   "operating_panels": [
     {
+      "panel_id": "dekon-shipment-annual-anchor",
+      "title": "年度出栏锚点（年报 / 汇总口径）",
+      "coverage_start": "2023",
+      "coverage_end": "2025",
+      "x_axis_type": "category",
+      "x_axis_data": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "series": [
+        {
+          "name": "年度出栏",
+          "type": "bar",
+          "data": [
+            [
+              "2023",
+              708.4
+            ],
+            [
+              "2024",
+              877.9
+            ],
+            [
+              "2025",
+              1082.8
+            ]
+          ]
+        }
+      ],
+      "latest_boxes": [
+        {
+          "label": "2025 出栏",
+          "value": "1082.8 万头",
+          "tone": "neutral",
+          "source_tier": "",
+          "source_label": "",
+          "trend_key": "",
+          "trend_icon": "",
+          "trend_label": ""
+        },
+        {
+          "label": "最新 YTD",
+          "value": "待补",
+          "tone": "neutral",
+          "source_tier": "",
+          "source_label": "",
+          "trend_key": "",
+          "trend_icon": "",
+          "trend_label": ""
+        },
+        {
+          "label": "覆盖状态",
+          "value": "公司披露摘录",
+          "tone": "neutral",
+          "source_tier": "",
+          "source_label": "",
+          "trend_key": "",
+          "trend_icon": "",
+          "trend_label": ""
+        },
+        {
+          "label": "最新月报",
+          "value": "无月报主序列",
+          "tone": "neutral",
+          "source_tier": "",
+          "source_label": "",
+          "trend_key": "",
+          "trend_icon": "",
+          "trend_label": ""
+        }
+      ],
+      "current_read": "当前没有可用月报主序列时，先用年度锚点确认公司规模级别与近年变化，避免把页面误读成“没有出栏数据”。",
+      "evidence_tier": "年报 / 汇总口径",
+      "data_mode": "reporting-mix-anchor",
+      "failure_mode": "这是年频锚点，不表达月度兑现节奏；若要看边际变化，仍需等待月报、经营公告或更多结构化更新。"
+    },
+    {
       "panel_id": "dekon-hog_full_cost",
       "title": "完全成本离散轨迹",
       "coverage_start": "2025-06-04",
