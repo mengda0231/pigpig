@@ -85,6 +85,20 @@
   },
   {
     "company_name": "天康生物",
+    "metric_family": "guidance_2026",
+    "metric_label": "2026 指引",
+    "metric_value": "400 - 500 万头",
+    "metric_unit": "万头",
+    "metric_date": "2025-09-04",
+    "actual_or_target": "target",
+    "evidence_mode": "support-candidate",
+    "binding_status": "support-candidate",
+    "source_type": "support-candidate",
+    "source_path": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\company\\industry-pig-zsxq-2025-09-04-天康生物-20250903-198336c3\\cursor-pdf-file-study.md",
+    "notes": "会议要点称天康生物 2025 年计划出栏 350-400 万头；若收购昌都畜牧成功，2026 年出栏量将达 500 万头；不考虑收购，2026 年白身出栏量预计也能达到 400 万头左右。当前仅按条件式 support 指引展示，不替代正式硬指引。"
+  },
+  {
+    "company_name": "天康生物",
     "metric_family": "hog_operating_cost",
     "metric_label": "运营成本",
     "metric_value": "生猪养殖成本为 13 元/kg",

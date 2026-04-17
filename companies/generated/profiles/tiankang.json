@@ -12,17 +12,16 @@
   "latest_evidence_mix": {
     "company-disclosure-extracted": 2,
     "historical-candidate": 1,
-    "pending": 2,
+    "pending": 1,
     "pending-company-capture": 1,
+    "support-candidate": 1,
     "verified": 2
   },
   "next_confirmations": [
-    "2026 指引",
     "2027 目标",
     "最新能繁母猪"
   ],
   "open_gaps": [
-    "2026 指引",
     "2027 目标",
     "最新能繁母猪",
     "sow_inventory_latest: keep-blank | 官方 2025 披露面已经重扫，仍未找到公司最新能繁母猪绝对值；公开网虽出现 14 / 13.3 万头口径，但时间锚与原始出处不够稳定，继续留空。"

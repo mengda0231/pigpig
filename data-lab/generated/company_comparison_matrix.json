@@ -378,7 +378,7 @@
     "shipment_latest_ytd": "89.9",
     "shipment_latest_month": "2026-03",
     "shipment_latest_yoy": "27.7%",
-    "guidance_2026": "",
+    "guidance_2026": "400 - 500 万头",
     "guidance_2027": "",
     "sow_inventory_latest": "",
     "sow_inventory_as_of": "",
@@ -397,7 +397,7 @@
       "shipment_2023": "historical-candidate",
       "shipment_2024": "verified",
       "shipment_2025": "verified",
-      "guidance_2026": "pending",
+      "guidance_2026": "support-candidate",
       "guidance_2027": "pending",
       "sow_inventory_latest": "pending-company-capture",
       "psy_latest": "company-disclosure-extracted",
@@ -405,11 +405,11 @@
     },
     "source_meta_by_field": {
       "guidance_2026": {
-        "source_label": "",
-        "source_date": "",
-        "source_type": "",
-        "source_path": "",
-        "notes": ""
+        "source_label": "support 候选 | 2025-09-04 | industry-pig-zsxq-2025-...",
+        "source_date": "2025-09-04",
+        "source_type": "support-candidate",
+        "source_path": "F:\\Codex\\projects\\research-report\\learning\\01-file-study\\cursor-pdf-imports\\company\\industry-pig-zsxq-2025-09-04-天康生物-20250903-198336c3\\cursor-pdf-file-study.md",
+        "notes": "会议要点称天康生物 2025 年计划出栏 350-400 万头；若收购昌都畜牧成功，2026 年出栏量将达 500 万头；不考虑收购，2026 年白身出栏量预计也能达到 400 万头左右。当前仅按条件式 support 指引展示，不替代正式硬指引。"
       },
       "guidance_2027": {
         "source_label": "",
@@ -440,8 +440,8 @@
         "notes": "由经营指标官方摘录回填成本字段：完全成本是多少， 今年的成本目标是 降到多少？ 答：2 月份的生猪完全成本是 13.12 ..."
       }
     },
-    "notes": "2023年年度报告；12/12 月报或拆分已覆盖；12/12 月报或拆分已覆盖；公司披露摘录 | 2025-03-21 | high；成本口径日 | 2025-03-21；由经营指标官方摘录回填成本字段：完全成本是多少， ...",
-    "evidence_badge": "出栏23:历史口径候选 | 出栏24:已验证 | 出栏25:已验证 | 指引26:待补 | 指引27:待补 | 母猪:待补 | PSY:公司披露摘录 | 成本:公司披露摘录"
+    "notes": "2023年年度报告；12/12 月报或拆分已覆盖；12/12 月报或拆分已覆盖；support 候选 | 2025-09-04 | ind...；公司披露摘录 | 2025-03-21 | high；成本口径日 | 2025-03-21；由经营指标官方摘录回填成本字段：完全成本是多少， ...",
+    "evidence_badge": "出栏23:历史口径候选 | 出栏24:已验证 | 出栏25:已验证 | 指引26:support候选 | 指引27:待补 | 母猪:待补 | PSY:公司披露摘录 | 成本:公司披露摘录"
   },
   {
     "company_name": "德康农牧",

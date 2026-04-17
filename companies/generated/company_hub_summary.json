@@ -149,13 +149,14 @@
     "latest_evidence_mix": {
       "company-disclosure-extracted": 2,
       "historical-candidate": 1,
-      "pending": 2,
+      "pending": 1,
       "pending-company-capture": 1,
+      "support-candidate": 1,
       "verified": 2
     },
-    "completeness_count": 5,
+    "completeness_count": 6,
     "completeness_total": 8,
-    "completeness_band": "中等",
+    "completeness_band": "较完整",
     "support_clue_count": "0",
     "support_clue_label": "暂无最新补充线索",
     "support_clue_preview": ""
