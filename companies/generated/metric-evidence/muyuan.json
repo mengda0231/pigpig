@@ -71,6 +71,20 @@
   },
   {
     "company_name": "牧原股份",
+    "metric_family": "avg_cost_latest",
+    "metric_label": "雪球成本线索",
+    "metric_value": "结合 3 月 28 日投资者关系活动记录，帖子强调公司 2026 年力争全年平均成本降至 11.5 元/公斤以下",
+    "metric_unit": "",
+    "metric_date": "2026-03-28",
+    "actual_or_target": "target",
+    "evidence_mode": "support-candidate",
+    "binding_status": "support-candidate",
+    "source_type": "雪球转载线索（待交叉验证）",
+    "source_path": "",
+    "notes": "属于近期交流对龙头低成本锚点的再确认，可作 support 交叉验证，但不需要改写当前更高等级原始披露。；动作建议：与现有 support 交叉验证；状态：corroborates-existing-guidance"
+  },
+  {
+    "company_name": "牧原股份",
     "metric_family": "psy_latest",
     "metric_label": "雪球PSY线索",
     "metric_value": "2025年9月 PSY在29左右；全程成活率87%；9月成本11.6元/公斤，10月11.3元/公斤",

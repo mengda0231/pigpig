@@ -15,6 +15,20 @@
   },
   {
     "company_name": "巨星农牧",
+    "metric_family": "guidance_2026",
+    "metric_label": "雪球出栏规划线索",
+    "metric_value": "作者结合年报与行业景气判断，继续强化公司轻资产扩张、出栏高增和成本领先的 2026 弹性逻辑",
+    "metric_unit": "",
+    "metric_date": "2026-03-17",
+    "actual_or_target": "actual",
+    "evidence_mode": "support-candidate",
+    "binding_status": "support-candidate",
+    "source_type": "雪球线索（待交叉验证）",
+    "source_path": "",
+    "notes": "适合作为公司页前瞻解读的补充，但本质仍是二手作者判断，不能视为公司硬出栏指引。；动作建议：仅线索展示；状态：qualitative-outlook-support"
+  },
+  {
+    "company_name": "巨星农牧",
     "metric_family": "psy_latest",
     "metric_label": "雪球PSY线索",
     "metric_value": "PSY 突破30；完全成本降至6.0元/斤以内；料肉比约2.5",
