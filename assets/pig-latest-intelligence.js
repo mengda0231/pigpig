@@ -20,30 +20,43 @@
     return String(value || "").replace(/\s+/g, " ").trim();
   }
 
-  function renderExcerptDetails(label, text, expandedText) {
+  function renderExcerptDetails(label, text, expandedText, options) {
     var summary = normalizeText(text);
     var fullText = normalizeText(expandedText || text);
     if (!fullText) {
       return "";
     }
-    if (fullText.length <= 88) {
-      return (
-        '<p class="intelligence-list-body intelligence-list-body-quote muted"><strong>' +
-        escapeHtml(label) +
-        "：</strong>" +
-        escapeHtml(fullText) +
-        "</p>"
-      );
-    }
+    var prompt =
+      (options && options.collapsedNote) || "点击查看完整原句";
+    var preview = summary ? truncateText(summary, 84) : prompt;
     return (
       '<details class="intelligence-excerpt-details">' +
       '<summary class="intelligence-excerpt-summary">' +
+      '<span class="intelligence-excerpt-label">' +
       escapeHtml(label) +
+      "</span>" +
+      '<span class="intelligence-excerpt-preview">' +
+      escapeHtml(preview) +
+      "</span>" +
       "</summary>" +
       '<div class="intelligence-excerpt-body">' +
       escapeHtml(fullText || summary) +
       "</div>" +
       "</details>"
+    );
+  }
+
+  function renderListMeta(theme) {
+    var cleanTheme = normalizeText(theme);
+    if (!cleanTheme) {
+      return "";
+    }
+    return (
+      '<div class="intelligence-list-meta-row">' +
+      '<span class="intelligence-mini-chip">' +
+      escapeHtml(cleanTheme) +
+      "</span>" +
+      "</div>"
     );
   }
 
@@ -100,6 +113,10 @@
       rows
       .map(function (item) {
         var link = item.url || item.requested_url || item.landed_url || "";
+        var summaryText = truncateText(
+          item.summary || item.excerpt || item.visible_body || "",
+          120
+        );
         return (
           '<article class="intelligence-list-item">' +
           '<div class="intelligence-list-top">' +
@@ -113,10 +130,18 @@
           '<h4 class="intelligence-list-title">' +
           escapeHtml(item.title || "") +
           "</h4>" +
-          '<p class="intelligence-list-body">' +
-          escapeHtml(truncateText(item.summary || "", 180)) +
-          "</p>" +
-          renderExcerptDetails("事件摘录", item.excerpt || item.summary || "", item.visible_body || item.excerpt || item.summary || "") +
+          renderListMeta(item.theme || item.source_tier_label || "") +
+          (summaryText
+            ? '<p class="intelligence-list-body intelligence-list-body-lead"><strong>研究摘要：</strong>' +
+              escapeHtml(summaryText) +
+              "</p>"
+            : "") +
+          renderExcerptDetails(
+            "事件摘录",
+            "",
+            item.visible_body || item.excerpt || item.summary || "",
+            { collapsedNote: "点击查看完整原句" }
+          ) +
           '<p class="intelligence-list-body muted"><strong>当前采用方式：</strong>' +
           escapeHtml(item.proposed_use || "") +
           "</p>" +
@@ -146,6 +171,7 @@
       rows
       .map(function (item) {
         var link = item.url || "";
+        var summaryText = truncateText(item.summary || "", 110);
         return (
           '<article class="intelligence-list-item tone-' +
           tone +
@@ -163,10 +189,18 @@
           '<h4 class="intelligence-list-title">' +
           escapeHtml(item.title || "") +
           "</h4>" +
-          '<p class="intelligence-list-body">' +
-          escapeHtml(truncateText(item.summary || "", 160)) +
-          "</p>" +
-          renderExcerptDetails("观点摘录", item.summary || "", item.full_quote || item.summary || "") +
+          renderListMeta(item.theme || "") +
+          (summaryText
+            ? '<p class="intelligence-list-body intelligence-list-body-lead"><strong>观点摘要：</strong>' +
+              escapeHtml(summaryText) +
+              "</p>"
+            : "") +
+          renderExcerptDetails(
+            "观点摘录",
+            "",
+            item.full_quote || item.summary || "",
+            { collapsedNote: "点击查看完整原句" }
+          ) +
           '<p class="intelligence-list-body muted"><strong>不能直接升级的地方：</strong>' +
           escapeHtml(item.blind_spot || "") +
           "</p>" +
@@ -212,6 +246,26 @@
         .join("") +
       "</div>" +
       "</article>"
+    );
+  }
+
+  function renderSourceCoverageNote(payload) {
+    var primary = (payload.quality_source_whitelist || [])
+      .slice(0, 5)
+      .join(" / ");
+    var watchlist = (payload.quality_source_watchlist || [])
+      .slice(0, 3)
+      .join(" / ");
+    if (!primary && !watchlist) {
+      return "";
+    }
+    return (
+      '<p class="intelligence-source-note muted"><strong>当前主池：</strong>' +
+      escapeHtml(primary || "待补") +
+      (watchlist
+        ? ' <strong>扩展观察池：</strong>' + escapeHtml(watchlist)
+        : "") +
+      "</p>"
     );
   }
 
@@ -304,16 +358,17 @@
       '<article class="intelligence-day-block intelligence-day-band">' +
       '<div class="intelligence-panel-top intelligence-panel-side-head"><h3>最近高质量公众号</h3><span class="intelligence-date">优先纳入公众号，不用雪球情绪帖</span></div>' +
       '<div class="intelligence-day-block-body">' +
-      renderMaterialList(articleItems, compact ? 2 : 3, "最近 7 天没有新的高质量公众号正文。") +
+      renderSourceCoverageNote(payload) +
+      renderMaterialList(articleItems, compact ? 3 : 5, "最近 7 天没有新的高质量公众号正文。") +
       "</div></article>" +
       '<article class="intelligence-day-block intelligence-day-band">' +
       '<div class="intelligence-panel-top intelligence-panel-side-head"><h3>公开分歧</h3><span class="intelligence-date">最近 7 天可见观点</span></div>' +
       '<div class="intelligence-day-block-body"><div class="intelligence-view-rail">' +
       '<div class="intelligence-view-lane"><p class="intelligence-mini-title">偏多 / 偏修复</p>' +
-      renderViewList(bullishViews, "bullish", "最近没有稳定的偏多公开说法。", compact ? 1 : 2) +
+      renderViewList(bullishViews, "bullish", "最近没有稳定的偏多公开说法。", compact ? 2 : 3) +
       "</div>" +
       '<div class="intelligence-view-lane"><p class="intelligence-mini-title">偏谨慎 / 偏承压</p>' +
-      renderViewList(bearishViews, "bearish", "最近没有稳定的偏谨慎公开说法。", compact ? 1 : 2) +
+      renderViewList(bearishViews, "bearish", "最近没有稳定的偏谨慎公开说法。", compact ? 2 : 3) +
       "</div>" +
       "</div></div></article>" +
       "</div>" +
