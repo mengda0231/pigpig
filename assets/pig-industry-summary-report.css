@@ -1,0 +1,1186 @@
+:root {
+  --bg: #f2ede6;
+  --paper: #fdfbf7;
+  --paper-strong: #ffffff;
+  --ink: #1f1a16;
+  --muted: #6b635b;
+  --line: rgba(102, 88, 74, 0.18);
+  --line-strong: rgba(92, 73, 53, 0.28);
+  --accent: #8b5328;
+  --accent-deep: #6f3d18;
+  --accent-soft: rgba(139, 83, 40, 0.08);
+  --support: #7d6417;
+  --support-soft: rgba(125, 100, 23, 0.12);
+  --warning: #8e4637;
+  --warning-soft: rgba(142, 70, 55, 0.11);
+  --strong: #335848;
+  --strong-soft: rgba(51, 88, 72, 0.11);
+  --neutral-soft: rgba(80, 69, 59, 0.07);
+  --shadow: 0 18px 48px rgba(55, 36, 20, 0.07);
+  --brand-mark-url: url("./cayman-asset-brand-crop.png");
+  --font-serif: "STSong", "Songti SC", "SimSun", "Noto Serif SC", serif;
+  --font-sans: "Microsoft YaHei UI", "Segoe UI", "PingFang SC", "Noto Sans SC", sans-serif;
+}
+
+@page {
+  size: A4 portrait;
+  margin: 12mm 10mm 14mm;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.report-shell {
+  width: min(100%, 1020px);
+  margin: 0 auto;
+  padding: 10px 0 28px;
+}
+
+.report-page {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  margin: 0 auto 12px;
+  padding: 16px 18px 18px;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.report-page + .report-page {
+  break-before: page;
+}
+
+.report-page--cover {
+  min-height: 262mm;
+  padding: 18px 20px 18px;
+  background:
+    radial-gradient(circle at top right, rgba(139, 83, 40, 0.18), transparent 34%),
+    radial-gradient(circle at 12% 18%, rgba(51, 88, 72, 0.08), transparent 26%),
+    linear-gradient(180deg, rgba(255, 252, 247, 1) 0%, rgba(251, 247, 241, 1) 100%);
+}
+
+.report-page h1,
+.report-page h2,
+.report-page h3,
+.report-page h4 {
+  margin: 0;
+  color: var(--ink);
+}
+
+.report-page h1,
+.report-page h2,
+.report-page h3 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.report-page h1 {
+  font-size: 33px;
+  line-height: 1.12;
+}
+
+.report-page h2 {
+  font-size: 23px;
+  line-height: 1.18;
+}
+
+.report-page h3 {
+  font-size: 16px;
+  line-height: 1.28;
+}
+
+.report-page h4 {
+  font-size: 12px;
+  line-height: 1.36;
+}
+
+.report-page p,
+.report-page li,
+.report-page td,
+.report-page th,
+.report-page span,
+.report-page strong,
+.report-page em {
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.eyebrow,
+.cover-kicker {
+  display: inline-flex;
+  align-items: center;
+  font-size: 10px;
+  line-height: 1.2;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.cover-masthead,
+.page-head,
+.company-card__head,
+.chart-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.cover-masthead {
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(99, 83, 67, 0.12);
+}
+
+.cover-masthead > div:first-child {
+  display: grid;
+  gap: 5px;
+}
+
+.cover-date,
+.cover-masthead__note {
+  color: var(--muted);
+}
+
+.cover-masthead__note {
+  max-width: 220px;
+  text-align: right;
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.cover-layout,
+.lead-grid,
+.thesis-grid,
+.chart-grid,
+.company-grid,
+.metric-box-grid,
+.cover-score-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.cover-layout {
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  align-items: start;
+}
+
+.cover-title-block {
+  display: grid;
+  gap: 10px;
+}
+
+.cover-brand-lockup {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.cover-brand-lockup img {
+  display: block;
+  width: 290px;
+  max-width: 100%;
+  height: auto;
+}
+
+.cover-subtitle {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.58;
+  color: #352c25;
+  max-width: 94%;
+}
+
+.edition-banner {
+  display: inline-flex;
+  align-items: center;
+  max-width: 92%;
+  margin-top: 12px;
+  padding: 8px 11px;
+  border-radius: 999px;
+  border: 1px solid rgba(139, 83, 40, 0.16);
+  background: rgba(255, 255, 255, 0.74);
+  color: #4a3b2f;
+  font-size: 10px;
+  line-height: 1.48;
+}
+
+.cover-score-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 16px;
+}
+
+.score-card,
+.summary-card,
+.chart-card,
+.company-card,
+.metric-box {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.score-card {
+  padding: 12px 13px;
+}
+
+.score-card span,
+.lead-grid span,
+.company-card__grid span,
+.chart-card__meta-grid > div span,
+.metric-box span {
+  display: block;
+  font-size: 10px;
+  line-height: 1.24;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.score-card strong {
+  display: block;
+  font-size: 15px;
+  line-height: 1.36;
+}
+
+.lead-panel {
+  margin-top: 16px;
+  padding: 14px 15px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(139, 83, 40, 0.06), rgba(255, 255, 255, 0.96));
+  border: 1px solid rgba(139, 83, 40, 0.12);
+}
+
+.lead-panel h3 {
+  margin-top: 4px;
+}
+
+.lead-panel > p {
+  margin: 8px 0 0;
+  font-size: 13px;
+  line-height: 1.62;
+}
+
+.lead-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 10px;
+}
+
+.lead-grid > div {
+  padding-top: 8px;
+  border-top: 1px solid rgba(97, 84, 72, 0.16);
+}
+
+.lead-grid strong {
+  font-size: 12px;
+  line-height: 1.52;
+}
+
+.cover-side {
+  display: grid;
+  gap: 12px;
+}
+
+.cover-foot-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.cover-foot-strip article {
+  padding: 11px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(102, 88, 74, 0.14);
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.cover-foot-strip span {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 10px;
+  line-height: 1.24;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.cover-foot-strip strong {
+  display: block;
+  font-size: 12px;
+  line-height: 1.48;
+}
+
+.summary-card {
+  padding: 12px 13px;
+}
+
+.summary-card--callout {
+  background: linear-gradient(180deg, rgba(51, 88, 72, 0.06), rgba(255, 255, 255, 0.98));
+}
+
+.summary-card--accent {
+  background: linear-gradient(180deg, rgba(139, 83, 40, 0.05), rgba(255, 255, 255, 0.98));
+}
+
+.summary-card ul {
+  margin: 8px 0 0 18px;
+  padding: 0;
+}
+
+.summary-card p {
+  margin: 8px 0 0;
+}
+
+.page-head {
+  margin-bottom: 12px;
+}
+
+.chapter-head {
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(99, 83, 67, 0.12);
+}
+
+.page-head p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  max-width: 72%;
+}
+
+.chapter-head p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  max-width: 72%;
+}
+
+.thesis-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.thesis-grid--bottom {
+  margin-top: 12px;
+}
+
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 3px 8px;
+  font-size: 10px;
+  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  border: 1px solid transparent;
+}
+
+.badge--neutral {
+  background: var(--neutral-soft);
+  color: #504840;
+  border-color: rgba(80, 69, 59, 0.1);
+}
+
+.badge--support {
+  background: var(--support-soft);
+  color: var(--support);
+  border-color: rgba(125, 100, 23, 0.18);
+}
+
+.badge--warning {
+  background: var(--warning-soft);
+  color: var(--warning);
+  border-color: rgba(142, 70, 55, 0.18);
+}
+
+.badge--strong {
+  background: var(--strong-soft);
+  color: var(--strong);
+  border-color: rgba(51, 88, 72, 0.18);
+}
+
+.chart-grid--summary,
+.chart-grid--company {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.chart-card {
+  padding: 12px 13px 13px;
+  overflow: hidden;
+}
+
+.chart-card__header h3 {
+  margin-top: 3px;
+}
+
+.chart-card__meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 8px 0 6px;
+}
+
+.chart-judgment,
+.chart-card__notes p {
+  margin: 8px 0 0;
+}
+
+.chart-surface {
+  width: 100%;
+  height: 214px;
+  margin-top: 8px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(255, 251, 245, 0.78), rgba(248, 245, 239, 0.48));
+  border: 1px solid rgba(112, 95, 78, 0.08);
+  overflow: hidden;
+}
+
+.chart-card--compact .chart-surface {
+  height: 182px;
+}
+
+.chart-card--tight .chart-surface {
+  height: 156px;
+}
+
+.chart-card--sparse .chart-surface {
+  height: 126px;
+}
+
+.chart-surface > div,
+.chart-surface svg,
+.chart-surface canvas {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+.chart-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--muted);
+}
+
+.metric-box-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 8px;
+}
+
+.metric-box {
+  padding: 8px 10px;
+  min-height: 62px;
+}
+
+.metric-box strong {
+  display: block;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.table-shell {
+  margin-top: 8px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.report-table th,
+.report-table td {
+  padding: 6px 7px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+  text-align: left;
+}
+
+.report-table thead th {
+  background: rgba(140, 114, 89, 0.08);
+  font-size: 10px;
+  line-height: 1.35;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.report-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.report-table tbody tr:nth-child(even) td {
+  background: rgba(140, 114, 89, 0.04);
+}
+
+.report-table--compact th,
+.report-table--compact td {
+  font-size: 11px;
+}
+
+.report-table--matrix th,
+.report-table--matrix td {
+  font-size: 10px;
+  word-break: break-word;
+}
+
+.report-page:not(.report-page--cover)::before {
+  content: "";
+  display: block;
+  height: 34px;
+  margin-bottom: 10px;
+  background: var(--brand-mark-url) no-repeat right center / 186px auto;
+  opacity: 0.92;
+}
+
+.watchboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.watch-card {
+  padding: 12px 13px;
+  border-radius: 12px;
+  border: 1px solid rgba(102, 88, 74, 0.16);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.watch-card h3 {
+  margin-top: 4px;
+  font-size: 15px;
+}
+
+.watch-card p {
+  margin: 7px 0 0;
+  color: #302823;
+}
+
+.company-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.company-card {
+  padding: 12px 13px 13px;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.company-card__head h3 {
+  font-size: 16px;
+}
+
+.company-card__head p {
+  margin: 5px 0 0;
+  color: #352c25;
+}
+
+.company-card__subline {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.company-card__featured {
+  margin-top: 10px;
+  padding: 11px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(139, 83, 40, 0.16);
+  background: linear-gradient(180deg, rgba(139, 83, 40, 0.05), rgba(255, 255, 255, 0.98));
+}
+
+.company-card__featured-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.company-card__featured-head > span {
+  display: block;
+  font-size: 10px;
+  line-height: 1.24;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.company-card__featured strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 15px;
+  line-height: 1.42;
+}
+
+.company-card__feature-note {
+  margin: 5px 0 0;
+}
+
+.company-card__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 10px;
+  margin-top: 10px;
+}
+
+.company-card__grid strong {
+  display: block;
+  font-size: 12px;
+  line-height: 1.42;
+}
+
+.company-card__tail {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(97, 84, 72, 0.14);
+}
+
+.company-card__tail p {
+  margin: 4px 0 0;
+}
+
+.company-card__footnote {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+body.report-theme--cayman-classic-note .edition-banner {
+  background: rgba(230, 57, 70, 0.04);
+  border-color: rgba(230, 57, 70, 0.14);
+}
+
+body.report-theme--cayman-classic-note .report-page--cover {
+  background:
+    radial-gradient(circle at top right, rgba(230, 57, 70, 0.05), transparent 30%),
+    linear-gradient(180deg, rgba(255, 252, 248, 1) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+body.report-theme--cayman-classic-note .report-page--cover::after {
+  content: "";
+  display: block;
+  height: 20px;
+  margin-top: 14px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(230, 57, 70, 0.12), rgba(230, 57, 70, 0.02));
+}
+
+body.report-theme--cayman-research-folio {
+  --bg: #f7f4f2;
+  --paper: #fffdfb;
+  --paper-strong: #ffffff;
+  --ink: #231f1c;
+  --muted: #6f6156;
+  --line: rgba(96, 84, 74, 0.18);
+  --line-strong: rgba(96, 84, 74, 0.28);
+  --accent: #d62839;
+  --accent-deep: #a01a2a;
+  --accent-soft: rgba(214, 40, 57, 0.08);
+  --support: #75611c;
+  --support-soft: rgba(117, 97, 28, 0.12);
+  --warning: #8f4331;
+  --warning-soft: rgba(143, 67, 49, 0.11);
+  --strong: #4d5e57;
+  --strong-soft: rgba(77, 94, 87, 0.11);
+  --neutral-soft: rgba(82, 73, 66, 0.07);
+  --shadow: 0 14px 42px rgba(51, 34, 23, 0.05);
+  --font-serif: "Cambria", "STSong", "Songti SC", "Noto Serif SC", serif;
+  --font-sans: "Aptos", "Segoe UI", "Microsoft YaHei UI", "PingFang SC", "Noto Sans SC", sans-serif;
+  background: var(--bg);
+}
+
+body.report-theme--cayman-research-folio .report-page {
+  border-radius: 10px;
+}
+
+body.report-theme--cayman-research-folio .page-head,
+body.report-theme--cayman-research-folio .chapter-head {
+  border-bottom-color: rgba(214, 40, 57, 0.18);
+}
+
+body.report-theme--cayman-research-folio .page-head h2,
+body.report-theme--cayman-research-folio .chapter-head h2 {
+  position: relative;
+  padding-left: 14px;
+}
+
+body.report-theme--cayman-research-folio .page-head h2::before,
+body.report-theme--cayman-research-folio .chapter-head h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  bottom: 3px;
+  width: 4px;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+body.report-theme--cayman-research-folio .report-page--cover {
+  background:
+    linear-gradient(180deg, rgba(230, 57, 70, 0.03), transparent 24%),
+    linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 252, 250, 1) 100%);
+}
+
+body.report-theme--cayman-research-folio .cover-score-grid {
+  border-top: 1px solid rgba(214, 40, 57, 0.14);
+  padding-top: 12px;
+}
+
+body.report-theme--cayman-research-folio .score-card,
+body.report-theme--cayman-research-folio .summary-card,
+body.report-theme--cayman-research-folio .watch-card,
+body.report-theme--cayman-research-folio .chart-card,
+body.report-theme--cayman-research-folio .company-card {
+  box-shadow: none;
+}
+
+body.report-theme--cayman-research-folio .company-card__featured {
+  background: linear-gradient(180deg, rgba(230, 57, 70, 0.05), rgba(255, 255, 255, 0.98));
+}
+
+body.report-theme--cayman-editorial-brief {
+  --bg: #f6f0ea;
+  --paper: #fffaf4;
+  --paper-strong: #ffffff;
+  --ink: #221714;
+  --muted: #7a695d;
+  --line: rgba(125, 100, 82, 0.16);
+  --line-strong: rgba(125, 100, 82, 0.26);
+  --accent: #d92d3c;
+  --accent-deep: #9b1a26;
+  --accent-soft: rgba(217, 45, 60, 0.08);
+  --support: #6e5b1c;
+  --support-soft: rgba(110, 91, 28, 0.12);
+  --warning: #954437;
+  --warning-soft: rgba(149, 68, 55, 0.11);
+  --strong: #495c53;
+  --strong-soft: rgba(73, 92, 83, 0.1);
+  --neutral-soft: rgba(78, 66, 58, 0.07);
+  --shadow: 0 14px 38px rgba(58, 36, 23, 0.04);
+  --font-serif: "Georgia", "STSong", "Songti SC", "Noto Serif SC", serif;
+  --font-sans: "Aptos", "Segoe UI", "Microsoft YaHei UI", "PingFang SC", "Noto Sans SC", sans-serif;
+  background: var(--bg);
+}
+
+body.report-theme--cayman-editorial-brief .report-shell {
+  width: min(100%, 1060px);
+}
+
+body.report-theme--cayman-editorial-brief .report-page {
+  border-radius: 0;
+  box-shadow: none;
+  background: linear-gradient(180deg, rgba(255, 250, 244, 1), rgba(255, 253, 250, 1));
+}
+
+body.report-theme--cayman-editorial-brief .report-page--cover {
+  background:
+    linear-gradient(180deg, rgba(217, 45, 60, 0.03), transparent 22%),
+    linear-gradient(180deg, rgba(255, 248, 241, 1) 0%, rgba(255, 253, 249, 1) 100%);
+}
+
+body.report-theme--cayman-editorial-brief .cover-title-block {
+  border-left: 6px solid var(--accent);
+  padding-left: 16px;
+}
+
+body.report-theme--cayman-editorial-brief .report-page h1 {
+  font-size: 42px;
+  line-height: 1.05;
+}
+
+body.report-theme--cayman-editorial-brief .page-head h2,
+body.report-theme--cayman-editorial-brief .chapter-head h2 {
+  font-size: 28px;
+}
+
+body.report-theme--cayman-editorial-brief .edition-banner {
+  display: block;
+  max-width: 86%;
+  padding: 10px 0;
+  border-radius: 0;
+  border: 0;
+  border-top: 1px solid rgba(217, 45, 60, 0.18);
+  border-bottom: 1px solid rgba(217, 45, 60, 0.18);
+  background: transparent;
+}
+
+body.report-theme--cayman-editorial-brief .score-card,
+body.report-theme--cayman-editorial-brief .summary-card,
+body.report-theme--cayman-editorial-brief .chart-card,
+body.report-theme--cayman-editorial-brief .company-card,
+body.report-theme--cayman-editorial-brief .watch-card,
+body.report-theme--cayman-editorial-brief .metric-box {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+body.report-theme--cayman-editorial-brief .chart-surface {
+  border-radius: 0;
+  background: linear-gradient(180deg, rgba(255, 248, 241, 0.9), rgba(255, 252, 248, 0.98));
+}
+
+body.report-theme--cayman-editorial-brief .company-card__featured {
+  border-radius: 0;
+  border-left: 4px solid var(--accent);
+  background: rgba(255, 245, 239, 0.94);
+}
+
+body.report-theme--cayman-strategy-ledger {
+  --bg: #f5f3f0;
+  --paper: #fffefe;
+  --paper-strong: #ffffff;
+  --ink: #1f1f1f;
+  --muted: #6b6762;
+  --line: rgba(72, 66, 61, 0.15);
+  --line-strong: rgba(72, 66, 61, 0.26);
+  --accent: #cf2337;
+  --accent-deep: #8d1826;
+  --accent-soft: rgba(207, 35, 55, 0.08);
+  --support: #6b5d24;
+  --support-soft: rgba(107, 93, 36, 0.12);
+  --warning: #914539;
+  --warning-soft: rgba(145, 69, 57, 0.1);
+  --strong: #47534d;
+  --strong-soft: rgba(71, 83, 77, 0.1);
+  --neutral-soft: rgba(68, 63, 58, 0.07);
+  --shadow: 0 10px 30px rgba(39, 30, 23, 0.03);
+  --font-serif: "Courier New", "Consolas", monospace;
+  --font-sans: "Consolas", "Aptos", "Segoe UI", "Microsoft YaHei UI", monospace;
+  background: var(--bg);
+}
+
+body.report-theme--cayman-strategy-ledger .report-page {
+  border-radius: 6px;
+  box-shadow: none;
+  background:
+    linear-gradient(transparent 31px, rgba(207, 35, 55, 0.05) 32px),
+    linear-gradient(90deg, transparent 47px, rgba(90, 81, 73, 0.05) 48px),
+    linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 253, 252, 1));
+  background-size: 100% 32px, 48px 100%, 100% 100%;
+}
+
+body.report-theme--cayman-strategy-ledger .report-page--cover {
+  background:
+    linear-gradient(transparent 31px, rgba(207, 35, 55, 0.05) 32px),
+    linear-gradient(90deg, transparent 47px, rgba(90, 81, 73, 0.05) 48px),
+    linear-gradient(180deg, rgba(255, 252, 251, 1), rgba(255, 255, 255, 1));
+  background-size: 100% 32px, 48px 100%, 100% 100%;
+}
+
+body.report-theme--cayman-strategy-ledger .report-page h1,
+body.report-theme--cayman-strategy-ledger .report-page h2,
+body.report-theme--cayman-strategy-ledger .report-page h3 {
+  font-family: "Consolas", "Courier New", monospace;
+  letter-spacing: 0;
+}
+
+body.report-theme--cayman-strategy-ledger .badge {
+  border-radius: 3px;
+}
+
+body.report-theme--cayman-strategy-ledger .report-table {
+  table-layout: auto;
+}
+
+body.report-theme--cayman-strategy-ledger .report-table th,
+body.report-theme--cayman-strategy-ledger .report-table td {
+  border-bottom-color: rgba(207, 35, 55, 0.12);
+}
+
+body.report-theme--cayman-strategy-ledger .report-table thead th {
+  background: rgba(207, 35, 55, 0.08);
+  color: #7a1624;
+}
+
+body.report-theme--cayman-whitepaper-book {
+  --bg: #f4f2ef;
+  --paper: #fffefe;
+  --paper-strong: #ffffff;
+  --ink: #1c1917;
+  --muted: #72695f;
+  --line: rgba(89, 79, 71, 0.14);
+  --line-strong: rgba(89, 79, 71, 0.22);
+  --accent: #e13343;
+  --accent-deep: #a31e2c;
+  --accent-soft: rgba(225, 51, 67, 0.07);
+  --support: #6b5d20;
+  --support-soft: rgba(107, 93, 32, 0.11);
+  --warning: #8b4536;
+  --warning-soft: rgba(139, 69, 54, 0.1);
+  --strong: #4d5b55;
+  --strong-soft: rgba(77, 91, 85, 0.1);
+  --neutral-soft: rgba(79, 70, 63, 0.07);
+  --shadow: 0 10px 28px rgba(43, 32, 24, 0.03);
+  --font-serif: "Georgia", "Palatino Linotype", "STSong", "Songti SC", serif;
+  --font-sans: "Aptos", "Segoe UI", "Microsoft YaHei UI", "PingFang SC", sans-serif;
+  background: var(--bg);
+}
+
+body.report-theme--cayman-whitepaper-book .report-shell {
+  width: min(100%, 1080px);
+}
+
+body.report-theme--cayman-whitepaper-book .report-page {
+  border-radius: 0;
+  box-shadow: none;
+  border: 1px solid rgba(89, 79, 71, 0.08);
+}
+
+body.report-theme--cayman-whitepaper-book .report-page--cover {
+  background:
+    radial-gradient(circle at top right, rgba(225, 51, 67, 0.04), transparent 26%),
+    linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 252, 251, 1));
+}
+
+body.report-theme--cayman-whitepaper-book .cover-layout {
+  grid-template-columns: minmax(0, 1.05fr) minmax(240px, 0.95fr);
+  gap: 18px;
+}
+
+body.report-theme--cayman-whitepaper-book .cover-title-block {
+  gap: 14px;
+}
+
+body.report-theme--cayman-whitepaper-book .report-page h1 {
+  font-size: 38px;
+}
+
+body.report-theme--cayman-whitepaper-book .page-head,
+body.report-theme--cayman-whitepaper-book .chapter-head {
+  border-bottom-style: dashed;
+}
+
+body.report-theme--cayman-whitepaper-book .edition-banner {
+  max-width: 84%;
+  background: rgba(225, 51, 67, 0.03);
+}
+
+body.report-theme--cayman-whitepaper-book .cover-foot-strip article {
+  background: rgba(255, 255, 255, 0.68);
+}
+
+body.report-theme--cayman-final {
+  --bg: #f4efe9;
+  --paper: #fffdfa;
+  --paper-strong: #ffffff;
+  --ink: #1f1a17;
+  --muted: #746960;
+  --line: rgba(112, 96, 82, 0.16);
+  --line-strong: rgba(112, 96, 82, 0.24);
+  --accent: #c62839;
+  --accent-deep: #8f1a29;
+  --accent-soft: rgba(198, 40, 57, 0.07);
+  --support: #705f1f;
+  --support-soft: rgba(112, 95, 31, 0.11);
+  --warning: #924637;
+  --warning-soft: rgba(146, 70, 55, 0.11);
+  --strong: #4b5d55;
+  --strong-soft: rgba(75, 93, 85, 0.1);
+  --neutral-soft: rgba(79, 70, 62, 0.07);
+  --shadow: 0 12px 32px rgba(42, 31, 24, 0.03);
+  --font-serif: "Georgia", "Palatino Linotype", "STSong", "Songti SC", "Noto Serif SC", serif;
+  --font-sans: "Aptos", "Segoe UI", "Microsoft YaHei UI", "PingFang SC", "Noto Sans SC", sans-serif;
+  background: var(--bg);
+}
+
+body.report-theme--cayman-final .report-shell {
+  width: min(100%, 1040px);
+}
+
+body.report-theme--cayman-final .report-page {
+  border-radius: 10px;
+  box-shadow: none;
+  border: 1px solid rgba(112, 96, 82, 0.12);
+  background: #fffdfa;
+}
+
+body.report-theme--cayman-final .report-page--cover {
+  background:
+    radial-gradient(circle at top right, rgba(198, 40, 57, 0.05), transparent 26%),
+    linear-gradient(180deg, rgba(255, 251, 247, 1) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+body.report-theme--cayman-final .report-page:not(.report-page--cover) {
+  background: #fffdfa;
+}
+
+body.report-theme--cayman-final .cover-layout {
+  grid-template-columns: minmax(0, 1.08fr) minmax(260px, 0.92fr);
+  gap: 18px;
+}
+
+body.report-theme--cayman-final .cover-brand-lockup img {
+  width: 302px;
+}
+
+body.report-theme--cayman-final .cover-title-block {
+  border-left: 5px solid var(--accent);
+  padding-left: 18px;
+  gap: 13px;
+}
+
+body.report-theme--cayman-final .report-page h1 {
+  font-size: 40px;
+  line-height: 1.04;
+}
+
+body.report-theme--cayman-final .page-head,
+body.report-theme--cayman-final .chapter-head {
+  border-bottom-color: rgba(198, 40, 57, 0.16);
+}
+
+body.report-theme--cayman-final .page-head h2,
+body.report-theme--cayman-final .chapter-head h2 {
+  position: relative;
+  padding-left: 16px;
+  font-size: 27px;
+}
+
+body.report-theme--cayman-final .page-head h2::before,
+body.report-theme--cayman-final .chapter-head h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  bottom: 4px;
+  width: 4px;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+body.report-theme--cayman-final .edition-banner {
+  max-width: 88%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: rgba(198, 40, 57, 0.03);
+  border-color: rgba(198, 40, 57, 0.14);
+}
+
+body.report-theme--cayman-final .score-card,
+body.report-theme--cayman-final .summary-card,
+body.report-theme--cayman-final .watch-card,
+body.report-theme--cayman-final .chart-card,
+body.report-theme--cayman-final .company-card,
+body.report-theme--cayman-final .metric-box {
+  border-radius: 10px;
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+body.report-theme--cayman-final .lead-panel {
+  background: linear-gradient(180deg, rgba(198, 40, 57, 0.05), rgba(255, 255, 255, 0.98));
+  border-color: rgba(198, 40, 57, 0.14);
+}
+
+body.report-theme--cayman-final .summary-card--callout {
+  background: linear-gradient(180deg, rgba(198, 40, 57, 0.04), rgba(255, 255, 255, 0.98));
+}
+
+body.report-theme--cayman-final .summary-card--accent {
+  background: linear-gradient(180deg, rgba(247, 244, 240, 1), rgba(255, 255, 255, 1));
+}
+
+body.report-theme--cayman-final .chart-surface {
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(255, 248, 243, 0.92), rgba(255, 255, 255, 0.98));
+}
+
+body.report-theme--cayman-final .company-card__featured {
+  border-left: 4px solid var(--accent);
+  background: linear-gradient(180deg, rgba(198, 40, 57, 0.04), rgba(255, 255, 255, 0.98));
+}
+
+body.report-theme--cayman-final .cover-foot-strip article {
+  background: rgba(255, 255, 255, 0.76);
+  border-color: rgba(112, 96, 82, 0.12);
+}
+
+body.report-theme--cayman-final .report-page:not(.report-page--cover)::before {
+  height: 40px;
+  margin-bottom: 10px;
+  background-position: right 2px center;
+  background-size: auto 34px;
+  opacity: 0.96;
+}
+
+@media print {
+  html,
+  body {
+    background: var(--bg);
+  }
+
+  .report-shell {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .report-page {
+    box-shadow: none;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .report-shell {
+    width: min(100%, 100vw - 24px);
+  }
+
+  .cover-layout,
+  .cover-foot-strip,
+  .thesis-grid,
+  .watchboard-grid,
+  .chart-grid--summary,
+  .company-grid,
+  .metric-box-grid,
+  .lead-grid,
+  .cover-score-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-head,
+  .chapter-head,
+  .cover-masthead,
+  .company-card__head,
+  .chart-card__header,
+  .company-card__featured-head {
+    flex-direction: column;
+  }
+
+  .page-head p {
+    max-width: none;
+  }
+
+  .chapter-head p {
+    max-width: none;
+  }
+}

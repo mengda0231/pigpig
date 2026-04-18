@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="220" viewBox="0 0 920 220" fill="none">
+  <defs>
+    <clipPath id="caymanCircle">
+      <circle cx="110" cy="110" r="82"/>
+    </clipPath>
+  </defs>
+  <rect width="920" height="220" fill="white"/>
+  <g transform="translate(20 10)">
+    <circle cx="110" cy="100" r="82" fill="#E63946"/>
+    <g clip-path="url(#caymanCircle)" opacity="0.92">
+      <path d="M24 40 C66 12, 142 12, 192 38" stroke="#FCE9EA" stroke-width="5" stroke-linecap="round"/>
+      <path d="M18 58 C62 34, 142 30, 196 56" stroke="#FCE9EA" stroke-width="5" stroke-linecap="round"/>
+      <path d="M12 76 C62 58, 146 56, 198 78" stroke="#FCE9EA" stroke-width="5" stroke-linecap="round"/>
+      <path d="M8 96 C62 82, 148 82, 202 98" stroke="#FCE9EA" stroke-width="5" stroke-linecap="round"/>
+      <path d="M10 116 C66 108, 150 108, 204 118" stroke="#FCE9EA" stroke-width="5" stroke-linecap="round"/>
+      <path d="M12 136 C64 130, 146 130, 202 138" stroke="#FCE9EA" stroke-width="5" stroke-linecap="round"/>
+      <path d="M18 156 C70 150, 142 152, 194 158" stroke="#FCE9EA" stroke-width="5" stroke-linecap="round"/>
+      <path d="M28 174 C82 172, 136 172, 182 178" stroke="#FCE9EA" stroke-width="5" stroke-linecap="round"/>
+    </g>
+    <path d="M54 110
+             C76 84, 126 74, 156 84
+             C166 88, 164 98, 152 100
+             C136 102, 126 106, 118 116
+             C108 128, 98 138, 80 140
+             C60 142, 42 132, 38 118
+             C34 104, 40 90, 54 82
+             C58 80, 64 84, 64 90
+             C64 96, 62 100, 62 106
+             C62 114, 68 120, 78 120
+             C94 120, 102 108, 112 96
+             C118 88, 126 84, 134 80
+             C114 72, 82 78, 64 90"
+          fill="white" opacity="0.96"/>
+    <circle cx="146" cy="88" r="4" fill="white"/>
+  </g>
+  <g transform="translate(242 34)" fill="#4A4A4A">
+    <text x="0" y="68" font-size="84" font-weight="700" font-family="'Microsoft YaHei UI','PingFang SC','Noto Sans SC',sans-serif" letter-spacing="2">小鳄资产</text>
+    <text x="2" y="132" font-size="48" font-weight="700" font-family="'Aptos','Segoe UI','Arial',sans-serif" letter-spacing="6">CAYMAN ASSET</text>
+  </g>
+</svg>

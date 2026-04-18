@@ -83,6 +83,10 @@
         </section>
 
         <section class="section">
+          <div id="home-latest-intelligence-root"></div>
+        </section>
+
+        <section class="section">
           <div class="section-header">
             <div>
               <span class="eyebrow">Current board</span>
@@ -355,5 +359,34 @@
         </p>
       </footer>
     </div>
+    <script src="./assets/pig-latest-intelligence.js"></script>
+    <script>
+      (async function () {
+        const target = document.getElementById("home-latest-intelligence-root");
+        if (!target) {
+          return;
+        }
+        try {
+          const response = await fetch("./data-lab/generated/latest_intelligence_digest.json", { cache: "no-store" });
+          if (!response.ok) {
+            throw new Error("failed to load latest intelligence digest");
+          }
+          const payload = await response.json();
+          if (window.renderPigLatestIntelligence) {
+            window.renderPigLatestIntelligence(target, payload, {
+              variant: "compact",
+              fullPageHref: "./data-lab/current-state-dashboard.html"
+            });
+          }
+        } catch (error) {
+          target.innerHTML =
+            '<div class="section-header">' +
+            '<div><span class="eyebrow">Latest Intelligence</span><h2>最新证据与观点分区</h2></div>' +
+            '<p>这块会从主研究页的最新情报流自动同步。当前 digest 还没成功加载，可以直接先看完整版主研究页。</p>' +
+            '</div>' +
+            '<div class="panel"><p><a href="./data-lab/current-state-dashboard.html">打开主研究页</a></p></div>';
+        }
+      })();
+    </script>
   </body>
 </html>

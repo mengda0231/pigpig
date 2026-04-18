@@ -8028,33 +8028,13 @@
       "panel_id": "daily_mysteel_public_mirror",
       "title": "Mysteel 公共图表：现货价 + 白条价（日度候选镜像）",
       "cadence": "daily",
-      "coverage_start": "2025-04-14",
-      "coverage_end": "2026-04-13",
+      "coverage_start": "2025-04-19",
+      "coverage_end": "2026-04-17",
       "series": [
         {
           "name": "Mysteel 生猪现货",
           "type": "line",
           "data": [
-            [
-              "2025-04-14",
-              14.85
-            ],
-            [
-              "2025-04-15",
-              14.91
-            ],
-            [
-              "2025-04-16",
-              14.86
-            ],
-            [
-              "2025-04-17",
-              14.86
-            ],
-            [
-              "2025-04-18",
-              14.9
-            ],
             [
               "2025-04-19",
               14.95
@@ -9494,6 +9474,22 @@
             [
               "2026-04-13",
               8.67
+            ],
+            [
+              "2026-04-14",
+              8.66
+            ],
+            [
+              "2026-04-15",
+              8.73
+            ],
+            [
+              "2026-04-16",
+              8.9
+            ],
+            [
+              "2026-04-17",
+              9.17
             ]
           ],
           "yAxisIndex": 0
@@ -9502,26 +9498,6 @@
           "name": "Mysteel 白条价",
           "type": "line",
           "data": [
-            [
-              "2025-04-14",
-              18.99
-            ],
-            [
-              "2025-04-15",
-              19.06
-            ],
-            [
-              "2025-04-16",
-              19.03
-            ],
-            [
-              "2025-04-17",
-              19.01
-            ],
-            [
-              "2025-04-18",
-              19.04
-            ],
             [
               "2025-04-19",
               19.05
@@ -10961,6 +10937,22 @@
             [
               "2026-04-13",
               11.55
+            ],
+            [
+              "2026-04-14",
+              11.51
+            ],
+            [
+              "2026-04-15",
+              11.56
+            ],
+            [
+              "2026-04-16",
+              11.69
+            ],
+            [
+              "2026-04-17",
+              11.9
             ]
           ],
           "yAxisIndex": 0
@@ -10969,23 +10961,23 @@
       "latest_boxes": [
         {
           "label": "现货价",
-          "value": "8.67 元/公斤",
+          "value": "9.17 元/公斤",
           "tone": "neutral",
           "source_tier": "",
           "source_label": "",
-          "trend_key": "down",
-          "trend_icon": "↓",
-          "trend_label": "下行"
+          "trend_key": "up",
+          "trend_icon": "↑",
+          "trend_label": "上行"
         },
         {
           "label": "白条价",
-          "value": "11.55 元/公斤",
+          "value": "11.9 元/公斤",
           "tone": "neutral",
           "source_tier": "",
           "source_label": "",
-          "trend_key": "down",
-          "trend_icon": "↓",
-          "trend_label": "下行"
+          "trend_key": "up",
+          "trend_icon": "↑",
+          "trend_label": "上行"
         },
         {
           "label": "标签",
@@ -11002,7 +10994,7 @@
       "readthrough": "这组 Mysteel 浏览器公共图表能补官方日度空窗，当前读法仍是现货偏弱、白条承接一般，只作为高频候选镜像使用。",
       "failure_mode": "公共图表来自浏览器可见接口，不等于官方主序列；可以补窗，但不能覆盖官方价格和行业状态判断。",
       "stale_after_days": 10,
-      "current_judgment": "Mysteel 日度镜像里，现货约 8.67 元/公斤、白条约 11.55 元/公斤，近端仍偏弱。",
+      "current_judgment": "Mysteel 日度镜像里，现货约 9.17 元/公斤、白条约 11.9 元/公斤，近端仍偏弱。",
       "judgment_tone": "cautious",
       "judgment_basis": "这张图只放高频候选镜像，方向可参考，但不替代官方主序列。"
     },
@@ -11010,33 +11002,13 @@
       "panel_id": "daily_mysteel_public_basis",
       "title": "Mysteel 公共图表：区域基差（日度候选镜像）",
       "cadence": "daily",
-      "coverage_start": "2025-04-14",
-      "coverage_end": "2026-04-13",
+      "coverage_start": "2025-04-21",
+      "coverage_end": "2026-04-17",
       "series": [
         {
           "name": "河南",
           "type": "line",
           "data": [
-            [
-              "2025-04-14",
-              610.0
-            ],
-            [
-              "2025-04-15",
-              560.0
-            ],
-            [
-              "2025-04-16",
-              665.0
-            ],
-            [
-              "2025-04-17",
-              585.0
-            ],
-            [
-              "2025-04-18",
-              665.0
-            ],
             [
               "2025-04-21",
               515.0
@@ -11984,6 +11956,22 @@
             [
               "2026-04-13",
               -115.0
+            ],
+            [
+              "2026-04-14",
+              -175.0
+            ],
+            [
+              "2026-04-15",
+              -275.0
+            ],
+            [
+              "2026-04-16",
+              -1715.0
+            ],
+            [
+              "2026-04-17",
+              -1430.0
             ]
           ],
           "yAxisIndex": 0
@@ -11992,26 +11980,6 @@
           "name": "山东",
           "type": "line",
           "data": [
-            [
-              "2025-04-14",
-              670.0
-            ],
-            [
-              "2025-04-15",
-              570.0
-            ],
-            [
-              "2025-04-16",
-              645.0
-            ],
-            [
-              "2025-04-17",
-              615.0
-            ],
-            [
-              "2025-04-18",
-              745.0
-            ],
             [
               "2025-04-21",
               655.0
@@ -12959,6 +12927,22 @@
             [
               "2026-04-13",
               15.0
+            ],
+            [
+              "2026-04-14",
+              -45.0
+            ],
+            [
+              "2026-04-15",
+              -125.0
+            ],
+            [
+              "2026-04-16",
+              -1505.0
+            ],
+            [
+              "2026-04-17",
+              -1390.0
             ]
           ],
           "yAxisIndex": 0
@@ -12967,26 +12951,6 @@
           "name": "广东",
           "type": "line",
           "data": [
-            [
-              "2025-04-14",
-              650.0
-            ],
-            [
-              "2025-04-15",
-              800.0
-            ],
-            [
-              "2025-04-16",
-              975.0
-            ],
-            [
-              "2025-04-17",
-              875.0
-            ],
-            [
-              "2025-04-18",
-              835.0
-            ],
             [
               "2025-04-21",
               905.0
@@ -13934,6 +13898,22 @@
             [
               "2026-04-13",
               -145.0
+            ],
+            [
+              "2026-04-14",
+              -475.0
+            ],
+            [
+              "2026-04-15",
+              -775.0
+            ],
+            [
+              "2026-04-16",
+              -2225.0
+            ],
+            [
+              "2026-04-17",
+              -2170.0
             ]
           ],
           "yAxisIndex": 0
@@ -13942,26 +13922,6 @@
           "name": "辽宁",
           "type": "line",
           "data": [
-            [
-              "2025-04-14",
-              440.0
-            ],
-            [
-              "2025-04-15",
-              400.0
-            ],
-            [
-              "2025-04-16",
-              395.0
-            ],
-            [
-              "2025-04-17",
-              265.0
-            ],
-            [
-              "2025-04-18",
-              335.0
-            ],
             [
               "2025-04-21",
               145.0
@@ -14909,6 +14869,22 @@
             [
               "2026-04-13",
               -75.0
+            ],
+            [
+              "2026-04-14",
+              -195.0
+            ],
+            [
+              "2026-04-15",
+              -415.0
+            ],
+            [
+              "2026-04-16",
+              -1935.0
+            ],
+            [
+              "2026-04-17",
+              -1890.0
             ]
           ],
           "yAxisIndex": 0
@@ -14917,26 +14893,6 @@
           "name": "四川",
           "type": "line",
           "data": [
-            [
-              "2025-04-14",
-              130.0
-            ],
-            [
-              "2025-04-15",
-              200.0
-            ],
-            [
-              "2025-04-16",
-              385.0
-            ],
-            [
-              "2025-04-17",
-              275.0
-            ],
-            [
-              "2025-04-18",
-              175.0
-            ],
             [
               "2025-04-21",
               195.0
@@ -15884,6 +15840,22 @@
             [
               "2026-04-13",
               -785.0
+            ],
+            [
+              "2026-04-14",
+              -915.0
+            ],
+            [
+              "2026-04-15",
+              -1205.0
+            ],
+            [
+              "2026-04-16",
+              -2775.0
+            ],
+            [
+              "2026-04-17",
+              -2730.0
             ]
           ],
           "yAxisIndex": 0
@@ -15892,7 +15864,7 @@
       "latest_boxes": [
         {
           "label": "河南",
-          "value": "-115",
+          "value": "-1430",
           "tone": "neutral",
           "source_tier": "",
           "source_label": "",
@@ -15902,13 +15874,13 @@
         },
         {
           "label": "广东",
-          "value": "-145",
+          "value": "-2170",
           "tone": "neutral",
           "source_tier": "",
           "source_label": "",
-          "trend_key": "down",
-          "trend_icon": "↓",
-          "trend_label": "下行"
+          "trend_key": "up",
+          "trend_icon": "↑",
+          "trend_label": "上行"
         },
         {
           "label": "标签",
@@ -15927,7 +15899,7 @@
       "stale_after_days": 10,
       "current_judgment": "河南/广东区域基差仍未明显收敛，更像局部张力分化，而不是全国一致性紧平衡。",
       "judgment_tone": "neutral",
-      "judgment_basis": "河南 -115；广东 -145。"
+      "judgment_basis": "河南 -1430；广东 -2170。"
     },
     {
       "panel_id": "daily_equity_mirror",
@@ -45911,7 +45883,7 @@
       "title": "官方价格口径总览：月度出场价 vs 周度收购价 vs 周度白条出厂价 + 第三方镜像",
       "cadence": "weekly",
       "coverage_start": "2021-12-31",
-      "coverage_end": "2026-04-14",
+      "coverage_end": "2026-04-17",
       "series": [
         {
           "name": "农业农村部月度生猪出场价",
@@ -46278,10 +46250,6 @@
               19.18
             ],
             [
-              "2024-08-01",
-              19.49
-            ],
-            [
               "2024-08-13",
               19.88
             ],
@@ -46632,6 +46600,10 @@
             [
               "2026-04-14",
               11.4
+            ],
+            [
+              "2026-04-17",
+              11.12
             ]
           ],
           "yAxisIndex": 0,
@@ -46786,10 +46758,6 @@
             [
               "2024-07-24",
               24.66
-            ],
-            [
-              "2024-08-01",
-              25.03
             ],
             [
               "2024-08-13",
@@ -47142,6 +47110,10 @@
             [
               "2026-04-14",
               15.19
+            ],
+            [
+              "2026-04-17",
+              14.85
             ]
           ],
           "yAxisIndex": 0,
@@ -47157,26 +47129,6 @@
           "showSymbol": false,
           "smooth": false,
           "data": [
-            [
-              "2025-04-14",
-              14.85
-            ],
-            [
-              "2025-04-15",
-              14.91
-            ],
-            [
-              "2025-04-16",
-              14.86
-            ],
-            [
-              "2025-04-17",
-              14.86
-            ],
-            [
-              "2025-04-18",
-              14.9
-            ],
             [
               "2025-04-19",
               14.95
@@ -48616,6 +48568,22 @@
             [
               "2026-04-13",
               8.67
+            ],
+            [
+              "2026-04-14",
+              8.66
+            ],
+            [
+              "2026-04-15",
+              8.73
+            ],
+            [
+              "2026-04-16",
+              8.9
+            ],
+            [
+              "2026-04-17",
+              9.17
             ]
           ],
           "yAxisIndex": 0,
@@ -48632,10 +48600,6 @@
           "showSymbol": false,
           "smooth": false,
           "data": [
-            [
-              "2026-02-26",
-              10.93
-            ],
             [
               "2026-03-05",
               10.56
@@ -48659,6 +48623,10 @@
             [
               "2026-04-09",
               8.99
+            ],
+            [
+              "2026-04-16",
+              8.78
             ]
           ],
           "yAxisIndex": 0,
@@ -48727,7 +48695,7 @@
         },
         {
           "label": "周度收购价",
-          "value": "11.4 元/公斤",
+          "value": "11.12 元/公斤",
           "tone": "neutral",
           "source_tier": "official-anchor",
           "source_label": "官方高频锚",
@@ -48737,7 +48705,7 @@
         },
         {
           "label": "周度白条价",
-          "value": "15.19 元/公斤",
+          "value": "14.85 元/公斤",
           "tone": "neutral",
           "source_tier": "official-downstream",
           "source_label": "下游承接层",
@@ -48747,7 +48715,7 @@
         },
         {
           "label": "第三方镜像",
-          "value": "Mysteel 8.67 元/公斤 / 涌益 8.99 元/公斤",
+          "value": "Mysteel 9.17 元/公斤 / 涌益 8.78 元/公斤",
           "tone": "soft",
           "source_tier": "candidate-mirror",
           "source_label": "候选镜像",
@@ -48772,14 +48740,14 @@
       "stale_after_days": 14,
       "current_judgment": "官方近端高频和第三方镜像没有共振出强势现货，当前更像弱平衡下的分层价格。",
       "judgment_tone": "cautious",
-      "judgment_basis": "月度出场价 12.54 元/公斤；周度收购价 11.4 元/公斤；周度白条价 15.19 元/公斤。"
+      "judgment_basis": "月度出场价 12.54 元/公斤；周度收购价 11.12 元/公斤；周度白条价 14.85 元/公斤。"
     },
     {
       "panel_id": "weekly_official_hog_purchase",
       "title": "农业农村部：生猪收购价 + 白条出厂价（官方周度）",
       "cadence": "weekly",
       "coverage_start": "2023-11-28",
-      "coverage_end": "2026-04-14",
+      "coverage_end": "2026-04-17",
       "series": [
         {
           "name": "生猪收购价",
@@ -48924,10 +48892,6 @@
             [
               "2024-07-24",
               19.18
-            ],
-            [
-              "2024-08-01",
-              19.49
             ],
             [
               "2024-08-13",
@@ -49280,6 +49244,10 @@
             [
               "2026-04-14",
               11.4
+            ],
+            [
+              "2026-04-17",
+              11.12
             ]
           ],
           "yAxisIndex": 0
@@ -49427,10 +49395,6 @@
             [
               "2024-07-24",
               24.66
-            ],
-            [
-              "2024-08-01",
-              25.03
             ],
             [
               "2024-08-13",
@@ -49783,6 +49747,10 @@
             [
               "2026-04-14",
               15.19
+            ],
+            [
+              "2026-04-17",
+              14.85
             ]
           ],
           "yAxisIndex": 0
@@ -49797,7 +49765,7 @@
       "latest_boxes": [
         {
           "label": "生猪收购价",
-          "value": "11.4 元/公斤",
+          "value": "11.12 元/公斤",
           "tone": "neutral",
           "source_tier": "",
           "source_label": "",
@@ -49807,7 +49775,7 @@
         },
         {
           "label": "白条出厂价",
-          "value": "15.19 元/公斤",
+          "value": "14.85 元/公斤",
           "tone": "neutral",
           "source_tier": "",
           "source_label": "",
@@ -49832,7 +49800,7 @@
       "stale_after_days": 14,
       "current_judgment": "官方周度收购价仍是近端偏弱锚点，白条也没有给出强承接扩张。",
       "judgment_tone": "cautious",
-      "judgment_basis": "生猪收购价 11.4 元/公斤；白条出厂价 15.19 元/公斤。"
+      "judgment_basis": "生猪收购价 11.12 元/公斤；白条出厂价 14.85 元/公斤。"
     },
     {
       "panel_id": "weekly_spread_weight",
@@ -64094,7 +64062,7 @@
         },
         {
           "label": "Mysteel 开工候选",
-          "value": "36.56 %",
+          "value": "37.12 %",
           "tone": "soft",
           "source_tier": "candidate-mirror",
           "source_label": "短窗候选",
@@ -64105,13 +64073,17 @@
             [
               "2026-04-14",
               36.56
+            ],
+            [
+              "2026-04-19",
+              37.12
             ]
           ],
           "sparkline_label": "近 8 期"
         },
         {
           "label": "Mysteel 库容候选",
-          "value": "23.91 %",
+          "value": "26.05 %",
           "tone": "soft",
           "source_tier": "candidate-mirror",
           "source_label": "短窗候选",
@@ -64122,6 +64094,10 @@
             [
               "2026-04-14",
               23.91
+            ],
+            [
+              "2026-04-19",
+              26.05
             ]
           ],
           "sparkline_label": "近 8 期"
@@ -64999,7 +64975,7 @@
       "title": "出生端主趋势：母猪分母 + 仔猪价格 + 样本桥接",
       "cadence": "monthly",
       "coverage_start": "2021-12-31",
-      "coverage_end": "2026-02-28",
+      "coverage_end": "2026-04-28",
       "series": [
         {
           "id": "birth_sow_index",
@@ -65416,6 +65392,45 @@
           "yAxisIndex": 0,
           "color": "#9e7b2f",
           "source_tier": "official"
+        },
+        {
+          "id": "birth_sample_bridge",
+          "name": "Mysteel 出生样本桥接（月度平滑）",
+          "type": "line",
+          "data": [
+            [
+              "2026-04-28",
+              100.0
+            ]
+          ],
+          "yAxisIndex": 0,
+          "color": "#b45b28",
+          "smooth": true,
+          "showSymbol": false,
+          "lineStyle": {
+            "type": "dashed",
+            "width": 2
+          },
+          "source_tier": "support-candidate"
+        },
+        {
+          "id": "birth_sample_raw",
+          "name": "Mysteel 出生样本原始点",
+          "type": "scatter",
+          "data": [
+            [
+              "2026-04-28",
+              100.0
+            ]
+          ],
+          "yAxisIndex": 0,
+          "showSymbol": true,
+          "symbolSize": 6,
+          "color": "#b45b28",
+          "itemStyle": {
+            "opacity": 0.42
+          },
+          "source_tier": "support-candidate"
         }
       ],
       "display_mode": "trend-plus-event-band",
@@ -66686,7 +66701,7 @@
       "title": "节奏补充图：涌益样本能繁 + Mysteel 新生仔猪/仔猪销量",
       "cadence": "monthly",
       "coverage_start": "2020-02-01",
-      "coverage_end": "2026-03-28",
+      "coverage_end": "2026-04-28",
       "series": [
         {
           "name": "涌益样本能繁（月度桥接）",
@@ -67305,6 +67320,82 @@
           "showSymbol": true,
           "symbolSize": 8,
           "source_tier": "support-candidate"
+        },
+        {
+          "name": "Mysteel 新生仔猪（月度桥接）",
+          "type": "line",
+          "data": [
+            [
+              "2026-04-28",
+              581.18
+            ]
+          ],
+          "yAxisIndex": 1,
+          "color": "#b45b28",
+          "smooth": true,
+          "showSymbol": false,
+          "lineStyle": {
+            "type": "dashed",
+            "width": 2
+          },
+          "source_tier": "support-candidate"
+        },
+        {
+          "name": "Mysteel 新生仔猪原始点",
+          "type": "scatter",
+          "data": [
+            [
+              "2026-04-14",
+              581.18
+            ],
+            [
+              "2026-04-19",
+              581.18
+            ]
+          ],
+          "yAxisIndex": 1,
+          "color": "#b45b28",
+          "showSymbol": true,
+          "symbolSize": 8,
+          "source_tier": "support-candidate"
+        },
+        {
+          "name": "Mysteel 仔猪销量（月度桥接）",
+          "type": "line",
+          "data": [
+            [
+              "2026-04-28",
+              47.2
+            ]
+          ],
+          "yAxisIndex": 1,
+          "color": "#2f8f7b",
+          "smooth": true,
+          "showSymbol": false,
+          "lineStyle": {
+            "type": "dashed",
+            "width": 2
+          },
+          "source_tier": "support-candidate"
+        },
+        {
+          "name": "Mysteel 仔猪销量原始点",
+          "type": "scatter",
+          "data": [
+            [
+              "2026-04-14",
+              47.2
+            ],
+            [
+              "2026-04-19",
+              47.2
+            ]
+          ],
+          "yAxisIndex": 1,
+          "color": "#2f8f7b",
+          "showSymbol": true,
+          "symbolSize": 8,
+          "source_tier": "support-candidate"
         }
       ],
       "latest_boxes": [
@@ -67442,7 +67533,7 @@
           "title": "官方价格口径总览：月度出场价 vs 周度收购价 vs 周度白条出厂价 + 第三方镜像",
           "cadence": "weekly",
           "coverage_start": "2021-12-31",
-          "coverage_end": "2026-04-14",
+          "coverage_end": "2026-04-17",
           "series": [
             {
               "name": "农业农村部月度生猪出场价",
@@ -67809,10 +67900,6 @@
                   19.18
                 ],
                 [
-                  "2024-08-01",
-                  19.49
-                ],
-                [
                   "2024-08-13",
                   19.88
                 ],
@@ -68163,6 +68250,10 @@
                 [
                   "2026-04-14",
                   11.4
+                ],
+                [
+                  "2026-04-17",
+                  11.12
                 ]
               ],
               "yAxisIndex": 0,
@@ -68317,10 +68408,6 @@
                 [
                   "2024-07-24",
                   24.66
-                ],
-                [
-                  "2024-08-01",
-                  25.03
                 ],
                 [
                   "2024-08-13",
@@ -68673,6 +68760,10 @@
                 [
                   "2026-04-14",
                   15.19
+                ],
+                [
+                  "2026-04-17",
+                  14.85
                 ]
               ],
               "yAxisIndex": 0,
@@ -68688,26 +68779,6 @@
               "showSymbol": false,
               "smooth": false,
               "data": [
-                [
-                  "2025-04-14",
-                  14.85
-                ],
-                [
-                  "2025-04-15",
-                  14.91
-                ],
-                [
-                  "2025-04-16",
-                  14.86
-                ],
-                [
-                  "2025-04-17",
-                  14.86
-                ],
-                [
-                  "2025-04-18",
-                  14.9
-                ],
                 [
                   "2025-04-19",
                   14.95
@@ -70147,6 +70218,22 @@
                 [
                   "2026-04-13",
                   8.67
+                ],
+                [
+                  "2026-04-14",
+                  8.66
+                ],
+                [
+                  "2026-04-15",
+                  8.73
+                ],
+                [
+                  "2026-04-16",
+                  8.9
+                ],
+                [
+                  "2026-04-17",
+                  9.17
                 ]
               ],
               "yAxisIndex": 0,
@@ -70163,10 +70250,6 @@
               "showSymbol": false,
               "smooth": false,
               "data": [
-                [
-                  "2026-02-26",
-                  10.93
-                ],
                 [
                   "2026-03-05",
                   10.56
@@ -70190,6 +70273,10 @@
                 [
                   "2026-04-09",
                   8.99
+                ],
+                [
+                  "2026-04-16",
+                  8.78
                 ]
               ],
               "yAxisIndex": 0,
@@ -70258,7 +70345,7 @@
             },
             {
               "label": "周度收购价",
-              "value": "11.4 元/公斤",
+              "value": "11.12 元/公斤",
               "tone": "neutral",
               "source_tier": "official-anchor",
               "source_label": "官方高频锚",
@@ -70268,7 +70355,7 @@
             },
             {
               "label": "周度白条价",
-              "value": "15.19 元/公斤",
+              "value": "14.85 元/公斤",
               "tone": "neutral",
               "source_tier": "official-downstream",
               "source_label": "下游承接层",
@@ -70278,7 +70365,7 @@
             },
             {
               "label": "第三方镜像",
-              "value": "Mysteel 8.67 元/公斤 / 涌益 8.99 元/公斤",
+              "value": "Mysteel 9.17 元/公斤 / 涌益 8.78 元/公斤",
               "tone": "soft",
               "source_tier": "candidate-mirror",
               "source_label": "候选镜像",
@@ -70303,7 +70390,7 @@
           "stale_after_days": 14,
           "current_judgment": "官方近端高频和第三方镜像没有共振出强势现货，当前更像弱平衡下的分层价格。",
           "judgment_tone": "cautious",
-          "judgment_basis": "月度出场价 12.54 元/公斤；周度收购价 11.4 元/公斤；周度白条价 15.19 元/公斤。"
+          "judgment_basis": "月度出场价 12.54 元/公斤；周度收购价 11.12 元/公斤；周度白条价 14.85 元/公斤。"
         },
         {
           "panel_id": "weekly_spread_weight",
@@ -76739,7 +76826,7 @@
             },
             {
               "label": "Mysteel 开工候选",
-              "value": "36.56 %",
+              "value": "37.12 %",
               "tone": "soft",
               "source_tier": "candidate-mirror",
               "source_label": "短窗候选",
@@ -76750,13 +76837,17 @@
                 [
                   "2026-04-14",
                   36.56
+                ],
+                [
+                  "2026-04-19",
+                  37.12
                 ]
               ],
               "sparkline_label": "近 8 期"
             },
             {
               "label": "Mysteel 库容候选",
-              "value": "23.91 %",
+              "value": "26.05 %",
               "tone": "soft",
               "source_tier": "candidate-mirror",
               "source_label": "短窗候选",
@@ -76767,6 +76858,10 @@
                 [
                   "2026-04-14",
                   23.91
+                ],
+                [
+                  "2026-04-19",
+                  26.05
                 ]
               ],
               "sparkline_label": "近 8 期"
@@ -77728,7 +77823,7 @@
           "title": "出生端主趋势：母猪分母 + 仔猪价格 + 样本桥接",
           "cadence": "monthly",
           "coverage_start": "2021-12-31",
-          "coverage_end": "2026-02-28",
+          "coverage_end": "2026-04-28",
           "series": [
             {
               "id": "birth_sow_index",
@@ -78145,6 +78240,45 @@
               "yAxisIndex": 0,
               "color": "#9e7b2f",
               "source_tier": "official"
+            },
+            {
+              "id": "birth_sample_bridge",
+              "name": "Mysteel 出生样本桥接（月度平滑）",
+              "type": "line",
+              "data": [
+                [
+                  "2026-04-28",
+                  100.0
+                ]
+              ],
+              "yAxisIndex": 0,
+              "color": "#b45b28",
+              "smooth": true,
+              "showSymbol": false,
+              "lineStyle": {
+                "type": "dashed",
+                "width": 2
+              },
+              "source_tier": "support-candidate"
+            },
+            {
+              "id": "birth_sample_raw",
+              "name": "Mysteel 出生样本原始点",
+              "type": "scatter",
+              "data": [
+                [
+                  "2026-04-28",
+                  100.0
+                ]
+              ],
+              "yAxisIndex": 0,
+              "showSymbol": true,
+              "symbolSize": 6,
+              "color": "#b45b28",
+              "itemStyle": {
+                "opacity": 0.42
+              },
+              "source_tier": "support-candidate"
             }
           ],
           "display_mode": "trend-plus-event-band",
@@ -79415,7 +79549,7 @@
           "title": "节奏补充图：涌益样本能繁 + Mysteel 新生仔猪/仔猪销量",
           "cadence": "monthly",
           "coverage_start": "2020-02-01",
-          "coverage_end": "2026-03-28",
+          "coverage_end": "2026-04-28",
           "series": [
             {
               "name": "涌益样本能繁（月度桥接）",
@@ -80031,6 +80165,82 @@
               ],
               "yAxisIndex": 0,
               "color": "#536041",
+              "showSymbol": true,
+              "symbolSize": 8,
+              "source_tier": "support-candidate"
+            },
+            {
+              "name": "Mysteel 新生仔猪（月度桥接）",
+              "type": "line",
+              "data": [
+                [
+                  "2026-04-28",
+                  581.18
+                ]
+              ],
+              "yAxisIndex": 1,
+              "color": "#b45b28",
+              "smooth": true,
+              "showSymbol": false,
+              "lineStyle": {
+                "type": "dashed",
+                "width": 2
+              },
+              "source_tier": "support-candidate"
+            },
+            {
+              "name": "Mysteel 新生仔猪原始点",
+              "type": "scatter",
+              "data": [
+                [
+                  "2026-04-14",
+                  581.18
+                ],
+                [
+                  "2026-04-19",
+                  581.18
+                ]
+              ],
+              "yAxisIndex": 1,
+              "color": "#b45b28",
+              "showSymbol": true,
+              "symbolSize": 8,
+              "source_tier": "support-candidate"
+            },
+            {
+              "name": "Mysteel 仔猪销量（月度桥接）",
+              "type": "line",
+              "data": [
+                [
+                  "2026-04-28",
+                  47.2
+                ]
+              ],
+              "yAxisIndex": 1,
+              "color": "#2f8f7b",
+              "smooth": true,
+              "showSymbol": false,
+              "lineStyle": {
+                "type": "dashed",
+                "width": 2
+              },
+              "source_tier": "support-candidate"
+            },
+            {
+              "name": "Mysteel 仔猪销量原始点",
+              "type": "scatter",
+              "data": [
+                [
+                  "2026-04-14",
+                  47.2
+                ],
+                [
+                  "2026-04-19",
+                  47.2
+                ]
+              ],
+              "yAxisIndex": 1,
+              "color": "#2f8f7b",
               "showSymbol": true,
               "symbolSize": 8,
               "source_tier": "support-candidate"
@@ -110320,11 +110530,11 @@
   "candidate_pulse_cards": [
     {
       "metric_name": "冻品库容率",
-      "latest_value": "23.91%",
-      "prior_value": "23.03%",
-      "delta_text": "+0.88",
+      "latest_value": "26.05%",
+      "prior_value": "23.91%",
+      "delta_text": "+2.14",
       "target_layer": "现货 / 下游吸收",
-      "period_label": "04-10",
+      "period_label": "04-17",
       "source_label": "Mysteel 首页候选快照",
       "source_tier": "candidate-mirror",
       "evidence_tier": "candidate-mirror",
@@ -110341,11 +110551,11 @@
     },
     {
       "metric_name": "屠宰开工率",
-      "latest_value": "36.56%",
-      "prior_value": "36.04%",
-      "delta_text": "+0.52",
+      "latest_value": "37.12%",
+      "prior_value": "37.12%",
+      "delta_text": "0",
       "target_layer": "现货 / 屠宰承接",
-      "period_label": "04-14",
+      "period_label": "04-17",
       "source_label": "Mysteel 首页候选快照",
       "source_tier": "candidate-mirror",
       "evidence_tier": "candidate-mirror",
@@ -110356,9 +110566,9 @@
       "failure_mode": "如果开工率升、库容也升，结论通常更接近处理量增加，而不是消费显著转强。",
       "proxy_panel_id": "monthly_absorption_proxy_long",
       "proxy_label": "看下游吸收长历史代理图",
-      "trend_key": "up",
-      "trend_icon": "↑",
-      "trend_label": "上行"
+      "trend_key": "flat",
+      "trend_icon": "→",
+      "trend_label": "持平"
     },
     {
       "metric_name": "新生仔猪数量",
@@ -110502,39 +110712,39 @@
     },
     "yongyi": {
       "public_series_count": 5,
-      "public_link_count": 18,
-      "login_gated_count": 18,
+      "public_link_count": 19,
+      "login_gated_count": 19,
       "public_group_counts": {
-        "首页最新": 6,
+        "首页最新": 7,
         "月度报告": 6,
         "调研相关": 6
       },
       "public_access_counts": {
-        "title-open-body-gated": 18
+        "title-open-body-gated": 19
       },
-      "history_row_count": 1518,
+      "history_row_count": 1522,
       "history_group_counts": {
-        "日评": 1085,
-        "周报": 201,
+        "日评": 1088,
+        "周报": 202,
         "月报": 64,
         "调研": 119,
         "会议回放": 49
       },
       "history_access_counts": {
-        "title-open-body-gated": 401,
+        "title-open-body-gated": 405,
         "listing-open-unprobed": 1117
       },
       "history_probe_scope_counts": {
-        "recent-probed": 401,
+        "recent-probed": 405,
         "historical-unprobed": 1117
       },
       "recent_probe_floor": "2025-01-01",
-      "recent_probe_count": 401,
-      "recent_body_gated_count": 401,
+      "recent_probe_count": 405,
+      "recent_body_gated_count": 405,
       "latest_series_dates": [
-        "2026-04-14",
-        "2026-04-13",
-        "2026-04-12"
+        "2026-04-17",
+        "2026-04-16",
+        "2026-04-15"
       ],
       "series_summary": [
         "yongyi_daily_meat_price",
@@ -110550,26 +110760,26 @@
         "月度能繁母猪存栏量走势图"
       ],
       "gated_titles": [
+        "2026年4月17日 午间行情播报（预期今晚与明日）",
+        "2026年4月16日 涌益咨询 生猪市场周报",
+        "2026年4月16日 午间行情播报（预期今晚与明日）",
+        "2026年4月15日 午间行情播报（预期今晚与明日）",
         "2026年4月14日 午间行情播报（预期今晚与明日）",
         "2026年4月13日 午间行情播报（预期今晚与明日）",
         "2026年4月10日 午间行情播报（预期今晚与明日）",
-        "2026年3月26日 涌益咨询 生猪市场周报",
-        "涌益咨询生猪市场月报 2026年3月生猪市场解读",
-        "2026年4月9日 午间行情播报（预期今晚与明日）",
-        "2026年4月8日 涌益咨询电话会PPT分享",
-        "2026年4月8日 午间行情播报（预期今晚与明日）"
+        "2026年3月26日 涌益咨询 生猪市场周报"
       ],
       "latest_recent_titles": [
+        "2026年4月17日 午间行情播报（预期今晚与明日）",
+        "2026年4月16日 涌益咨询 生猪市场周报",
+        "2026年4月16日 午间行情播报（预期今晚与明日）",
+        "2026年4月15日 午间行情播报（预期今晚与明日）",
         "2026年4月14日 午间行情播报（预期今晚与明日）",
         "2026年4月13日 午间行情播报（预期今晚与明日）",
         "2026年4月10日 午间行情播报（预期今晚与明日）",
         "2026年3月26日 涌益咨询 生猪市场周报",
         "涌益咨询生猪市场月报 2026年3月生猪市场解读",
-        "2026年4月9日 午间行情播报（预期今晚与明日）",
-        "2026年4月8日 涌益咨询电话会PPT分享",
-        "2026年4月8日 午间行情播报（预期今晚与明日）",
-        "2026年4月7日 午间行情播报（预期今晚与明日）",
-        "2026年4月3日 午间行情播报（预期今晚与明日）"
+        "2026年4月9日 午间行情播报（预期今晚与明日）"
       ],
       "keyword_focus": [
         {
