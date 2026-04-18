@@ -541,6 +541,10 @@ code {
   color: var(--muted);
 }
 
+.intelligence-list-body-quote {
+  margin-top: 0.4rem;
+}
+
 .intelligence-summary-card.strong {
   border-color: rgba(123, 63, 33, 0.18);
   background: linear-gradient(135deg, rgba(255, 248, 238, 0.96), rgba(252, 240, 229, 0.92));
@@ -592,6 +596,10 @@ code {
 
 .intelligence-evidence-grid.compact {
   grid-template-columns: 1fr;
+}
+
+.intelligence-evidence-grid-band {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .intelligence-card {
@@ -686,6 +694,13 @@ code {
   padding: 16px 18px;
 }
 
+.intelligence-list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.12rem;
+  height: 100%;
+}
+
 .intelligence-compact-row {
   border: 1px solid rgba(64, 54, 40, 0.1);
   border-radius: 14px;
@@ -709,6 +724,26 @@ code {
 
 .intelligence-mini-split .intelligence-list-item {
   box-shadow: none;
+}
+
+.intelligence-list-rail {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.85rem;
+}
+
+.intelligence-view-rail {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.intelligence-view-lane,
+.intelligence-day-block-body,
+.intelligence-day-archive-body {
+  display: grid;
+  gap: 0.8rem;
+  min-width: 0;
 }
 
 .intelligence-summary-band-compact {
@@ -779,7 +814,7 @@ code {
 .intelligence-day-grid,
 .intelligence-day-archive-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 1rem;
   margin-top: 1rem;
 }
@@ -787,6 +822,28 @@ code {
 .intelligence-day-block,
 .intelligence-house-note {
   padding: 18px;
+}
+
+.intelligence-day-band {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.28fr) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.intelligence-panel-side-head,
+.intelligence-day-archive-head {
+  display: grid;
+  gap: 0.35rem;
+  align-content: start;
+  padding-right: 0.8rem;
+  border-right: 1px dashed rgba(123, 63, 33, 0.12);
+}
+
+.intelligence-panel-side-head {
+  margin-bottom: 0;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .intelligence-house-note {
@@ -847,6 +904,49 @@ code {
   margin-top: 0.8rem;
 }
 
+.intelligence-day-archive-head .intelligence-mini-title {
+  margin: 0;
+}
+
+.intelligence-excerpt-details {
+  margin-top: 0.45rem;
+  padding-top: 0.45rem;
+  border-top: 1px dashed rgba(123, 63, 33, 0.14);
+}
+
+.intelligence-excerpt-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  cursor: pointer;
+  list-style: none;
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.intelligence-excerpt-summary::-webkit-details-marker {
+  display: none;
+}
+
+.intelligence-excerpt-summary::after {
+  content: "展开";
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.intelligence-excerpt-details[open] .intelligence-excerpt-summary::after {
+  content: "收起";
+}
+
+.intelligence-excerpt-body {
+  margin-top: 0.55rem;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
 .intelligence-latest-footer-link {
   margin-top: 1rem;
   justify-content: flex-end;
@@ -895,6 +995,11 @@ code {
   .intelligence-day-archive-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .intelligence-day-grid,
+  .intelligence-day-archive-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 760px) {
@@ -933,6 +1038,19 @@ code {
   .intelligence-day-grid,
   .intelligence-day-archive-grid {
     grid-template-columns: 1fr;
+  }
+
+  .intelligence-day-band,
+  .intelligence-view-rail {
+    grid-template-columns: 1fr;
+  }
+
+  .intelligence-panel-side-head,
+  .intelligence-day-archive-head {
+    padding-right: 0;
+    border-right: 0;
+    padding-bottom: 0.55rem;
+    border-bottom: 1px dashed rgba(123, 63, 33, 0.12);
   }
 
   .topbar {

@@ -16,6 +16,37 @@
     return clean.length > limit ? clean.slice(0, limit - 1) + "…" : clean;
   }
 
+  function normalizeText(value) {
+    return String(value || "").replace(/\s+/g, " ").trim();
+  }
+
+  function renderExcerptDetails(label, text, expandedText) {
+    var summary = normalizeText(text);
+    var fullText = normalizeText(expandedText || text);
+    if (!fullText) {
+      return "";
+    }
+    if (fullText.length <= 88) {
+      return (
+        '<p class="intelligence-list-body intelligence-list-body-quote muted"><strong>' +
+        escapeHtml(label) +
+        "：</strong>" +
+        escapeHtml(fullText) +
+        "</p>"
+      );
+    }
+    return (
+      '<details class="intelligence-excerpt-details">' +
+      '<summary class="intelligence-excerpt-summary">' +
+      escapeHtml(label) +
+      "</summary>" +
+      '<div class="intelligence-excerpt-body">' +
+      escapeHtml(fullText || summary) +
+      "</div>" +
+      "</details>"
+    );
+  }
+
   function renderEvidenceCards(items, limit) {
     var rows = (items || []).slice(0, limit);
     if (!rows.length) {
@@ -64,7 +95,9 @@
     if (!rows.length) {
       return '<p class="intelligence-empty">' + escapeHtml(emptyText) + "</p>";
     }
-    return rows
+    return (
+      '<div class="intelligence-list-rail">' +
+      rows
       .map(function (item) {
         var link = item.url || item.requested_url || item.landed_url || "";
         return (
@@ -83,6 +116,7 @@
           '<p class="intelligence-list-body">' +
           escapeHtml(truncateText(item.summary || "", 180)) +
           "</p>" +
+          renderExcerptDetails("事件摘录", item.excerpt || item.summary || "", item.visible_body || item.excerpt || item.summary || "") +
           '<p class="intelligence-list-body muted"><strong>当前采用方式：</strong>' +
           escapeHtml(item.proposed_use || "") +
           "</p>" +
@@ -97,7 +131,9 @@
           "</article>"
         );
       })
-      .join("");
+      .join("") +
+      "</div>"
+    );
   }
 
   function renderViewList(items, tone, emptyText, limit) {
@@ -105,7 +141,9 @@
     if (!rows.length) {
       return '<p class="intelligence-empty">' + escapeHtml(emptyText) + "</p>";
     }
-    return rows
+    return (
+      '<div class="intelligence-list-rail">' +
+      rows
       .map(function (item) {
         var link = item.url || "";
         return (
@@ -128,6 +166,7 @@
           '<p class="intelligence-list-body">' +
           escapeHtml(truncateText(item.summary || "", 160)) +
           "</p>" +
+          renderExcerptDetails("观点摘录", item.summary || "", item.full_quote || item.summary || "") +
           '<p class="intelligence-list-body muted"><strong>不能直接升级的地方：</strong>' +
           escapeHtml(item.blind_spot || "") +
           "</p>" +
@@ -139,7 +178,9 @@
           "</article>"
         );
       })
-      .join("");
+      .join("") +
+      "</div>"
+    );
   }
 
   function renderHouseNote(note, houseView) {
@@ -255,25 +296,26 @@
         bearishCount: bearishViews.length,
       }) +
       '<div class="intelligence-day-grid">' +
-      '<article class="intelligence-day-block">' +
-      '<div class="intelligence-panel-top"><h3>当日硬证据</h3><span class="intelligence-date">先看数据锚</span></div>' +
-      '<div class="intelligence-evidence-grid compact">' +
+      '<article class="intelligence-day-block intelligence-day-band">' +
+      '<div class="intelligence-panel-top intelligence-panel-side-head"><h3>当日硬证据</h3><span class="intelligence-date">先看数据锚</span></div>' +
+      '<div class="intelligence-day-block-body"><div class="intelligence-evidence-grid intelligence-evidence-grid-band">' +
       renderEvidenceCards(evidenceItems, compact ? 2 : 3) +
-      "</div></article>" +
-      '<article class="intelligence-day-block">' +
-      '<div class="intelligence-panel-top"><h3>最近高质量公众号</h3><span class="intelligence-date">优先纳入公众号，不用雪球情绪帖</span></div>' +
+      "</div></div></article>" +
+      '<article class="intelligence-day-block intelligence-day-band">' +
+      '<div class="intelligence-panel-top intelligence-panel-side-head"><h3>最近高质量公众号</h3><span class="intelligence-date">优先纳入公众号，不用雪球情绪帖</span></div>' +
+      '<div class="intelligence-day-block-body">' +
       renderMaterialList(articleItems, compact ? 2 : 3, "最近 7 天没有新的高质量公众号正文。") +
-      "</article>" +
-      '<article class="intelligence-day-block">' +
-      '<div class="intelligence-panel-top"><h3>公开分歧</h3><span class="intelligence-date">最近 7 天可见观点</span></div>' +
-      '<div class="intelligence-mini-split">' +
-      '<div><p class="intelligence-mini-title">偏多 / 偏修复</p>' +
+      "</div></article>" +
+      '<article class="intelligence-day-block intelligence-day-band">' +
+      '<div class="intelligence-panel-top intelligence-panel-side-head"><h3>公开分歧</h3><span class="intelligence-date">最近 7 天可见观点</span></div>' +
+      '<div class="intelligence-day-block-body"><div class="intelligence-view-rail">' +
+      '<div class="intelligence-view-lane"><p class="intelligence-mini-title">偏多 / 偏修复</p>' +
       renderViewList(bullishViews, "bullish", "最近没有稳定的偏多公开说法。", compact ? 1 : 2) +
       "</div>" +
-      '<div><p class="intelligence-mini-title">偏谨慎 / 偏承压</p>' +
+      '<div class="intelligence-view-lane"><p class="intelligence-mini-title">偏谨慎 / 偏承压</p>' +
       renderViewList(bearishViews, "bearish", "最近没有稳定的偏谨慎公开说法。", compact ? 1 : 2) +
       "</div>" +
-      "</div></article>" +
+      "</div></div></article>" +
       "</div>" +
       renderHouseNote(latestDay.house_note, payload.house_view || {}) +
       "</section>"
@@ -296,19 +338,23 @@
       "</p>" +
       renderDayMeta(day) +
       '<div class="intelligence-day-archive-grid">' +
-      '<div class="intelligence-day-archive-section">' +
-      '<p class="intelligence-mini-title">硬证据</p>' +
-      '<div class="intelligence-evidence-grid compact">' +
+      '<div class="intelligence-day-archive-section intelligence-day-band">' +
+      '<div class="intelligence-day-archive-head"><p class="intelligence-mini-title">硬证据</p></div>' +
+      '<div class="intelligence-day-archive-body"><div class="intelligence-evidence-grid intelligence-evidence-grid-band">' +
       renderEvidenceCards(day.evidence_items || [], compact ? 1 : 2) +
+      "</div></div>" +
       "</div>" +
-      "</div>" +
-      '<div class="intelligence-day-archive-section">' +
-      '<p class="intelligence-mini-title">公众号</p>' +
+      '<div class="intelligence-day-archive-section intelligence-day-band">' +
+      '<div class="intelligence-day-archive-head"><p class="intelligence-mini-title">公众号</p></div>' +
+      '<div class="intelligence-day-archive-body">' +
       renderMaterialList(day.article_items || [], compact ? 1 : 2, "当日没有新增高质量公众号正文。") +
       "</div>" +
-      '<div class="intelligence-day-archive-section">' +
-      '<p class="intelligence-mini-title">公开分歧</p>' +
+      "</div>" +
+      '<div class="intelligence-day-archive-section intelligence-day-band">' +
+      '<div class="intelligence-day-archive-head"><p class="intelligence-mini-title">公开分歧</p></div>' +
+      '<div class="intelligence-day-archive-body">' +
       renderViewList((((day.public_views || {}).bullish || []).concat(((day.public_views || {}).bearish || []))), "neutral", "当日没有新增公开分歧。", compact ? 1 : 2) +
+      "</div>" +
       "</div>" +
       "</div>" +
       "</article>"
