@@ -251,7 +251,7 @@
 
   function renderSourceCoverageNote(payload) {
     var primary = (payload.quality_source_whitelist || [])
-      .slice(0, 5)
+      .slice(0, 6)
       .join(" / ");
     var watchlist = (payload.quality_source_watchlist || [])
       .slice(0, 3)
@@ -265,6 +265,7 @@
       (watchlist
         ? ' <strong>扩展观察池：</strong>' + escapeHtml(watchlist)
         : "") +
+      ' <strong>回退规则：</strong>最近 7 天缺文时，自动补近 45 天研究型精选专题。' +
       "</p>"
     );
   }
